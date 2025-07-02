@@ -20,7 +20,6 @@ struct Pattern {
     occurrences: u32,
 }
 
-#[derive(Debug)]
 struct PatternDistrict {
     patterns: Arc<Mutex<HashMap<String, Pattern>>>,
     atoms: Arc<Mutex<HashMap<String, Atom>>>,
@@ -55,7 +54,7 @@ impl PatternDistrict {
             
             if hot_atoms.len() >= 2 {
                 let pattern_id = hot_atoms.iter()
-                    .map(|a| &a.word)
+                    .map(|a| a.word.as_str())
                     .collect::<Vec<_>>()
                     .join("-");
                 
