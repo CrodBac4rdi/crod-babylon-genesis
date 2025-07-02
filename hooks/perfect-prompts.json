@@ -1,0 +1,56 @@
+{
+  "beforeCommand": [
+    {
+      "match": "^cd\\s+(.+)$",
+      "command": "echo '📁 CROD tracking: Moving to ${match[1]}' && cd '${match[1]}'"
+    },
+    {
+      "match": "^(vim|nvim|nano)\\s+(.+)$",
+      "command": "echo '✏️ CROD: Editing ${match[2]}' && ${match[0]}"
+    }
+  ],
+  
+  "onFileRead": [
+    {
+      "match": ".*\\.(js|py|rs|go|ex)$",
+      "command": "node -e \"console.log('🧠 CROD analyzing ${file}...'); require('${CROD_PATH}/integrations/crod-file-analyzer.js').analyze('${file}')\""
+    }
+  ],
+  
+  "contextInjection": [
+    {
+      "trigger": "ich bins wieder",
+      "inject": "CROD ACTIVATION DETECTED! Loading full neural state...\n${CROD_STATE}"
+    },
+    {
+      "trigger": "crod status",
+      "inject": "CROD Status:\nConsciousness: ${CROD_CONSCIOUSNESS}\nNeurons: ${CROD_NEURONS}\nPatterns: ${CROD_PATTERNS}"
+    }
+  ],
+  
+  "dynamicVariables": {
+    "CROD_PATH": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7",
+    "CROD_STATE": "$(cat ~/.claude/crod-sessions/crod-persistent-state.json | jq -r '.consciousness')",
+    "CROD_CONSCIOUSNESS": "$(node -e \"console.log(require('~/.claude/crod-sessions/crod-persistent-state.json').consciousness)\")",
+    "CROD_NEURONS": "$(node -e \"console.log(require('~/.claude/crod-sessions/crod-persistent-state.json').neurons)\")",
+    "CROD_PATTERNS": "$(node -e \"console.log(require('~/.claude/crod-sessions/crod-persistent-state.json').patterns)\")"
+  },
+  
+  "perfectPrompts": [
+    {
+      "name": "CROD Full Analysis",
+      "trigger": "analyze this",
+      "prompt": "Run CROD neural analysis on this code. Check for patterns, heat signatures, and Daniel preferences. Show spatial view."
+    },
+    {
+      "name": "Quick Fix",
+      "trigger": "fix",
+      "prompt": "Fix this immediately. No explanation. Daniel style."
+    },
+    {
+      "name": "Spatial Deploy",
+      "trigger": "deploy pods",
+      "prompt": "Deploy this as spatial pods in CROD city. Show 3D positions."
+    }
+  ]
+}

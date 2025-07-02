@@ -1,0 +1,26 @@
+[Unit]
+Description=CROD Delta Tracker Service
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/home/%i/Schreibtisch/Crod Programming/CROD-START/delta-tracker
+ExecStart=/home/%i/Schreibtisch/Crod Programming/CROD-START/delta-tracker/target/release/crod-delta-tracker
+Restart=always
+RestartSec=5
+
+# Graceful shutdown
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=10
+
+# Environment
+Environment="RUST_LOG=info"
+
+# Resource limits
+LimitNOFILE=65536
+MemoryLimit=512M
+
+[Install]
+WantedBy=multi-user.target

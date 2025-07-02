@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|MultiEdit|Write|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-pattern-detector.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-learning-hook.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-session-stats.py"
+          }
+        ]
+      }
+    ]
+  }
+}

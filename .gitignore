@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+*.pyc
+__pycache__/
+.venv/
+vendor/
+target/
+*.beam
+_build/
+deps/
+*.ez
+
+# Environment
+.env
+.env.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist/
+build/
+*.o
+*.so
+*.dll
+*.exe
+*.out
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+
+# CROD specific
+/crod-brain-data/
+/crod-redis-data/
+*.consciousness.backup
+learning-cache/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# Secrets - NEVER commit these!
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+credentials.json
+service-account.json

@@ -1,0 +1,17 @@
+{
+  "name": "crod-gateway",
+  "version": "1.0.0",
+  "main": "gateway.js",
+  "scripts": {
+    "start": "node gateway.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^2.0.9",
+    "redis": "^4.7.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
