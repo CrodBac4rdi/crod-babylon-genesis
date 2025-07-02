@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: crod/gateway-node:latest
+        image: ghcr.io/crodbac4rdi/crod-babylon-genesis/gateway-node:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8888

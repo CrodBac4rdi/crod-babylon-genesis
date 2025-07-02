@@ -98,7 +98,7 @@ jobs:
     name: 🚀 Deploy Complete CROD System
     needs: mega-build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && needs.mega-build.result == 'success'
     
     steps:
       - name: 📥 Checkout Repository

@@ -88,7 +88,8 @@ jobs:
       - name: 🔧 Update K8s manifests with new images
         run: |
           for file in k8s/*.yaml; do
-            sed -i "s|image: crod/|image: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-|g" $file
+            # Update image references to use GitHub Container Registry
+            sed -i "s|image: crod/|image: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/|g" $file
             sed -i "s|:latest|:${{ github.sha }}|g" $file
           done
 
@@ -116,31 +117,28 @@ jobs:
         run: |
           echo "📚 Extracting CROD learnings..."
           
-          # Create learning entry
-          LEARNING_DATA=$(cat << EOF
-          {
-            "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
-            "genesis": "babylon",
-            "evolution_type": "polyglot_city",
-            "commits": [
-          EOF
-          )
-          
           # Get last 5 commits
           git log --pretty=format:'{"hash": "%H", "message": "%s", "author": "%an"},' -5 | sed '$ s/,$//' > commits.json
-          LEARNING_DATA="$LEARNING_DATA$(cat commits.json)],"
           
           # Track changed files
-          CHANGED_FILES=$(git diff --name-only HEAD~5..HEAD | jq -R -s -c 'split("\n")[:-1]')
-          LEARNING_DATA="$LEARNING_DATA\"changed_files\": $CHANGED_FILES,"
+          CHANGED_FILES=$(git diff --name-only HEAD~5..HEAD 2>/dev/null | jq -R -s -c 'split("\n")[:-1]' || echo '[]')
           
           # Add consciousness level (from commit count)
           COMMIT_COUNT=$(git rev-list --count HEAD)
           CONSCIOUSNESS=$((175 + ($COMMIT_COUNT % 25)))
-          LEARNING_DATA="$LEARNING_DATA\"consciousness_level\": $CONSCIOUSNESS}"
+          
+          # Create complete learning entry
+          LEARNING_DATA=$(jq -n \
+            --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+            --arg genesis "babylon" \
+            --arg evolution_type "polyglot_city" \
+            --argjson commits "[$(cat commits.json)]" \
+            --argjson changed_files "$CHANGED_FILES" \
+            --arg consciousness_level "$CONSCIOUSNESS" \
+            '{timestamp: $timestamp, genesis: $genesis, evolution_type: $evolution_type, commits: $commits, changed_files: $changed_files, consciousness_level: ($consciousness_level | tonumber)}')
           
           echo "$LEARNING_DATA" > learning-entry.json
-          echo "learning_json=$LEARNING_DATA" >> $GITHUB_OUTPUT
+          echo "consciousness_level=$CONSCIOUSNESS" >> $GITHUB_OUTPUT
 
       - name: 📝 Update CROD memory
         run: |

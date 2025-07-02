@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: memory-quarter
-        image: crod/memory-quarter-go:latest
+        image: ghcr.io/crodbac4rdi/crod-babylon-genesis/memory-quarter-go:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 7031

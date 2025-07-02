@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: meta-chain
-        image: crod/meta-chain-elixir:latest
+        image: ghcr.io/crodbac4rdi/crod-babylon-genesis/meta-chain-elixir:latest
         imagePullPolicy: IfNotPresent  # Use local if available
         ports:
         - containerPort: 8000

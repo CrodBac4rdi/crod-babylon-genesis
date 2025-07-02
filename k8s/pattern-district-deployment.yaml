@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: pattern-district
-        image: crod/pattern-district-rust:latest
+        image: ghcr.io/crodbac4rdi/crod-babylon-genesis/pattern-district-rust:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 7007
