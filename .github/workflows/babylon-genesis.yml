@@ -22,7 +22,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_PREFIX: ${{ github.repository_owner }}/crod-polyglot
+  IMAGE_PREFIX: ${{ github.repository }}
 
 jobs:
   # Job 1: Build all Docker images
@@ -70,8 +70,8 @@ jobs:
           context: ${{ matrix.district.path }}
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.district.name }}:latest
-            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}-${{ matrix.district.name }}:${{ github.sha }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.district.name }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.district.name }}:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
