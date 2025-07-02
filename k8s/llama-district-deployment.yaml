@@ -1,0 +1,130 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: crod-polyglot
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llama-district
+  namespace: crod-polyglot
+  labels:
+    app: llama-district
+    crod.io/district: llama
+    crod.io/language: python-ollama
+    crod.io/trinity: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llama-district
+  template:
+    metadata:
+      labels:
+        app: llama-district
+        crod.io/district: llama
+      annotations:
+        crod.io/created-by: "Daniel-Claude-CROD Trinity"
+        crod.io/timestamp: "2025-07-02T00:00:00Z"
+    spec:
+      containers:
+      - name: llama
+        image: crod/llama-district:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 7777
+          name: llama-api
+        - containerPort: 11434
+          name: ollama
+        env:
+        - name: REDIS_HOST
+          value: "redis-service"
+        - name: REDIS_PORT
+          value: "6379"
+        - name: OLLAMA_HOST
+          value: "0.0.0.0"
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+          limits:
+            memory: "8Gi"
+            cpu: "4"
+        volumeMounts:
+        - name: models
+          mountPath: /home/crod/.ollama/models
+        - name: data
+          mountPath: /home/crod/data
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+      volumes:
+      - name: models
+        emptyDir:
+          sizeLimit: 10Gi
+      - name: data
+        emptyDir:
+          sizeLimit: 5Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: llama-district-service
+  namespace: crod-polyglot
+  labels:
+    app: llama-district
+spec:
+  selector:
+    app: llama-district
+  ports:
+  - name: api
+    port: 7777
+    targetPort: 7777
+  - name: ollama
+    port: 11434
+    targetPort: 11434
+  type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: llama-district-policy
+  namespace: crod-polyglot
+spec:
+  podSelector:
+    matchLabels:
+      app: llama-district
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: crod-polyglot
+    - podSelector:
+        matchLabels:
+          crod.io/district: gateway
+    - podSelector:
+        matchLabels:
+          crod.io/district: meta-chain
+    ports:
+    - port: 7777
+    - port: 11434
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: redis
+    ports:
+    - port: 6379
+  - to:
+    - namespaceSelector: {}
+      podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - port: 53
+      protocol: UDP
