@@ -3,6 +3,10 @@ name: 🚀 CROD MEGA BUILD - Complete Blockchain System
 on:
   push:
     branches: [main]
+    paths:
+      - 'pod-sources/**'
+      - 'k8s/**'
+      - '.github/workflows/crod-mega-build.yml'
   workflow_dispatch:
 
 env:
