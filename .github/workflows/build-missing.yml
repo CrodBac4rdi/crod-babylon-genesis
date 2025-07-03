@@ -1,0 +1,49 @@
+name: 🔨 Build Missing Images Only
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: crodbac4rdi/crod-babylon-genesis
+
+jobs:
+  build-missing:
+    name: Build Missing Images
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        include:
+          - name: llama-learning
+            context: ./pod-sources/llama-learning
+          - name: blockchain-core
+            context: ./pod-sources/blockchain-core
+          - name: delta-quarter
+            context: ./pod-sources/delta-quarter
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🔐 Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🏗️ Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🐋 Build & Push ${{ matrix.name }}
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.context }}
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.name }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

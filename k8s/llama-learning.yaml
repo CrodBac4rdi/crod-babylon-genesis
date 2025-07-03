@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
       - name: llama-learning
-        image: ghcr.io/crodbac4rdi/crod-babylon-genesis/llama-learning:latest
-        imagePullPolicy: Always
+        image: crod/llama-learning:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8089
           name: http
