@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockchain-core
+  namespace: crod-polyglot
+  labels:
+    app: blockchain-core
+    district: blockchain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blockchain-core
+  template:
+    metadata:
+      labels:
+        app: blockchain-core
+        district: blockchain
+    spec:
+      containers:
+      - name: blockchain-core
+        image: crod/blockchain-core:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8085
+        env:
+        - name: PORT
+          value: "8085"
+        - name: REDIS_URL
+          value: "redis://redis:6379"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blockchain-core
+  namespace: crod-polyglot
+spec:
+  selector:
+    app: blockchain-core
+  ports:
+  - port: 8085
+    targetPort: 8085
+    protocol: TCP

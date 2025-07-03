@@ -78,7 +78,7 @@ jobs:
           echo "$BLOCK_DATA" > blockchain-entry.json
           
       - name: 💾 Store as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: blockchain-entries
           path: blockchain-entry.json

@@ -6,8 +6,8 @@ COPY src ./src
 
 RUN cargo build --release
 
-FROM alpine:latest
-RUN apk add --no-cache ca-certificates
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y ca-certificates wget && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/target/release/pattern-district /usr/local/bin/pattern-district
 
