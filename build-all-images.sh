@@ -63,6 +63,9 @@ build_image "pattern-district" "$POD_SOURCES/pattern-district"
 build_image "memory-quarter" "$POD_SOURCES/memory-quarter"
 build_image "intelligence-hub" "$POD_SOURCES/intelligence-hub"
 build_image "gateway" "$POD_SOURCES/gateway"
+build_image "llama-learning" "$POD_SOURCES/llama-learning"
+build_image "blockchain-core" "$POD_SOURCES/blockchain-core"
+build_image "delta-quarter" "$POD_SOURCES/delta-quarter"
 
 # Redis doesn't need building (using official image)
 echo "📦 Redis will use official image: redis:7-alpine"
