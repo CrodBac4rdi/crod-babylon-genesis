@@ -181,7 +181,8 @@ jobs:
           echo ""
           echo "🏙️ CROD POLYGLOT CITY STATUS:"
           echo "================================"
-          kubectl exec -n crod-polyglot deployment/crod-core -- curl -s http://localhost:8100/trinity | jq . || echo "CROD Core starting..."
+          # Use service name instead of localhost in K8s
+          kubectl exec -n crod-polyglot deployment/crod-core -- wget -q -O- http://crod-core:8100/trinity 2>/dev/null | jq . || echo "CROD Core starting..."
 
       - name: 🏥 Health Check All Districts
         run: |
