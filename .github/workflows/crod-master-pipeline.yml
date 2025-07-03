@@ -125,7 +125,7 @@ jobs:
   test-k3s-deployment:
     name: 🧪 Test Complete CROD System
     needs: build-changed
-    if: always() && (needs.build-changed.result == 'success' || needs.build-changed.result == 'skipped')
+    if: false  # DISABLED - nur local deployment bei Daniel!
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -264,7 +264,7 @@ jobs:
 
   blockchain-validation:
     name: ⛓️ Validate Blockchain Integrity
-    needs: test-k3s-deployment
+    needs: build-changed  # Direct dependency, skip k3s test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -292,7 +292,7 @@ jobs:
 
   database-setup:
     name: 🗄️ Setup CROD Database (ERD)
-    needs: test-k3s-deployment
+    needs: build-changed  # Direct dependency, skip k3s test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -492,7 +492,7 @@ jobs:
           
   llama-learning-integration:
     name: 🦙 LLAMA Learning System
-    needs: test-k3s-deployment
+    needs: build-changed  # Direct dependency, skip k3s test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -543,7 +543,7 @@ jobs:
           
   visualization-deployment:
     name: 🎨 Deploy CROD Dashboards
-    needs: test-k3s-deployment
+    needs: build-changed  # Direct dependency, skip k3s test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -609,7 +609,7 @@ jobs:
           
   neural-network-training:
     name: 🧠 CROD Neural Network Training
-    needs: test-k3s-deployment
+    needs: build-changed  # Direct dependency, skip k3s test
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -842,7 +842,7 @@ jobs:
           
   pattern-evolution:
     name: 🧬 Pattern Evolution Engine
-    needs: [database-setup, llama-learning-integration, neural-network-training]
+    needs: [build-changed]  # Simplified dependencies
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
@@ -923,7 +923,7 @@ jobs:
           
   full-integration-test:
     name: 🚀 Full CROD Integration
-    needs: [database-setup, quantum-validation, llama-learning-integration, visualization-deployment, pattern-evolution]
+    needs: [build-changed]  # All tests run independently
     if: success() || failure()  # Run even if some jobs fail
     runs-on: ubuntu-latest
     steps:
