@@ -1,0 +1,1088 @@
+{
+  "version": "MEGA_EXPANSION_1.0",
+  "total_patterns": 94,
+  "patterns": [
+    {
+      "pattern_id": 100000,
+      "atoms": [
+        "javascript_async",
+        "rust_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between javascript and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100001,
+      "atoms": [
+        "javascript_error_handling",
+        "rust_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between javascript and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100002,
+      "atoms": [
+        "javascript_memory_management",
+        "rust_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between javascript and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100003,
+      "atoms": [
+        "javascript_concurrency",
+        "rust_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between javascript and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100004,
+      "atoms": [
+        "javascript_testing",
+        "rust_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between javascript and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100005,
+      "atoms": [
+        "javascript_async",
+        "python_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between javascript and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100006,
+      "atoms": [
+        "javascript_error_handling",
+        "python_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between javascript and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100007,
+      "atoms": [
+        "javascript_memory_management",
+        "python_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between javascript and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100008,
+      "atoms": [
+        "javascript_concurrency",
+        "python_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between javascript and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100009,
+      "atoms": [
+        "javascript_testing",
+        "python_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between javascript and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100010,
+      "atoms": [
+        "rust_async",
+        "javascript_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between rust and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100011,
+      "atoms": [
+        "rust_error_handling",
+        "javascript_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between rust and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100012,
+      "atoms": [
+        "rust_memory_management",
+        "javascript_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between rust and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100013,
+      "atoms": [
+        "rust_concurrency",
+        "javascript_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between rust and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100014,
+      "atoms": [
+        "rust_testing",
+        "javascript_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between rust and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100015,
+      "atoms": [
+        "rust_async",
+        "python_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between rust and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100016,
+      "atoms": [
+        "rust_error_handling",
+        "python_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between rust and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100017,
+      "atoms": [
+        "rust_memory_management",
+        "python_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between rust and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100018,
+      "atoms": [
+        "rust_concurrency",
+        "python_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between rust and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100019,
+      "atoms": [
+        "rust_testing",
+        "python_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between rust and python",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100020,
+      "atoms": [
+        "python_async",
+        "javascript_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between python and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100021,
+      "atoms": [
+        "python_error_handling",
+        "javascript_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between python and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100022,
+      "atoms": [
+        "python_memory_management",
+        "javascript_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between python and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100023,
+      "atoms": [
+        "python_concurrency",
+        "javascript_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between python and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100024,
+      "atoms": [
+        "python_testing",
+        "javascript_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between python and javascript",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100025,
+      "atoms": [
+        "python_async",
+        "rust_async"
+      ],
+      "pattern_type": "cross_language",
+      "description": "async implementation comparison between python and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100026,
+      "atoms": [
+        "python_error_handling",
+        "rust_error_handling"
+      ],
+      "pattern_type": "cross_language",
+      "description": "error_handling implementation comparison between python and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100027,
+      "atoms": [
+        "python_memory_management",
+        "rust_memory_management"
+      ],
+      "pattern_type": "cross_language",
+      "description": "memory_management implementation comparison between python and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100028,
+      "atoms": [
+        "python_concurrency",
+        "rust_concurrency"
+      ],
+      "pattern_type": "cross_language",
+      "description": "concurrency implementation comparison between python and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100029,
+      "atoms": [
+        "python_testing",
+        "rust_testing"
+      ],
+      "pattern_type": "cross_language",
+      "description": "testing implementation comparison between python and rust",
+      "code_examples": true,
+      "strength": 80
+    },
+    {
+      "pattern_id": 100030,
+      "atoms": [
+        "react",
+        "express",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + express + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100031,
+      "atoms": [
+        "react",
+        "express",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + express + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100032,
+      "atoms": [
+        "react",
+        "express",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + express + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100033,
+      "atoms": [
+        "react",
+        "fastapi",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + fastapi + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100034,
+      "atoms": [
+        "react",
+        "fastapi",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + fastapi + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100035,
+      "atoms": [
+        "react",
+        "fastapi",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + fastapi + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100036,
+      "atoms": [
+        "react",
+        "actix",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + actix + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100037,
+      "atoms": [
+        "react",
+        "actix",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + actix + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100038,
+      "atoms": [
+        "react",
+        "actix",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + actix + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100039,
+      "atoms": [
+        "react",
+        "rocket",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + rocket + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100040,
+      "atoms": [
+        "react",
+        "rocket",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + rocket + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100041,
+      "atoms": [
+        "react",
+        "rocket",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: react + rocket + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100042,
+      "atoms": [
+        "vue",
+        "express",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + express + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100043,
+      "atoms": [
+        "vue",
+        "express",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + express + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100044,
+      "atoms": [
+        "vue",
+        "express",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + express + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100045,
+      "atoms": [
+        "vue",
+        "fastapi",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + fastapi + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100046,
+      "atoms": [
+        "vue",
+        "fastapi",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + fastapi + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100047,
+      "atoms": [
+        "vue",
+        "fastapi",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + fastapi + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100048,
+      "atoms": [
+        "vue",
+        "actix",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + actix + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100049,
+      "atoms": [
+        "vue",
+        "actix",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + actix + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100050,
+      "atoms": [
+        "vue",
+        "actix",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + actix + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100051,
+      "atoms": [
+        "vue",
+        "rocket",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + rocket + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100052,
+      "atoms": [
+        "vue",
+        "rocket",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + rocket + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100053,
+      "atoms": [
+        "vue",
+        "rocket",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: vue + rocket + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100054,
+      "atoms": [
+        "svelte",
+        "express",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + express + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100055,
+      "atoms": [
+        "svelte",
+        "express",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + express + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100056,
+      "atoms": [
+        "svelte",
+        "express",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + express + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100057,
+      "atoms": [
+        "svelte",
+        "fastapi",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + fastapi + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100058,
+      "atoms": [
+        "svelte",
+        "fastapi",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + fastapi + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100059,
+      "atoms": [
+        "svelte",
+        "fastapi",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + fastapi + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100060,
+      "atoms": [
+        "svelte",
+        "actix",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + actix + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100061,
+      "atoms": [
+        "svelte",
+        "actix",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + actix + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100062,
+      "atoms": [
+        "svelte",
+        "actix",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + actix + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100063,
+      "atoms": [
+        "svelte",
+        "rocket",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + rocket + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100064,
+      "atoms": [
+        "svelte",
+        "rocket",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + rocket + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100065,
+      "atoms": [
+        "svelte",
+        "rocket",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: svelte + rocket + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100066,
+      "atoms": [
+        "angular",
+        "express",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + express + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100067,
+      "atoms": [
+        "angular",
+        "express",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + express + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100068,
+      "atoms": [
+        "angular",
+        "express",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + express + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100069,
+      "atoms": [
+        "angular",
+        "fastapi",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + fastapi + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100070,
+      "atoms": [
+        "angular",
+        "fastapi",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + fastapi + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100071,
+      "atoms": [
+        "angular",
+        "fastapi",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + fastapi + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100072,
+      "atoms": [
+        "angular",
+        "actix",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + actix + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100073,
+      "atoms": [
+        "angular",
+        "actix",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + actix + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100074,
+      "atoms": [
+        "angular",
+        "actix",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + actix + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100075,
+      "atoms": [
+        "angular",
+        "rocket",
+        "postgresql"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + rocket + postgresql",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100076,
+      "atoms": [
+        "angular",
+        "rocket",
+        "mongodb"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + rocket + mongodb",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100077,
+      "atoms": [
+        "angular",
+        "rocket",
+        "redis"
+      ],
+      "pattern_type": "full_stack",
+      "description": "Full stack: angular + rocket + redis",
+      "example_projects": true,
+      "strength": 90
+    },
+    {
+      "pattern_id": 100078,
+      "atoms": [
+        "microservices",
+        "docker"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "microservices architecture using docker",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100079,
+      "atoms": [
+        "microservices",
+        "kubernetes"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "microservices architecture using kubernetes",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100080,
+      "atoms": [
+        "microservices",
+        "terraform"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "microservices architecture using terraform",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100081,
+      "atoms": [
+        "microservices",
+        "github_actions"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "microservices architecture using github_actions",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100082,
+      "atoms": [
+        "event_driven",
+        "docker"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "event_driven architecture using docker",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100083,
+      "atoms": [
+        "event_driven",
+        "kubernetes"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "event_driven architecture using kubernetes",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100084,
+      "atoms": [
+        "event_driven",
+        "terraform"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "event_driven architecture using terraform",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100085,
+      "atoms": [
+        "event_driven",
+        "github_actions"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "event_driven architecture using github_actions",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100086,
+      "atoms": [
+        "serverless",
+        "docker"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "serverless architecture using docker",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100087,
+      "atoms": [
+        "serverless",
+        "kubernetes"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "serverless architecture using kubernetes",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100088,
+      "atoms": [
+        "serverless",
+        "terraform"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "serverless architecture using terraform",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100089,
+      "atoms": [
+        "serverless",
+        "github_actions"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "serverless architecture using github_actions",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100090,
+      "atoms": [
+        "clean",
+        "docker"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "clean architecture using docker",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100091,
+      "atoms": [
+        "clean",
+        "kubernetes"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "clean architecture using kubernetes",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100092,
+      "atoms": [
+        "clean",
+        "terraform"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "clean architecture using terraform",
+      "best_practices": true,
+      "strength": 85
+    },
+    {
+      "pattern_id": 100093,
+      "atoms": [
+        "clean",
+        "github_actions"
+      ],
+      "pattern_type": "architecture_implementation",
+      "description": "clean architecture using github_actions",
+      "best_practices": true,
+      "strength": 85
+    }
+  ]
+}

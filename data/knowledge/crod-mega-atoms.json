@@ -1,0 +1,5896 @@
+{
+  "version": "MEGA_EXPANSION_1.0",
+  "total_atoms": 600,
+  "atoms": {
+    "javascript": {
+      "atom_key": 10000,
+      "atom_type": "language",
+      "atom_value": "javascript",
+      "prime_number": 10007,
+      "weight": 100,
+      "heat": 0,
+      "category": "programming"
+    },
+    "javascript_const": {
+      "atom_key": 10001,
+      "atom_type": "javascript_keywords",
+      "atom_value": "const",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_let": {
+      "atom_key": 10002,
+      "atom_type": "javascript_keywords",
+      "atom_value": "let",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_var": {
+      "atom_key": 10003,
+      "atom_type": "javascript_keywords",
+      "atom_value": "var",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_function": {
+      "atom_key": 10004,
+      "atom_type": "javascript_keywords",
+      "atom_value": "function",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_async": {
+      "atom_key": 10005,
+      "atom_type": "javascript_keywords",
+      "atom_value": "async",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_await": {
+      "atom_key": 10006,
+      "atom_type": "javascript_keywords",
+      "atom_value": "await",
+      "prime_number": 10007,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_class": {
+      "atom_key": 10007,
+      "atom_type": "javascript_keywords",
+      "atom_value": "class",
+      "prime_number": 10009,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_extends": {
+      "atom_key": 10008,
+      "atom_type": "javascript_keywords",
+      "atom_value": "extends",
+      "prime_number": 10009,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_import": {
+      "atom_key": 10009,
+      "atom_type": "javascript_keywords",
+      "atom_value": "import",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_export": {
+      "atom_key": 10010,
+      "atom_type": "javascript_keywords",
+      "atom_value": "export",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_yield": {
+      "atom_key": 10011,
+      "atom_type": "javascript_keywords",
+      "atom_value": "yield",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_return": {
+      "atom_key": 10012,
+      "atom_type": "javascript_keywords",
+      "atom_value": "return",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_throw": {
+      "atom_key": 10013,
+      "atom_type": "javascript_keywords",
+      "atom_value": "throw",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_try": {
+      "atom_key": 10014,
+      "atom_type": "javascript_keywords",
+      "atom_value": "try",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_catch": {
+      "atom_key": 10015,
+      "atom_type": "javascript_keywords",
+      "atom_value": "catch",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_finally": {
+      "atom_key": 10016,
+      "atom_type": "javascript_keywords",
+      "atom_value": "finally",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_if": {
+      "atom_key": 10017,
+      "atom_type": "javascript_keywords",
+      "atom_value": "if",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_else": {
+      "atom_key": 10018,
+      "atom_type": "javascript_keywords",
+      "atom_value": "else",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_switch": {
+      "atom_key": 10019,
+      "atom_type": "javascript_keywords",
+      "atom_value": "switch",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_case": {
+      "atom_key": 10020,
+      "atom_type": "javascript_keywords",
+      "atom_value": "case",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_for": {
+      "atom_key": 10021,
+      "atom_type": "javascript_keywords",
+      "atom_value": "for",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_while": {
+      "atom_key": 10022,
+      "atom_type": "javascript_keywords",
+      "atom_value": "while",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_do": {
+      "atom_key": 10023,
+      "atom_type": "javascript_keywords",
+      "atom_value": "do",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_break": {
+      "atom_key": 10024,
+      "atom_type": "javascript_keywords",
+      "atom_value": "break",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_continue": {
+      "atom_key": 10025,
+      "atom_type": "javascript_keywords",
+      "atom_value": "continue",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "keywords"
+    },
+    "javascript_Array": {
+      "atom_key": 10026,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Array",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Object": {
+      "atom_key": 10027,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Object",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_String": {
+      "atom_key": 10028,
+      "atom_type": "javascript_builtins",
+      "atom_value": "String",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Number": {
+      "atom_key": 10029,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Number",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Promise": {
+      "atom_key": 10030,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Promise",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Map": {
+      "atom_key": 10031,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Map",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Set": {
+      "atom_key": 10032,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Set",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_WeakMap": {
+      "atom_key": 10033,
+      "atom_type": "javascript_builtins",
+      "atom_value": "WeakMap",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Symbol": {
+      "atom_key": 10034,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Symbol",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Proxy": {
+      "atom_key": 10035,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Proxy",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Reflect": {
+      "atom_key": 10036,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Reflect",
+      "prime_number": 10037,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_JSON": {
+      "atom_key": 10037,
+      "atom_type": "javascript_builtins",
+      "atom_value": "JSON",
+      "prime_number": 10039,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Math": {
+      "atom_key": 10038,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Math",
+      "prime_number": 10039,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Date": {
+      "atom_key": 10039,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Date",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_RegExp": {
+      "atom_key": 10040,
+      "atom_type": "javascript_builtins",
+      "atom_value": "RegExp",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_Error": {
+      "atom_key": 10041,
+      "atom_type": "javascript_builtins",
+      "atom_value": "Error",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "builtins"
+    },
+    "javascript_callback": {
+      "atom_key": 10042,
+      "atom_type": "javascript_patterns",
+      "atom_value": "callback",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_promise": {
+      "atom_key": 10043,
+      "atom_type": "javascript_patterns",
+      "atom_value": "promise",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_async_await": {
+      "atom_key": 10044,
+      "atom_type": "javascript_patterns",
+      "atom_value": "async_await",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_event_loop": {
+      "atom_key": 10045,
+      "atom_type": "javascript_patterns",
+      "atom_value": "event_loop",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_closure": {
+      "atom_key": 10046,
+      "atom_type": "javascript_patterns",
+      "atom_value": "closure",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_prototype": {
+      "atom_key": 10047,
+      "atom_type": "javascript_patterns",
+      "atom_value": "prototype",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_hoisting": {
+      "atom_key": 10048,
+      "atom_type": "javascript_patterns",
+      "atom_value": "hoisting",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_this_binding": {
+      "atom_key": 10049,
+      "atom_type": "javascript_patterns",
+      "atom_value": "this_binding",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_arrow_function": {
+      "atom_key": 10050,
+      "atom_type": "javascript_patterns",
+      "atom_value": "arrow_function",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_destructuring": {
+      "atom_key": 10051,
+      "atom_type": "javascript_patterns",
+      "atom_value": "destructuring",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_spread": {
+      "atom_key": 10052,
+      "atom_type": "javascript_patterns",
+      "atom_value": "spread",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_template_literal": {
+      "atom_key": 10053,
+      "atom_type": "javascript_patterns",
+      "atom_value": "template_literal",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "patterns"
+    },
+    "javascript_react": {
+      "atom_key": 10054,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "react",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_vue": {
+      "atom_key": 10055,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "vue",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_angular": {
+      "atom_key": 10056,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "angular",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_svelte": {
+      "atom_key": 10057,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "svelte",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_next": {
+      "atom_key": 10058,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "next",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_nuxt": {
+      "atom_key": 10059,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "nuxt",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_express": {
+      "atom_key": 10060,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "express",
+      "prime_number": 10061,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_koa": {
+      "atom_key": 10061,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "koa",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_fastify": {
+      "atom_key": 10062,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "fastify",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_nest": {
+      "atom_key": 10063,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "nest",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_electron": {
+      "atom_key": 10064,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "electron",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_react_native": {
+      "atom_key": 10065,
+      "atom_type": "javascript_frameworks",
+      "atom_value": "react_native",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "frameworks"
+    },
+    "javascript_webpack": {
+      "atom_key": 10066,
+      "atom_type": "javascript_tools",
+      "atom_value": "webpack",
+      "prime_number": 10067,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_vite": {
+      "atom_key": 10067,
+      "atom_type": "javascript_tools",
+      "atom_value": "vite",
+      "prime_number": 10069,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_rollup": {
+      "atom_key": 10068,
+      "atom_type": "javascript_tools",
+      "atom_value": "rollup",
+      "prime_number": 10069,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_babel": {
+      "atom_key": 10069,
+      "atom_type": "javascript_tools",
+      "atom_value": "babel",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_typescript": {
+      "atom_key": 10070,
+      "atom_type": "javascript_tools",
+      "atom_value": "typescript",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_eslint": {
+      "atom_key": 10071,
+      "atom_type": "javascript_tools",
+      "atom_value": "eslint",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_prettier": {
+      "atom_key": 10072,
+      "atom_type": "javascript_tools",
+      "atom_value": "prettier",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_jest": {
+      "atom_key": 10073,
+      "atom_type": "javascript_tools",
+      "atom_value": "jest",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_mocha": {
+      "atom_key": 10074,
+      "atom_type": "javascript_tools",
+      "atom_value": "mocha",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_cypress": {
+      "atom_key": 10075,
+      "atom_type": "javascript_tools",
+      "atom_value": "cypress",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "javascript_playwright": {
+      "atom_key": 10076,
+      "atom_type": "javascript_tools",
+      "atom_value": "playwright",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "javascript",
+      "subcategory": "tools"
+    },
+    "rust": {
+      "atom_key": 10077,
+      "atom_type": "language",
+      "atom_value": "rust",
+      "prime_number": 10079,
+      "weight": 100,
+      "heat": 0,
+      "category": "programming"
+    },
+    "rust_fn": {
+      "atom_key": 10078,
+      "atom_type": "rust_keywords",
+      "atom_value": "fn",
+      "prime_number": 10079,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_let": {
+      "atom_key": 10079,
+      "atom_type": "rust_keywords",
+      "atom_value": "let",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_mut": {
+      "atom_key": 10080,
+      "atom_type": "rust_keywords",
+      "atom_value": "mut",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_const": {
+      "atom_key": 10081,
+      "atom_type": "rust_keywords",
+      "atom_value": "const",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_struct": {
+      "atom_key": 10082,
+      "atom_type": "rust_keywords",
+      "atom_value": "struct",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_enum": {
+      "atom_key": 10083,
+      "atom_type": "rust_keywords",
+      "atom_value": "enum",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_trait": {
+      "atom_key": 10084,
+      "atom_type": "rust_keywords",
+      "atom_value": "trait",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_impl": {
+      "atom_key": 10085,
+      "atom_type": "rust_keywords",
+      "atom_value": "impl",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_mod": {
+      "atom_key": 10086,
+      "atom_type": "rust_keywords",
+      "atom_value": "mod",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_pub": {
+      "atom_key": 10087,
+      "atom_type": "rust_keywords",
+      "atom_value": "pub",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_use": {
+      "atom_key": 10088,
+      "atom_type": "rust_keywords",
+      "atom_value": "use",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_match": {
+      "atom_key": 10089,
+      "atom_type": "rust_keywords",
+      "atom_value": "match",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_if": {
+      "atom_key": 10090,
+      "atom_type": "rust_keywords",
+      "atom_value": "if",
+      "prime_number": 10091,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_else": {
+      "atom_key": 10091,
+      "atom_type": "rust_keywords",
+      "atom_value": "else",
+      "prime_number": 10093,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_loop": {
+      "atom_key": 10092,
+      "atom_type": "rust_keywords",
+      "atom_value": "loop",
+      "prime_number": 10093,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_while": {
+      "atom_key": 10093,
+      "atom_type": "rust_keywords",
+      "atom_value": "while",
+      "prime_number": 10099,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_for": {
+      "atom_key": 10094,
+      "atom_type": "rust_keywords",
+      "atom_value": "for",
+      "prime_number": 10099,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_return": {
+      "atom_key": 10095,
+      "atom_type": "rust_keywords",
+      "atom_value": "return",
+      "prime_number": 10099,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_break": {
+      "atom_key": 10096,
+      "atom_type": "rust_keywords",
+      "atom_value": "break",
+      "prime_number": 10099,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_continue": {
+      "atom_key": 10097,
+      "atom_type": "rust_keywords",
+      "atom_value": "continue",
+      "prime_number": 10099,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_unsafe": {
+      "atom_key": 10137,
+      "atom_type": "rust_patterns",
+      "atom_value": "unsafe",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_async": {
+      "atom_key": 10099,
+      "atom_type": "rust_keywords",
+      "atom_value": "async",
+      "prime_number": 10103,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_await": {
+      "atom_key": 10100,
+      "atom_type": "rust_keywords",
+      "atom_value": "await",
+      "prime_number": 10103,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_move": {
+      "atom_key": 10101,
+      "atom_type": "rust_keywords",
+      "atom_value": "move",
+      "prime_number": 10103,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_dyn": {
+      "atom_key": 10102,
+      "atom_type": "rust_keywords",
+      "atom_value": "dyn",
+      "prime_number": 10103,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_static": {
+      "atom_key": 10103,
+      "atom_type": "rust_keywords",
+      "atom_value": "static",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "keywords"
+    },
+    "rust_i8": {
+      "atom_key": 10104,
+      "atom_type": "rust_types",
+      "atom_value": "i8",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_i16": {
+      "atom_key": 10105,
+      "atom_type": "rust_types",
+      "atom_value": "i16",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_i32": {
+      "atom_key": 10106,
+      "atom_type": "rust_types",
+      "atom_value": "i32",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_i64": {
+      "atom_key": 10107,
+      "atom_type": "rust_types",
+      "atom_value": "i64",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_i128": {
+      "atom_key": 10108,
+      "atom_type": "rust_types",
+      "atom_value": "i128",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_u8": {
+      "atom_key": 10109,
+      "atom_type": "rust_types",
+      "atom_value": "u8",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_u16": {
+      "atom_key": 10110,
+      "atom_type": "rust_types",
+      "atom_value": "u16",
+      "prime_number": 10111,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_u32": {
+      "atom_key": 10111,
+      "atom_type": "rust_types",
+      "atom_value": "u32",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_u64": {
+      "atom_key": 10112,
+      "atom_type": "rust_types",
+      "atom_value": "u64",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_u128": {
+      "atom_key": 10113,
+      "atom_type": "rust_types",
+      "atom_value": "u128",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_f32": {
+      "atom_key": 10114,
+      "atom_type": "rust_types",
+      "atom_value": "f32",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_f64": {
+      "atom_key": 10115,
+      "atom_type": "rust_types",
+      "atom_value": "f64",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_bool": {
+      "atom_key": 10116,
+      "atom_type": "rust_types",
+      "atom_value": "bool",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_char": {
+      "atom_key": 10117,
+      "atom_type": "rust_types",
+      "atom_value": "char",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_str": {
+      "atom_key": 10118,
+      "atom_type": "rust_types",
+      "atom_value": "str",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_String": {
+      "atom_key": 10119,
+      "atom_type": "rust_types",
+      "atom_value": "String",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Vec": {
+      "atom_key": 10120,
+      "atom_type": "rust_types",
+      "atom_value": "Vec",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_HashMap": {
+      "atom_key": 10121,
+      "atom_type": "rust_types",
+      "atom_value": "HashMap",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Option": {
+      "atom_key": 10122,
+      "atom_type": "rust_types",
+      "atom_value": "Option",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Result": {
+      "atom_key": 10123,
+      "atom_type": "rust_types",
+      "atom_value": "Result",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Box": {
+      "atom_key": 10124,
+      "atom_type": "rust_types",
+      "atom_value": "Box",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Rc": {
+      "atom_key": 10125,
+      "atom_type": "rust_types",
+      "atom_value": "Rc",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Arc": {
+      "atom_key": 10126,
+      "atom_type": "rust_types",
+      "atom_value": "Arc",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_RefCell": {
+      "atom_key": 10127,
+      "atom_type": "rust_types",
+      "atom_value": "RefCell",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_Mutex": {
+      "atom_key": 10128,
+      "atom_type": "rust_types",
+      "atom_value": "Mutex",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "types"
+    },
+    "rust_ownership": {
+      "atom_key": 10129,
+      "atom_type": "rust_patterns",
+      "atom_value": "ownership",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_borrowing": {
+      "atom_key": 10130,
+      "atom_type": "rust_patterns",
+      "atom_value": "borrowing",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_lifetimes": {
+      "atom_key": 10131,
+      "atom_type": "rust_patterns",
+      "atom_value": "lifetimes",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_pattern_matching": {
+      "atom_key": 10132,
+      "atom_type": "rust_patterns",
+      "atom_value": "pattern_matching",
+      "prime_number": 10133,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_error_handling": {
+      "atom_key": 10133,
+      "atom_type": "rust_patterns",
+      "atom_value": "error_handling",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_traits": {
+      "atom_key": 10134,
+      "atom_type": "rust_patterns",
+      "atom_value": "traits",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_generics": {
+      "atom_key": 10135,
+      "atom_type": "rust_patterns",
+      "atom_value": "generics",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_macros": {
+      "atom_key": 10136,
+      "atom_type": "rust_patterns",
+      "atom_value": "macros",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_concurrency": {
+      "atom_key": 10138,
+      "atom_type": "rust_patterns",
+      "atom_value": "concurrency",
+      "prime_number": 10139,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_async_await": {
+      "atom_key": 10139,
+      "atom_type": "rust_patterns",
+      "atom_value": "async_await",
+      "prime_number": 10141,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_zero_cost": {
+      "atom_key": 10140,
+      "atom_type": "rust_patterns",
+      "atom_value": "zero_cost",
+      "prime_number": 10141,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_memory_safety": {
+      "atom_key": 10141,
+      "atom_type": "rust_patterns",
+      "atom_value": "memory_safety",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "patterns"
+    },
+    "rust_tokio": {
+      "atom_key": 10142,
+      "atom_type": "rust_crates",
+      "atom_value": "tokio",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_async-std": {
+      "atom_key": 10143,
+      "atom_type": "rust_crates",
+      "atom_value": "async-std",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_actix": {
+      "atom_key": 10144,
+      "atom_type": "rust_crates",
+      "atom_value": "actix",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_rocket": {
+      "atom_key": 10145,
+      "atom_type": "rust_crates",
+      "atom_value": "rocket",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_axum": {
+      "atom_key": 10146,
+      "atom_type": "rust_crates",
+      "atom_value": "axum",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_diesel": {
+      "atom_key": 10147,
+      "atom_type": "rust_crates",
+      "atom_value": "diesel",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_sqlx": {
+      "atom_key": 10148,
+      "atom_type": "rust_crates",
+      "atom_value": "sqlx",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_serde": {
+      "atom_key": 10149,
+      "atom_type": "rust_crates",
+      "atom_value": "serde",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_reqwest": {
+      "atom_key": 10150,
+      "atom_type": "rust_crates",
+      "atom_value": "reqwest",
+      "prime_number": 10151,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_clap": {
+      "atom_key": 10151,
+      "atom_type": "rust_crates",
+      "atom_value": "clap",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_tracing": {
+      "atom_key": 10152,
+      "atom_type": "rust_crates",
+      "atom_value": "tracing",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_anyhow": {
+      "atom_key": 10153,
+      "atom_type": "rust_crates",
+      "atom_value": "anyhow",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_thiserror": {
+      "atom_key": 10154,
+      "atom_type": "rust_crates",
+      "atom_value": "thiserror",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "crates"
+    },
+    "rust_move_semantics": {
+      "atom_key": 10155,
+      "atom_type": "rust_concepts",
+      "atom_value": "move_semantics",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_borrow_checker": {
+      "atom_key": 10156,
+      "atom_type": "rust_concepts",
+      "atom_value": "borrow_checker",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_RAII": {
+      "atom_key": 10157,
+      "atom_type": "rust_concepts",
+      "atom_value": "RAII",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_fearless_concurrency": {
+      "atom_key": 10158,
+      "atom_type": "rust_concepts",
+      "atom_value": "fearless_concurrency",
+      "prime_number": 10159,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_zero_copy": {
+      "atom_key": 10159,
+      "atom_type": "rust_concepts",
+      "atom_value": "zero_copy",
+      "prime_number": 10163,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_const_generics": {
+      "atom_key": 10160,
+      "atom_type": "rust_concepts",
+      "atom_value": "const_generics",
+      "prime_number": 10163,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "rust_procedural_macros": {
+      "atom_key": 10161,
+      "atom_type": "rust_concepts",
+      "atom_value": "procedural_macros",
+      "prime_number": 10163,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "rust",
+      "subcategory": "concepts"
+    },
+    "python": {
+      "atom_key": 10162,
+      "atom_type": "language",
+      "atom_value": "python",
+      "prime_number": 10163,
+      "weight": 100,
+      "heat": 0,
+      "category": "programming"
+    },
+    "python_def": {
+      "atom_key": 10163,
+      "atom_type": "python_keywords",
+      "atom_value": "def",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_class": {
+      "atom_key": 10164,
+      "atom_type": "python_keywords",
+      "atom_value": "class",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_import": {
+      "atom_key": 10165,
+      "atom_type": "python_keywords",
+      "atom_value": "import",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_from": {
+      "atom_key": 10166,
+      "atom_type": "python_keywords",
+      "atom_value": "from",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_as": {
+      "atom_key": 10167,
+      "atom_type": "python_keywords",
+      "atom_value": "as",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_if": {
+      "atom_key": 10168,
+      "atom_type": "python_keywords",
+      "atom_value": "if",
+      "prime_number": 10169,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_elif": {
+      "atom_key": 10169,
+      "atom_type": "python_keywords",
+      "atom_value": "elif",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_else": {
+      "atom_key": 10170,
+      "atom_type": "python_keywords",
+      "atom_value": "else",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_for": {
+      "atom_key": 10171,
+      "atom_type": "python_keywords",
+      "atom_value": "for",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_while": {
+      "atom_key": 10172,
+      "atom_type": "python_keywords",
+      "atom_value": "while",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_try": {
+      "atom_key": 10173,
+      "atom_type": "python_keywords",
+      "atom_value": "try",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_except": {
+      "atom_key": 10174,
+      "atom_type": "python_keywords",
+      "atom_value": "except",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_finally": {
+      "atom_key": 10175,
+      "atom_type": "python_keywords",
+      "atom_value": "finally",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_with": {
+      "atom_key": 10176,
+      "atom_type": "python_keywords",
+      "atom_value": "with",
+      "prime_number": 10177,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_yield": {
+      "atom_key": 10177,
+      "atom_type": "python_keywords",
+      "atom_value": "yield",
+      "prime_number": 10181,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_return": {
+      "atom_key": 10178,
+      "atom_type": "python_keywords",
+      "atom_value": "return",
+      "prime_number": 10181,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_lambda": {
+      "atom_key": 10179,
+      "atom_type": "python_keywords",
+      "atom_value": "lambda",
+      "prime_number": 10181,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_pass": {
+      "atom_key": 10180,
+      "atom_type": "python_keywords",
+      "atom_value": "pass",
+      "prime_number": 10181,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_break": {
+      "atom_key": 10181,
+      "atom_type": "python_keywords",
+      "atom_value": "break",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_continue": {
+      "atom_key": 10182,
+      "atom_type": "python_keywords",
+      "atom_value": "continue",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_global": {
+      "atom_key": 10183,
+      "atom_type": "python_keywords",
+      "atom_value": "global",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_nonlocal": {
+      "atom_key": 10184,
+      "atom_type": "python_keywords",
+      "atom_value": "nonlocal",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_async": {
+      "atom_key": 10185,
+      "atom_type": "python_keywords",
+      "atom_value": "async",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_await": {
+      "atom_key": 10186,
+      "atom_type": "python_keywords",
+      "atom_value": "await",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "keywords"
+    },
+    "python_list": {
+      "atom_key": 10187,
+      "atom_type": "python_builtins",
+      "atom_value": "list",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_dict": {
+      "atom_key": 10188,
+      "atom_type": "python_builtins",
+      "atom_value": "dict",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_set": {
+      "atom_key": 10189,
+      "atom_type": "python_builtins",
+      "atom_value": "set",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_tuple": {
+      "atom_key": 10190,
+      "atom_type": "python_builtins",
+      "atom_value": "tuple",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_str": {
+      "atom_key": 10191,
+      "atom_type": "python_builtins",
+      "atom_value": "str",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_int": {
+      "atom_key": 10192,
+      "atom_type": "python_builtins",
+      "atom_value": "int",
+      "prime_number": 10193,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_float": {
+      "atom_key": 10193,
+      "atom_type": "python_builtins",
+      "atom_value": "float",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_bool": {
+      "atom_key": 10194,
+      "atom_type": "python_builtins",
+      "atom_value": "bool",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_bytes": {
+      "atom_key": 10195,
+      "atom_type": "python_builtins",
+      "atom_value": "bytes",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_range": {
+      "atom_key": 10196,
+      "atom_type": "python_builtins",
+      "atom_value": "range",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_enumerate": {
+      "atom_key": 10197,
+      "atom_type": "python_builtins",
+      "atom_value": "enumerate",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_zip": {
+      "atom_key": 10198,
+      "atom_type": "python_builtins",
+      "atom_value": "zip",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_map": {
+      "atom_key": 10199,
+      "atom_type": "python_builtins",
+      "atom_value": "map",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_filter": {
+      "atom_key": 10200,
+      "atom_type": "python_builtins",
+      "atom_value": "filter",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_reduce": {
+      "atom_key": 10201,
+      "atom_type": "python_builtins",
+      "atom_value": "reduce",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_sorted": {
+      "atom_key": 10202,
+      "atom_type": "python_builtins",
+      "atom_value": "sorted",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_reversed": {
+      "atom_key": 10203,
+      "atom_type": "python_builtins",
+      "atom_value": "reversed",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_len": {
+      "atom_key": 10204,
+      "atom_type": "python_builtins",
+      "atom_value": "len",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_sum": {
+      "atom_key": 10205,
+      "atom_type": "python_builtins",
+      "atom_value": "sum",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_min": {
+      "atom_key": 10206,
+      "atom_type": "python_builtins",
+      "atom_value": "min",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_max": {
+      "atom_key": 10207,
+      "atom_type": "python_builtins",
+      "atom_value": "max",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_any": {
+      "atom_key": 10208,
+      "atom_type": "python_builtins",
+      "atom_value": "any",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_all": {
+      "atom_key": 10209,
+      "atom_type": "python_builtins",
+      "atom_value": "all",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "builtins"
+    },
+    "python_list_comprehension": {
+      "atom_key": 10210,
+      "atom_type": "python_patterns",
+      "atom_value": "list_comprehension",
+      "prime_number": 10211,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_generator": {
+      "atom_key": 10211,
+      "atom_type": "python_patterns",
+      "atom_value": "generator",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_decorator": {
+      "atom_key": 10212,
+      "atom_type": "python_patterns",
+      "atom_value": "decorator",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_context_manager": {
+      "atom_key": 10213,
+      "atom_type": "python_patterns",
+      "atom_value": "context_manager",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_metaclass": {
+      "atom_key": 10214,
+      "atom_type": "python_patterns",
+      "atom_value": "metaclass",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_descriptor": {
+      "atom_key": 10215,
+      "atom_type": "python_patterns",
+      "atom_value": "descriptor",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_iterator": {
+      "atom_key": 10216,
+      "atom_type": "python_patterns",
+      "atom_value": "iterator",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_coroutine": {
+      "atom_key": 10217,
+      "atom_type": "python_patterns",
+      "atom_value": "coroutine",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_dataclass": {
+      "atom_key": 10218,
+      "atom_type": "python_patterns",
+      "atom_value": "dataclass",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_type_hints": {
+      "atom_key": 10219,
+      "atom_type": "python_patterns",
+      "atom_value": "type_hints",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_walrus_operator": {
+      "atom_key": 10220,
+      "atom_type": "python_patterns",
+      "atom_value": "walrus_operator",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_f_strings": {
+      "atom_key": 10221,
+      "atom_type": "python_patterns",
+      "atom_value": "f_strings",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "patterns"
+    },
+    "python_numpy": {
+      "atom_key": 10222,
+      "atom_type": "python_libraries",
+      "atom_value": "numpy",
+      "prime_number": 10223,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_pandas": {
+      "atom_key": 10223,
+      "atom_type": "python_libraries",
+      "atom_value": "pandas",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_matplotlib": {
+      "atom_key": 10224,
+      "atom_type": "python_libraries",
+      "atom_value": "matplotlib",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_scikit-learn": {
+      "atom_key": 10225,
+      "atom_type": "python_libraries",
+      "atom_value": "scikit-learn",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_tensorflow": {
+      "atom_key": 10226,
+      "atom_type": "python_libraries",
+      "atom_value": "tensorflow",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_pytorch": {
+      "atom_key": 10227,
+      "atom_type": "python_libraries",
+      "atom_value": "pytorch",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_fastapi": {
+      "atom_key": 10228,
+      "atom_type": "python_libraries",
+      "atom_value": "fastapi",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_django": {
+      "atom_key": 10229,
+      "atom_type": "python_libraries",
+      "atom_value": "django",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_flask": {
+      "atom_key": 10230,
+      "atom_type": "python_libraries",
+      "atom_value": "flask",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_requests": {
+      "atom_key": 10231,
+      "atom_type": "python_libraries",
+      "atom_value": "requests",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_beautifulsoup": {
+      "atom_key": 10232,
+      "atom_type": "python_libraries",
+      "atom_value": "beautifulsoup",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_selenium": {
+      "atom_key": 10233,
+      "atom_type": "python_libraries",
+      "atom_value": "selenium",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_pytest": {
+      "atom_key": 10234,
+      "atom_type": "python_libraries",
+      "atom_value": "pytest",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_black": {
+      "atom_key": 10235,
+      "atom_type": "python_libraries",
+      "atom_value": "black",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_mypy": {
+      "atom_key": 10236,
+      "atom_type": "python_libraries",
+      "atom_value": "mypy",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "libraries"
+    },
+    "python_tensor": {
+      "atom_key": 10237,
+      "atom_type": "python_ml_specific",
+      "atom_value": "tensor",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_gradient": {
+      "atom_key": 10238,
+      "atom_type": "python_ml_specific",
+      "atom_value": "gradient",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_backprop": {
+      "atom_key": 10239,
+      "atom_type": "python_ml_specific",
+      "atom_value": "backprop",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_neural_net": {
+      "atom_key": 10240,
+      "atom_type": "python_ml_specific",
+      "atom_value": "neural_net",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_optimizer": {
+      "atom_key": 10241,
+      "atom_type": "python_ml_specific",
+      "atom_value": "optimizer",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_loss_function": {
+      "atom_key": 10242,
+      "atom_type": "python_ml_specific",
+      "atom_value": "loss_function",
+      "prime_number": 10243,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_activation": {
+      "atom_key": 10243,
+      "atom_type": "python_ml_specific",
+      "atom_value": "activation",
+      "prime_number": 10247,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_batch": {
+      "atom_key": 10244,
+      "atom_type": "python_ml_specific",
+      "atom_value": "batch",
+      "prime_number": 10247,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_epoch": {
+      "atom_key": 10245,
+      "atom_type": "python_ml_specific",
+      "atom_value": "epoch",
+      "prime_number": 10247,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_learning_rate": {
+      "atom_key": 10246,
+      "atom_type": "python_ml_specific",
+      "atom_value": "learning_rate",
+      "prime_number": 10247,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_dropout": {
+      "atom_key": 10247,
+      "atom_type": "python_ml_specific",
+      "atom_value": "dropout",
+      "prime_number": 10253,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "python_regularization": {
+      "atom_key": 10248,
+      "atom_type": "python_ml_specific",
+      "atom_value": "regularization",
+      "prime_number": 10253,
+      "weight": 50,
+      "heat": 0,
+      "category": "programming",
+      "language": "python",
+      "subcategory": "ml_specific"
+    },
+    "web_html": {
+      "atom_key": 20000,
+      "atom_type": "domain_knowledge",
+      "atom_value": "html",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_css": {
+      "atom_key": 20001,
+      "atom_type": "domain_knowledge",
+      "atom_value": "css",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_dom": {
+      "atom_key": 20002,
+      "atom_type": "domain_knowledge",
+      "atom_value": "dom",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_browser": {
+      "atom_key": 20003,
+      "atom_type": "domain_knowledge",
+      "atom_value": "browser",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_http": {
+      "atom_key": 20004,
+      "atom_type": "domain_knowledge",
+      "atom_value": "http",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_https": {
+      "atom_key": 20005,
+      "atom_type": "domain_knowledge",
+      "atom_value": "https",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_rest": {
+      "atom_key": 20006,
+      "atom_type": "domain_knowledge",
+      "atom_value": "rest",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_graphql": {
+      "atom_key": 20007,
+      "atom_type": "domain_knowledge",
+      "atom_value": "graphql",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_websocket": {
+      "atom_key": 20008,
+      "atom_type": "domain_knowledge",
+      "atom_value": "websocket",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_webrtc": {
+      "atom_key": 20009,
+      "atom_type": "domain_knowledge",
+      "atom_value": "webrtc",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_pwa": {
+      "atom_key": 20010,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pwa",
+      "prime_number": 20011,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_spa": {
+      "atom_key": 20011,
+      "atom_type": "domain_knowledge",
+      "atom_value": "spa",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_ssr": {
+      "atom_key": 20012,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ssr",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_ssg": {
+      "atom_key": 20013,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ssg",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_jamstack": {
+      "atom_key": 20014,
+      "atom_type": "domain_knowledge",
+      "atom_value": "jamstack",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_cdn": {
+      "atom_key": 20015,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cdn",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_cors": {
+      "atom_key": 20016,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cors",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_jwt": {
+      "atom_key": 20017,
+      "atom_type": "domain_knowledge",
+      "atom_value": "jwt",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_oauth": {
+      "atom_key": 20018,
+      "atom_type": "domain_knowledge",
+      "atom_value": "oauth",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_cookies": {
+      "atom_key": 20019,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cookies",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_localstorage": {
+      "atom_key": 20020,
+      "atom_type": "domain_knowledge",
+      "atom_value": "localstorage",
+      "prime_number": 20021,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "web_indexeddb": {
+      "atom_key": 20021,
+      "atom_type": "domain_knowledge",
+      "atom_value": "indexeddb",
+      "prime_number": 20023,
+      "weight": 60,
+      "heat": 0,
+      "category": "web"
+    },
+    "devops_docker": {
+      "atom_key": 20022,
+      "atom_type": "domain_knowledge",
+      "atom_value": "docker",
+      "prime_number": 20023,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_kubernetes": {
+      "atom_key": 20023,
+      "atom_type": "domain_knowledge",
+      "atom_value": "kubernetes",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_terraform": {
+      "atom_key": 20024,
+      "atom_type": "domain_knowledge",
+      "atom_value": "terraform",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_ansible": {
+      "atom_key": 20025,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ansible",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_jenkins": {
+      "atom_key": 20026,
+      "atom_type": "domain_knowledge",
+      "atom_value": "jenkins",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_gitlab": {
+      "atom_key": 20027,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gitlab",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_github": {
+      "atom_key": 20028,
+      "atom_type": "domain_knowledge",
+      "atom_value": "github",
+      "prime_number": 20029,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_actions": {
+      "atom_key": 20029,
+      "atom_type": "domain_knowledge",
+      "atom_value": "actions",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_ci": {
+      "atom_key": 20030,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ci",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_cd": {
+      "atom_key": 20031,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cd",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_pipeline": {
+      "atom_key": 20032,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pipeline",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_container": {
+      "atom_key": 20033,
+      "atom_type": "domain_knowledge",
+      "atom_value": "container",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_orchestration": {
+      "atom_key": 20034,
+      "atom_type": "domain_knowledge",
+      "atom_value": "orchestration",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_microservice": {
+      "atom_key": 20035,
+      "atom_type": "domain_knowledge",
+      "atom_value": "microservice",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_monitoring": {
+      "atom_key": 20036,
+      "atom_type": "domain_knowledge",
+      "atom_value": "monitoring",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_logging": {
+      "atom_key": 20037,
+      "atom_type": "domain_knowledge",
+      "atom_value": "logging",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_prometheus": {
+      "atom_key": 20038,
+      "atom_type": "domain_knowledge",
+      "atom_value": "prometheus",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_grafana": {
+      "atom_key": 20039,
+      "atom_type": "domain_knowledge",
+      "atom_value": "grafana",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_elk": {
+      "atom_key": 20040,
+      "atom_type": "domain_knowledge",
+      "atom_value": "elk",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "devops_helm": {
+      "atom_key": 20041,
+      "atom_type": "domain_knowledge",
+      "atom_value": "helm",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "devops"
+    },
+    "database_sql": {
+      "atom_key": 20042,
+      "atom_type": "domain_knowledge",
+      "atom_value": "sql",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_nosql": {
+      "atom_key": 20043,
+      "atom_type": "domain_knowledge",
+      "atom_value": "nosql",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_postgresql": {
+      "atom_key": 20044,
+      "atom_type": "domain_knowledge",
+      "atom_value": "postgresql",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_mysql": {
+      "atom_key": 20045,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mysql",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_mongodb": {
+      "atom_key": 20046,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mongodb",
+      "prime_number": 20047,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_redis": {
+      "atom_key": 20047,
+      "atom_type": "domain_knowledge",
+      "atom_value": "redis",
+      "prime_number": 20051,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_cassandra": {
+      "atom_key": 20048,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cassandra",
+      "prime_number": 20051,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_elasticsearch": {
+      "atom_key": 20049,
+      "atom_type": "domain_knowledge",
+      "atom_value": "elasticsearch",
+      "prime_number": 20051,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_neo4j": {
+      "atom_key": 20050,
+      "atom_type": "domain_knowledge",
+      "atom_value": "neo4j",
+      "prime_number": 20051,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_influxdb": {
+      "atom_key": 20051,
+      "atom_type": "domain_knowledge",
+      "atom_value": "influxdb",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_clickhouse": {
+      "atom_key": 20052,
+      "atom_type": "domain_knowledge",
+      "atom_value": "clickhouse",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_query": {
+      "atom_key": 20053,
+      "atom_type": "domain_knowledge",
+      "atom_value": "query",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_index": {
+      "atom_key": 20054,
+      "atom_type": "domain_knowledge",
+      "atom_value": "index",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_transaction": {
+      "atom_key": 20055,
+      "atom_type": "domain_knowledge",
+      "atom_value": "transaction",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_acid": {
+      "atom_key": 20056,
+      "atom_type": "domain_knowledge",
+      "atom_value": "acid",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_cap": {
+      "atom_key": 20057,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cap",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_sharding": {
+      "atom_key": 20058,
+      "atom_type": "domain_knowledge",
+      "atom_value": "sharding",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_replication": {
+      "atom_key": 20059,
+      "atom_type": "domain_knowledge",
+      "atom_value": "replication",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "database_cache": {
+      "atom_key": 20060,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cache",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "database"
+    },
+    "cloud_aws": {
+      "atom_key": 20061,
+      "atom_type": "domain_knowledge",
+      "atom_value": "aws",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_gcp": {
+      "atom_key": 20062,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gcp",
+      "prime_number": 20063,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_azure": {
+      "atom_key": 20063,
+      "atom_type": "domain_knowledge",
+      "atom_value": "azure",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_digitalocean": {
+      "atom_key": 20064,
+      "atom_type": "domain_knowledge",
+      "atom_value": "digitalocean",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_linode": {
+      "atom_key": 20065,
+      "atom_type": "domain_knowledge",
+      "atom_value": "linode",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_hetzner": {
+      "atom_key": 20066,
+      "atom_type": "domain_knowledge",
+      "atom_value": "hetzner",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_cloudflare": {
+      "atom_key": 20067,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cloudflare",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_lambda": {
+      "atom_key": 20068,
+      "atom_type": "domain_knowledge",
+      "atom_value": "lambda",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_serverless": {
+      "atom_key": 20069,
+      "atom_type": "domain_knowledge",
+      "atom_value": "serverless",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_edge": {
+      "atom_key": 20070,
+      "atom_type": "domain_knowledge",
+      "atom_value": "edge",
+      "prime_number": 20071,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_cdn": {
+      "atom_key": 20071,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cdn",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_s3": {
+      "atom_key": 20072,
+      "atom_type": "domain_knowledge",
+      "atom_value": "s3",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_ec2": {
+      "atom_key": 20073,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ec2",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_rds": {
+      "atom_key": 20074,
+      "atom_type": "domain_knowledge",
+      "atom_value": "rds",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_vpc": {
+      "atom_key": 20075,
+      "atom_type": "domain_knowledge",
+      "atom_value": "vpc",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_iam": {
+      "atom_key": 20076,
+      "atom_type": "domain_knowledge",
+      "atom_value": "iam",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_cloudformation": {
+      "atom_key": 20077,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cloudformation",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_fargate": {
+      "atom_key": 20078,
+      "atom_type": "domain_knowledge",
+      "atom_value": "fargate",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "cloud_amplify": {
+      "atom_key": 20079,
+      "atom_type": "domain_knowledge",
+      "atom_value": "amplify",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "cloud"
+    },
+    "security_encryption": {
+      "atom_key": 20080,
+      "atom_type": "domain_knowledge",
+      "atom_value": "encryption",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_hashing": {
+      "atom_key": 20081,
+      "atom_type": "domain_knowledge",
+      "atom_value": "hashing",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_salt": {
+      "atom_key": 20082,
+      "atom_type": "domain_knowledge",
+      "atom_value": "salt",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_tls": {
+      "atom_key": 20083,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tls",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_ssl": {
+      "atom_key": 20084,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ssl",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_certificate": {
+      "atom_key": 20085,
+      "atom_type": "domain_knowledge",
+      "atom_value": "certificate",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_firewall": {
+      "atom_key": 20086,
+      "atom_type": "domain_knowledge",
+      "atom_value": "firewall",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_vpn": {
+      "atom_key": 20087,
+      "atom_type": "domain_knowledge",
+      "atom_value": "vpn",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_pentest": {
+      "atom_key": 20088,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pentest",
+      "prime_number": 20089,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_vulnerability": {
+      "atom_key": 20089,
+      "atom_type": "domain_knowledge",
+      "atom_value": "vulnerability",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_exploit": {
+      "atom_key": 20090,
+      "atom_type": "domain_knowledge",
+      "atom_value": "exploit",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_patch": {
+      "atom_key": 20091,
+      "atom_type": "domain_knowledge",
+      "atom_value": "patch",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_zero_day": {
+      "atom_key": 20092,
+      "atom_type": "domain_knowledge",
+      "atom_value": "zero_day",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_ddos": {
+      "atom_key": 20093,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ddos",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_xss": {
+      "atom_key": 20094,
+      "atom_type": "domain_knowledge",
+      "atom_value": "xss",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_csrf": {
+      "atom_key": 20095,
+      "atom_type": "domain_knowledge",
+      "atom_value": "csrf",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_sqli": {
+      "atom_key": 20096,
+      "atom_type": "domain_knowledge",
+      "atom_value": "sqli",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_auth": {
+      "atom_key": 20097,
+      "atom_type": "domain_knowledge",
+      "atom_value": "auth",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_authorization": {
+      "atom_key": 20098,
+      "atom_type": "domain_knowledge",
+      "atom_value": "authorization",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "security_rbac": {
+      "atom_key": 20099,
+      "atom_type": "domain_knowledge",
+      "atom_value": "rbac",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "security"
+    },
+    "blockchain_bitcoin": {
+      "atom_key": 20100,
+      "atom_type": "domain_knowledge",
+      "atom_value": "bitcoin",
+      "prime_number": 20101,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_ethereum": {
+      "atom_key": 20101,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ethereum",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_smart_contract": {
+      "atom_key": 20102,
+      "atom_type": "domain_knowledge",
+      "atom_value": "smart_contract",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_defi": {
+      "atom_key": 20103,
+      "atom_type": "domain_knowledge",
+      "atom_value": "defi",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_nft": {
+      "atom_key": 20104,
+      "atom_type": "domain_knowledge",
+      "atom_value": "nft",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_dao": {
+      "atom_key": 20105,
+      "atom_type": "domain_knowledge",
+      "atom_value": "dao",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_consensus": {
+      "atom_key": 20106,
+      "atom_type": "domain_knowledge",
+      "atom_value": "consensus",
+      "prime_number": 20107,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_pow": {
+      "atom_key": 20107,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pow",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_pos": {
+      "atom_key": 20108,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pos",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_hash": {
+      "atom_key": 20109,
+      "atom_type": "domain_knowledge",
+      "atom_value": "hash",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_merkle": {
+      "atom_key": 20110,
+      "atom_type": "domain_knowledge",
+      "atom_value": "merkle",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_wallet": {
+      "atom_key": 20111,
+      "atom_type": "domain_knowledge",
+      "atom_value": "wallet",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_transaction": {
+      "atom_key": 20112,
+      "atom_type": "domain_knowledge",
+      "atom_value": "transaction",
+      "prime_number": 20113,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_gas": {
+      "atom_key": 20113,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gas",
+      "prime_number": 20117,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_mining": {
+      "atom_key": 20114,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mining",
+      "prime_number": 20117,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_node": {
+      "atom_key": 20115,
+      "atom_type": "domain_knowledge",
+      "atom_value": "node",
+      "prime_number": 20117,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_ledger": {
+      "atom_key": 20116,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ledger",
+      "prime_number": 20117,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_immutable": {
+      "atom_key": 20117,
+      "atom_type": "domain_knowledge",
+      "atom_value": "immutable",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "blockchain_decentralized": {
+      "atom_key": 20118,
+      "atom_type": "domain_knowledge",
+      "atom_value": "decentralized",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "blockchain"
+    },
+    "ai_ml_neural": {
+      "atom_key": 20119,
+      "atom_type": "domain_knowledge",
+      "atom_value": "neural",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_deep_learning": {
+      "atom_key": 20120,
+      "atom_type": "domain_knowledge",
+      "atom_value": "deep_learning",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_machine_learning": {
+      "atom_key": 20121,
+      "atom_type": "domain_knowledge",
+      "atom_value": "machine_learning",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_transformer": {
+      "atom_key": 20122,
+      "atom_type": "domain_knowledge",
+      "atom_value": "transformer",
+      "prime_number": 20123,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_gpt": {
+      "atom_key": 20123,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gpt",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_bert": {
+      "atom_key": 20124,
+      "atom_type": "domain_knowledge",
+      "atom_value": "bert",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_gan": {
+      "atom_key": 20125,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gan",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_cnn": {
+      "atom_key": 20126,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cnn",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_rnn": {
+      "atom_key": 20127,
+      "atom_type": "domain_knowledge",
+      "atom_value": "rnn",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_lstm": {
+      "atom_key": 20128,
+      "atom_type": "domain_knowledge",
+      "atom_value": "lstm",
+      "prime_number": 20129,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_attention": {
+      "atom_key": 20129,
+      "atom_type": "domain_knowledge",
+      "atom_value": "attention",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_embedding": {
+      "atom_key": 20130,
+      "atom_type": "domain_knowledge",
+      "atom_value": "embedding",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_tokenizer": {
+      "atom_key": 20131,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tokenizer",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_fine_tuning": {
+      "atom_key": 20132,
+      "atom_type": "domain_knowledge",
+      "atom_value": "fine_tuning",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_inference": {
+      "atom_key": 20133,
+      "atom_type": "domain_knowledge",
+      "atom_value": "inference",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_training": {
+      "atom_key": 20134,
+      "atom_type": "domain_knowledge",
+      "atom_value": "training",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_dataset": {
+      "atom_key": 20135,
+      "atom_type": "domain_knowledge",
+      "atom_value": "dataset",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_model": {
+      "atom_key": 20136,
+      "atom_type": "domain_knowledge",
+      "atom_value": "model",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_weights": {
+      "atom_key": 20137,
+      "atom_type": "domain_knowledge",
+      "atom_value": "weights",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "ai_ml_bias": {
+      "atom_key": 20138,
+      "atom_type": "domain_knowledge",
+      "atom_value": "bias",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "ai_ml"
+    },
+    "gaming_unity": {
+      "atom_key": 20139,
+      "atom_type": "domain_knowledge",
+      "atom_value": "unity",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_unreal": {
+      "atom_key": 20140,
+      "atom_type": "domain_knowledge",
+      "atom_value": "unreal",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_godot": {
+      "atom_key": 20141,
+      "atom_type": "domain_knowledge",
+      "atom_value": "godot",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_pygame": {
+      "atom_key": 20142,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pygame",
+      "prime_number": 20143,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_phaser": {
+      "atom_key": 20143,
+      "atom_type": "domain_knowledge",
+      "atom_value": "phaser",
+      "prime_number": 20147,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_three_js": {
+      "atom_key": 20144,
+      "atom_type": "domain_knowledge",
+      "atom_value": "three_js",
+      "prime_number": 20147,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_webgl": {
+      "atom_key": 20145,
+      "atom_type": "domain_knowledge",
+      "atom_value": "webgl",
+      "prime_number": 20147,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_shader": {
+      "atom_key": 20146,
+      "atom_type": "domain_knowledge",
+      "atom_value": "shader",
+      "prime_number": 20147,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_mesh": {
+      "atom_key": 20147,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mesh",
+      "prime_number": 20149,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_texture": {
+      "atom_key": 20148,
+      "atom_type": "domain_knowledge",
+      "atom_value": "texture",
+      "prime_number": 20149,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_physics": {
+      "atom_key": 20149,
+      "atom_type": "domain_knowledge",
+      "atom_value": "physics",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_collision": {
+      "atom_key": 20150,
+      "atom_type": "domain_knowledge",
+      "atom_value": "collision",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_animation": {
+      "atom_key": 20151,
+      "atom_type": "domain_knowledge",
+      "atom_value": "animation",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_sprite": {
+      "atom_key": 20152,
+      "atom_type": "domain_knowledge",
+      "atom_value": "sprite",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_tilemap": {
+      "atom_key": 20153,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tilemap",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_pathfinding": {
+      "atom_key": 20154,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pathfinding",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_ai": {
+      "atom_key": 20155,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ai",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_multiplayer": {
+      "atom_key": 20156,
+      "atom_type": "domain_knowledge",
+      "atom_value": "multiplayer",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "gaming_netcode": {
+      "atom_key": 20157,
+      "atom_type": "domain_knowledge",
+      "atom_value": "netcode",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "gaming"
+    },
+    "mobile_android": {
+      "atom_key": 20158,
+      "atom_type": "domain_knowledge",
+      "atom_value": "android",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_ios": {
+      "atom_key": 20159,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ios",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_react_native": {
+      "atom_key": 20160,
+      "atom_type": "domain_knowledge",
+      "atom_value": "react_native",
+      "prime_number": 20161,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_flutter": {
+      "atom_key": 20161,
+      "atom_type": "domain_knowledge",
+      "atom_value": "flutter",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_swift": {
+      "atom_key": 20162,
+      "atom_type": "domain_knowledge",
+      "atom_value": "swift",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_kotlin": {
+      "atom_key": 20163,
+      "atom_type": "domain_knowledge",
+      "atom_value": "kotlin",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_xcode": {
+      "atom_key": 20164,
+      "atom_type": "domain_knowledge",
+      "atom_value": "xcode",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_gradle": {
+      "atom_key": 20165,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gradle",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_apk": {
+      "atom_key": 20166,
+      "atom_type": "domain_knowledge",
+      "atom_value": "apk",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_ipa": {
+      "atom_key": 20167,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ipa",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_responsive": {
+      "atom_key": 20168,
+      "atom_type": "domain_knowledge",
+      "atom_value": "responsive",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_gesture": {
+      "atom_key": 20169,
+      "atom_type": "domain_knowledge",
+      "atom_value": "gesture",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_notification": {
+      "atom_key": 20170,
+      "atom_type": "domain_knowledge",
+      "atom_value": "notification",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_deeplink": {
+      "atom_key": 20171,
+      "atom_type": "domain_knowledge",
+      "atom_value": "deeplink",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_store": {
+      "atom_key": 20172,
+      "atom_type": "domain_knowledge",
+      "atom_value": "store",
+      "prime_number": 20173,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_crash": {
+      "atom_key": 20173,
+      "atom_type": "domain_knowledge",
+      "atom_value": "crash",
+      "prime_number": 20177,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_analytics": {
+      "atom_key": 20174,
+      "atom_type": "domain_knowledge",
+      "atom_value": "analytics",
+      "prime_number": 20177,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "mobile_push": {
+      "atom_key": 20175,
+      "atom_type": "domain_knowledge",
+      "atom_value": "push",
+      "prime_number": 20177,
+      "weight": 60,
+      "heat": 0,
+      "category": "mobile"
+    },
+    "performance_optimization": {
+      "atom_key": 20176,
+      "atom_type": "domain_knowledge",
+      "atom_value": "optimization",
+      "prime_number": 20177,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_profiling": {
+      "atom_key": 20177,
+      "atom_type": "domain_knowledge",
+      "atom_value": "profiling",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_benchmark": {
+      "atom_key": 20178,
+      "atom_type": "domain_knowledge",
+      "atom_value": "benchmark",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_cache": {
+      "atom_key": 20179,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cache",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_lazy": {
+      "atom_key": 20180,
+      "atom_type": "domain_knowledge",
+      "atom_value": "lazy",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_memoization": {
+      "atom_key": 20181,
+      "atom_type": "domain_knowledge",
+      "atom_value": "memoization",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_throttle": {
+      "atom_key": 20182,
+      "atom_type": "domain_knowledge",
+      "atom_value": "throttle",
+      "prime_number": 20183,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_debounce": {
+      "atom_key": 20183,
+      "atom_type": "domain_knowledge",
+      "atom_value": "debounce",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_chunking": {
+      "atom_key": 20184,
+      "atom_type": "domain_knowledge",
+      "atom_value": "chunking",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_streaming": {
+      "atom_key": 20185,
+      "atom_type": "domain_knowledge",
+      "atom_value": "streaming",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_compression": {
+      "atom_key": 20186,
+      "atom_type": "domain_knowledge",
+      "atom_value": "compression",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_minification": {
+      "atom_key": 20187,
+      "atom_type": "domain_knowledge",
+      "atom_value": "minification",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_tree_shaking": {
+      "atom_key": 20188,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tree_shaking",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_code_splitting": {
+      "atom_key": 20189,
+      "atom_type": "domain_knowledge",
+      "atom_value": "code_splitting",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_prefetch": {
+      "atom_key": 20190,
+      "atom_type": "domain_knowledge",
+      "atom_value": "prefetch",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "performance_preload": {
+      "atom_key": 20191,
+      "atom_type": "domain_knowledge",
+      "atom_value": "preload",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "performance"
+    },
+    "architecture_mvc": {
+      "atom_key": 20192,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mvc",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_mvvm": {
+      "atom_key": 20193,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mvvm",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_mvp": {
+      "atom_key": 20194,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mvp",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_clean": {
+      "atom_key": 20195,
+      "atom_type": "domain_knowledge",
+      "atom_value": "clean",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_hexagonal": {
+      "atom_key": 20196,
+      "atom_type": "domain_knowledge",
+      "atom_value": "hexagonal",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_onion": {
+      "atom_key": 20197,
+      "atom_type": "domain_knowledge",
+      "atom_value": "onion",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_ddd": {
+      "atom_key": 20198,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ddd",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_cqrs": {
+      "atom_key": 20199,
+      "atom_type": "domain_knowledge",
+      "atom_value": "cqrs",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_event_sourcing": {
+      "atom_key": 20200,
+      "atom_type": "domain_knowledge",
+      "atom_value": "event_sourcing",
+      "prime_number": 20201,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_saga": {
+      "atom_key": 20201,
+      "atom_type": "domain_knowledge",
+      "atom_value": "saga",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_microservices": {
+      "atom_key": 20202,
+      "atom_type": "domain_knowledge",
+      "atom_value": "microservices",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_monolith": {
+      "atom_key": 20203,
+      "atom_type": "domain_knowledge",
+      "atom_value": "monolith",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_serverless": {
+      "atom_key": 20204,
+      "atom_type": "domain_knowledge",
+      "atom_value": "serverless",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_edge": {
+      "atom_key": 20205,
+      "atom_type": "domain_knowledge",
+      "atom_value": "edge",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_distributed": {
+      "atom_key": 20206,
+      "atom_type": "domain_knowledge",
+      "atom_value": "distributed",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_scalable": {
+      "atom_key": 20207,
+      "atom_type": "domain_knowledge",
+      "atom_value": "scalable",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "architecture_resilient": {
+      "atom_key": 20208,
+      "atom_type": "domain_knowledge",
+      "atom_value": "resilient",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "architecture"
+    },
+    "testing_unit": {
+      "atom_key": 20209,
+      "atom_type": "domain_knowledge",
+      "atom_value": "unit",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_integration": {
+      "atom_key": 20210,
+      "atom_type": "domain_knowledge",
+      "atom_value": "integration",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_e2e": {
+      "atom_key": 20211,
+      "atom_type": "domain_knowledge",
+      "atom_value": "e2e",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_tdd": {
+      "atom_key": 20212,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tdd",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_bdd": {
+      "atom_key": 20213,
+      "atom_type": "domain_knowledge",
+      "atom_value": "bdd",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_mock": {
+      "atom_key": 20214,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mock",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_stub": {
+      "atom_key": 20215,
+      "atom_type": "domain_knowledge",
+      "atom_value": "stub",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_spy": {
+      "atom_key": 20216,
+      "atom_type": "domain_knowledge",
+      "atom_value": "spy",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_fixture": {
+      "atom_key": 20217,
+      "atom_type": "domain_knowledge",
+      "atom_value": "fixture",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_assertion": {
+      "atom_key": 20218,
+      "atom_type": "domain_knowledge",
+      "atom_value": "assertion",
+      "prime_number": 20219,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_coverage": {
+      "atom_key": 20219,
+      "atom_type": "domain_knowledge",
+      "atom_value": "coverage",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_mutation": {
+      "atom_key": 20220,
+      "atom_type": "domain_knowledge",
+      "atom_value": "mutation",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_property": {
+      "atom_key": 20221,
+      "atom_type": "domain_knowledge",
+      "atom_value": "property",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_fuzzing": {
+      "atom_key": 20222,
+      "atom_type": "domain_knowledge",
+      "atom_value": "fuzzing",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_regression": {
+      "atom_key": 20223,
+      "atom_type": "domain_knowledge",
+      "atom_value": "regression",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_smoke": {
+      "atom_key": 20224,
+      "atom_type": "domain_knowledge",
+      "atom_value": "smoke",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_acceptance": {
+      "atom_key": 20225,
+      "atom_type": "domain_knowledge",
+      "atom_value": "acceptance",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "testing_performance": {
+      "atom_key": 20226,
+      "atom_type": "domain_knowledge",
+      "atom_value": "performance",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "testing"
+    },
+    "tools_git": {
+      "atom_key": 20227,
+      "atom_type": "domain_knowledge",
+      "atom_value": "git",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_vim": {
+      "atom_key": 20228,
+      "atom_type": "domain_knowledge",
+      "atom_value": "vim",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_vscode": {
+      "atom_key": 20229,
+      "atom_type": "domain_knowledge",
+      "atom_value": "vscode",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_intellij": {
+      "atom_key": 20230,
+      "atom_type": "domain_knowledge",
+      "atom_value": "intellij",
+      "prime_number": 20231,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_terminal": {
+      "atom_key": 20231,
+      "atom_type": "domain_knowledge",
+      "atom_value": "terminal",
+      "prime_number": 20233,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_bash": {
+      "atom_key": 20232,
+      "atom_type": "domain_knowledge",
+      "atom_value": "bash",
+      "prime_number": 20233,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_zsh": {
+      "atom_key": 20233,
+      "atom_type": "domain_knowledge",
+      "atom_value": "zsh",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_tmux": {
+      "atom_key": 20234,
+      "atom_type": "domain_knowledge",
+      "atom_value": "tmux",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_docker": {
+      "atom_key": 20235,
+      "atom_type": "domain_knowledge",
+      "atom_value": "docker",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_postman": {
+      "atom_key": 20236,
+      "atom_type": "domain_knowledge",
+      "atom_value": "postman",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_insomnia": {
+      "atom_key": 20237,
+      "atom_type": "domain_knowledge",
+      "atom_value": "insomnia",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_wireshark": {
+      "atom_key": 20238,
+      "atom_type": "domain_knowledge",
+      "atom_value": "wireshark",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_charles": {
+      "atom_key": 20239,
+      "atom_type": "domain_knowledge",
+      "atom_value": "charles",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_ngrok": {
+      "atom_key": 20240,
+      "atom_type": "domain_knowledge",
+      "atom_value": "ngrok",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_homebrew": {
+      "atom_key": 20241,
+      "atom_type": "domain_knowledge",
+      "atom_value": "homebrew",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_nvm": {
+      "atom_key": 20242,
+      "atom_type": "domain_knowledge",
+      "atom_value": "nvm",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_pyenv": {
+      "atom_key": 20243,
+      "atom_type": "domain_knowledge",
+      "atom_value": "pyenv",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "tools_rustup": {
+      "atom_key": 20244,
+      "atom_type": "domain_knowledge",
+      "atom_value": "rustup",
+      "prime_number": 20249,
+      "weight": 60,
+      "heat": 0,
+      "category": "tools"
+    },
+    "concept_singleton": {
+      "atom_key": 30000,
+      "atom_type": "concept",
+      "atom_value": "singleton",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_factory": {
+      "atom_key": 30001,
+      "atom_type": "concept",
+      "atom_value": "factory",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_observer": {
+      "atom_key": 30002,
+      "atom_type": "concept",
+      "atom_value": "observer",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_strategy": {
+      "atom_key": 30003,
+      "atom_type": "concept",
+      "atom_value": "strategy",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_decorator": {
+      "atom_key": 30004,
+      "atom_type": "concept",
+      "atom_value": "decorator",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_adapter": {
+      "atom_key": 30005,
+      "atom_type": "concept",
+      "atom_value": "adapter",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_facade": {
+      "atom_key": 30006,
+      "atom_type": "concept",
+      "atom_value": "facade",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_proxy": {
+      "atom_key": 30007,
+      "atom_type": "concept",
+      "atom_value": "proxy",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_command": {
+      "atom_key": 30008,
+      "atom_type": "concept",
+      "atom_value": "command",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_iterator": {
+      "atom_key": 30009,
+      "atom_type": "concept",
+      "atom_value": "iterator",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_composite": {
+      "atom_key": 30010,
+      "atom_type": "concept",
+      "atom_value": "composite",
+      "prime_number": 30011,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_state": {
+      "atom_key": 30011,
+      "atom_type": "concept",
+      "atom_value": "state",
+      "prime_number": 30013,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_template": {
+      "atom_key": 30012,
+      "atom_type": "concept",
+      "atom_value": "template",
+      "prime_number": 30013,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_visitor": {
+      "atom_key": 30013,
+      "atom_type": "concept",
+      "atom_value": "visitor",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_chain": {
+      "atom_key": 30014,
+      "atom_type": "concept",
+      "atom_value": "chain",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_mediator": {
+      "atom_key": 30015,
+      "atom_type": "concept",
+      "atom_value": "mediator",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_memento": {
+      "atom_key": 30016,
+      "atom_type": "concept",
+      "atom_value": "memento",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "patterns"
+    },
+    "concept_solid": {
+      "atom_key": 30017,
+      "atom_type": "concept",
+      "atom_value": "solid",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_dry": {
+      "atom_key": 30018,
+      "atom_type": "concept",
+      "atom_value": "dry",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_kiss": {
+      "atom_key": 30019,
+      "atom_type": "concept",
+      "atom_value": "kiss",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_yagni": {
+      "atom_key": 30020,
+      "atom_type": "concept",
+      "atom_value": "yagni",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_composition": {
+      "atom_key": 30021,
+      "atom_type": "concept",
+      "atom_value": "composition",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_inheritance": {
+      "atom_key": 30022,
+      "atom_type": "concept",
+      "atom_value": "inheritance",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_polymorphism": {
+      "atom_key": 30023,
+      "atom_type": "concept",
+      "atom_value": "polymorphism",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_encapsulation": {
+      "atom_key": 30024,
+      "atom_type": "concept",
+      "atom_value": "encapsulation",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_abstraction": {
+      "atom_key": 30025,
+      "atom_type": "concept",
+      "atom_value": "abstraction",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_coupling": {
+      "atom_key": 30026,
+      "atom_type": "concept",
+      "atom_value": "coupling",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_cohesion": {
+      "atom_key": 30027,
+      "atom_type": "concept",
+      "atom_value": "cohesion",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_immutability": {
+      "atom_key": 30028,
+      "atom_type": "concept",
+      "atom_value": "immutability",
+      "prime_number": 30029,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_idempotency": {
+      "atom_key": 30029,
+      "atom_type": "concept",
+      "atom_value": "idempotency",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_deterministic": {
+      "atom_key": 30030,
+      "atom_type": "concept",
+      "atom_value": "deterministic",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "principles"
+    },
+    "concept_sort": {
+      "atom_key": 30031,
+      "atom_type": "concept",
+      "atom_value": "sort",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_search": {
+      "atom_key": 30032,
+      "atom_type": "concept",
+      "atom_value": "search",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_graph": {
+      "atom_key": 30056,
+      "atom_type": "concept",
+      "atom_value": "graph",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_tree": {
+      "atom_key": 30055,
+      "atom_type": "concept",
+      "atom_value": "tree",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_dynamic": {
+      "atom_key": 30035,
+      "atom_type": "concept",
+      "atom_value": "dynamic",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_greedy": {
+      "atom_key": 30036,
+      "atom_type": "concept",
+      "atom_value": "greedy",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_divide": {
+      "atom_key": 30037,
+      "atom_type": "concept",
+      "atom_value": "divide",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_backtrack": {
+      "atom_key": 30038,
+      "atom_type": "concept",
+      "atom_value": "backtrack",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_branch": {
+      "atom_key": 30039,
+      "atom_type": "concept",
+      "atom_value": "branch",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_heuristic": {
+      "atom_key": 30040,
+      "atom_type": "concept",
+      "atom_value": "heuristic",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_genetic": {
+      "atom_key": 30041,
+      "atom_type": "concept",
+      "atom_value": "genetic",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_dijkstra": {
+      "atom_key": 30042,
+      "atom_type": "concept",
+      "atom_value": "dijkstra",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_astar": {
+      "atom_key": 30043,
+      "atom_type": "concept",
+      "atom_value": "astar",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_bfs": {
+      "atom_key": 30044,
+      "atom_type": "concept",
+      "atom_value": "bfs",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_dfs": {
+      "atom_key": 30045,
+      "atom_type": "concept",
+      "atom_value": "dfs",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_bellman": {
+      "atom_key": 30046,
+      "atom_type": "concept",
+      "atom_value": "bellman",
+      "prime_number": 30047,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_floyd": {
+      "atom_key": 30047,
+      "atom_type": "concept",
+      "atom_value": "floyd",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_kruskal": {
+      "atom_key": 30048,
+      "atom_type": "concept",
+      "atom_value": "kruskal",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_prim": {
+      "atom_key": 30049,
+      "atom_type": "concept",
+      "atom_value": "prim",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "algorithms"
+    },
+    "concept_array": {
+      "atom_key": 30050,
+      "atom_type": "concept",
+      "atom_value": "array",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_list": {
+      "atom_key": 30051,
+      "atom_type": "concept",
+      "atom_value": "list",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_stack": {
+      "atom_key": 30052,
+      "atom_type": "concept",
+      "atom_value": "stack",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_queue": {
+      "atom_key": 30053,
+      "atom_type": "concept",
+      "atom_value": "queue",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_heap": {
+      "atom_key": 30054,
+      "atom_type": "concept",
+      "atom_value": "heap",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_trie": {
+      "atom_key": 30057,
+      "atom_type": "concept",
+      "atom_value": "trie",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_hashmap": {
+      "atom_key": 30058,
+      "atom_type": "concept",
+      "atom_value": "hashmap",
+      "prime_number": 30059,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_set": {
+      "atom_key": 30059,
+      "atom_type": "concept",
+      "atom_value": "set",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_linkedlist": {
+      "atom_key": 30060,
+      "atom_type": "concept",
+      "atom_value": "linkedlist",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_deque": {
+      "atom_key": 30061,
+      "atom_type": "concept",
+      "atom_value": "deque",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_priority_queue": {
+      "atom_key": 30062,
+      "atom_type": "concept",
+      "atom_value": "priority_queue",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_bloom_filter": {
+      "atom_key": 30063,
+      "atom_type": "concept",
+      "atom_value": "bloom_filter",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_lru_cache": {
+      "atom_key": 30064,
+      "atom_type": "concept",
+      "atom_value": "lru_cache",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_segment_tree": {
+      "atom_key": 30065,
+      "atom_type": "concept",
+      "atom_value": "segment_tree",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "datastructures"
+    },
+    "concept_functional": {
+      "atom_key": 30066,
+      "atom_type": "concept",
+      "atom_value": "functional",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_object_oriented": {
+      "atom_key": 30067,
+      "atom_type": "concept",
+      "atom_value": "object_oriented",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_procedural": {
+      "atom_key": 30068,
+      "atom_type": "concept",
+      "atom_value": "procedural",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_declarative": {
+      "atom_key": 30069,
+      "atom_type": "concept",
+      "atom_value": "declarative",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_imperative": {
+      "atom_key": 30070,
+      "atom_type": "concept",
+      "atom_value": "imperative",
+      "prime_number": 30071,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_reactive": {
+      "atom_key": 30071,
+      "atom_type": "concept",
+      "atom_value": "reactive",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_event_driven": {
+      "atom_key": 30072,
+      "atom_type": "concept",
+      "atom_value": "event_driven",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_aspect_oriented": {
+      "atom_key": 30073,
+      "atom_type": "concept",
+      "atom_value": "aspect_oriented",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_concurrent": {
+      "atom_key": 30074,
+      "atom_type": "concept",
+      "atom_value": "concurrent",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_parallel": {
+      "atom_key": 30075,
+      "atom_type": "concept",
+      "atom_value": "parallel",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_distributed": {
+      "atom_key": 30076,
+      "atom_type": "concept",
+      "atom_value": "distributed",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_quantum": {
+      "atom_key": 30077,
+      "atom_type": "concept",
+      "atom_value": "quantum",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "paradigms"
+    },
+    "concept_linear_algebra": {
+      "atom_key": 30078,
+      "atom_type": "concept",
+      "atom_value": "linear_algebra",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_calculus": {
+      "atom_key": 30079,
+      "atom_type": "concept",
+      "atom_value": "calculus",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_statistics": {
+      "atom_key": 30080,
+      "atom_type": "concept",
+      "atom_value": "statistics",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_probability": {
+      "atom_key": 30081,
+      "atom_type": "concept",
+      "atom_value": "probability",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_discrete": {
+      "atom_key": 30082,
+      "atom_type": "concept",
+      "atom_value": "discrete",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_matrix": {
+      "atom_key": 30083,
+      "atom_type": "concept",
+      "atom_value": "matrix",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_vector": {
+      "atom_key": 30084,
+      "atom_type": "concept",
+      "atom_value": "vector",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_tensor": {
+      "atom_key": 30085,
+      "atom_type": "concept",
+      "atom_value": "tensor",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_gradient": {
+      "atom_key": 30086,
+      "atom_type": "concept",
+      "atom_value": "gradient",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_derivative": {
+      "atom_key": 30087,
+      "atom_type": "concept",
+      "atom_value": "derivative",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_integral": {
+      "atom_key": 30088,
+      "atom_type": "concept",
+      "atom_value": "integral",
+      "prime_number": 30089,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_fourier": {
+      "atom_key": 30089,
+      "atom_type": "concept",
+      "atom_value": "fourier",
+      "prime_number": 30091,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_laplace": {
+      "atom_key": 30090,
+      "atom_type": "concept",
+      "atom_value": "laplace",
+      "prime_number": 30091,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_eigenvalue": {
+      "atom_key": 30091,
+      "atom_type": "concept",
+      "atom_value": "eigenvalue",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_optimization": {
+      "atom_key": 30092,
+      "atom_type": "concept",
+      "atom_value": "optimization",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "math"
+    },
+    "concept_o1": {
+      "atom_key": 30093,
+      "atom_type": "concept",
+      "atom_value": "o1",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_ologn": {
+      "atom_key": 30094,
+      "atom_type": "concept",
+      "atom_value": "ologn",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_on": {
+      "atom_key": 30095,
+      "atom_type": "concept",
+      "atom_value": "on",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_onlogn": {
+      "atom_key": 30096,
+      "atom_type": "concept",
+      "atom_value": "onlogn",
+      "prime_number": 30097,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_on2": {
+      "atom_key": 30097,
+      "atom_type": "concept",
+      "atom_value": "on2",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_on3": {
+      "atom_key": 30098,
+      "atom_type": "concept",
+      "atom_value": "on3",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_o2n": {
+      "atom_key": 30099,
+      "atom_type": "concept",
+      "atom_value": "o2n",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_onfactorial": {
+      "atom_key": 30100,
+      "atom_type": "concept",
+      "atom_value": "onfactorial",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_space": {
+      "atom_key": 30101,
+      "atom_type": "concept",
+      "atom_value": "space",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_time": {
+      "atom_key": 30102,
+      "atom_type": "concept",
+      "atom_value": "time",
+      "prime_number": 30103,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_constant": {
+      "atom_key": 30103,
+      "atom_type": "concept",
+      "atom_value": "constant",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_linear": {
+      "atom_key": 30104,
+      "atom_type": "concept",
+      "atom_value": "linear",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_quadratic": {
+      "atom_key": 30105,
+      "atom_type": "concept",
+      "atom_value": "quadratic",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_exponential": {
+      "atom_key": 30106,
+      "atom_type": "concept",
+      "atom_value": "exponential",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_logarithmic": {
+      "atom_key": 30107,
+      "atom_type": "concept",
+      "atom_value": "logarithmic",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    },
+    "concept_polynomial": {
+      "atom_key": 30108,
+      "atom_type": "concept",
+      "atom_value": "polynomial",
+      "prime_number": 30109,
+      "weight": 70,
+      "heat": 0,
+      "category": "complexity"
+    }
+  }
+}

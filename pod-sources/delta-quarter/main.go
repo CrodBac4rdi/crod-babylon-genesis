@@ -255,7 +255,7 @@ func main() {
     }
     
     // Connect to Redis
-    redisAddr := "redis-service:6379"
+    redisAddr := "redis:6379"
     if addr := getEnv("REDIS_ADDR", ""); addr != "" {
         redisAddr = addr
     }
@@ -295,7 +295,7 @@ func main() {
         json.NewEncoder(w).Encode(info)
     }).Methods("GET")
     
-    port := getEnv("PORT", "7283")
+    port := getEnv("PORT", "8087")
     log.Printf("🔺 CROD Delta Quarter starting on port %s", port)
     log.Printf("📊 Hash-Document Delta System Active")
     log.Fatal(http.ListenAndServe(":"+port, router))

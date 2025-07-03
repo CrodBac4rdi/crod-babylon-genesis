@@ -28,8 +28,14 @@ async function init() {
   
   // Load master database if provided
   if (fs.existsSync('/data/crod-master.json')) {
-    const masterData = JSON.parse(fs.readFileSync('/data/crod-master.json', 'utf8'));
-    console.log('📚 Loading CROD Master Database...');
+    try {
+      let masterDataStr = fs.readFileSync('/data/crod-master.json', 'utf8');
+      // Fix common JSON issues
+      masterDataStr = masterDataStr.replace(/×/g, '*');
+      masterDataStr = masterDataStr.replace(/\s*\/\/.*/g, ''); // Remove comments
+      
+      const masterData = JSON.parse(masterDataStr);
+      console.log('📚 Loading CROD Master Database...');
     
     // Import atoms
     if (masterData.atoms) {
@@ -43,6 +49,10 @@ async function init() {
     }
     
     console.log(`✅ Loaded ${CROD.neurons.size} atoms`);
+    } catch (error) {
+      console.error('❌ Failed to load master database:', error.message);
+      console.log('🔄 Starting with default CROD configuration');
+    }
   }
   
   // Subscribe to Meta-Chain events

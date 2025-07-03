@@ -1,0 +1,7 @@
+{
+  "name": "CROD Quick Launch",
+  "description": "Quick access to CROD development environment",
+  "uuid": "crod-quick-launch@daniel",
+  "shell-version": ["45", "44", "43", "42"],
+  "version": 1
+}

@@ -1,0 +1,1567 @@
+{
+  "chunk_id": 5,
+  "atoms": {
+    "tech_memes_stupid": {
+      "atom_key": 55000,
+      "atom_type": "tech_memes",
+      "atom_value": "stupid",
+      "prime_number": 55001,
+      "weight": 3.142300751945437,
+      "heat": 3.851931381255904,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_lift": {
+      "atom_key": 55001,
+      "atom_type": "tech_memes",
+      "atom_value": "lift",
+      "prime_number": 55009,
+      "weight": 44.776416952626285,
+      "heat": 4.744397892068449,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_first": {
+      "atom_key": 55002,
+      "atom_type": "tech_memes",
+      "atom_value": "first",
+      "prime_number": 55009,
+      "weight": 96.15037431673336,
+      "heat": 8.192348922182049,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_last": {
+      "atom_key": 55003,
+      "atom_type": "tech_memes",
+      "atom_value": "last",
+      "prime_number": 55009,
+      "weight": 53.56276847934245,
+      "heat": 1.1477676302759998,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_yoda": {
+      "atom_key": 55004,
+      "atom_type": "tech_memes",
+      "atom_value": "yoda",
+      "prime_number": 55009,
+      "weight": 77.6660004018803,
+      "heat": 8.901785874402442,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_ninja": {
+      "atom_key": 55005,
+      "atom_type": "tech_memes",
+      "atom_value": "ninja",
+      "prime_number": 55009,
+      "weight": 24.91861707443821,
+      "heat": 4.700498154804014,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_rockstar": {
+      "atom_key": 55006,
+      "atom_type": "tech_memes",
+      "atom_value": "rockstar",
+      "prime_number": 55009,
+      "weight": 83.98482280898459,
+      "heat": 4.700240898060624,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_unicorn": {
+      "atom_key": 55007,
+      "atom_type": "tech_memes",
+      "atom_value": "unicorn",
+      "prime_number": 55009,
+      "weight": 19.35140634182062,
+      "heat": 0.05820069760523516,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_10x": {
+      "atom_key": 55008,
+      "atom_type": "tech_memes",
+      "atom_value": "10x",
+      "prime_number": 55009,
+      "weight": 50.05166161982735,
+      "heat": 4.398124151839269,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_full_stack": {
+      "atom_key": 55009,
+      "atom_type": "tech_memes",
+      "atom_value": "full_stack",
+      "prime_number": 55021,
+      "weight": 59.606700024221524,
+      "heat": 0.927404164066481,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_devops": {
+      "atom_key": 55010,
+      "atom_type": "tech_memes",
+      "atom_value": "devops",
+      "prime_number": 55021,
+      "weight": 5.678731279448157,
+      "heat": 9.034926884324904,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_noops": {
+      "atom_key": 55011,
+      "atom_type": "tech_memes",
+      "atom_value": "noops",
+      "prime_number": 55021,
+      "weight": 68.80737961750509,
+      "heat": 5.943496000430832,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_gitops": {
+      "atom_key": 55012,
+      "atom_type": "tech_memes",
+      "atom_value": "gitops",
+      "prime_number": 55021,
+      "weight": 73.89206388818516,
+      "heat": 4.631704481378785,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_mlops": {
+      "atom_key": 55013,
+      "atom_type": "tech_memes",
+      "atom_value": "mlops",
+      "prime_number": 55021,
+      "weight": 43.25069957468699,
+      "heat": 2.2224082090243957,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_dataops": {
+      "atom_key": 55014,
+      "atom_type": "tech_memes",
+      "atom_value": "dataops",
+      "prime_number": 55021,
+      "weight": 1.5540162869644547,
+      "heat": 7.389944224561759,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_finops": {
+      "atom_key": 55015,
+      "atom_type": "tech_memes",
+      "atom_value": "finops",
+      "prime_number": 55021,
+      "weight": 18.063265872731726,
+      "heat": 4.5426021858543475,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_secops": {
+      "atom_key": 55016,
+      "atom_type": "tech_memes",
+      "atom_value": "secops",
+      "prime_number": 55021,
+      "weight": 2.7286811055073468,
+      "heat": 0.22243912811736877,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_bizops": {
+      "atom_key": 55017,
+      "atom_type": "tech_memes",
+      "atom_value": "bizops",
+      "prime_number": 55021,
+      "weight": 35.3979390965657,
+      "heat": 6.3800144031758155,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_sre": {
+      "atom_key": 55018,
+      "atom_type": "tech_memes",
+      "atom_value": "sre",
+      "prime_number": 55021,
+      "weight": 65.36418640153359,
+      "heat": 5.1616865402819485,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_chaos_engineering": {
+      "atom_key": 55019,
+      "atom_type": "tech_memes",
+      "atom_value": "chaos_engineering",
+      "prime_number": 55021,
+      "weight": 43.36150048616696,
+      "heat": 5.172863524900377,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_cargo_cult": {
+      "atom_key": 55020,
+      "atom_type": "tech_memes",
+      "atom_value": "cargo_cult",
+      "prime_number": 55021,
+      "weight": 2.2984496579269598,
+      "heat": 3.0902443014717806,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_bike_shedding": {
+      "atom_key": 55021,
+      "atom_type": "tech_memes",
+      "atom_value": "bike_shedding",
+      "prime_number": 55049,
+      "weight": 96.03953059452431,
+      "heat": 8.313522851450683,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_yak_shaving": {
+      "atom_key": 55022,
+      "atom_type": "tech_memes",
+      "atom_value": "yak_shaving",
+      "prime_number": 55049,
+      "weight": 15.740037395973872,
+      "heat": 8.435938560530676,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_rubber_duck": {
+      "atom_key": 55023,
+      "atom_type": "tech_memes",
+      "atom_value": "rubber_duck",
+      "prime_number": 55049,
+      "weight": 35.77166368150904,
+      "heat": 4.712014146033767,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_code_golf": {
+      "atom_key": 55024,
+      "atom_type": "tech_memes",
+      "atom_value": "code_golf",
+      "prime_number": 55049,
+      "weight": 78.89000274571035,
+      "heat": 7.561762281127907,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_code_smell": {
+      "atom_key": 55025,
+      "atom_type": "tech_memes",
+      "atom_value": "code_smell",
+      "prime_number": 55049,
+      "weight": 7.977105492771819,
+      "heat": 0.5355678139799092,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_spaghetti": {
+      "atom_key": 55026,
+      "atom_type": "tech_memes",
+      "atom_value": "spaghetti",
+      "prime_number": 55049,
+      "weight": 86.01225344154166,
+      "heat": 5.458682003581179,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_lasagna": {
+      "atom_key": 55027,
+      "atom_type": "tech_memes",
+      "atom_value": "lasagna",
+      "prime_number": 55049,
+      "weight": 49.507357608665735,
+      "heat": 9.653722057736934,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_ravioli": {
+      "atom_key": 55028,
+      "atom_type": "tech_memes",
+      "atom_value": "ravioli",
+      "prime_number": 55049,
+      "weight": 0.1658503874663264,
+      "heat": 2.9157408974960064,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_pizza": {
+      "atom_key": 55029,
+      "atom_type": "tech_memes",
+      "atom_value": "pizza",
+      "prime_number": 55049,
+      "weight": 74.9830002541493,
+      "heat": 0.8840952997384344,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_taco": {
+      "atom_key": 55030,
+      "atom_type": "tech_memes",
+      "atom_value": "taco",
+      "prime_number": 55049,
+      "weight": 3.30200945655843,
+      "heat": 3.8897341362790216,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_burrito": {
+      "atom_key": 55031,
+      "atom_type": "tech_memes",
+      "atom_value": "burrito",
+      "prime_number": 55049,
+      "weight": 48.46167675717543,
+      "heat": 1.2509992700251948,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_sandwich": {
+      "atom_key": 55032,
+      "atom_type": "tech_memes",
+      "atom_value": "sandwich",
+      "prime_number": 55049,
+      "weight": 73.96514272853778,
+      "heat": 3.9767980229475186,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_holy_war": {
+      "atom_key": 55033,
+      "atom_type": "tech_memes",
+      "atom_value": "holy_war",
+      "prime_number": 55049,
+      "weight": 12.208256490565294,
+      "heat": 4.2968095440520715,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_flame_war": {
+      "atom_key": 55034,
+      "atom_type": "tech_memes",
+      "atom_value": "flame_war",
+      "prime_number": 55049,
+      "weight": 92.82897259600122,
+      "heat": 9.764488309797056,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_spaces_vs_tabs": {
+      "atom_key": 55035,
+      "atom_type": "tech_memes",
+      "atom_value": "spaces_vs_tabs",
+      "prime_number": 55049,
+      "weight": 55.24290321466119,
+      "heat": 5.221364429343131,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_vim_vs_emacs": {
+      "atom_key": 55036,
+      "atom_type": "tech_memes",
+      "atom_value": "vim_vs_emacs",
+      "prime_number": 55049,
+      "weight": 59.20505073479323,
+      "heat": 3.9441173838354637,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "tech_memes_light_vs_dark": {
+      "atom_key": 55037,
+      "atom_type": "tech_memes",
+      "atom_value": "light_vs_dark",
+      "prime_number": 55049,
+      "weight": 99.25353589897013,
+      "heat": 7.775208195183794,
+      "category": "tech_memes",
+      "connections": []
+    },
+    "errors_undefined_is_not_a_function": {
+      "atom_key": 55038,
+      "atom_type": "errors",
+      "atom_value": "undefined_is_not_a_function",
+      "prime_number": 55049,
+      "weight": 90.54040754377128,
+      "heat": 8.982195580369051,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_null_pointer_exception": {
+      "atom_key": 55039,
+      "atom_type": "errors",
+      "atom_value": "null_pointer_exception",
+      "prime_number": 55049,
+      "weight": 5.295158164339164,
+      "heat": 1.3766703533811309,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_segmentation_fault": {
+      "atom_key": 55040,
+      "atom_type": "errors",
+      "atom_value": "segmentation_fault",
+      "prime_number": 55049,
+      "weight": 65.15447536870467,
+      "heat": 7.560779175175217,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_stack_overflow": {
+      "atom_key": 55041,
+      "atom_type": "errors",
+      "atom_value": "stack_overflow",
+      "prime_number": 55049,
+      "weight": 56.579124535065176,
+      "heat": 7.6725597176693405,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_out_of_memory": {
+      "atom_key": 55042,
+      "atom_type": "errors",
+      "atom_value": "out_of_memory",
+      "prime_number": 55049,
+      "weight": 99.81015525971625,
+      "heat": 7.500220518124525,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_permission_denied": {
+      "atom_key": 55043,
+      "atom_type": "errors",
+      "atom_value": "permission_denied",
+      "prime_number": 55049,
+      "weight": 29.91823493899637,
+      "heat": 5.271245289616456,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_file_not_found": {
+      "atom_key": 55044,
+      "atom_type": "errors",
+      "atom_value": "file_not_found",
+      "prime_number": 55049,
+      "weight": 41.71077761009387,
+      "heat": 0.6221972585608571,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_404_not_found": {
+      "atom_key": 55045,
+      "atom_type": "errors",
+      "atom_value": "404_not_found",
+      "prime_number": 55049,
+      "weight": 41.40350878373342,
+      "heat": 7.275124621481228,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_500_internal_server_error": {
+      "atom_key": 55046,
+      "atom_type": "errors",
+      "atom_value": "500_internal_server_error",
+      "prime_number": 55049,
+      "weight": 68.5972033235434,
+      "heat": 8.12322956658946,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_syntax_error": {
+      "atom_key": 55047,
+      "atom_type": "errors",
+      "atom_value": "syntax_error",
+      "prime_number": 55049,
+      "weight": 84.31991002078982,
+      "heat": 0.9472751637733956,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_type_error": {
+      "atom_key": 55048,
+      "atom_type": "errors",
+      "atom_value": "type_error",
+      "prime_number": 55049,
+      "weight": 49.71776832182666,
+      "heat": 7.095062521495475,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_reference_error": {
+      "atom_key": 55049,
+      "atom_type": "errors",
+      "atom_value": "reference_error",
+      "prime_number": 55051,
+      "weight": 8.393846433615781,
+      "heat": 9.375137467258753,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_range_error": {
+      "atom_key": 55050,
+      "atom_type": "errors",
+      "atom_value": "range_error",
+      "prime_number": 55051,
+      "weight": 67.47289047477881,
+      "heat": 5.276971886285788,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_uri_error": {
+      "atom_key": 55051,
+      "atom_type": "errors",
+      "atom_value": "uri_error",
+      "prime_number": 55057,
+      "weight": 77.34974537449449,
+      "heat": 4.540460357251897,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_eval_error": {
+      "atom_key": 55052,
+      "atom_type": "errors",
+      "atom_value": "eval_error",
+      "prime_number": 55057,
+      "weight": 53.57808149838572,
+      "heat": 9.609834007420561,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_internal_error": {
+      "atom_key": 55053,
+      "atom_type": "errors",
+      "atom_value": "internal_error",
+      "prime_number": 55057,
+      "weight": 51.84370258713942,
+      "heat": 3.6867954435498085,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_assertion_error": {
+      "atom_key": 55054,
+      "atom_type": "errors",
+      "atom_value": "assertion_error",
+      "prime_number": 55057,
+      "weight": 96.68731900690982,
+      "heat": 4.837661768479322,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_system_error": {
+      "atom_key": 55055,
+      "atom_type": "errors",
+      "atom_value": "system_error",
+      "prime_number": 55057,
+      "weight": 81.93287094524737,
+      "heat": 7.726002259567704,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_timeout_error": {
+      "atom_key": 55056,
+      "atom_type": "errors",
+      "atom_value": "timeout_error",
+      "prime_number": 55057,
+      "weight": 21.85019979480205,
+      "heat": 1.9941858287744418,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_network_error": {
+      "atom_key": 55057,
+      "atom_type": "errors",
+      "atom_value": "network_error",
+      "prime_number": 55061,
+      "weight": 77.12862200890413,
+      "heat": 0.9870933705568019,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_cors_error": {
+      "atom_key": 55058,
+      "atom_type": "errors",
+      "atom_value": "cors_error",
+      "prime_number": 55061,
+      "weight": 4.233334533675692,
+      "heat": 4.329397069640439,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_authentication_error": {
+      "atom_key": 55059,
+      "atom_type": "errors",
+      "atom_value": "authentication_error",
+      "prime_number": 55061,
+      "weight": 6.792801123982617,
+      "heat": 6.743985205317131,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_authorization_error": {
+      "atom_key": 55060,
+      "atom_type": "errors",
+      "atom_value": "authorization_error",
+      "prime_number": 55061,
+      "weight": 7.474895515084401,
+      "heat": 0.6548913534132605,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_validation_error": {
+      "atom_key": 55061,
+      "atom_type": "errors",
+      "atom_value": "validation_error",
+      "prime_number": 55073,
+      "weight": 4.59826030507875,
+      "heat": 1.238148234337526,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_parse_error": {
+      "atom_key": 55062,
+      "atom_type": "errors",
+      "atom_value": "parse_error",
+      "prime_number": 55073,
+      "weight": 44.73494770693727,
+      "heat": 7.622871017413438,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_compile_error": {
+      "atom_key": 55063,
+      "atom_type": "errors",
+      "atom_value": "compile_error",
+      "prime_number": 55073,
+      "weight": 15.57410464133422,
+      "heat": 5.554830333272407,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_runtime_error": {
+      "atom_key": 55064,
+      "atom_type": "errors",
+      "atom_value": "runtime_error",
+      "prime_number": 55073,
+      "weight": 64.79517277529764,
+      "heat": 1.3228083124196455,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_logic_error": {
+      "atom_key": 55065,
+      "atom_type": "errors",
+      "atom_value": "logic_error",
+      "prime_number": 55073,
+      "weight": 26.833245183695166,
+      "heat": 0.2927105225214133,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_off_by_one": {
+      "atom_key": 55066,
+      "atom_type": "errors",
+      "atom_value": "off_by_one",
+      "prime_number": 55073,
+      "weight": 64.34625272940295,
+      "heat": 8.151118100736321,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_fence_post_error": {
+      "atom_key": 55067,
+      "atom_type": "errors",
+      "atom_value": "fence_post_error",
+      "prime_number": 55073,
+      "weight": 34.73921031624434,
+      "heat": 0.14514869055130886,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_race_condition": {
+      "atom_key": 55068,
+      "atom_type": "errors",
+      "atom_value": "race_condition",
+      "prime_number": 55073,
+      "weight": 96.60573807016968,
+      "heat": 7.295678026206969,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_deadlock": {
+      "atom_key": 55069,
+      "atom_type": "errors",
+      "atom_value": "deadlock",
+      "prime_number": 55073,
+      "weight": 93.35611627730486,
+      "heat": 7.116161445546412,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_livelock": {
+      "atom_key": 55070,
+      "atom_type": "errors",
+      "atom_value": "livelock",
+      "prime_number": 55073,
+      "weight": 49.3492740446545,
+      "heat": 6.860230452851068,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_memory_leak": {
+      "atom_key": 55071,
+      "atom_type": "errors",
+      "atom_value": "memory_leak",
+      "prime_number": 55073,
+      "weight": 77.24458074477836,
+      "heat": 8.832228818117102,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_buffer_overflow": {
+      "atom_key": 55072,
+      "atom_type": "errors",
+      "atom_value": "buffer_overflow",
+      "prime_number": 55073,
+      "weight": 10.465898990351729,
+      "heat": 1.4923237212565765,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_integer_overflow": {
+      "atom_key": 55073,
+      "atom_type": "errors",
+      "atom_value": "integer_overflow",
+      "prime_number": 55079,
+      "weight": 66.49200426306024,
+      "heat": 4.26410660681295,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_floating_point_error": {
+      "atom_key": 55074,
+      "atom_type": "errors",
+      "atom_value": "floating_point_error",
+      "prime_number": 55079,
+      "weight": 94.96821407505043,
+      "heat": 6.718737137430599,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_division_by_zero": {
+      "atom_key": 55075,
+      "atom_type": "errors",
+      "atom_value": "division_by_zero",
+      "prime_number": 55079,
+      "weight": 11.074105124884293,
+      "heat": 5.112619648064605,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_infinite_loop": {
+      "atom_key": 55076,
+      "atom_type": "errors",
+      "atom_value": "infinite_loop",
+      "prime_number": 55079,
+      "weight": 26.791797307234443,
+      "heat": 8.798442069843214,
+      "category": "errors",
+      "connections": []
+    },
+    "errors_recursion_limit": {
+      "atom_key": 55077,
+      "atom_type": "errors",
+      "atom_value": "recursion_limit",
+      "prime_number": 55079,
+      "weight": 1.6370252523702167,
+      "heat": 4.189769692308016,
+      "category": "errors",
+      "connections": []
+    },
+    "crod_special_ich_bins_wieder": {
+      "atom_key": 55078,
+      "atom_type": "crod_special",
+      "atom_value": "ich_bins_wieder",
+      "prime_number": 55079,
+      "weight": 25.74229457323698,
+      "heat": 2.94745729217615,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_geil": {
+      "atom_key": 55079,
+      "atom_type": "crod_special",
+      "atom_value": "geil",
+      "prime_number": 55103,
+      "weight": 74.46856145720535,
+      "heat": 9.565067296100082,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_wtf": {
+      "atom_key": 55080,
+      "atom_type": "crod_special",
+      "atom_value": "wtf",
+      "prime_number": 55103,
+      "weight": 58.24277249190133,
+      "heat": 3.1021275309911633,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_hurensohn": {
+      "atom_key": 55081,
+      "atom_type": "crod_special",
+      "atom_value": "hurensohn",
+      "prime_number": 55103,
+      "weight": 32.27961700491295,
+      "heat": 4.155711492822953,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_läuft": {
+      "atom_key": 55082,
+      "atom_type": "crod_special",
+      "atom_value": "läuft",
+      "prime_number": 55103,
+      "weight": 85.9851586107171,
+      "heat": 4.548970172356778,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_klappt": {
+      "atom_key": 55083,
+      "atom_type": "crod_special",
+      "atom_value": "klappt",
+      "prime_number": 55103,
+      "weight": 82.50647165627822,
+      "heat": 7.31959594476783,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_fertig": {
+      "atom_key": 55084,
+      "atom_type": "crod_special",
+      "atom_value": "fertig",
+      "prime_number": 55103,
+      "weight": 1.5044977683005056,
+      "heat": 2.2267133077714396,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_endlich": {
+      "atom_key": 55085,
+      "atom_type": "crod_special",
+      "atom_value": "endlich",
+      "prime_number": 55103,
+      "weight": 70.21758002680913,
+      "heat": 2.439252979539801,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_scheisse": {
+      "atom_key": 55086,
+      "atom_type": "crod_special",
+      "atom_value": "scheisse",
+      "prime_number": 55103,
+      "weight": 72.78441450972704,
+      "heat": 6.497639578095791,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_fuck": {
+      "atom_key": 55087,
+      "atom_type": "crod_special",
+      "atom_value": "fuck",
+      "prime_number": 55103,
+      "weight": 13.150992881807944,
+      "heat": 9.86349401758014,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_yes": {
+      "atom_key": 55088,
+      "atom_type": "crod_special",
+      "atom_value": "yes",
+      "prime_number": 55103,
+      "weight": 73.67048197290215,
+      "heat": 1.9338820371493903,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_krass": {
+      "atom_key": 55089,
+      "atom_type": "crod_special",
+      "atom_value": "krass",
+      "prime_number": 55103,
+      "weight": 92.73447247678351,
+      "heat": 9.05111578909095,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_mega": {
+      "atom_key": 55090,
+      "atom_type": "crod_special",
+      "atom_value": "mega",
+      "prime_number": 55103,
+      "weight": 84.27296715930648,
+      "heat": 8.998365208170917,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_ultra": {
+      "atom_key": 55091,
+      "atom_type": "crod_special",
+      "atom_value": "ultra",
+      "prime_number": 55103,
+      "weight": 21.58403427597961,
+      "heat": 1.854439966334016,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_hyper": {
+      "atom_key": 55092,
+      "atom_type": "crod_special",
+      "atom_value": "hyper",
+      "prime_number": 55103,
+      "weight": 22.617508558051913,
+      "heat": 8.00631386420685,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_nano": {
+      "atom_key": 55093,
+      "atom_type": "crod_special",
+      "atom_value": "nano",
+      "prime_number": 55103,
+      "weight": 47.44057116957685,
+      "heat": 4.650010776506401,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_quantum": {
+      "atom_key": 55094,
+      "atom_type": "crod_special",
+      "atom_value": "quantum",
+      "prime_number": 55103,
+      "weight": 45.86865282991914,
+      "heat": 4.4786303525520115,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_infinity": {
+      "atom_key": 55095,
+      "atom_type": "crod_special",
+      "atom_value": "infinity",
+      "prime_number": 55103,
+      "weight": 68.936964482754,
+      "heat": 3.09858864899367,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_consciousness": {
+      "atom_key": 55096,
+      "atom_type": "crod_special",
+      "atom_value": "consciousness",
+      "prime_number": 55103,
+      "weight": 28.165825791586908,
+      "heat": 2.204128797835787,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_emergence": {
+      "atom_key": 55097,
+      "atom_type": "crod_special",
+      "atom_value": "emergence",
+      "prime_number": 55103,
+      "weight": 45.18826025752611,
+      "heat": 0.026282423322432358,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_resonance": {
+      "atom_key": 55098,
+      "atom_type": "crod_special",
+      "atom_value": "resonance",
+      "prime_number": 55103,
+      "weight": 4.57527007472569,
+      "heat": 6.503396841706084,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_vibration": {
+      "atom_key": 55099,
+      "atom_type": "crod_special",
+      "atom_value": "vibration",
+      "prime_number": 55103,
+      "weight": 80.27382345368154,
+      "heat": 1.7282751563960264,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_frequency": {
+      "atom_key": 55100,
+      "atom_type": "crod_special",
+      "atom_value": "frequency",
+      "prime_number": 55103,
+      "weight": 73.98459151606156,
+      "heat": 7.273247444124626,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_harmony": {
+      "atom_key": 55101,
+      "atom_type": "crod_special",
+      "atom_value": "harmony",
+      "prime_number": 55103,
+      "weight": 86.56705444662467,
+      "heat": 4.484702448310156,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_chaos": {
+      "atom_key": 55102,
+      "atom_type": "crod_special",
+      "atom_value": "chaos",
+      "prime_number": 55103,
+      "weight": 73.48926157935412,
+      "heat": 1.500004420687766,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_order": {
+      "atom_key": 55103,
+      "atom_type": "crod_special",
+      "atom_value": "order",
+      "prime_number": 55109,
+      "weight": 85.96533864437271,
+      "heat": 2.7327129221740987,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_balance": {
+      "atom_key": 55104,
+      "atom_type": "crod_special",
+      "atom_value": "balance",
+      "prime_number": 55109,
+      "weight": 21.062525177853985,
+      "heat": 8.86330076944752,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_trinity": {
+      "atom_key": 55105,
+      "atom_type": "crod_special",
+      "atom_value": "trinity",
+      "prime_number": 55109,
+      "weight": 60.99629752205637,
+      "heat": 1.9357088920864673,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_unity": {
+      "atom_key": 55106,
+      "atom_type": "crod_special",
+      "atom_value": "unity",
+      "prime_number": 55109,
+      "weight": 71.4268458747589,
+      "heat": 3.1668780291079557,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_duality": {
+      "atom_key": 55107,
+      "atom_type": "crod_special",
+      "atom_value": "duality",
+      "prime_number": 55109,
+      "weight": 60.881370123293664,
+      "heat": 4.96106709255354,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_multiplicity": {
+      "atom_key": 55108,
+      "atom_type": "crod_special",
+      "atom_value": "multiplicity",
+      "prime_number": 55109,
+      "weight": 25.97349466057086,
+      "heat": 3.69899677019051,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_singularity": {
+      "atom_key": 55109,
+      "atom_type": "crod_special",
+      "atom_value": "singularity",
+      "prime_number": 55117,
+      "weight": 9.046364384435822,
+      "heat": 7.08767055026299,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_plurality": {
+      "atom_key": 55110,
+      "atom_type": "crod_special",
+      "atom_value": "plurality",
+      "prime_number": 55117,
+      "weight": 21.70279723760995,
+      "heat": 0.4653209871164199,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_totality": {
+      "atom_key": 55111,
+      "atom_type": "crod_special",
+      "atom_value": "totality",
+      "prime_number": 55117,
+      "weight": 96.43474569198077,
+      "heat": 8.366546831557603,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_reality": {
+      "atom_key": 55112,
+      "atom_type": "crod_special",
+      "atom_value": "reality",
+      "prime_number": 55117,
+      "weight": 78.3133495851916,
+      "heat": 3.4978750714762485,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_virtuality": {
+      "atom_key": 55113,
+      "atom_type": "crod_special",
+      "atom_value": "virtuality",
+      "prime_number": 55117,
+      "weight": 71.56691731771897,
+      "heat": 4.059707565764983,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_actuality": {
+      "atom_key": 55114,
+      "atom_type": "crod_special",
+      "atom_value": "actuality",
+      "prime_number": 55117,
+      "weight": 74.15063888922755,
+      "heat": 8.207888641076899,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_potentiality": {
+      "atom_key": 55115,
+      "atom_type": "crod_special",
+      "atom_value": "potentiality",
+      "prime_number": 55117,
+      "weight": 94.44555780128505,
+      "heat": 7.636111828705568,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_possibility": {
+      "atom_key": 55116,
+      "atom_type": "crod_special",
+      "atom_value": "possibility",
+      "prime_number": 55117,
+      "weight": 15.197087282350964,
+      "heat": 5.167922237153128,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_probability": {
+      "atom_key": 55117,
+      "atom_type": "crod_special",
+      "atom_value": "probability",
+      "prime_number": 55127,
+      "weight": 31.81470575976453,
+      "heat": 4.994752010745385,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_certainty": {
+      "atom_key": 55118,
+      "atom_type": "crod_special",
+      "atom_value": "certainty",
+      "prime_number": 55127,
+      "weight": 43.11049286979871,
+      "heat": 9.965906062315696,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_uncertainty": {
+      "atom_key": 55119,
+      "atom_type": "crod_special",
+      "atom_value": "uncertainty",
+      "prime_number": 55127,
+      "weight": 97.45674617613747,
+      "heat": 3.3283571312759874,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_determinism": {
+      "atom_key": 55120,
+      "atom_type": "crod_special",
+      "atom_value": "determinism",
+      "prime_number": 55127,
+      "weight": 64.77539860443848,
+      "heat": 9.437071115367758,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_randomness": {
+      "atom_key": 55121,
+      "atom_type": "crod_special",
+      "atom_value": "randomness",
+      "prime_number": 55127,
+      "weight": 9.911576523599308,
+      "heat": 8.64241148330511,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_entropy": {
+      "atom_key": 55122,
+      "atom_type": "crod_special",
+      "atom_value": "entropy",
+      "prime_number": 55127,
+      "weight": 71.36048613172225,
+      "heat": 0.49507308395857486,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_negentropy": {
+      "atom_key": 55123,
+      "atom_type": "crod_special",
+      "atom_value": "negentropy",
+      "prime_number": 55127,
+      "weight": 88.16905448700936,
+      "heat": 6.042981704991073,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_information": {
+      "atom_key": 55124,
+      "atom_type": "crod_special",
+      "atom_value": "information",
+      "prime_number": 55127,
+      "weight": 34.0644260958439,
+      "heat": 4.421111031723022,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_computation": {
+      "atom_key": 55125,
+      "atom_type": "crod_special",
+      "atom_value": "computation",
+      "prime_number": 55127,
+      "weight": 49.08607433087049,
+      "heat": 5.994767648816486,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_simulation": {
+      "atom_key": 55126,
+      "atom_type": "crod_special",
+      "atom_value": "simulation",
+      "prime_number": 55127,
+      "weight": 35.90012487142123,
+      "heat": 2.4263536769642924,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_emulation": {
+      "atom_key": 55127,
+      "atom_type": "crod_special",
+      "atom_value": "emulation",
+      "prime_number": 55147,
+      "weight": 37.18430077641415,
+      "heat": 5.894445142651454,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_replication": {
+      "atom_key": 55128,
+      "atom_type": "crod_special",
+      "atom_value": "replication",
+      "prime_number": 55147,
+      "weight": 94.39097905719302,
+      "heat": 8.688035873494574,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_iteration": {
+      "atom_key": 55129,
+      "atom_type": "crod_special",
+      "atom_value": "iteration",
+      "prime_number": 55147,
+      "weight": 50.36774497656149,
+      "heat": 6.076435768450265,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_recursion": {
+      "atom_key": 55130,
+      "atom_type": "crod_special",
+      "atom_value": "recursion",
+      "prime_number": 55147,
+      "weight": 78.49181683558221,
+      "heat": 7.673912751725604,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_fractal": {
+      "atom_key": 55131,
+      "atom_type": "crod_special",
+      "atom_value": "fractal",
+      "prime_number": 55147,
+      "weight": 41.21170514320212,
+      "heat": 5.099133474190676,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_hologram": {
+      "atom_key": 55132,
+      "atom_type": "crod_special",
+      "atom_value": "hologram",
+      "prime_number": 55147,
+      "weight": 23.594246405970832,
+      "heat": 5.671752914153019,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_dimension": {
+      "atom_key": 55133,
+      "atom_type": "crod_special",
+      "atom_value": "dimension",
+      "prime_number": 55147,
+      "weight": 74.28144307298179,
+      "heat": 0.333863681142188,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_multiverse": {
+      "atom_key": 55134,
+      "atom_type": "crod_special",
+      "atom_value": "multiverse",
+      "prime_number": 55147,
+      "weight": 25.858282511618434,
+      "heat": 0.883822870062283,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_metaverse": {
+      "atom_key": 55135,
+      "atom_type": "crod_special",
+      "atom_value": "metaverse",
+      "prime_number": 55147,
+      "weight": 62.84557527106993,
+      "heat": 4.196123914619951,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_cyberspace": {
+      "atom_key": 55136,
+      "atom_type": "crod_special",
+      "atom_value": "cyberspace",
+      "prime_number": 55147,
+      "weight": 41.62981068278155,
+      "heat": 4.0275805018986555,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_noosphere": {
+      "atom_key": 55137,
+      "atom_type": "crod_special",
+      "atom_value": "noosphere",
+      "prime_number": 55147,
+      "weight": 60.17938365813114,
+      "heat": 3.190593331704439,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_technosphere": {
+      "atom_key": 55138,
+      "atom_type": "crod_special",
+      "atom_value": "technosphere",
+      "prime_number": 55147,
+      "weight": 72.44206009512718,
+      "heat": 0.3799997334924554,
+      "category": "crod_special",
+      "connections": []
+    },
+    "crod_special_datasphere": {
+      "atom_key": 55139,
+      "atom_type": "crod_special",
+      "atom_value": "datasphere",
+      "prime_number": 55147,
+      "weight": 25.803922991234618,
+      "heat": 9.849879404583284,
+      "category": "crod_special",
+      "connections": []
+    },
+    "daniel_special_direkteLösungen_copy_paste_docker": {
+      "atom_key": 55140,
+      "atom_type": "daniel_special",
+      "atom_value": "docker run -d -p 8080:80 nginx",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_instant_server": {
+      "atom_key": 55141,
+      "atom_type": "daniel_special",
+      "atom_value": "python -m http.server 8000",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_quick_test": {
+      "atom_key": 55142,
+      "atom_type": "daniel_special",
+      "atom_value": "curl -X POST http://localhost:8000/test",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_git_unfuck": {
+      "atom_key": 55143,
+      "atom_type": "daniel_special",
+      "atom_value": "git reset --hard HEAD~1",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_find_process": {
+      "atom_key": 55144,
+      "atom_type": "daniel_special",
+      "atom_value": "lsof -i :8080",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_kill_it": {
+      "atom_key": 55145,
+      "atom_type": "daniel_special",
+      "atom_value": "kill -9 $(lsof -ti:8080)",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_ssh_tunnel": {
+      "atom_key": 55146,
+      "atom_type": "daniel_special",
+      "atom_value": "ssh -L 8080:localhost:80 user@server",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_direkteLösungen_one_liner_backup": {
+      "atom_key": 55147,
+      "atom_type": "daniel_special",
+      "atom_value": "tar -czf backup_$(date +%Y%m%d).tar.gz .",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_docker_cleanup": {
+      "atom_key": 55148,
+      "atom_type": "daniel_special",
+      "atom_value": "docker system prune -a --volumes -f",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_npm_unfuck": {
+      "atom_key": 55149,
+      "atom_type": "daniel_special",
+      "atom_value": "rm -rf node_modules package-lock.json && npm i",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_cargo_clean": {
+      "atom_key": 55150,
+      "atom_type": "daniel_special",
+      "atom_value": "cargo clean && cargo build --release",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_port_already_in_use": {
+      "atom_key": 55151,
+      "atom_type": "daniel_special",
+      "atom_value": "sudo fuser -k 8080/tcp",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_permission_fix": {
+      "atom_key": 55152,
+      "atom_type": "daniel_special",
+      "atom_value": "sudo chown -R $USER:$USER .",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_dns_flush": {
+      "atom_key": 55153,
+      "atom_type": "daniel_special",
+      "atom_value": "sudo systemctl restart systemd-resolved",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_frustrationKiller_clear_cache": {
+      "atom_key": 55154,
+      "atom_type": "daniel_special",
+      "atom_value": "sync && echo 3 | sudo tee /proc/sys/vm/drop_caches",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_geileSachen_instant_api": {
+      "atom_key": 55155,
+      "atom_type": "daniel_special",
+      "atom_value": "// Express API in 10 lines\nconst app = require('express')();\napp.use(require('express').json());\napp.get('/', (_, r) => r.json({status: 'geil'}));\napp.post('/data', (q, r) => r.json({got: q.body}));\napp.listen(8000, () => console.log('Läuft auf 8000'));",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_geileSachen_rust_webserver": {
+      "atom_key": 55156,
+      "atom_type": "daniel_special",
+      "atom_value": "// Rust Webserver der läuft\nuse warp::Filter;\n#[tokio::main]\nasync fn main() {\n    let route = warp::any().map(|| \"CROD läuft!\");\n    warp::serve(route).run(([127, 0, 0, 1], 8000)).await;\n}",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    },
+    "daniel_special_geileSachen_python_magic": {
+      "atom_key": 55157,
+      "atom_type": "daniel_special",
+      "atom_value": "# Python one-liner collection\nweb_server = lambda: __import__('http.server').test()\njson_pretty = lambda d: print(__import__('json').dumps(d, indent=2))\ndownload = lambda url: open(url.split('/')[-1], 'wb').write(__import__('requests').get(url).content)",
+      "prime_number": 42069,
+      "weight": 1000,
+      "heat": 100,
+      "category": "daniel_geil"
+    }
+  }
+}

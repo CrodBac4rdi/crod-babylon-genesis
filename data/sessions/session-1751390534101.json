@@ -1,0 +1,76 @@
+{
+  "sessionId": 1751390534101,
+  "startTime": "2025-07-01T17:22:14.101Z",
+  "interactions": [
+    {
+      "timestamp": "2025-07-01T17:22:14.101Z",
+      "claudeAction": {
+        "type": "build_heat_visualization",
+        "code": "const heatMap = new HeatFlowNetwork();",
+        "files": [
+          "heat-viz.js"
+        ],
+        "timestamp": 1751390534101
+      },
+      "networksInvolved": [
+        "heat_flow_network"
+      ],
+      "complexity": 1.038,
+      "predictedDanielReaction": {
+        "prediction": "UNKNOWN",
+        "confidence": 0
+      }
+    }
+  ],
+  "danielReactions": [
+    {
+      "interaction": {
+        "timestamp": "2025-07-01T17:22:14.101Z",
+        "claudeAction": {
+          "type": "build_heat_visualization",
+          "code": "const heatMap = new HeatFlowNetwork();",
+          "files": [
+            "heat-viz.js"
+          ],
+          "timestamp": 1751390534101
+        },
+        "networksInvolved": [
+          "heat_flow_network"
+        ],
+        "complexity": 1.038,
+        "predictedDanielReaction": {
+          "prediction": "UNKNOWN",
+          "confidence": 0
+        }
+      },
+      "danielReaction": "geil! genau das wollte ich :)",
+      "timestamp": "2025-07-01T17:22:14.106Z",
+      "sentiment": "POSITIVE",
+      "score": 1
+    }
+  ],
+  "successfulPatterns": [
+    {
+      "pattern": {
+        "type": "build_heat_visualization",
+        "code": "const heatMap = new HeatFlowNetwork();",
+        "files": [
+          "heat-viz.js"
+        ],
+        "timestamp": 1751390534101
+      },
+      "networks": [
+        "heat_flow_network"
+      ],
+      "context": {
+        "time": "2025-07-01T17:22:14.106Z",
+        "sessionDuration": 5,
+        "interactionCount": 1,
+        "recentNetworks": [
+          "heat_flow_network"
+        ]
+      }
+    }
+  ],
+  "failedPatterns": []
+}
