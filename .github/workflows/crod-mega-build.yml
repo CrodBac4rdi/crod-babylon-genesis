@@ -52,8 +52,18 @@ jobs:
             dockerfile: Dockerfile
             category: polyglot-city
             
-          - name: llama-district
-            context: ./pod-sources/llama-district
+          - name: llama-learning
+            context: ./pod-sources/llama-learning
+            dockerfile: Dockerfile
+            category: polyglot-city
+            
+          - name: blockchain-core
+            context: ./pod-sources/blockchain-core
+            dockerfile: Dockerfile
+            category: polyglot-city
+            
+          - name: delta-quarter
+            context: ./pod-sources/delta-quarter
             dockerfile: Dockerfile
             category: polyglot-city
 
