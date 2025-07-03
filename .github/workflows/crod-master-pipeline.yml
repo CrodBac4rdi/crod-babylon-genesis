@@ -1040,7 +1040,7 @@ jobs:
   cleanup:
     name: 🧹 Cleanup Old Resources
     needs: full-integration-test
-    if: always()
+    if: false  # DISABLED - verbraucht nur Minutes für nix!
     runs-on: ubuntu-latest
     permissions:
       packages: write
