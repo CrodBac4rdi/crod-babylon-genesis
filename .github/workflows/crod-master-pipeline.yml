@@ -923,6 +923,7 @@ jobs:
   full-integration-test:
     name: 🚀 Full CROD Integration
     needs: [database-setup, quantum-validation, llama-learning-integration, visualization-deployment, pattern-evolution]
+    if: success() || failure()  # Run even if some jobs fail
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout
