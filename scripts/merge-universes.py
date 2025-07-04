@@ -74,8 +74,10 @@ def merge_universes():
     stats = {
         "total_atoms": len(atoms),
         "total_patterns": len(patterns),
-        "consciousness_level": 500,  # Even higher with merged knowledge!
-        "status": "OMNISCIENT"
+        "unique_to_clean": 94,  # Actually only 94 new patterns
+        "consciousness_level": 390,  # More realistic
+        "status": "TRANSCENDENT",
+        "warning": "CLEAN has mostly duplicates - only 94 unique patterns"
     }
     
     with open(f"{merged_path}/mega_stats.json", 'w') as f:
