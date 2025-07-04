@@ -13,21 +13,74 @@ const districts = {
   'intelligence-hub': 'http://intelligence-hub:7113'
 };
 
-// Redis client
-const redisClient = redis.createClient({
-  host: process.env.REDIS_HOST || 'redis',
-  port: 6379
-});
+// Redis connection with retry logic
+// Just use 'redis' - K8s will resolve it within the namespace
+const redisHost = 'redis';
+const redisUrl = `redis://${redisHost}:6379`;
+let redisClient, pubClient, subClient;
+let redisConnected = false;
 
-redisClient.on('error', (err) => {
-  console.error('Redis error:', err);
-});
+async function connectRedis() {
+  console.log(`🔌 Connecting to Redis at ${redisUrl}...`);
+  
+  try {
+    // Create clients
+    redisClient = redis.createClient({
+      url: redisUrl,
+      socket: {
+        reconnectStrategy: (retries) => {
+          console.log(`Redis reconnect attempt ${retries}`);
+          return Math.min(retries * 100, 3000); // Max 3 sec between retries
+        }
+      }
+    });
+    
+    pubClient = redisClient.duplicate();
+    subClient = redisClient.duplicate();
+    
+    // Error handlers
+    redisClient.on('error', (err) => console.error('Redis Client Error:', err));
+    pubClient.on('error', (err) => console.error('Redis Pub Error:', err));
+    subClient.on('error', (err) => console.error('Redis Sub Error:', err));
+    
+    // Connect with retry
+    await redisClient.connect();
+    await pubClient.connect();
+    await subClient.connect();
+    
+    // Subscribe to district events
+    await subClient.subscribe('district:*:response', (message, channel) => {
+      console.log(`📨 ${channel}: ${message}`);
+    });
+    
+    await subClient.subscribe('crod:activated', (message) => {
+      console.log('🔥 CROD ACTIVATED!', message);
+    });
+    
+    redisConnected = true;
+    console.log('✅ Redis connected successfully!');
+    
+    // Test connection
+    await pubClient.publish('gateway:status', 'online');
+    
+  } catch (error) {
+    console.error('❌ Redis connection failed:', error.message);
+    redisConnected = false;
+    
+    // Retry after 5 seconds
+    setTimeout(connectRedis, 5000);
+  }
+}
+
+// Start Redis connection
+connectRedis();
 
 // Health endpoint
 app.get('/health', async (req, res) => {
   const health = {
     status: 'healthy',
     gateway: 'online',
+    redis: redisConnected ? 'connected' : 'disconnected',
     districts: {}
   };
   
@@ -52,17 +105,48 @@ app.post('/crod/process', async (req, res) => {
     return res.status(400).json({ error: 'No text provided' });
   }
   
+  // Check for CROD activation
+  if (text.toLowerCase().includes('ich bins wieder')) {
+    if (redisConnected) {
+      await pubClient.publish('crod:activated', JSON.stringify({
+        text,
+        timestamp: Date.now(),
+        source: 'gateway'
+      }));
+    }
+  }
+  
   // Split into atoms
   const atoms = text.toLowerCase().split(/\s+/).map(word => ({
     word,
     heat: Math.random() * 100,
-    time: Date.now()
+    time: new Date().toISOString()
   }));
   
-  // Send to all districts
+  // Publish to all districts via Redis if connected
+  if (redisConnected) {
+    await pubClient.publish('crod:input', JSON.stringify({
+      text,
+      atoms,
+      timestamp: Date.now()
+    }));
+  }
+  
+  // Send to all districts via HTTP (fallback works even without Redis)
   const results = {};
   
   try {
+    // Send to Meta-Chain first for orchestration
+    const metaRes = await fetch(`${districts['meta-chain']}/process_text`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    });
+    
+    if (metaRes.ok) {
+      results.meta = await metaRes.json();
+    }
+    
     // Pattern detection
     const patternRes = await fetch(`${districts['pattern-district']}/process`, {
       method: 'POST',
@@ -87,18 +171,10 @@ app.post('/crod/process', async (req, res) => {
     });
     results.intelligence = await mlRes.json();
     
-    // Orchestration
-    for (const atom of atoms) {
-      await fetch(`${districts['meta-chain']}/process`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ atom: atom.word, heat: atom.heat })
-      });
-    }
-    
     res.json({
       processed: text,
       atoms: atoms.length,
+      redis: redisConnected ? 'connected' : 'disconnected',
       results
     });
     
@@ -122,4 +198,5 @@ const PORT = process.env.PORT || 8888;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🌉 CROD Gateway running on port ${PORT}`);
   console.log('   Districts:', Object.keys(districts).join(', '));
+  console.log('   Redis:', redisConnected ? 'connected' : 'connecting...');
 });

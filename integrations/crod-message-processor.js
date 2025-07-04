@@ -7,14 +7,16 @@ const path = require('path');
 
 class CRODMessageProcessor {
     constructor() {
-        this.crod = new CRODLearningImitation();
+        // Don't initialize CROD here - do it in init()
+        this.crod = null;
         this.redis = null;
         this.messageBuffer = [];
     }
 
     async init() {
         // Initialize CROD
-        await this.crod.init();
+        this.crod = new CRODLearningImitation();
+        // Skip init() call - CRODLearningImitation doesn't have async init
         
         // Connect to Redis if available
         try {

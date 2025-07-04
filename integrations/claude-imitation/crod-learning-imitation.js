@@ -66,12 +66,12 @@ class CRODLearningImitation extends CRODLocal {
     
     initializeSpatialMemory() {
         // Place trinity atoms in space (from chat DB)
-        this.spatialMemory.set('ich', { x: 20, y: 20, z: 0, heat: 71 });
-        this.spatialMemory.set('bins', { x: 50, y: 50, z: 0, heat: 71 });
-        this.spatialMemory.set('wieder', { x: 80, y: 20, z: 0, heat: 71 });
+        this.learningSystem.spatialMemory.set('ich', { x: 20, y: 20, z: 0, heat: 71 });
+        this.learningSystem.spatialMemory.set('bins', { x: 50, y: 50, z: 0, heat: 71 });
+        this.learningSystem.spatialMemory.set('wieder', { x: 80, y: 20, z: 0, heat: 71 });
         
         // CROD entity in control room
-        this.spatialMemory.set('CROD', { 
+        this.learningSystem.spatialMemory.set('CROD', { 
             x: 50, y: 50, z: 50, 
             facing: 'ATOM_STORAGE',
             type: 'CONTROL_ENTITY'
@@ -157,7 +157,7 @@ class CRODLearningImitation extends CRODLocal {
             // Calculate center of mass
             let centerX = 0, centerY = 0, centerZ = 0;
             activeAtoms.forEach(atom => {
-                const pos = this.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
+                const pos = this.learningSystem.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
                 centerX += pos.x;
                 centerY += pos.y;
                 centerZ += pos.z;
@@ -169,11 +169,11 @@ class CRODLearningImitation extends CRODLocal {
             
             // Move atoms toward center
             activeAtoms.forEach(atom => {
-                const pos = this.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
+                const pos = this.learningSystem.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
                 pos.x += (centerX - pos.x) * this.learningParams.spatialLearningRate;
                 pos.y += (centerY - pos.y) * this.learningParams.spatialLearningRate;
                 pos.heat = atom.heat;
-                this.spatialMemory.set(atom.word, pos);
+                this.learningSystem.spatialMemory.set(atom.word, pos);
             });
             
             console.log(`📍 Spatial update: Active atoms moving toward (${centerX.toFixed(1)}, ${centerY.toFixed(1)}, ${centerZ.toFixed(1)})`);
@@ -220,7 +220,7 @@ class CRODLearningImitation extends CRODLocal {
                 const x = Math.random() * 100;
                 const y = Math.random() * 100;
                 const z = Math.random() * 20;
-                this.spatialMemory.set(word, { x, y, z, heat: 0 });
+                this.learningSystem.spatialMemory.set(word, { x, y, z, heat: 0 });
                 
                 // Track discovery
                 this.learningSystem.discoveredAtoms.push({
@@ -280,7 +280,7 @@ class CRODLearningImitation extends CRODLocal {
         let x = 0, y = 0, z = 0;
         
         atoms.forEach(atom => {
-            const pos = this.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
+            const pos = this.learningSystem.spatialMemory.get(atom.word) || { x: 50, y: 50, z: 0 };
             x += pos.x;
             y += pos.y;
             z += pos.z;
@@ -336,14 +336,14 @@ class CRODLearningImitation extends CRODLocal {
         // Create 3D view of current state
         const view = {
             controlRoom: {
-                crod: this.spatialMemory.get('CROD'),
+                crod: this.learningSystem.spatialMemory.get('CROD'),
                 consciousness: this.spatialConfig.consciousness
             },
             atomStorage: {}
         };
         
         // Add all atoms with heat > 0
-        this.spatialMemory.forEach((pos, word) => {
+        this.learningSystem.spatialMemory.forEach((pos, word) => {
             if (word !== 'CROD' && pos.heat > 0) {
                 view.atomStorage[word] = pos;
             }
@@ -357,7 +357,7 @@ class CRODLearningImitation extends CRODLocal {
         const state = {
             neurons: Array.from(this.neurons.entries()),
             patterns: Array.from(this.patterns.entries()),
-            spatialMemory: Array.from(this.spatialMemory.entries()),
+            spatialMemory: Array.from(this.learningSystem.spatialMemory.entries()),
             consciousness: this.spatialConfig.consciousness,
             discoveries: Array.from(this.learningSystem.discoveredPatterns.entries()),
             improvements: this.learningSystem.improvements,
@@ -389,7 +389,7 @@ class CRODLearningImitation extends CRODLocal {
                 
                 // Restore spatial memory
                 state.spatialMemory.forEach(([word, pos]) => {
-                    this.spatialMemory.set(word, pos);
+                    this.learningSystem.spatialMemory.set(word, pos);
                 });
                 
                 // Restore consciousness

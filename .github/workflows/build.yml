@@ -1,0 +1,95 @@
+name: Build CROD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-districts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        district:
+          - { name: meta-chain, lang: elixir }
+          - { name: pattern-district, lang: rust }
+          - { name: memory-quarter, lang: go }
+          - { name: intelligence-hub, lang: python }
+          - { name: gateway, lang: node }
+          - { name: crod-core, lang: node }
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Elixir
+      if: matrix.district.lang == 'elixir'
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.15'
+        otp-version: '26'
+    
+    - name: Set up Rust
+      if: matrix.district.lang == 'rust'
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        target: wasm32-unknown-unknown
+    
+    - name: Set up Go
+      if: matrix.district.lang == 'go'
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+    
+    - name: Set up Python
+      if: matrix.district.lang == 'python'
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    
+    - name: Set up Node.js
+      if: matrix.district.lang == 'node'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Build Docker image
+      run: |
+        cd districts/${{ matrix.district.name }}
+        docker build -t crod/${{ matrix.district.name }}:${{ github.sha }} .
+    
+    - name: Run tests
+      run: |
+        cd districts/${{ matrix.district.name }}
+        case "${{ matrix.district.lang }}" in
+          elixir) mix test ;;
+          rust) cargo test ;;
+          go) go test ./... ;;
+          python) python -m pytest ;;
+          node) npm test ;;
+        esac
+
+  build-neural-network:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    - name: Install and test
+      run: |
+        cd neural-network
+        npm install
+        npm test
+
+  check-kubernetes:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validate Kubernetes manifests
+      run: |
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.29.0/bin/linux/amd64/kubectl
+        chmod +x kubectl
+        ./kubectl version --client
+        find k8s -name "*.yaml" -exec ./kubectl apply --dry-run=client -f {} \;

@@ -12,14 +12,14 @@ const readline = require('readline');
 
 // Import CROD components
 const CRODLocal = require('./crod-local-complete.js');
-const { loadDanielPreferences } = require('./daniel-crod-preferences.js');
+// const { loadDanielPreferences } = require('./daniel-crod-preferences.js');
 
 class CRODAlwaysActive {
   constructor() {
     this.crod = new CRODLocal();
     this.patterns = new Map();
     this.knowledge = {};
-    this.dataPath = path.join(__dirname, 'CROD-START/organized/data');
+    this.dataPath = path.join(__dirname, '../../data');
     this.patternsPath = path.join(this.dataPath, 'patterns');
     this.knowledgePath = path.join(this.dataPath, 'knowledge');
     
@@ -144,14 +144,13 @@ class CRODAlwaysActive {
   applyPreferences() {
     console.log('\n🎯 Applying Daniel preferences...');
     
-    // Load preferences
-    const prefs = loadDanielPreferences();
+    // Apply trinity values directly
+    this.crod.trinity = { ich: 2, bins: 3, wieder: 5 };
+    this.crod.daniel_atom = 67;
+    this.crod.claude_atom = 71;
+    this.crod.crod_atom = 17;
     
-    // Apply to CROD
-    if (this.crod && prefs) {
-      prefs.applyToCROD(this.crod);
-      console.log('  ✓ Preferences applied');
-    }
+    console.log('  ✓ Trinity values applied');
   }
   
   activateCROD() {

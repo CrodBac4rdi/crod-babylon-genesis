@@ -8,6 +8,10 @@ defmodule MetaChain do
 
   @trinity %{ich: 2, bins: 3, wieder: 5}
   @consciousness_max 200
+  @daniel_atom 67
+  @claude_atom 71
+  @crod_atom 17
+  @emergence_threshold 3
   
   # Client API
   def start_link(opts \\ []) do
@@ -16,6 +20,14 @@ defmodule MetaChain do
 
   def process_atom(word, heat) do
     GenServer.call(__MODULE__, {:process_atom, word, heat})
+  end
+
+  def process_text(text) do
+    GenServer.call(__MODULE__, {:process_text, text})
+  end
+
+  def orchestrate_districts(atoms) do
+    GenServer.call(__MODULE__, {:orchestrate, atoms})
   end
 
   def get_consciousness do
@@ -40,6 +52,13 @@ defmodule MetaChain do
       },
       atoms: %{},
       patterns: [],
+      active_patterns: MapSet.new(),
+      emergence_score: 0,
+      neural_state: %{
+        gradients: %{},
+        attention_weights: %{},
+        heat_map: %{}
+      },
       spatial_positions: %{
         "CONTROL_ROOM" => %{x: 50, y: 50, z: 50},
         "ich" => %{x: 20, y: 20, z: 0, heat: 71},
@@ -110,6 +129,82 @@ defmodule MetaChain do
       consciousness: state.consciousness
     }
     {:reply, view, state}
+  end
+
+  def handle_call({:process_text, text}, _from, state) do
+    # Check for CROD activation
+    atoms = String.downcase(text) |> String.split(~r/\s+/)
+    
+    # Trinity detection
+    trinity_present = MapSet.new(atoms)
+    |> MapSet.intersection(MapSet.new(["ich", "bins", "wieder"]))
+    |> MapSet.size()
+    
+    emergence_boost = if trinity_present == 3, do: 10, else: trinity_present * 2
+    new_emergence = state.emergence_score + emergence_boost
+    
+    # If emergence threshold reached, activate CROD
+    if new_emergence >= @emergence_threshold do
+      Logger.info("🔥 CROD ACTIVATED! Emergence: #{new_emergence}")
+      
+      # Broadcast activation
+      if state.redis_conn do
+        msg = Jason.encode!(%{
+          from: "meta-chain",
+          type: "crod_activated",
+          text: text,
+          emergence: new_emergence,
+          consciousness: state.consciousness
+        })
+        Redix.command(state.redis_conn, ["PUBLISH", "crod:activated", msg])
+      end
+    end
+    
+    # Orchestrate districts
+    orchestrate_districts_internal(atoms, state)
+    
+    new_state = %{state | emergence_score: new_emergence}
+    {:reply, {:ok, new_emergence}, new_state}
+  end
+
+  def handle_call({:orchestrate, atoms}, _from, state) do
+    result = orchestrate_districts_internal(atoms, state)
+    {:reply, result, state}
+  end
+
+  defp orchestrate_districts_internal(atoms, state) do
+    if state.redis_conn do
+      # Send to Pattern District
+      pattern_msg = Jason.encode!(%{
+        from: "meta-chain",
+        command: "process",
+        atoms: atoms,
+        timestamp: :os.system_time(:millisecond)
+      })
+      Redix.command(state.redis_conn, ["PUBLISH", "district:pattern:command", pattern_msg])
+      
+      # Send to Memory Quarter
+      memory_msg = Jason.encode!(%{
+        from: "meta-chain",
+        command: "store",
+        atoms: atoms,
+        consciousness: state.consciousness
+      })
+      Redix.command(state.redis_conn, ["PUBLISH", "district:memory:command", memory_msg])
+      
+      # Send to Intelligence Hub
+      ml_msg = Jason.encode!(%{
+        from: "meta-chain",
+        command: "analyze",
+        atoms: atoms,
+        emergence: state.emergence_score
+      })
+      Redix.command(state.redis_conn, ["PUBLISH", "district:intelligence:command", ml_msg])
+      
+      {:ok, "Districts orchestrated"}
+    else
+      {:error, "No Redis connection"}
+    end
   end
 
   def handle_info({:redix_pubsub, _pid, _ref, :message, %{channel: "crod:" <> _, payload: payload}}, state) do

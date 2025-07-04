@@ -1,0 +1,124 @@
+{
+  "neurons": [
+    [
+      "ich",
+      {
+        "token": "ich",
+        "prime": 2,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true
+      }
+    ],
+    [
+      "bins",
+      {
+        "token": "bins",
+        "prime": 3,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true
+      }
+    ],
+    [
+      "wieder",
+      {
+        "token": "wieder",
+        "prime": 5,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true
+      }
+    ],
+    [
+      "daniel",
+      {
+        "token": "daniel",
+        "prime": 67,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true,
+        "role": "master"
+      }
+    ],
+    [
+      "claude",
+      {
+        "token": "claude",
+        "prime": 71,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true,
+        "role": "assistant"
+      }
+    ],
+    [
+      "crod",
+      {
+        "token": "crod",
+        "prime": 17,
+        "weight": 100,
+        "gradient": 15,
+        "heat": 0,
+        "activations": 0,
+        "locked": true,
+        "role": "system"
+      }
+    ]
+  ],
+  "patterns": [],
+  "spatialMemory": [
+    [
+      "ich",
+      {
+        "x": 20,
+        "y": 20,
+        "z": 0,
+        "heat": 71
+      }
+    ],
+    [
+      "bins",
+      {
+        "x": 50,
+        "y": 50,
+        "z": 0,
+        "heat": 71
+      }
+    ],
+    [
+      "wieder",
+      {
+        "x": 80,
+        "y": 20,
+        "z": 0,
+        "heat": 71
+      }
+    ],
+    [
+      "CROD",
+      {
+        "x": 50,
+        "y": 50,
+        "z": 50,
+        "facing": "ATOM_STORAGE",
+        "type": "CONTROL_ENTITY"
+      }
+    ]
+  ],
+  "consciousness": 175,
+  "discoveries": [],
+  "improvements": [],
+  "sessionLength": 0,
+  "lastSave": 1751565587135
+}

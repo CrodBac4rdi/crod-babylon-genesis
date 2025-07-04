@@ -1,0 +1,137 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - crod-network
+
+  postgres:
+    image: postgis/postgis:15-3.3
+    environment:
+      POSTGRES_USER: crod
+      POSTGRES_PASSWORD: crod123
+      POSTGRES_DB: crod_blockchain
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - crod-network
+
+  nats:
+    image: nats:2.10-alpine
+    command: "-js"
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    networks:
+      - crod-network
+
+  meta-chain:
+    build: ./districts/meta-chain
+    image: crod/meta-chain:latest
+    environment:
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=postgres
+      - NATS_URL=nats://nats:4222
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - postgres
+      - nats
+    networks:
+      - crod-network
+
+  pattern-district:
+    build: ./districts/pattern-district
+    image: crod/pattern-district:latest
+    environment:
+      - REDIS_HOST=redis
+      - NATS_URL=nats://nats:4222
+    ports:
+      - "7007:7007"
+    depends_on:
+      - redis
+      - nats
+    networks:
+      - crod-network
+
+  memory-quarter:
+    build: ./districts/memory-quarter
+    image: crod/memory-quarter:latest
+    environment:
+      - REDIS_ADDR=redis:6379
+      - NATS_URL=nats://nats:4222
+    ports:
+      - "7031:7031"
+    depends_on:
+      - redis
+      - nats
+    networks:
+      - crod-network
+
+  intelligence-hub:
+    build: ./districts/intelligence-hub
+    image: crod/intelligence-hub:latest
+    environment:
+      - REDIS_HOST=redis
+      - NATS_URL=nats://nats:4222
+    ports:
+      - "7113:7113"
+    depends_on:
+      - redis
+      - nats
+    networks:
+      - crod-network
+
+  gateway:
+    build: ./districts/gateway
+    image: crod/gateway:latest
+    environment:
+      - REDIS_HOST=redis
+      - META_CHAIN_URL=http://meta-chain:8000
+      - PATTERN_DISTRICT_URL=http://pattern-district:7007
+      - MEMORY_QUARTER_URL=http://memory-quarter:7031
+      - INTELLIGENCE_HUB_URL=http://intelligence-hub:7113
+    ports:
+      - "8888:8888"
+      - "30889:8888"
+    depends_on:
+      - meta-chain
+      - pattern-district
+      - memory-quarter
+      - intelligence-hub
+    networks:
+      - crod-network
+
+  crod-core:
+    build: ./districts/crod-core
+    image: crod/crod-core:latest
+    environment:
+      - REDIS_HOST=redis
+      - NATS_URL=nats://nats:4222
+    ports:
+      - "8100:8100"
+      - "8101:8101"
+    depends_on:
+      - redis
+      - nats
+    volumes:
+      - ./neural-network:/app/neural-network:ro
+      - ./data:/app/data:ro
+    networks:
+      - crod-network
+
+volumes:
+  redis-data:
+  postgres-data:
+
+networks:
+  crod-network:
+    driver: bridge

@@ -2,11 +2,22 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-Helper-Member-7/integrations/hooks/crod-file-location-checker.py",
+            "description": "Check file locations against Daniel's organization rules"
+          }
+        ]
+      },
+      {
         "matcher": "Bash|Edit|MultiEdit|Write|Task",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-pattern-detector.py"
+            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-Helper-Member-7/integrations/hooks/crod-pattern-detector.py",
+            "description": "Detect CROD patterns in commands"
           }
         ]
       }
@@ -17,7 +28,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-learning-hook.sh"
+            "command": "/home/daniel/Schreibtisch/Crod\\ Programming/CROD-Helper-Member-7/integrations/hooks/crod-learning-hook.sh",
+            "description": "Learn from CROD interactions"
           }
         ]
       }
@@ -28,7 +40,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-START/polyglot-city/hooks/crod-session-stats.py"
+            "command": "python3 /home/daniel/Schreibtisch/Crod\\ Programming/CROD-Helper-Member-7/integrations/hooks/crod-session-stats.py",
+            "description": "Show session statistics"
           }
         ]
       }

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROD POLYGLOT CITY - Live Metrics 🏙️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            overflow: hidden;
+        }
+        
+        .container {
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #00ff00, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .district-card {
+            background: rgba(0, 255, 0, 0.05);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            animation: borderPulse 3s infinite;
+        }
+        
+        .district-card.offline {
+            border-color: #ff0000;
+            background: rgba(255, 0, 0, 0.05);
+        }
+        
+        .district-card.warning {
+            border-color: #ffaa00;
+            background: rgba(255, 170, 0, 0.05);
+        }
+        
+        .district-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .district-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .status-light {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+            animation: statusPulse 2s infinite;
+        }
+        
+        .status-light.offline {
+            background: #ff0000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: #00ffff;
+        }
+        
+        .cpu-bar, .memory-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            margin: 5px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff00, #00ffff);
+            transition: width 0.3s ease;
+            position: relative;
+        }
+        
+        .bar-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #000;
+            text-shadow: 0 0 3px #00ff00;
+        }
+        
+        .system-overview {
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .overview-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        
+        .stat-box {
+            padding: 10px 20px;
+            background: rgba(0, 255, 0, 0.05);
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00ffff;
+        }
+        
+        .messages-flow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        
+        .message-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: messageFlow 3s linear infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.8); }
+        }
+        
+        @keyframes statusPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes messageFlow {
+            0% { transform: translateX(-10px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(110%); opacity: 0; }
+        }
+        
+        .connection-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .connection-line {
+            stroke: #00ff00;
+            stroke-width: 1;
+            fill: none;
+            opacity: 0.3;
+            stroke-dasharray: 5,5;
+            animation: dashFlow 10s linear infinite;
+        }
+        
+        @keyframes dashFlow {
+            to { stroke-dashoffset: -100; }
+        }
+    </style>
+</head>
+<body>
+    <svg class="connection-lines">
+        <line class="connection-line" x1="50%" y1="20%" x2="20%" y2="50%" />
+        <line class="connection-line" x1="50%" y1="20%" x2="80%" y2="50%" />
+        <line class="connection-line" x1="20%" y1="50%" x2="80%" y2="50%" />
+        <line class="connection-line" x1="50%" y1="20%" x2="50%" y2="80%" />
+    </svg>
+    
+    <div class="container">
+        <div class="header">
+            <h1>CROD POLYGLOT CITY 🏙️</h1>
+            <p>Waiting for connection...</p>
+        </div>
+        
+        <div class="system-overview">
+            <h2>SYSTEM OVERVIEW</h2>
+            <div class="overview-stats">
+                <div class="stat-box">
+                    <div>Total Districts</div>
+                    <div class="stat-value" id="total-districts">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Messages/sec</div>
+                    <div class="stat-value" id="msg-per-sec">0</div>
+                </div>
+                <div class="stat-box">
+                    <div>CPU Usage</div>
+                    <div class="stat-value" id="total-cpu">0%</div>
+                </div>
+                <div class="stat-box">
+                    <div>Memory</div>
+                    <div class="stat-value" id="total-memory">0GB</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metrics-grid" id="districts-container">
+            <!-- Districts will be inserted here -->
+        </div>
+    </div>
+    
+    <script>
+        const districts = [
+            {
+                name: 'Meta-Chain (Elixir)',
+                port: 8000,
+                pod: 'meta-chain',
+                namespace: 'crod-polyglot',
+                metrics: {
+                    cpu: 0,
+                    memory: 0,
+                    requests: 0,
+                    errors: 0,
+                    uptime: '0s'
+                }
+            },
+            {
+                name: 'Pattern District (Rust)',
+                port: 7007,
+                pod: 'pattern-district',
+                namespace: 'crod-polyglot',
+                metrics: {
+                    cpu: 0,
+                    memory: 0,
+                    patterns: 0,
+                    matches: 0,
+                    uptime: '0s'
+                }
+            },
+            {
+                name: 'Memory Quarter (Go)',
+                port: 7031,
+                pod: 'memory-quarter',
+                namespace: 'crod-polyglot',
+                metrics: {
+                    cpu: 0,
+                    memory: 0,
+                    stored: 0,
+                    retrieved: 0,
+                    uptime: '0s'
+                }
+            },
+            {
+                name: 'Intelligence Hub (Python)',
+                port: 7113,
+                pod: 'intelligence-hub',
+                namespace: 'crod-polyglot',
+                metrics: {
+                    cpu: 0,
+                    memory: 0,
+                    inferences: 0,
+                    accuracy: 0,
+                    uptime: '0s'
+                }
+            }
+        ];
+        
+        function createDistrictCard(district) {
+            const card = document.createElement('div');
+            card.className = 'district-card';
+            card.id = `district-${district.port}`;
+            
+            const messagesFlow = document.createElement('div');
+            messagesFlow.className = 'messages-flow';
+            
+            card.innerHTML = `
+                <div class="district-header">
+                    <div class="district-name">${district.name}</div>
+                    <div class="status-light" id="status-${district.port}"></div>
+                </div>
+                
+                <div class="metric-row">
+                    <span>Status:</span>
+                    <span class="metric-value" id="status-text-${district.port}">Checking...</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span>CPU Usage:</span>
+                    <span class="metric-value" id="cpu-${district.port}">0%</span>
+                </div>
+                <div class="cpu-bar">
+                    <div class="bar-fill" id="cpu-bar-${district.port}" style="width: 0%">
+                        <span class="bar-text" id="cpu-bar-text-${district.port}">0%</span>
+                    </div>
+                </div>
+                
+                <div class="metric-row">
+                    <span>Memory:</span>
+                    <span class="metric-value" id="memory-${district.port}">0MB</span>
+                </div>
+                <div class="memory-bar">
+                    <div class="bar-fill" id="memory-bar-${district.port}" style="width: 0%">
+                        <span class="bar-text" id="memory-bar-text-${district.port}">0%</span>
+                    </div>
+                </div>
+                
+                <div class="metric-row">
+                    <span>Uptime:</span>
+                    <span class="metric-value" id="uptime-${district.port}">0s</span>
+                </div>
+                
+                <div class="metric-row">
+                    <span>Pod:</span>
+                    <span class="metric-value">${district.pod}</span>
+                </div>
+            `;
+            
+            card.appendChild(messagesFlow);
+            return card;
+        }
+        
+        // Initialize dashboard
+        const container = document.getElementById('districts-container');
+        districts.forEach(district => {
+            container.appendChild(createDistrictCard(district));
+        });
+        
+        let connected = false;
+        
+        function setNoData() {
+            districts.forEach(district => {
+                document.getElementById(`cpu-${district.port}`).textContent = '--';
+                document.getElementById(`cpu-bar-${district.port}`).style.width = '0%';
+                document.getElementById(`cpu-bar-text-${district.port}`).textContent = '--';
+                
+                document.getElementById(`memory-${district.port}`).textContent = '--';
+                document.getElementById(`memory-bar-${district.port}`).style.width = '0%';
+                document.getElementById(`memory-bar-text-${district.port}`).textContent = '--';
+                
+                const statusText = document.getElementById(`status-text-${district.port}`);
+                const statusLight = document.getElementById(`status-${district.port}`);
+                const card = document.getElementById(`district-${district.port}`);
+                
+                statusText.textContent = 'No Data';
+                statusText.style.color = '#666666';
+                statusLight.classList.add('offline');
+                card.classList.add('offline');
+            });
+            
+            document.getElementById('total-cpu').textContent = '--';
+            document.getElementById('total-memory').textContent = '--';
+            document.getElementById('msg-per-sec').textContent = '--';
+        }
+        
+        function updateMetrics(data) {
+            if (!data || !data.pods) {
+                setNoData();
+                return;
+            }
+            
+            let totalCpu = 0;
+            let totalMemory = 0;
+            let activeDistricts = 0;
+            
+            districts.forEach(district => {
+                const podData = Object.entries(data.pods).find(([name]) => 
+                    name.includes(district.pod));
+                
+                if (podData) {
+                    const [podName, metrics] = podData;
+                    const statusData = data.status[podName];
+                    
+                    // CPU
+                    const cpuValue = metrics.cpu;
+                    document.getElementById(`cpu-${district.port}`).textContent = cpuValue + 'm';
+                    const cpuPercent = Math.min(100, Math.round(cpuValue / 10)); // 1000m = 100%
+                    document.getElementById(`cpu-bar-${district.port}`).style.width = cpuPercent + '%';
+                    document.getElementById(`cpu-bar-text-${district.port}`).textContent = cpuPercent + '%';
+                    
+                    // Memory
+                    const memValue = metrics.memory;
+                    document.getElementById(`memory-${district.port}`).textContent = memValue + 'Mi';
+                    const memPercent = Math.min(100, Math.round(memValue / 1024)); // 1Gi = 100%
+                    document.getElementById(`memory-bar-${district.port}`).style.width = memPercent + '%';
+                    document.getElementById(`memory-bar-text-${district.port}`).textContent = memPercent + '%';
+                    
+                    // Status
+                    const statusLight = document.getElementById(`status-${district.port}`);
+                    const statusText = document.getElementById(`status-text-${district.port}`);
+                    const card = document.getElementById(`district-${district.port}`);
+                    
+                    if (statusData && statusData.ready) {
+                        statusLight.classList.remove('offline');
+                        card.classList.remove('offline');
+                        statusText.textContent = 'Running';
+                        statusText.style.color = '#00ff00';
+                        activeDistricts++;
+                    } else {
+                        statusLight.classList.add('offline');
+                        card.classList.add('offline');
+                        statusText.textContent = 'Not Ready';
+                        statusText.style.color = '#ff0000';
+                    }
+                    
+                    totalCpu += cpuValue;
+                    totalMemory += memValue;
+                } else {
+                    // No data for this district
+                    const statusText = document.getElementById(`status-text-${district.port}`);
+                    statusText.textContent = 'Not Found';
+                    statusText.style.color = '#666666';
+                }
+            });
+            
+            // Update totals
+            if (activeDistricts > 0) {
+                document.getElementById('total-cpu').textContent = 
+                    Math.round(totalCpu / activeDistricts) + 'm';
+                document.getElementById('total-memory').textContent = 
+                    (totalMemory / 1024).toFixed(1) + 'Gi';
+                document.getElementById('msg-per-sec').textContent = '0'; // No real message data yet
+            }
+        }
+        
+        // WebSocket connection for real metrics
+        function connectToMetrics() {
+            const ws = new WebSocket('ws://localhost:8889/metrics');
+            
+            ws.onopen = () => {
+                console.log('Connected to CROD metrics');
+                connected = true;
+                document.querySelector('.header p').textContent = 'Connected to K8s Metrics';
+                document.querySelector('.header p').style.color = '#00ff00';
+            };
+            
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                updateMetrics(data);
+            };
+            
+            ws.onerror = (error) => {
+                console.error('WebSocket error:', error);
+                connected = false;
+                setNoData();
+                document.querySelector('.header p').textContent = 'Connection Failed';
+                document.querySelector('.header p').style.color = '#ff0000';
+            };
+            
+            ws.onclose = () => {
+                console.log('WebSocket closed');
+                connected = false;
+                setNoData();
+                document.querySelector('.header p').textContent = 'Disconnected - Retrying...';
+                document.querySelector('.header p').style.color = '#ffaa00';
+                setTimeout(connectToMetrics, 5000);
+            };
+        }
+        
+        // Initialize with no data
+        setNoData();
+        connectToMetrics();
+        
+        // Add some visual effects
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.connection-line').forEach((line, i) => {
+                line.style.opacity = 0.1 + (0.2 * Math.sin(x * Math.PI + i));
+            });
+        });
+    </script>
+</body>
+</html>
