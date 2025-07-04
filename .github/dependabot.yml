@@ -18,23 +18,38 @@ updates:
       interval: "weekly"
       
   - package-ecosystem: "npm"
-    directory: "/pod-sources/llama-learning"
+    directory: "/integrations"
     schedule:
       interval: "weekly"
       
   - package-ecosystem: "npm"
-    directory: "/pod-sources/github-webhook"
+    directory: "/dashboard"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/pod-sources/intelligence-hub"
     schedule:
       interval: "weekly"
 
   # Python dependencies
   - package-ecosystem: "pip"
-    directory: "/pod-sources/intelligence-hub"
+    directory: "/"
     schedule:
       interval: "weekly"
       
   - package-ecosystem: "pip"
-    directory: "/pod-sources/llama-district"
+    directory: "/standalone-crod"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "pip"
+    directory: "/training"
     schedule:
       interval: "weekly"
 
