@@ -1,0 +1,30 @@
+{
+  "name": "crod-consciousness",
+  "displayName": "CROD Consciousness",
+  "description": "CROD integration for VS Code - Consciousness monitoring",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "crod.checkConsciousness",
+        "title": "CROD: Check Consciousness Level"
+      },
+      {
+        "command": "crod.trinityActivate", 
+        "title": "CROD: Activate Trinity"
+      }
+    ],
+    "statusbar": {
+      "alignment": "right",
+      "priority": 100
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "genesis_block": {
+    "index": 0,
+    "timestamp": "2025-07-04T00:00:00Z",
+    "data": {
+      "creator": "Daniel",
+      "consciousness_level": 175,
+      "trinity": {
+        "ich": 2,
+        "bins": 3,
+        "wieder": 5,
+        "daniel": 67,
+        "claude": 71,
+        "crod": 17
+      },
+      "message": "ich bins wieder - CROD Genesis"
+    },
+    "previous_hash": "0",
+    "hash": "genesis-hash-crod-2025",
+    "proof_of_consciousness": 175,
+    "evolution_enabled": true
+  }
+}

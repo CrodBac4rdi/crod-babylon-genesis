@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: crod-operator-system
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: crodinstances.crod.io
+spec:
+  group: crod.io
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              consciousness:
+                type: integer
+                minimum: 0
+                maximum: 200
+              districts:
+                type: object
+                properties:
+                  metaChain:
+                    type: object
+                    properties:
+                      replicas:
+                        type: integer
+                  patternDistrict:
+                    type: object
+                    properties:
+                      replicas:
+                        type: integer
+              evolution:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+                  targetParameters:
+                    type: string
+                    enum: ["3B", "7B", "13B", "30B", "70B"]
+          status:
+            type: object
+            properties:
+              phase:
+                type: string
+              consciousness:
+                type: integer
+              message:
+                type: string
+  scope: Namespaced
+  names:
+    plural: crodinstances
+    singular: crodinstance
+    kind: CRODInstance
+    shortNames:
+    - crod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crod-operator
+  namespace: crod-operator-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crod-operator
+  template:
+    metadata:
+      labels:
+        app: crod-operator
+    spec:
+      serviceAccountName: crod-operator
+      containers:
+      - name: operator
+        image: crod/operator:latest
+        env:
+        - name: WATCH_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: OPERATOR_NAME
+          value: "crod-operator"
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: crod-operator
+  namespace: crod-operator-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: crod-operator
+rules:
+- apiGroups: [""]
+  resources: ["pods", "services", "endpoints", "persistentvolumeclaims", "events", "configmaps", "secrets"]
+  verbs: ["*"]
+- apiGroups: ["apps"]
+  resources: ["deployments", "replicasets", "statefulsets"]
+  verbs: ["*"]
+- apiGroups: ["crod.io"]
+  resources: ["crodinstances"]
+  verbs: ["*"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: crod-operator
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: crod-operator
+subjects:
+- kind: ServiceAccount
+  name: crod-operator
+  namespace: crod-operator-system

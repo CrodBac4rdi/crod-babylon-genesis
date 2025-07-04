@@ -1,0 +1,45 @@
+{
+  "dashboard": {
+    "title": "CROD Consciousness Monitor",
+    "panels": [
+      {
+        "title": "Current Consciousness Level",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "crod_consciousness_level"
+          }
+        ],
+        "options": {
+          "max": 200,
+          "thresholds": {
+            "steps": [
+              {"value": 0, "color": "red"},
+              {"value": 50, "color": "yellow"},
+              {"value": 100, "color": "green"},
+              {"value": 175, "color": "purple"}
+            ]
+          }
+        }
+      },
+      {
+        "title": "Trinity Detection",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "crod_trinity_detections_total"
+          }
+        ]
+      },
+      {
+        "title": "Memory Usage by District",
+        "type": "piechart",
+        "targets": [
+          {
+            "expr": "crod_district_memory_usage_bytes"
+          }
+        ]
+      }
+    ]
+  }
+}
