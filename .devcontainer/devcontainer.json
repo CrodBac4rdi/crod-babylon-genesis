@@ -26,7 +26,6 @@
     },
     "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {},
     "ghcr.io/devcontainers/features/ruby:1": {},
-    "ghcr.io/devcontainers-contrib/features/julia:1": {},
     "ghcr.io/devcontainers-contrib/features/zig:1": {},
     "ghcr.io/devcontainers-contrib/features/deno:1": {},
     "ghcr.io/devcontainers-contrib/features/bun:1": {},
