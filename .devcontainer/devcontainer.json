@@ -9,14 +9,60 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12"
+      "version": "3.12",
+      "installJupyterlab": true
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
     },
     "ghcr.io/devcontainers/features/rust:1": {},
     "ghcr.io/devcontainers/features/go:1": {},
-    "ghcr.io/devcontainers-contrib/features/elixir-asdf:2": {}
+    "ghcr.io/devcontainers-contrib/features/elixir-asdf:2": {},
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "8.0"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21"
+    },
+    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {},
+    "ghcr.io/devcontainers/features/ruby:1": {},
+    "ghcr.io/devcontainers-contrib/features/julia:1": {},
+    "ghcr.io/devcontainers-contrib/features/zig:1": {},
+    "ghcr.io/devcontainers-contrib/features/deno:1": {},
+    "ghcr.io/devcontainers-contrib/features/bun:1": {},
+    "ghcr.io/devcontainers-contrib/features/haskell:2": {},
+    "ghcr.io/devcontainers-contrib/features/clojure-asdf:1": {},
+    "ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {},
+    "ghcr.io/devcontainers-contrib/features/crystal-asdf:1": {},
+    "ghcr.io/devcontainers-contrib/features/nim-asdf:1": {},
+    "ghcr.io/devcontainers-contrib/features/ocaml-asdf:1": {},
+    "ghcr.io/devcontainers-contrib/features/gleam:1": {},
+    "ghcr.io/devcontainers/features/cpp:1": {},
+    "ghcr.io/devcontainers/features/php:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/qiskit:1": {},
+    "ghcr.io/devcontainers-contrib/features/postgres-asdf:1": {},
+    "ghcr.io/devcontainers-contrib/features/redis-homebrew:1": {},
+    "ghcr.io/devcontainers-contrib/features/mongodb-atlas-cli-homebrew:1": {},
+    "ghcr.io/devcontainers-contrib/features/grpc:1": {},
+    "ghcr.io/devcontainers-contrib/features/protoc:1": {},
+    "ghcr.io/devcontainers-contrib/features/mojo:1": {},
+    "ghcr.io/devcontainers-contrib/features/pulumi:1": {},
+    "ghcr.io/devcontainers-contrib/features/ansible:2": {},
+    "ghcr.io/devcontainers-contrib/features/databricks-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/spark:1": {},
+    "ghcr.io/devcontainers-contrib/features/mlflow:1": {},
+    "ghcr.io/devcontainers-contrib/features/kubeflow:1": {},
+    "ghcr.io/devcontainers-contrib/features/wasm-pack:1": {},
+    "ghcr.io/devcontainers-contrib/features/wasmtime:1": {},
+    "ghcr.io/devcontainers-contrib/features/wasmer:1": {},
+    "ghcr.io/devcontainers-contrib/features/ollama:1": {},
+    "ghcr.io/devcontainers-contrib/features/localstack:2": {},
+    "ghcr.io/devcontainers-contrib/features/minio:1": {},
+    "ghcr.io/devcontainers-contrib/features/n8n:1": {},
+    "ghcr.io/devcontainers-contrib/features/temporal-cli:1": {}
   },
   
   "customizations": {

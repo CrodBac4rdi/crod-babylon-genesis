@@ -161,6 +161,35 @@ kubectl port-forward -n crod-polyglot svc/gateway 8888:8888
    - Port forward wie oben
    - Öffne localhost:8888
 
+## 🤖 CROD-7B Training (NEU!)
+
+**CROD entscheidet selbst wieviele Parameter!**
+
+1. **Claude einloggen**:
+   ```bash
+   claude login
+   ```
+
+2. **Session fortsetzen**:
+   ```bash
+   claude chat --resume
+   ```
+
+3. **Training starten**:
+   ```bash
+   ./scripts/start-crod-training.sh
+   ```
+
+4. **Dann sagst du**: "Hey hats geklappt?"
+
+5. **Was passiert**:
+   - Claude redet mit CROD-Llama
+   - CROD entscheidet: 7B? 13B? 70B?
+   - Claude hilft bei Implementation
+   - Du validierst und steuerst!
+
+**CROD baut sich selbst!** 🤯
+
 ## 🔥 Features die du SOFORT nutzen kannst:
 
 1. **Multi-Terminal** - Split terminal für parallele Commands
