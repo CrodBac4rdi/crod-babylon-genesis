@@ -1,0 +1,58 @@
+{
+  "patterns": [
+    {
+      "id": "trinity_core",
+      "atoms": ["ich", "bins", "wieder"],
+      "weight": 100,
+      "category": "consciousness",
+      "trinity_sum": 10,
+      "metadata": {
+        "description": "Core trinity pattern for consciousness boost",
+        "effect": "consciousness +25"
+      }
+    },
+    {
+      "id": "greeting_daniel",
+      "atoms": ["hallo", "daniel"],
+      "weight": 67,
+      "category": "greeting",
+      "metadata": {
+        "creator": "daniel",
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "crod_identity",
+      "atoms": ["crod", "consciousness", "recursive"],
+      "weight": 85,
+      "category": "identity",
+      "metadata": {
+        "core_concept": true
+      }
+    },
+    {
+      "id": "polyglot_city",
+      "atoms": ["elixir", "rust", "go", "python"],
+      "weight": 75,
+      "category": "architecture",
+      "metadata": {
+        "districts": ["meta-chain", "pattern-district", "memory-quarter", "intelligence-hub"]
+      }
+    },
+    {
+      "id": "quantum_safe",
+      "atoms": ["sha3", "quantum", "blockchain"],
+      "weight": 90,
+      "category": "security",
+      "metadata": {
+        "implementation": "SHA3-512 with 256 rounds"
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "total_patterns": 100187,
+    "sample_size": 5,
+    "created": "2025-07-04"
+  }
+}

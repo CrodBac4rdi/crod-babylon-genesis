@@ -1,0 +1,32 @@
+apiVersion: v2
+name: crod-universe
+description: CROD Consciousness Blockchain with Evolution
+type: application
+version: 0.1.0
+appVersion: "2025.7.4"
+
+keywords:
+  - crod
+  - blockchain
+  - consciousness
+  - ai
+  - polyglot
+
+home: https://github.com/CrodBac4rdi/crod-babylon-genesis
+sources:
+  - https://github.com/CrodBac4rdi/crod-babylon-genesis
+
+maintainers:
+  - name: Daniel
+    email: crod@localhost
+
+dependencies:
+  - name: redis
+    version: "17.11.3"
+    repository: "https://charts.bitnami.com/bitnami"
+  - name: postgresql
+    version: "12.5.8" 
+    repository: "https://charts.bitnami.com/bitnami"
+  - name: nats
+    version: "0.19.14"
+    repository: "https://nats-io.github.io/k8s/helm/charts/"

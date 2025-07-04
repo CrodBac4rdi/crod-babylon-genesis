@@ -1,0 +1,49 @@
+{
+  "description": "Index of CROD knowledge base files - Large JSON files referenced here",
+  "knowledge_location": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/",
+  "major_files": [
+    {
+      "name": "CROD-MEGA-COMPLETE.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/CROD-MEGA-COMPLETE.json",
+      "description": "Complete CROD knowledge base",
+      "usage": "Load into Intelligence Hub pod"
+    },
+    {
+      "name": "CROD-ULTIMATE-INDEX.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/CROD-ULTIMATE-INDEX.json",
+      "description": "Ultimate index of all CROD components",
+      "usage": "Meta-Chain reference"
+    },
+    {
+      "name": "crod-master.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/crod-master.json",
+      "description": "Master atom and pattern definitions",
+      "usage": "Core system initialization"
+    },
+    {
+      "name": "llama-learning-db.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/llama-learning-db.json",
+      "description": "LLAMA integration knowledge",
+      "usage": "Local ML runner"
+    },
+    {
+      "name": "crod-mega-atoms.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/crod-mega-atoms.json",
+      "description": "Complete atom database",
+      "usage": "Import into spatial DB atoms table"
+    },
+    {
+      "name": "crod-mega-patterns.json",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-START/organized/data/knowledge/crod-mega-patterns.json",
+      "description": "Complete pattern database",
+      "usage": "Import into spatial DB patterns table"
+    }
+  ],
+  "import_script": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/import-crod-data.js",
+  "notes": [
+    "Use import-crod-data.js to load these into spatial DB",
+    "Files are too large to move - reference in place",
+    "Each pod can selectively load what it needs",
+    "Consider chunking for better performance"
+  ]
+}

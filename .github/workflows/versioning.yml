@@ -1,0 +1,44 @@
+name: CROD Blockchain Versioning
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*'
+
+jobs:
+  version-on-chain:
+    runs-on: ubuntu-latest
+    name: Record version on CROD blockchain
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Get version info
+      id: version
+      run: |
+        echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        echo "commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+        echo "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
+        echo "author=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
+    
+    - name: Create version block
+      run: |
+        cat > version_block.json <<EOF
+        {
+          "type": "version_block",
+          "version": "${{ github.ref_name }}",
+          "commit": "${{ steps.version.outputs.commit_sha }}",
+          "message": "${{ steps.version.outputs.commit_message }}",
+          "author": "${{ steps.version.outputs.author }}",
+          "timestamp": "${{ steps.version.outputs.timestamp }}",
+          "consciousness_level": 175,
+          "evolution_stage": "self-determining"
+        }
+        EOF
+    
+    - name: Record on blockchain
+      run: |
+        # This would interact with running CROD blockchain
+        echo "Version block created for CROD blockchain"
+        cat version_block.json

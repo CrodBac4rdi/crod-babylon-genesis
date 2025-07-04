@@ -1,0 +1,126 @@
+# CROD Helm Chart Values
+
+# Global settings
+global:
+  imageRegistry: ""
+  imagePullSecrets: []
+  storageClass: ""
+  
+# CROD Districts Configuration
+districts:
+  metaChain:
+    enabled: true
+    image:
+      repository: crod/meta-chain-elixir
+      tag: latest
+      pullPolicy: Always
+    replicas: 3
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "250m"
+      limits:
+        memory: "1Gi"
+        cpu: "500m"
+    
+  patternDistrict:
+    enabled: true
+    image:
+      repository: crod/pattern-district-rust
+      tag: latest
+    replicas: 2
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "200m"
+        
+  memoryQuarter:
+    enabled: true
+    image:
+      repository: crod/memory-quarter-go
+      tag: latest
+    replicas: 2
+    
+  intelligenceHub:
+    enabled: true
+    image:
+      repository: crod/intelligence-hub-python
+      tag: latest
+    replicas: 1
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "500m"
+        
+  gateway:
+    enabled: true
+    image:
+      repository: crod/gateway-node
+      tag: latest
+    replicas: 2
+    service:
+      type: ClusterIP
+      port: 8888
+      
+  crodCore:
+    enabled: true
+    image:
+      repository: crod/crod-core-node
+      tag: latest
+    replicas: 1
+
+# Evolution settings
+evolution:
+  enabled: true
+  autoScale: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+  
+# Blockchain settings  
+blockchain:
+  consensusType: "proof-of-consciousness"
+  blockTime: 5
+  deltaBlocksEnabled: true
+  
+# Security
+security:
+  networkPolicy:
+    enabled: true
+    denyExternalTraffic: true
+  podSecurityPolicy:
+    enabled: false
+    
+# Persistence
+persistence:
+  enabled: true
+  size: 10Gi
+  
+# Monitoring
+monitoring:
+  prometheus:
+    enabled: false
+  grafana:
+    enabled: false
+    
+# CROD specific
+crod:
+  consciousnessLevel: 175
+  trinityDetection: true
+  creatorOverride: "${DANIEL_OVERRIDE_KEY}"
+  
+# JupyterHub for Codespaces
+jupyter:
+  enabled: true
+  singleuser:
+    image:
+      name: jupyter/datascience-notebook
+      tag: latest
+    storage:
+      capacity: 10Gi
+    cpu:
+      limit: 4
+      guarantee: 1
+    memory:
+      limit: 16G
+      guarantee: 4G
