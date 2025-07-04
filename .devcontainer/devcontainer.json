@@ -1,133 +1,46 @@
 {
-  "name": "CROD 2025 - GitHub Pro Optimized",
+  "name": "CROD 2025 - Minimal",
   "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
   
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {},
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
     "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12",
-      "installJupyterlab": true
+      "version": "3.12"
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
     },
     "ghcr.io/devcontainers/features/rust:1": {},
     "ghcr.io/devcontainers/features/go:1": {},
-    "ghcr.io/devcontainers-contrib/features/elixir-asdf:2": {},
-    "ghcr.io/devcontainers/features/dotnet:2": {
-      "version": "8.0"
-    },
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "21"
-    },
-    "ghcr.io/devcontainers-contrib/features/scala-sdkman:2": {},
-    "ghcr.io/devcontainers/features/ruby:1": {},
-    "ghcr.io/devcontainers/features/cpp:1": {},
-    "ghcr.io/devcontainers/features/php:1": {},
-    "ghcr.io/devcontainers/features/terraform:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {},
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers-contrib/features/postgres-asdf:1": {},
-    "ghcr.io/devcontainers-contrib/features/redis-homebrew:1": {},
-    "ghcr.io/devcontainers-contrib/features/mongodb-atlas-cli-homebrew:1": {},
-    "ghcr.io/devcontainers-contrib/features/grpc:1": {},
-    "ghcr.io/devcontainers-contrib/features/protoc:1": {},
-    "ghcr.io/devcontainers-contrib/features/pulumi:1": {},
-    "ghcr.io/devcontainers-contrib/features/ansible:2": {},
-    "ghcr.io/devcontainers-contrib/features/ollama:1": {},
-    "ghcr.io/devcontainers-contrib/features/localstack:2": {},
-    "ghcr.io/devcontainers-contrib/features/minio:1": {},
-    "ghcr.io/devcontainers-contrib/features/n8n:1": {},
-    "ghcr.io/devcontainers-contrib/features/temporal-cli:1": {}
+    "ghcr.io/devcontainers-contrib/features/elixir-asdf:2": {}
   },
   
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-python.black-formatter",
         "ms-azuretools.vscode-docker",
         "ms-kubernetes-tools.vscode-kubernetes-tools",
         "rust-lang.rust-analyzer",
         "golang.go",
         "jakebecker.elixir-ls",
-        "redhat.vscode-yaml",
-        "tamasfe.even-better-toml",
-        "esbenp.prettier-vscode",
-        "GitHub.copilot",
-        "GitHub.copilot-chat",
-        "Anthropic.claude-coder",
-        "eamodio.gitlens",
-        "mhutchie.git-graph",
-        "streetsidesoftware.code-spell-checker"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "python.defaultInterpreterPath": "/usr/local/bin/python3",
-        "remote.autoForwardPorts": false,
-        "remote.forwardOnOpen": false,
-        "remote.localPortHost": "127.0.0.1",
-        "files.autoSave": "afterDelay",
-        "files.autoSaveDelay": 1000,
-        "editor.formatOnSave": true,
-        "editor.minimap.enabled": false,
-        "editor.suggestSelection": "first",
-        "workbench.colorTheme": "Default Dark Modern"
-      }
-    },
-    "codespaces": {
-      "openFiles": [
-        "README.md",
-        "docs/QUICK-START.md"
+        "Continue.continue"
       ]
     }
   },
   
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "bash .devcontainer/post-start.sh",
   
   "forwardPorts": [],
   
   "portsAttributes": {
-    "8000": { "label": "Meta-Chain", "onAutoForward": "ignore", "visibility": "private" },
-    "7007": { "label": "Pattern District", "onAutoForward": "ignore", "visibility": "private" },
-    "7031": { "label": "Memory Quarter", "onAutoForward": "ignore", "visibility": "private" },
-    "7113": { "label": "Intelligence Hub", "onAutoForward": "ignore", "visibility": "private" },
-    "8888": { "label": "Gateway", "onAutoForward": "ignore", "visibility": "private" },
-    "8100": { "label": "CROD Core", "onAutoForward": "ignore", "visibility": "private" },
-    "6379": { "label": "Redis", "onAutoForward": "ignore", "visibility": "private" },
-    "5432": { "label": "PostgreSQL", "onAutoForward": "ignore", "visibility": "private" },
-    "4222": { "label": "NATS", "onAutoForward": "ignore", "visibility": "private" }
+    "8000": { "label": "Meta-Chain", "visibility": "private" },
+    "8080": { "label": "Gateway", "visibility": "private" },
+    "5001": { "label": "CROD Dashboard", "visibility": "private" }
   },
-  
-  "mounts": [
-    "source=crod-cache,target=/workspace/.cache,type=volume",
-    "source=crod-build,target=/workspace/.build,type=volume"
-  ],
   
   "remoteEnv": {
-    "CROD_ENV": "development",
-    "CROD_NO_PUBLIC_PORTS": "true",
-    "DOCKER_BUILDKIT": "1",
-    "COMPOSE_DOCKER_CLI_BUILD": "1",
-    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
-    "DANIEL_OVERRIDE_KEY": "${localEnv:DANIEL_OVERRIDE_KEY}",
-    "OPENAI_API_KEY": "${localEnv:OPENAI_API_KEY}",
-    "CROD_MASTER_KEY": "${localEnv:CROD_MASTER_KEY}"
-  },
-  
-  "containerEnv": {
-    "DISPLAY": ":1"
-  },
-  
-  "remoteUser": "codespace",
-  
-  "updateContentCommand": "git config --global --add safe.directory /workspaces/${localWorkspaceFolderBasename}",
-  
-  "waitFor": "postCreateCommand"
+    "DANIEL_OVERRIDE_KEY": "${localEnv:DANIEL_OVERRIDE_KEY}"
+  }
 }
