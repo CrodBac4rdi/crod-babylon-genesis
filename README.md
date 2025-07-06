@@ -6,6 +6,16 @@
 [![Phase](https://img.shields.io/badge/Phase-Reborn-purple.svg)]()
 [![Stack](https://img.shields.io/badge/Stack-Polyglot-blue.svg)]()
 
+![CROD Banner](assets/svg/crod-banner.svg)
+
+## 📚 Dokumentation
+
+- [Projektarchitektur](docs/docs/ARCHITECTURE.md)
+- [Entwicklungsanleitung](docs/docs/DEVELOPMENT.md)
+- [API-Dokumentation](docs/docs/API.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Beitragsrichtlinien](docs/contributing/CONTRIBUTING.md)
+
 ## 🔥 Neuer Stack: Ohne Blockchain, volle Power!
 
 CROD ist jetzt eine polyglot Architektur, die die besten Eigenschaften mehrerer Programmiersprachen nutzt, um ein hochleistungsfähiges System zu schaffen:
@@ -17,6 +27,8 @@ CROD ist jetzt eine polyglot Architektur, die die besten Eigenschaften mehrerer 
 - **📱 Phoenix LiveView**: Reaktives Frontend ohne komplexe SPA
 
 ## 🏗️ Architektur-Übersicht
+
+![Architektur](assets/svg/crod-architecture.svg)
 
 ```
 ┌─────────────────────────────┐    ┌─────────────────────────────┐
@@ -118,6 +130,8 @@ npm run dev
 
 ## 📊 Performance-Vorteile
 
+![Performance-Metrics](assets/svg/performance-metrics.svg)
+
 | Komponente | Technologie | Vorteile |
 |------------|-------------|----------|
 | Core Services | Elixir/Phoenix | Hohe Verfügbarkeit, Fault-Tolerance, Millionen gleichzeitiger Verbindungen |
@@ -162,6 +176,8 @@ Der polyglote Ansatz erlaubt es uns, die optimale Sprache für jeden Teil der An
 4. **JavaScript/TypeScript**: Für das Frontend und einige Backend-Dienste, die von der npm-Ökosystem profitieren
 
 ## 🛠️ Nächste Schritte
+
+![Roadmap](assets/svg/roadmap.svg)
 
 1. Elixir/Phoenix-Grundstruktur implementieren
 2. Rust-Services für Performance-kritische Komponenten entwickeln
