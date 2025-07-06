@@ -9,7 +9,7 @@
 
 ## 📊 Aktueller Status (Juli 2025)
 
-![System Architecture](visualization/output/enhanced/crod_system_architecture_20250706_104240.png)
+![Current vs Target State](assets/svg/current-vs-target-state.svg)
 
 ### 🏃 Was läuft aktuell:
 - ✅ **Mock Blockchain API** (Port 3001) - Node.js Service für Blockchain Simulation
@@ -29,26 +29,7 @@ Wir befinden uns in der **Planungsphase** für die finale Polyglot-Architektur. 
 
 ### 🏙️ CROD Polyglot City Architektur
 
-```mermaid
-graph TB
-    subgraph "CROD Polyglot City"
-        MC[🧠 Meta-Chain<br/>Elixir]
-        PD[🔍 Pattern District<br/>Rust]
-        MQ[💾 Memory Quarter<br/>Go]
-        IH[🤖 Intelligence Hub<br/>Python]
-        GW[🌐 Gateway<br/>Node.js]
-    end
-    
-    MB[[🔗 Message Bus<br/>NATS/Redis]]
-    
-    MC <--> MB
-    PD <--> MB
-    MQ <--> MB
-    IH <--> MB
-    GW <--> MB
-    
-    User((User)) --> GW
-```
+![Polyglot City Architecture](assets/svg/polyglot-city-architecture.svg)
 
 ## 🛠️ Technologie Stack
 
@@ -138,6 +119,8 @@ python3 dynamic_visualizer.py   # Animierte Visualisierungen
 ```
 
 ## 📦 Dependencies & Tech Stack
+
+![Tech Stack Overview](assets/svg/tech-stack-overview.svg)
 
 ### Core Technologies
 - **Elixir** (Apache 2.0) - Blockchain Core mit Phoenix, NATS, Quantum

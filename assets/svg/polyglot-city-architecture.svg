@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f3a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- District gradients -->
+    <linearGradient id="elixirGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="rustGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1c40f;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="natsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a8cc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+  
+  <!-- Title -->
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#fff">
+    CROD Polyglot City Architecture
+  </text>
+  
+  <!-- City outline -->
+  <rect x="150" y="100" width="900" height="500" rx="20" fill="none" stroke="#34495e" stroke-width="3" stroke-dasharray="10,5" opacity="0.5"/>
+  
+  <!-- Districts -->
+  
+  <!-- Meta-Chain (Elixir) - Center/Top -->
+  <g transform="translate(600, 200)">
+    <rect x="-100" y="-60" width="200" height="120" rx="15" fill="url(#elixirGrad)" filter="url(#glow)"/>
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#fff">🧠 Meta-Chain</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#fff">Elixir</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#ecf0f1">Orchestrator</text>
+  </g>
+  
+  <!-- Pattern District (Rust) - Left -->
+  <g transform="translate(300, 350)">
+    <rect x="-90" y="-50" width="180" height="100" rx="15" fill="url(#rustGrad)" filter="url(#glow)"/>
+    <text x="0" y="-10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">🔍 Pattern District</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Rust</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">Fast Matching</text>
+  </g>
+  
+  <!-- Memory Quarter (Go) - Right -->
+  <g transform="translate(900, 350)">
+    <rect x="-90" y="-50" width="180" height="100" rx="15" fill="url(#goGrad)" filter="url(#glow)"/>
+    <text x="0" y="-10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">💾 Memory Quarter</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Go</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">Concurrent Memory</text>
+  </g>
+  
+  <!-- Intelligence Hub (Python) - Bottom Left -->
+  <g transform="translate(400, 500)">
+    <rect x="-100" y="-50" width="200" height="100" rx="15" fill="url(#pythonGrad)" filter="url(#glow)"/>
+    <text x="0" y="-10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">🤖 Intelligence Hub</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Python</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">ML/AI Processing</text>
+  </g>
+  
+  <!-- Gateway (Node.js) - Bottom Right -->
+  <g transform="translate(800, 500)">
+    <rect x="-90" y="-50" width="180" height="100" rx="15" fill="url(#nodeGrad)" filter="url(#glow)"/>
+    <text x="0" y="-10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#fff">🌐 Gateway</text>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#fff">Node.js</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">API Entry</text>
+  </g>
+  
+  <!-- Message Bus (Center) -->
+  <g transform="translate(600, 400)">
+    <ellipse cx="0" cy="0" rx="120" ry="60" fill="url(#natsGrad)" opacity="0.3"/>
+    <rect x="-80" y="-30" width="160" height="60" rx="30" fill="url(#natsGrad)" filter="url(#glow)"/>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#fff">🔗 Message Bus</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">NATS/Redis</text>
+  </g>
+  
+  <!-- Connections -->
+  <g stroke="#00d9ff" stroke-width="3" fill="none" opacity="0.6">
+    <!-- Meta-Chain to Message Bus -->
+    <path d="M 600 260 L 600 340" stroke-dasharray="5,5"/>
+    <!-- Pattern District to Message Bus -->
+    <path d="M 390 350 L 480 400" stroke-dasharray="5,5"/>
+    <!-- Memory Quarter to Message Bus -->
+    <path d="M 810 350 L 720 400" stroke-dasharray="5,5"/>
+    <!-- Intelligence Hub to Message Bus -->
+    <path d="M 500 500 L 550 430" stroke-dasharray="5,5"/>
+    <!-- Gateway to Message Bus -->
+    <path d="M 710 500 L 650 430" stroke-dasharray="5,5"/>
+  </g>
+  
+  <!-- User -->
+  <g transform="translate(600, 700)">
+    <circle cx="0" cy="0" r="40" fill="#ecf0f1" filter="url(#glow)"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#2c3e50">👤</text>
+    <text x="0" y="-55" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#ecf0f1">User</text>
+  </g>
+  
+  <!-- User to Gateway connection -->
+  <path d="M 600 660 L 800 550" stroke="#2ecc71" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2ecc71"/>
+    </marker>
+  </defs>
+  
+  <!-- Status indicators -->
+  <g transform="translate(1050, 150)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ecf0f1">Status</text>
+    <circle cx="-20" cy="30" r="8" fill="#2ecc71"/>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1">Ready</text>
+    <circle cx="-20" cy="60" r="8" fill="#e74c3c"/>
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1">Planned</text>
+    <circle cx="-20" cy="90" r="8" fill="#f39c12"/>
+    <text x="0" y="95" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1">In Progress</text>
+  </g>
+  
+  <!-- Timestamp -->
+  <text x="1190" y="790" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#7f8c8d">Generated: Juli 2025</text>
+</svg>
