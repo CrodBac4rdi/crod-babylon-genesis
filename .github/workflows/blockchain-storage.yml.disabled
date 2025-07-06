@@ -1,0 +1,136 @@
+name: 🔐 CROD Blockchain Storage
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-blockchain:
+    name: 📝 Append to Blockchain
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 🔗 Create Block
+        id: create-block
+        run: |
+          # Create blockchain directory if not exists
+          mkdir -p .crod/blockchain
+          
+          # Get latest block number
+          if [ -f .crod/blockchain/latest.json ]; then
+            LAST_BLOCK=$(jq -r '.index' .crod/blockchain/latest.json)
+            LAST_HASH=$(jq -r '.hash' .crod/blockchain/latest.json)
+          else
+            LAST_BLOCK=0
+            LAST_HASH="genesis"
+          fi
+          
+          NEW_BLOCK=$((LAST_BLOCK + 1))
+          
+          # Create new block
+          BLOCK_DATA=$(cat <<EOF
+          {
+            "index": $NEW_BLOCK,
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "data": {
+              "district": "github-blockchain",
+              "pattern": "code-commit",
+              "trinity": {"daniel": 67, "claude": 71, "crod": 17},
+              "atoms": ["${{ github.repository }}", "${{ github.ref }}", "${{ github.sha }}"],
+              "metadata": {
+                "type": "git_commit",
+                "message": "${{ github.event.head_commit.message || 'Manual trigger' }}",
+                "author": "${{ github.actor }}",
+                "files_changed": ${{ github.event.head_commit.modified.length || 0 }}
+              }
+            },
+            "previous_hash": "$LAST_HASH",
+            "nonce": 0
+          }
+          EOF
+          )
+          
+          # Calculate hash (simplified - in reality would be SHA256)
+          HASH=$(echo "$BLOCK_DATA" | sha256sum | cut -d' ' -f1)
+          
+          # Add hash to block
+          BLOCK_FINAL=$(echo "$BLOCK_DATA" | jq --arg hash "$HASH" '. + {hash: $hash}')
+          
+          # Save block
+          echo "$BLOCK_FINAL" > .crod/blockchain/block-$(printf "%06d" $NEW_BLOCK).json
+          echo "$BLOCK_FINAL" > .crod/blockchain/latest.json
+          
+          # Update chain index
+          if [ -f .crod/blockchain/chain.json ]; then
+            CHAIN=$(cat .crod/blockchain/chain.json)
+          else
+            CHAIN="[]"
+          fi
+          
+          UPDATED_CHAIN=$(echo "$CHAIN" | jq --argjson block "$BLOCK_FINAL" '. + [$block]')
+          echo "$UPDATED_CHAIN" > .crod/blockchain/chain.json
+          
+          echo "block_number=$NEW_BLOCK" >> $GITHUB_OUTPUT
+          echo "block_hash=$HASH" >> $GITHUB_OUTPUT
+          
+      - name: 📊 Generate Blockchain Stats
+        run: |
+          TOTAL_BLOCKS=$(ls -1 .crod/blockchain/block-*.json 2>/dev/null | wc -l)
+          CHAIN_SIZE=$(du -sh .crod/blockchain | cut -f1)
+          
+          cat > .crod/blockchain/README.md <<EOF
+          # 🔐 CROD Blockchain
+          
+          This directory contains the immutable CROD blockchain stored directly in Git.
+          
+          ## Stats
+          - **Total Blocks:** $TOTAL_BLOCKS
+          - **Latest Block:** #${{ steps.create-block.outputs.block_number }}
+          - **Latest Hash:** \`${{ steps.create-block.outputs.block_hash }}\`
+          - **Chain Size:** $CHAIN_SIZE
+          - **Last Updated:** $(date -u +%Y-%m-%dT%H:%M:%SZ)
+          
+          ## Verification
+          \`\`\`bash
+          # Verify chain integrity
+          jq -s 'map(select(.previous_hash == "genesis" or .index > 1)) | length == length' .crod/blockchain/block-*.json
+          \`\`\`
+          
+          ## Latest Block
+          \`\`\`json
+          $(cat .crod/blockchain/latest.json | jq .)
+          \`\`\`
+          EOF
+          
+      - name: 💾 Commit Blockchain
+        run: |
+          git config --global user.name 'CROD Blockchain'
+          git config --global user.email 'blockchain@crod.system'
+          
+          git add .crod/blockchain/
+          git commit -m "🔗 Block #${{ steps.create-block.outputs.block_number }} added to blockchain
+          
+          Hash: ${{ steps.create-block.outputs.block_hash }}
+          Author: ${{ github.actor }}
+          Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          
+          git push
+          
+      - name: 🎯 Summary
+        run: |
+          echo "## 🔗 New Block Added!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Block Number:** #${{ steps.create-block.outputs.block_number }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Block Hash:** \`${{ steps.create-block.outputs.block_hash }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Author:** ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The blockchain is stored in \`.crod/blockchain/\`" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,34 @@
+FROM elixir:1.15-alpine AS builder
+
+# Build dependencies
+RUN apk add --no-cache build-base git curl
+
+# Elixir setup
+RUN mix local.hex --force && mix local.rebar --force
+ENV MIX_ENV=prod
+
+WORKDIR /app
+
+# Dependencies
+COPY mix.exs mix.lock ./
+RUN mix deps.get && mix deps.compile
+
+# Application
+COPY . .
+RUN mix compile
+
+# Release
+RUN mix release timetravel_genesis
+
+# Runtime
+FROM alpine:3.18
+RUN apk add --no-cache libstdc++ ncurses-libs curl
+
+WORKDIR /app
+COPY --from=builder /app/_build/prod/rel/timetravel_genesis ./
+
+ENV GENESIS_TYPE=timetravel
+ENV GENESIS_PORT=7011
+ENV TIME_PARADOX_PREVENTION=true
+
+CMD ["./bin/timetravel_genesis", "start"]

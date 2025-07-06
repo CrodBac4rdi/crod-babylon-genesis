@@ -1,0 +1,60 @@
+name: Test CROD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-units:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run unit tests
+      run: ./scripts/test-unit.sh
+
+  test-integration:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+      postgres:
+        image: postgis/postgis:15-3.3
+        env:
+          POSTGRES_PASSWORD: crod123
+        ports:
+          - 5432:5432
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Start services
+      run: |
+        docker-compose up -d
+        sleep 30  # Wait for services
+    
+    - name: Run integration tests
+      run: ./scripts/test-integration.sh
+    
+    - name: Cleanup
+      if: always()
+      run: docker-compose down
+
+  test-performance:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run performance tests
+      run: ./scripts/test-performance.sh
+    
+    - name: Upload results
+      uses: actions/upload-artifact@v3
+      with:
+        name: performance-results
+        path: tests/performance/results/

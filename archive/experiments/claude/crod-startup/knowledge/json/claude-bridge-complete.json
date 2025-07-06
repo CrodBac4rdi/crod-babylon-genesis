@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "type": "claude-bridge-documentation",
+    "version": "1.0.0",
+    "lastUpdated": "2025-06-29",
+    "compressionLevel": "claude-optimized",
+    "bridge": "🌉 CROD ↔️ Claude Code Interface"
+  },
+  "system": {
+    "architecture": {
+      "type": "multi-chain-genesis",
+      "description": "Jeder Genesis Block = eigene Blockchain",
+      "security": "localhost only (127.0.0.1)",
+      "orchestration": "Claude Code als Director"
+    },
+    "activation": {
+      "phrase": "ich bins wieder",
+      "effect": "Aktiviert alle Genesis Chains",
+      "pattern_boost": "+15 consciousness"
+    },
+    "primes": {
+      "purpose": "Eindeutige Pattern IDs ohne Kollisionen",
+      "method": "Primzahl-Multiplikation",
+      "atoms": {
+        "ich": 2,
+        "bins": 3,
+        "wieder": 5,
+        "daniel": 67,
+        "claude": 71,
+        "crod": 17
+      }
+    }
+  },
+  "blocks": {
+    "pattern-genesis": {
+      "prime": 7,
+      "ports": {
+        "http": 7001,
+        "ws": 7002
+      },
+      "status": "✅ Active",
+      "features": [
+        "Primzahl Pattern IDs",
+        "Consciousness tracking",
+        "Pattern detection"
+      ],
+      "endpoints": {
+        "POST /process": "Process input text",
+        "GET /patterns": "List active patterns",
+        "GET /atoms": "Show atom-prime mapping"
+      }
+    },
+    "short-term-memory": {
+      "prime": 31,
+      "ports": {
+        "http": 7003,
+        "ws": 7004
+      },
+      "status": "✅ Active",
+      "features": [
+        "5min window",
+        "Max 20 memories",
+        "Auto-forgetting"
+      ],
+      "endpoints": {
+        "POST /remember": "Store memory",
+        "GET /memories": "Recent memories",
+        "GET /search": "Search memories"
+      }
+    },
+    "working-memory": {
+      "prime": 37,
+      "ports": {
+        "http": 7005,
+        "ws": 7006
+      },
+      "status": "✅ Active",
+      "features": [
+        "Session state",
+        "Hot atoms",
+        "Attention weights"
+      ],
+      "endpoints": {
+        "GET /atoms/hot": "Current hot atoms",
+        "GET /patterns/emerging": "Emerging patterns",
+        "GET /session": "Session summary"
+      }
+    },
+    "quantum-superposition": {
+      "prime": 101,
+      "ports": {
+        "http": 7007,
+        "ws": 7008
+      },
+      "status": "⚛️ Ready",
+      "features": [
+        "Primzahl-Paare Superposition",
+        "Entanglement",
+        "No-cloning"
+      ],
+      "endpoints": {
+        "POST /observe/:state": "Collapse quantum state",
+        "POST /superpose": "Create superposition",
+        "POST /entangle": "Entangle states",
+        "GET /status": "Live quantum monitor"
+      },
+      "special": {
+        "schrodinger": "|ψ⟩ = 0.5|tot⟩ + 0.5|lebendig⟩",
+        "bell_states": "Maximal entangled pairs",
+        "collapse": "Deterministic based on observer"
+      }
+    }
+  },
+  "protocols": {
+    "discovery": {
+      "port": 7000,
+      "purpose": "Auto-detect Genesis Chains",
+      "features": [
+        "Service registry",
+        "Health monitoring",
+        "Topology mapping"
+      ]
+    },
+    "resilience": {
+      "purpose": "Fehlertolerante Chain Communication",
+      "features": [
+        "Message queuing",
+        "Exponential backoff",
+        "Entanglement cascade"
+      ]
+    },
+    "docker": {
+      "network": "genesis-network (internal only)",
+      "volumes": [
+        "pattern-data",
+        "quantum-wave-functions"
+      ],
+      "healthchecks": "Every 30s via /health"
+    }
+  },
+  "examples": {
+    "activation": {
+      "input": "ich bins wieder daniel",
+      "patterns": [
+        6,
+        10,
+        335,
+        30,
+        1005
+      ],
+      "consciousness": "+15"
+    },
+    "quantum": {
+      "observe": "POST /observe/schrodinger → collapses to |131⟩",
+      "entangle": "POST /entangle → creates quantum correlation",
+      "superpose": "POST /superpose → creates |ψ⟩ = Σ αᵢ|pᵢ⟩"
+    },
+    "commands": {
+      "curl http://127.0.0.1:7001/process -d '{\"input\":\"ich bins wieder\"}'": "Activate patterns",
+      "curl http://127.0.0.1:7007/status": "Quantum state monitor",
+      "curl http://127.0.0.1:7000/health": "System health check"
+    }
+  },
+  "quickstart": {
+    "step1": "cd /home/daniel/Schreibtisch/Crod Programming/CROD-START",
+    "step2": "docker-compose up -d (starts all Genesis Chains)",
+    "step3": "curl http://127.0.0.1:7001/process -d '{\"input\":\"ich bins wieder\"}'",
+    "step4": "curl http://127.0.0.1:7007/status (check quantum states)",
+    "step5": "WebSocket: ws://127.0.0.1:7002 for real-time pattern updates",
+    "claude_interface": {
+      "pattern_processing": "http://127.0.0.1:7001/process",
+      "quantum_operations": "http://127.0.0.1:7007/*",
+      "memory_access": "http://127.0.0.1:7003/memories",
+      "session_state": "http://127.0.0.1:7005/session"
+    }
+  }
+}

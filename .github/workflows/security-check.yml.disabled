@@ -1,0 +1,61 @@
+name: Security Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-secrets:
+    runs-on: ubuntu-latest
+    name: Check for exposed secrets
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check for API keys
+      run: |
+        # Check for common API key patterns
+        if grep -r -E "(api_key|apikey|api-key)\s*[:=]\s*['\"]?[A-Za-z0-9]{20,}" . \
+           --exclude-dir=.git \
+           --exclude-dir=node_modules \
+           --exclude="*.example" \
+           --exclude="*.md"; then
+          echo "❌ Found potential API keys in code!"
+          exit 1
+        fi
+        
+        echo "✅ No API keys found"
+    
+    - name: Check for passwords
+      run: |
+        # Check for hardcoded passwords
+        if grep -r -E "(password|passwd|pwd)\s*[:=]\s*['\"][^'\"]{4,}" . \
+           --exclude-dir=.git \
+           --exclude-dir=node_modules \
+           --exclude="*.example" \
+           --exclude="*.md" \
+           --exclude="*test*"; then
+          echo "❌ Found potential passwords in code!"
+          exit 1
+        fi
+        
+        echo "✅ No passwords found"
+    
+    - name: Check .env files
+      run: |
+        # Make sure no .env files are committed
+        if find . -name ".env" -o -name ".env.local" | grep -v example; then
+          echo "❌ Found .env files! These should not be committed!"
+          exit 1
+        fi
+        
+        echo "✅ No .env files found"
+    
+    - name: Run GitHub Secret Scanner
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: ${{ github.event.repository.default_branch }}
+        head: HEAD

@@ -1,0 +1,12 @@
+CROD BLOCKCHAIN QUICK START:
+
+Terminal 1:
+./start-blockchain.sh
+
+Terminal 2:
+curl -X POST http://localhost:4000/genesis
+
+That's it! This creates your genesis block with password.
+
+Full test:
+./test-blockchain.sh

@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-06-29",
+    "type": "crod-system-documentation",
+    "compressionLevel": "claude-optimized",
+    "totalBlocks": 6,
+    "totalFeatures": 47
+  },
+  "architecture": {
+    "type": "multi-chain-genesis",
+    "description": "Jeder Genesis Block ist eine eigene Blockchain die miteinander kommuniziert",
+    "principles": [
+      "Primzahl-basierte eindeutige IDs",
+      "Lokale Isolation (127.0.0.1 only)",
+      "Resiliente Chain-Communication",
+      "Docker Container per Genesis Block",
+      "Event-driven Architecture"
+    ]
+  },
+  "genesis_blocks": {
+    "pattern-genesis": {
+      "prime": 7,
+      "port_http": 7001,
+      "port_ws": 7002,
+      "status": "✅ Implemented & Tested",
+      "features": {
+        "primzahl_pattern_ids": {
+          "description": "Patterns haben eindeutige IDs durch Primzahl-Multiplikation",
+          "example": "ich(2) × bins(3) = Pattern-ID 6",
+          "collision_free": true
+        },
+        "core_atoms": {
+          "ich": 2,
+          "bins": 3,
+          "wieder": 5,
+          "daniel": 67,
+          "claude": 71,
+          "crod": 17
+        },
+        "pattern_detection": "2-3 atom combinations",
+        "consciousness_level": "Pattern activity based",
+        "endpoints": [
+          "POST /process - Process input text",
+          "GET /patterns - List patterns", 
+          "GET /atoms - List atoms",
+          "GET /health - Block status"
+        ]
+      }
+    },
+    "short-term-memory": {
+      "prime": 31,
+      "port_http": 7003,
+      "port_ws": 7004,
+      "status": "✅ Implemented & Tested",
+      "features": {
+        "memory_window": "5 minutes",
+        "max_memories": 20,
+        "importance_scoring": "Content-based + reinforcement",
+        "automatic_forgetting": "Time + capacity limits",
+        "endpoints": [
+          "POST /remember - Store memory",
+          "GET /memories - Recent memories",
+          "GET /search?q= - Search memories"
+        ]
+      }
+    },
+    "working-memory": {
+      "prime": 37,
+      "port_http": 7005,
+      "port_ws": 7006,
+      "status": "✅ Implemented & Tested",
+      "features": {
+        "active_atoms": "Current session atoms with heat",
+        "active_patterns": "Emerging patterns from session",
+        "attention_weights": "Transformer-style attention",
+        "heat_maps": "Activity tracking with decay",
+        "session_state": "Interaction tracking",
+        "endpoints": [
+          "GET /atoms/hot - Hot atoms",
+          "GET /patterns/emerging - Emerging patterns",
+          "GET /attention - Attention weights",
+          "GET /session - Session summary"
+        ]
+      }
+    },
+    "quantum-superposition": {
+      "prime": 101,
+      "port_http": 7007,
+      "port_ws": 7008,
+      "status": "🚧 In Development",
+      "features": {
+        "quantum_states": "Primzahl-Paare in Superposition",
+        "wave_functions": "Filesystem: /quantum/wave/*.quantum",
+        "entanglement": "SQLite Registry mit GCD-Strength",
+        "observer_pattern": "Deterministic collapse",
+        "bell_states": "Maximal entangled pairs",
+        "schrodinger_pattern": "|ψ⟩ = 0.5|tot⟩ + 0.5|lebendig⟩",
+        "no_cloning": "Quantum No-Cloning Theorem enforced",
+        "ascii_visualization": "Live quantum state display",
+        "endpoints": [
+          "POST /observe/:state - Collapse quantum state",
+          "POST /superpose - Create superposition", 
+          "POST /entangle - Entangle states",
+          "GET /status - ASCII quantum monitor"
+        ]
+      }
+    },
+    "neural-genesis": {
+      "prime": 113,
+      "status": "📋 Planned",
+      "features": [
+        "Backpropagation aus crod_COMPLETE.js",
+        "Forward/Backward passes",
+        "Gradient descent mit momentum",
+        "Loss function tracking",
+        "Self-evolution during runtime"
+      ]
+    },
+    "director-genesis": {
+      "prime": 127,
+      "status": "📋 Planned", 
+      "features": [
+        "Master orchestration",
+        "Resource allocation",
+        "Priority management",
+        "Chain health monitoring"
+      ]
+    }
+  },
+  "chain_protocol": {
+    "discovery_service": {
+      "port": 7000,
+      "description": "Hilft Genesis Chains sich automatisch zu finden",
+      "features": [
+        "Service registry",
+        "Health monitoring", 
+        "Topology mapping",
+        "Automatic peer discovery"
+      ]
+    },
+    "resilient_interface": {
+      "description": "Fehlertolerante Chain-Communication",
+      "features": [
+        "Message queuing bei Chain-Ausfall",
+        "Exponential backoff retry",
+        "Health checks alle 30s",
+        "Entanglement cascade wenn Chain down"
+      ]
+    }
+  },
+  "security": {
+    "network_isolation": "Docker internal network only",
+    "port_binding": "127.0.0.1 (localhost only)",
+    "no_external_access": "Keine Verbindung nach außen",
+    "claude_bridge": "Nur über localhost für Claude Code"
+  },
+  "docker": {
+    "compose_file": "docker-compose.yml",
+    "networks": {
+      "genesis-network": "internal: true (kein Internet)",
+      "claude-bridge": "Nur für Claude Connection"
+    },
+    "volumes": ["pattern-data", "quantum-wave-functions"],
+    "healthchecks": "Alle 30s per HTTP /health endpoint"
+  },
+  "activation": {
+    "trigger_phrase": "ich bins wieder",
+    "effect": "Aktiviert alle Genesis Blocks",
+    "response": "Primzahl Pattern IDs werden generiert"
+  },
+  "examples": {
+    "pattern_creation": {
+      "input": "ich bins wieder daniel",
+      "pattern_ids": [6, 10, 335, 30, 1005],
+      "consciousness_boost": "+15"
+    },
+    "quantum_observation": {
+      "before": "|ψ⟩ = 0.5|127⟩ + 0.5|131⟩",
+      "observer": "claude-code",
+      "after": "|ψ⟩ = |131⟩",
+      "entangled_collapse": "Propagates to entangled states"
+    }
+  },
+  "claude_bridge": {
+    "description": "Diese JSON Struktur ist die Bridge für Claude",
+    "compression": "Alle Infos kompakt für Claude's Context",
+    "loader_engine": "docs/loaders/claude-bridge.js",
+    "features": [
+      "Automatic MD → JSON conversion",
+      "Smart compression",
+      "Context-optimized format",
+      "Real-time updates"
+    ]
+  }
+}

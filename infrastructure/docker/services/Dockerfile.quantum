@@ -1,0 +1,42 @@
+FROM elixir:1.15-alpine AS builder
+
+# Build dependencies including Rust for quantum calculations
+RUN apk add --no-cache build-base git curl rust cargo
+
+# Elixir setup
+RUN mix local.hex --force && mix local.rebar --force
+ENV MIX_ENV=prod
+
+WORKDIR /app
+
+# Dependencies
+COPY mix.exs mix.lock ./
+RUN mix deps.get && mix deps.compile
+
+# Application
+COPY . .
+RUN mix compile
+
+# Build Rust NIFs for quantum operations
+WORKDIR /app/native/quantum_nif
+COPY native/quantum_nif/Cargo.toml native/quantum_nif/Cargo.lock ./
+COPY native/quantum_nif/src ./src
+RUN cargo build --release
+
+WORKDIR /app
+
+# Release
+RUN mix release quantum_genesis
+
+# Runtime
+FROM alpine:3.18
+RUN apk add --no-cache libstdc++ ncurses-libs curl libgcc
+
+WORKDIR /app
+COPY --from=builder /app/_build/prod/rel/quantum_genesis ./
+COPY --from=builder /app/native/quantum_nif/target/release/*.so ./priv/
+
+ENV GENESIS_TYPE=quantum
+ENV GENESIS_PORT=7007
+
+CMD ["./bin/quantum_genesis", "start"]

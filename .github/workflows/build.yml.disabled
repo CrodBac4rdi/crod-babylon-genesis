@@ -1,0 +1,78 @@
+name: Build CROD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-blockchain:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.15'
+        otp-version: '26'
+    
+    - name: Build and test Elixir blockchain
+      run: |
+        cd blockchain/elixir
+        mix deps.get
+        mix test
+  
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Build and test frontend
+      run: |
+        cd src/frontend/crod-gui
+        npm install
+        npm run build
+  
+  build-visualization:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    
+    - name: Test visualization tools
+      run: |
+        cd visualization
+        pip install -r requirements.txt
+        python generate_crod_graphics.py --list
+        python crod_scientific_3d.py --list
+  
+  build-go-programs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+    
+    - name: Build Go programs
+      run: |
+        cd cmd
+        for dir in */; do
+          echo "Building $dir"
+          cd "$dir"
+          go build
+          cd ..
+        done

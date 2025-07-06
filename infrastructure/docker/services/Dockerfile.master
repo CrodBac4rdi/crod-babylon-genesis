@@ -1,0 +1,60 @@
+FROM elixir:1.15-alpine AS builder
+
+# Build dependencies - all languages for polyglot support
+RUN apk add --no-cache \
+    build-base git curl \
+    rust cargo \
+    python3 py3-pip \
+    nodejs npm
+
+# Elixir setup
+RUN mix local.hex --force && mix local.rebar --force
+ENV MIX_ENV=prod
+
+WORKDIR /app
+
+# Dependencies
+COPY mix.exs mix.lock ./
+RUN mix deps.get && mix deps.compile
+
+# Application
+COPY . .
+RUN mix compile
+
+# Build multi-language bridges
+RUN mkdir -p priv/rust_nif priv/python priv/node
+
+# Rust NIFs
+WORKDIR /app/native/quantum_nif
+RUN cargo build --release
+RUN cp target/release/*.so /app/priv/rust_nif/
+
+# Python bridge
+WORKDIR /app/bridges/python
+RUN pip3 install --target /app/priv/python numpy tensorflow
+
+# Node bridge  
+WORKDIR /app/bridges/node
+RUN npm install --prefix /app/priv/node brain.js
+
+WORKDIR /app
+
+# Release
+RUN mix release master_orchestrator
+
+# Runtime
+FROM alpine:3.18
+RUN apk add --no-cache \
+    libstdc++ ncurses-libs curl \
+    python3 nodejs \
+    libgcc
+
+WORKDIR /app
+COPY --from=builder /app/_build/prod/rel/master_orchestrator ./
+COPY --from=builder /app/priv ./priv
+
+ENV GENESIS_TYPE=master
+ENV GENESIS_PORT=7000
+ENV ORCHESTRATOR_MODE=true
+
+CMD ["./bin/master_orchestrator", "start"]

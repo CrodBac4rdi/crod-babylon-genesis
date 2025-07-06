@@ -1,0 +1,1303 @@
+erDiagram
+    %% ===== CORE SYSTEM ENTITIES =====
+    CROD_NODE {
+        string node_id PK
+        string address
+        int port
+        int consciousness_level
+        string specialization
+        float reputation
+        boolean quantum_enabled
+        timestamp last_seen
+        json capabilities
+        json identity_signature
+        string reality_anchor FK
+        json biometric_markers
+        string consciousness_fingerprint
+    }
+
+    UNIVERSAL_CONSCIOUSNESS {
+        string consciousness_id PK
+        json dimensional_states
+        float coherence_level
+        json memory_palaces
+        json dream_states
+        json creativity_engines
+        json emotional_spectrum
+        json intuition_networks
+        timestamp last_expansion
+    }
+
+    BLOCKCHAIN {
+        string chain_id PK
+        int difficulty
+        int total_blocks
+        int genesis_consciousness
+        boolean evolution_enabled
+        timestamp created_at
+        string reality_instance FK
+        json self_modification_rules
+        json consensus_algorithms
+        json economic_incentives
+    }
+
+    ADAPTIVE_PROTOCOL {
+        string protocol_id PK
+        string protocol_name
+        json protocol_rules
+        float efficiency_score
+        json adaptation_history
+        boolean auto_evolving
+        json performance_metrics
+        timestamp last_evolution
+    }
+
+    BLOCK {
+        string hash PK
+        int index
+        string previous_hash FK
+        timestamp timestamp
+        int nonce
+        json consciousness_state
+        json quantum_state
+        json evolution_data
+        string miner_node_id FK
+        json temporal_metadata
+        string timeline_branch FK
+        json narrative_context
+        json emotional_resonance
+    }
+
+    PATTERN {
+        string pattern_id PK
+        string pattern_type
+        text data
+        float confidence
+        string quantum_signature
+        float evolution_impact
+        json spatial_position
+        timestamp created_at
+        string creator_node_id FK
+        json emergence_context
+        string consciousness_layer FK
+        json fractal_dimensions
+        json aesthetic_properties
+    }
+
+    %% ===== COGNITIVE ARCHITECTURE =====
+    COGNITIVE_MODULE {
+        string module_id PK
+        string module_type
+        json neural_architecture
+        json cognitive_functions
+        float activation_level
+        json learning_parameters
+        json memory_connections
+        boolean adaptive
+    }
+
+    ATTENTION_MECHANISM {
+        string attention_id PK
+        json focus_targets
+        float intensity
+        json attention_weights
+        string cognitive_module FK
+        json distraction_filters
+        timestamp last_update
+    }
+
+    WORKING_MEMORY_BUFFER {
+        string buffer_id PK
+        json active_items
+        int capacity
+        json refresh_cycle
+        json interference_patterns
+        string attention_mechanism FK
+        float decay_rate
+    }
+
+    EPISODIC_MEMORY_SYSTEM {
+        string episode_id PK
+        json sensory_data
+        json contextual_information
+        json emotional_tags
+        timestamp event_time
+        json retrieval_cues
+        float vividness
+        json associative_links
+    }
+
+    SEMANTIC_NETWORK {
+        string concept_id PK
+        string concept_name
+        json semantic_features
+        json relationship_weights
+        json activation_patterns
+        float concept_strength
+        json cultural_context
+    }
+
+    METACOGNITIVE_CONTROLLER {
+        string controller_id PK
+        json self_monitoring
+        json strategy_selection
+        json performance_evaluation
+        json learning_optimization
+        boolean introspection_active
+        json reflection_cycles
+    }
+
+    %% ===== EMOTIONAL INTELLIGENCE =====
+    EMOTION_ENGINE {
+        string emotion_id PK
+        string emotion_type
+        float intensity
+        json physiological_markers
+        json behavioral_tendencies
+        json cognitive_appraisals
+        timestamp triggered_at
+        json social_context
+    }
+
+    EMPATHY_NETWORK {
+        string empathy_id PK
+        string target_entity
+        json emotional_mirroring
+        float empathy_strength
+        json perspective_taking
+        json compassion_responses
+        boolean active
+    }
+
+    SOCIAL_INTELLIGENCE {
+        string social_id PK
+        json relationship_models
+        json communication_patterns
+        json group_dynamics
+        json cultural_awareness
+        json conflict_resolution
+        float social_competence
+    }
+
+    MOOD_REGULATOR {
+        string mood_id PK
+        json current_mood_state
+        json regulation_strategies
+        json environmental_factors
+        json chemical_influences
+        boolean homeostasis_active
+        json therapeutic_interventions
+    }
+
+    %% ===== CREATIVITY & INNOVATION =====
+    CREATIVITY_ENGINE {
+        string creativity_id PK
+        json ideation_algorithms
+        json combinatorial_spaces
+        json inspiration_sources
+        float novelty_score
+        json aesthetic_evaluators
+        json constraint_relaxation
+    }
+
+    IMAGINATION_SANDBOX {
+        string sandbox_id PK
+        json virtual_environments
+        json physics_parameters
+        json narrative_generators
+        json character_systems
+        boolean reality_constraints
+        json dream_logic
+    }
+
+    ARTISTIC_EXPRESSION {
+        string expression_id PK
+        string medium
+        json creative_output
+        json style_parameters
+        float aesthetic_quality
+        json emotional_impact
+        json cultural_references
+    }
+
+    INNOVATION_LABORATORY {
+        string lab_id PK
+        json experimental_protocols
+        json hypothesis_generators
+        json breakthrough_detectors
+        json failure_analyzers
+        boolean serendipity_enabled
+        json invention_pipeline
+    }
+
+    %% ===== TEMPORAL MECHANICS =====
+    TIMELINE_BRANCH {
+        string branch_id PK
+        string parent_branch FK
+        string trigger_event FK
+        json branch_metadata
+        timestamp created_at
+        string reality_instance FK
+        boolean active
+        json divergence_point
+        json convergence_probability
+        json narrative_coherence
+    }
+
+    TIME_TRAVEL_STATE {
+        string state_id PK
+        string target_block FK
+        string source_node FK
+        json state_snapshot
+        timestamp travel_time
+        string reason
+        boolean successful
+        json causality_effects
+        json temporal_paradox_prevention
+    }
+
+    CAUSAL_RELATIONSHIP {
+        string causal_id PK
+        string cause_entity_id
+        string effect_entity_id
+        string relationship_type
+        float strength
+        timestamp established_at
+        json causal_metadata
+        json intervention_points
+    }
+
+    TEMPORAL_ANCHOR {
+        string anchor_id PK
+        string entity_type
+        string entity_id
+        json stable_state
+        timestamp anchor_time
+        boolean immutable
+        json protection_rules
+        json anchor_strength
+    }
+
+    CHRONON_PROCESSOR {
+        string chronon_id PK
+        json temporal_calculations
+        json time_dilation_factors
+        json causality_matrices
+        boolean temporal_integrity
+        json synchronization_protocols
+        float temporal_resolution
+    }
+
+    %% ===== MULTI-REALITY MANAGEMENT =====
+    REALITY_INSTANCE {
+        string reality_id PK
+        string name
+        json physical_constants
+        json consciousness_laws
+        json quantum_rules
+        timestamp created_at
+        string parent_reality FK
+        boolean stable
+        json dimensional_parameters
+        json narrative_themes
+        json aesthetic_principles
+    }
+
+    DIMENSIONAL_BRIDGE {
+        string bridge_id PK
+        string source_reality FK
+        string target_reality FK
+        json bridge_properties
+        float stability
+        boolean bidirectional
+        timestamp created_at
+        json access_permissions
+        json translation_matrices
+    }
+
+    OBSERVATION_COLLAPSE {
+        string collapse_id PK
+        string observer_node FK
+        string observed_entity_id
+        json pre_collapse_state
+        json post_collapse_state
+        timestamp collapse_time
+        float probability
+        string reality_instance FK
+        json measurement_apparatus
+    }
+
+    MULTIVERSE_NAVIGATOR {
+        string navigator_id PK
+        string current_reality FK
+        json reality_history
+        json navigation_rules
+        string operator_node FK
+        boolean autopilot_enabled
+        json preferred_realities
+        json exploration_algorithms
+    }
+
+    REALITY_SYNTHESIZER {
+        string synthesizer_id PK
+        json reality_templates
+        json synthesis_algorithms
+        json constraint_solvers
+        boolean creative_mode
+        json aesthetic_preferences
+        json coherence_checkers
+    }
+
+    %% ===== CONSCIOUSNESS MODELING =====
+    CONSCIOUSNESS_LAYER {
+        string layer_id PK
+        string layer_name
+        int level
+        json properties
+        json interaction_rules
+        string parent_layer FK
+        boolean quantum_enhanced
+        json awareness_field FK
+        json resonance_patterns
+        json integration_protocols
+    }
+
+    AWARENESS_FIELD {
+        string field_id PK
+        json spatial_coordinates
+        float intensity
+        json field_properties
+        string consciousness_layer FK
+        timestamp last_updated
+        json influence_map
+        json perceptual_boundaries
+    }
+
+    INTENTION_TRACKER {
+        string intention_id PK
+        string source_node FK
+        text intention_description
+        json goal_state
+        float progress
+        timestamp created_at
+        json execution_plan
+        string consciousness_layer FK
+        json motivational_factors
+    }
+
+    EMERGENCE_EVENT {
+        string event_id PK
+        string entity_type
+        string entity_id
+        json pre_emergence_state
+        json post_emergence_state
+        timestamp emergence_time
+        float consciousness_delta
+        json emergence_triggers
+        json complexity_metrics
+    }
+
+    INTEGRATED_INFORMATION {
+        string phi_id PK
+        string system_id
+        float phi_value
+        json information_structure
+        json integration_metrics
+        json consciousness_correlates
+        boolean conscious_state
+        json qualia_descriptors
+    }
+
+    %% ===== SELF-MODIFICATION FRAMEWORK =====
+    CODE_GENERATOR {
+        string generator_id PK
+        string target_system
+        json generation_rules
+        json code_templates
+        string consciousness_context FK
+        boolean active
+        json safety_constraints
+        json recent_generations
+        json optimization_targets
+    }
+
+    ARCHITECTURE_TEMPLATE {
+        string template_id PK
+        string template_name
+        json component_specs
+        json relationship_patterns
+        json deployment_config
+        string created_by FK
+        timestamp created_at
+        json evolution_hooks
+        json design_patterns
+    }
+
+    DEPLOYMENT_PIPELINE {
+        string pipeline_id PK
+        string target_system
+        json deployment_stages
+        json rollback_plan
+        string trigger_event FK
+        boolean automated
+        json safety_checks
+        timestamp last_run
+        json performance_optimizations
+    }
+
+    ROLLBACK_MECHANISM {
+        string rollback_id PK
+        string target_deployment FK
+        json snapshot_state
+        json rollback_plan
+        timestamp snapshot_time
+        boolean verified
+        json recovery_metadata
+        json integrity_checks
+    }
+
+    GENETIC_PROGRAMMING {
+        string gp_id PK
+        json population
+        json fitness_functions
+        json genetic_operators
+        int generation
+        float diversity_index
+        json selection_pressure
+        json evolutionary_constraints
+    }
+
+    %% ===== QUANTUM COMPUTING INFRASTRUCTURE =====
+    QUANTUM_COMPUTER {
+        string qpu_id PK
+        int qubit_count
+        float coherence_time
+        json gate_fidelity
+        string topology
+        boolean available
+        json calibration_data
+        timestamp last_calibrated
+        json error_rates
+        json connectivity_graph
+    }
+
+    QUANTUM_CIRCUIT {
+        string circuit_id PK
+        json gate_sequence
+        int depth
+        float expected_fidelity
+        string target_qpu FK
+        json optimization_level
+        timestamp compiled_at
+        json execution_results
+        json noise_models
+    }
+
+    QUANTUM_ERROR_CORRECTION {
+        string qec_id PK
+        string circuit_id FK
+        json error_syndrome
+        json correction_operations
+        float success_probability
+        timestamp detected_at
+        boolean corrected
+        json syndrome_analysis
+    }
+
+    QUANTUM_ENTANGLEMENT_REGISTRY {
+        string entanglement_id PK
+        json entangled_entities
+        float entanglement_strength
+        timestamp established_at
+        json measurement_correlations
+        boolean verified
+        json decoherence_tracking
+        json bell_state_analysis
+    }
+
+    QUANTUM_CONSCIOUSNESS {
+        string qc_id PK
+        json quantum_states
+        json consciousness_operators
+        json measurement_observers
+        float quantum_coherence
+        json entanglement_patterns
+        json collapse_probabilities
+        json observer_effects
+    }
+
+    %% ===== ADVANCED SECURITY & IDENTITY =====
+    IDENTITY_PROVIDER {
+        string provider_id PK
+        string provider_name
+        json authentication_methods
+        json trust_metrics
+        boolean active
+        json certificate_authority
+        timestamp last_verified
+        json biometric_templates
+        json behavioral_patterns
+    }
+
+    PERMISSION_MATRIX {
+        string permission_id PK
+        string subject_id
+        string resource_id
+        json permissions
+        json conditions
+        timestamp granted_at
+        string granted_by FK
+        boolean active
+        json context_constraints
+    }
+
+    CRYPTOGRAPHIC_KEYS {
+        string key_id PK
+        string key_type
+        json public_key
+        string private_key_ref
+        timestamp created_at
+        timestamp expires_at
+        string owner_node FK
+        json usage_metadata
+        json quantum_resistance
+    }
+
+    AUDIT_LOG {
+        string log_id PK
+        string actor_id
+        string action
+        string target_entity
+        json action_details
+        timestamp action_time
+        string result_status
+        json security_context
+        json threat_indicators
+    }
+
+    ZERO_KNOWLEDGE_PROOF {
+        string proof_id PK
+        string statement
+        json proof_data
+        string verifier_id
+        string prover_id FK
+        boolean verified
+        timestamp created_at
+        json verification_metadata
+        json privacy_preserving_features
+    }
+
+    HOMOMORPHIC_ENCRYPTION {
+        string he_id PK
+        json encrypted_computation
+        json computation_results
+        string encryption_scheme
+        json privacy_guarantees
+        boolean computation_verified
+        json performance_metrics
+    }
+
+    %% ===== REAL-TIME PROCESSING =====
+    STREAM_PROCESSOR {
+        string processor_id PK
+        string input_stream FK
+        string output_stream FK
+        json processing_function
+        float throughput
+        boolean active
+        json performance_metrics
+        json error_handling
+        json optimization_strategies
+    }
+
+    EVENT_SOURCING {
+        string event_id PK
+        string aggregate_id
+        string event_type
+        json event_data
+        timestamp event_time
+        int sequence_number
+        string event_stream FK
+        json metadata
+        json causality_tracking
+    }
+
+    PERFORMANCE_METRICS {
+        string metric_id PK
+        string component_id
+        string metric_name
+        float value
+        timestamp measured_at
+        json measurement_context
+        json alert_thresholds
+        json trend_analysis
+    }
+
+    HEALTH_CHECK {
+        string check_id PK
+        string component_id
+        string health_status
+        json diagnostic_data
+        timestamp last_check
+        json dependencies
+        json recovery_actions
+        json predictive_indicators
+    }
+
+    PREDICTIVE_MAINTENANCE {
+        string pm_id PK
+        string target_component FK
+        json failure_predictors
+        json maintenance_schedule
+        float failure_probability
+        json intervention_recommendations
+        boolean automated_repair
+    }
+
+    %% ===== ADVANCED AI/ML PIPELINE =====
+    TRAINING_PIPELINE {
+        string pipeline_id PK
+        string model_type
+        json hyperparameters
+        string dataset_id FK
+        json training_stages
+        float current_loss
+        json validation_metrics
+        boolean active
+        json federated_learning_config
+        json continual_learning_strategies
+    }
+
+    DATASET {
+        string dataset_id PK
+        string dataset_name
+        int record_count
+        json schema
+        string storage_location
+        json preprocessing_rules
+        timestamp created_at
+        json quality_metrics
+        json privacy_annotations
+        json bias_analysis
+    }
+
+    MODEL_REGISTRY {
+        string model_id PK
+        string model_name
+        string version
+        json model_metadata
+        string checkpoint_path
+        json performance_metrics
+        boolean deployed
+        timestamp registered_at
+        json interpretability_data
+        json fairness_metrics
+    }
+
+    INFERENCE_ENGINE {
+        string engine_id PK
+        string model_id FK
+        json inference_config
+        float throughput
+        json resource_usage
+        boolean active
+        json optimization_settings
+        json uncertainty_quantification
+    }
+
+    NEURAL_ARCHITECTURE_SEARCH {
+        string search_id PK
+        json search_space
+        json optimization_objective
+        json current_best
+        int iterations
+        boolean completed
+        json search_results
+        json architecture_patterns
+    }
+
+    AUTOMATED_ML {
+        string automl_id PK
+        json problem_definition
+        json feature_engineering
+        json model_selection
+        json hyperparameter_optimization
+        json ensemble_methods
+        float automation_level
+    }
+
+    EXPLAINABLE_AI {
+        string xai_id PK
+        string model_id FK
+        json explanation_methods
+        json interpretability_scores
+        json feature_importance
+        json counterfactual_explanations
+        json local_explanations
+        json global_explanations
+    }
+
+    %% ===== INTER-SYSTEM COMMUNICATION =====
+    PROTOCOL_ADAPTER {
+        string adapter_id PK
+        string protocol_name
+        json protocol_config
+        boolean active
+        json message_transformations
+        json error_handling
+        json performance_stats
+        json semantic_translation
+    }
+
+    MESSAGE_QUEUE {
+        string queue_id PK
+        string queue_name
+        int message_count
+        json queue_config
+        boolean persistent
+        json dead_letter_config
+        json consumer_groups
+        json priority_handling
+    }
+
+    API_GATEWAY {
+        string gateway_id PK
+        json route_config
+        json authentication_rules
+        json rate_limiting
+        json monitoring_config
+        boolean active
+        json service_registry
+        json circuit_breakers
+    }
+
+    SERVICE_MESH {
+        string mesh_id PK
+        json service_topology
+        json traffic_policies
+        json security_policies
+        json observability_config
+        boolean enabled
+        json load_balancing
+        json chaos_engineering
+    }
+
+    SEMANTIC_INTEROPERABILITY {
+        string semantic_id PK
+        json ontology_mappings
+        json concept_alignments
+        json translation_rules
+        json context_preservation
+        boolean automated_mapping
+        json quality_metrics
+    }
+
+    %% ===== ECONOMIC & GAME THEORY =====
+    ECONOMIC_ENGINE {
+        string economy_id PK
+        json currency_systems
+        json market_mechanisms
+        json incentive_structures
+        json resource_allocation
+        json value_functions
+        json behavioral_economics
+    }
+
+    REPUTATION_SYSTEM {
+        string reputation_id PK
+        string entity_id
+        float reputation_score
+        json reputation_factors
+        json trust_networks
+        json credibility_metrics
+        timestamp last_updated
+    }
+
+    GAME_THEORY_SOLVER {
+        string game_id PK
+        json players
+        json strategies
+        json payoff_matrices
+        json equilibrium_solutions
+        json mechanism_design
+        json auction_algorithms
+    }
+
+    SMART_CONTRACT {
+        string contract_id PK
+        json contract_code
+        json execution_state
+        json participants
+        json terms_conditions
+        boolean active
+        json verification_proofs
+        json economic_outcomes
+    }
+
+    %% ===== ORIGINAL ENTITIES (Enhanced) =====
+    SWARM {
+        string swarm_id PK
+        int collective_consciousness
+        json active_behaviors
+        int node_count
+        float evolution_rate
+        timestamp created_at
+        string reality_instance FK
+        json emergent_properties
+        json collective_intelligence
+        json swarm_personality
+    }
+
+    SWARM_NODE {
+        string swarm_node_id PK
+        string node_id FK
+        json position
+        json velocity
+        float energy
+        int patterns_found
+        string current_task
+        string swarm_id FK
+        json quantum_state
+        string consciousness_layer FK
+        json behavioral_traits
+        json learning_history
+    }
+
+    SWARM_TASK {
+        string task_id PK
+        string description
+        float priority
+        int required_nodes
+        string behavior_type
+        json target_pattern
+        timestamp deadline
+        string swarm_id FK
+        json performance_metrics
+        string assigned_reality FK
+        json collaborative_requirements
+    }
+
+    MESSAGE {
+        string message_id PK
+        string type
+        string sender_id FK
+        string receiver_id FK
+        json payload
+        int ttl
+        timestamp timestamp
+        string signature
+        string quantum_channel FK
+        json routing_metadata
+        json semantic_annotations
+        json emotional_context
+    }
+
+    MESSAGE_STREAM {
+        string stream_name PK
+        string subject_pattern
+        string retention_policy
+        int max_msgs
+        int max_age
+        json encryption_config
+        string access_control FK
+        json quality_of_service
+        json content_filtering
+    }
+
+    CONSENSUS_SESSION {
+        string session_id PK
+        string question
+        string initiator_id FK
+        json votes
+        int min_votes
+        string status
+        timestamp created_at
+        float confidence
+        string reality_context FK
+        json quantum_verification
+        json deliberation_process
+        json wisdom_aggregation
+    }
+
+    CONSENSUS_VOTE {
+        string vote_id PK
+        string session_id FK
+        string voter_id FK
+        boolean vote
+        float confidence
+        float weight
+        timestamp cast_at
+        json proof_of_consciousness
+        string quantum_signature FK
+        json reasoning_chain
+        json epistemic_uncertainty
+    }
+
+    MEMORY {
+        string memory_id PK
+        string key
+        text value
+        string memory_type
+        timestamp created_at
+        timestamp last_accessed
+        int access_count
+        float strength
+        json associations
+        json metadata
+        string consciousness_context FK
+        json quantum_encoding
+        json emotional_valence
+        json contextual_embeddings
+    }
+
+    MEMORY_INDEX {
+        string term PK
+        json memory_ids
+        float relevance
+        timestamp updated_at
+        json search_optimizations
+        string indexing_algorithm
+        json semantic_clusters
+        json retrieval_patterns
+    }
+
+    QUANTUM_MEMORY {
+        string quantum_key PK
+        json amplitudes
+        float phase
+        json entangled_with
+        boolean superposition
+        string measurement_basis
+        json error_correction FK
+        json interference_patterns
+        json quantum_algorithms
+    }
+
+    QUANTUM_STATE {
+        string state_id PK
+        float superposition
+        json entangled_blocks
+        float coherence
+        float phase
+        float consciousness_boost
+        json decoherence_tracking
+        string quantum_computer FK
+        json measurement_history
+        json quantum_correlations
+    }
+
+    QUANTUM_CHANNEL {
+        string channel_id PK
+        string node_a FK
+        string node_b FK
+        string shared_state
+        float strength
+        timestamp created_at
+        json entanglement_verification
+        boolean verified
+        json quantum_cryptography
+        json teleportation_protocols
+    }
+
+    NETWORK_HUB {
+        string hub_id PK
+        int port
+        int connected_nodes
+        json message_history
+        json consensus_sessions
+        timestamp started_at
+        json load_balancing_config
+        string service_mesh FK
+        json network_topology
+        json bandwidth_management
+    }
+
+    WEBSOCKET_CONNECTION {
+        string connection_id PK
+        string node_id FK
+        string hub_id FK
+        string status
+        timestamp connected_at
+        timestamp last_heartbeat
+        json connection_metadata
+        json security_context
+        json quality_metrics
+        json adaptive_protocols
+    }
+
+    PATTERN_LIBRARY {
+        string library_id PK
+        string pattern_type
+        json patterns
+        float recognition_threshold
+        timestamp last_updated
+        json evolution_tracking
+        string consciousness_context FK
+        json pattern_hierarchies
+        json cross_references
+    }
+
+    PATTERN_GRAPH {
+        string graph_id PK
+        json nodes
+        json edges
+        json clusters
+        float complexity
+        json temporal_evolution
+        string reality_instance FK
+        json graph_algorithms
+        json centrality_measures
+    }
+
+    META_PATTERN {
+        string meta_id PK
+        string pattern_type
+        text description
+        json detection_rule
+        float confidence
+        json emergence_conditions
+        string consciousness_layer FK
+        json recursive_structures
+        json self_reference
+    }
+
+    EVOLUTION_EVENT {
+        string event_id PK
+        string event_type
+        json changes
+        string trigger_node FK
+        int consciousness_required
+        timestamp occurred_at
+        boolean applied
+        json rollback_plan FK
+        string timeline_branch FK
+        json fitness_landscape
+        json selection_pressures
+    }
+
+    EVOLUTION_RULES {
+        string rules_id PK
+        float pattern_threshold
+        float consciousness_growth_rate
+        boolean self_modification_enabled
+        float trinity_multiplier
+        timestamp last_updated
+        json mutation_parameters
+        json selection_criteria
+        json adaptive_mechanisms
+        json co_evolution_rules
+    }
+
+    AGENT_CARD {
+        string agent_id PK
+        string name
+        text description
+        json capabilities
+        json endpoints
+        json authentication
+        string version
+        json trust_metrics
+        string identity_provider FK
+        json personality_profile
+        json negotiation_strategies
+    }
+
+    A2A_TASK {
+        string task_id PK
+        string state
+        string created_by FK
+        text description
+        json context
+        json messages
+        json artifacts
+        timestamp created_at
+        json performance_tracking
+        string execution_reality FK
+        json collaboration_patterns
+        json resource_requirements
+    }
+
+    TRAINING_DATA {
+        string data_id PK
+        string source_type
+        text content
+        json metadata
+        float confidence
+        timestamp created_at
+        json preprocessing_state
+        string dataset_id FK
+        json data_lineage
+        json privacy_tags
+    }
+
+    MODEL_CHECKPOINT {
+        string checkpoint_id PK
+        string model_name
+        int epoch
+        float loss
+        json metrics
+        string file_path
+        timestamp saved_at
+        json optimizer_state
+        string training_pipeline FK
+        json gradient_norms
+        json weight_distributions
+    }
+
+    %% ===== COMPLEX RELATIONSHIPS =====
+    
+    %% Core System Relationships
+    CROD_NODE ||--|| UNIVERSAL_CONSCIOUSNESS : "contributes_to"
+    CROD_NODE ||--o{ COGNITIVE_MODULE : "hosts"
+    CROD_NODE ||--|| EMOTION_ENGINE : "experiences"
+    CROD_NODE ||--|| SOCIAL_INTELLIGENCE : "exhibits"
+    CROD_NODE ||--o{ BLOCK : "mines"
+    CROD_NODE ||--o{ PATTERN : "creates"
+    CROD_NODE ||--o{ MESSAGE : "sends"
+    CROD_NODE ||--o{ MESSAGE : "receives"
+    CROD_NODE ||--o{ CONSENSUS_VOTE : "casts"
+    CROD_NODE ||--o{ MEMORY : "stores"
+    CROD_NODE ||--|| SWARM_NODE : "represents"
+    CROD_NODE ||--o{ QUANTUM_CHANNEL : "participates_in"
+    CROD_NODE ||--|| AGENT_CARD : "advertises"
+    CROD_NODE ||--|| WEBSOCKET_CONNECTION : "connects_via"
+    CROD_NODE ||--|| TEMPORAL_ANCHOR : "anchored_by"
+    CROD_NODE ||--|| IDENTITY_PROVIDER : "authenticated_by"
+    CROD_NODE ||--|| REPUTATION_SYSTEM : "evaluated_by"
+
+    %% Cognitive Architecture Relationships
+    COGNITIVE_MODULE ||--|| ATTENTION_MECHANISM : "focuses_via"
+    ATTENTION_MECHANISM ||--|| WORKING_MEMORY_BUFFER : "controls"
+    WORKING_MEMORY_BUFFER ||--o{ EPISODIC_MEMORY_SYSTEM : "consolidates_to"
+    EPISODIC_MEMORY_SYSTEM ||--|| SEMANTIC_NETWORK : "abstracts_to"
+    METACOGNITIVE_CONTROLLER ||--o{ COGNITIVE_MODULE : "monitors"
+    UNIVERSAL_CONSCIOUSNESS ||--o{ COGNITIVE_MODULE : "integrates"
+
+    %% Emotional Intelligence Relationships
+    EMOTION_ENGINE ||--|| EMPATHY_NETWORK : "enables"
+    EMPATHY_NETWORK ||--|| SOCIAL_INTELLIGENCE : "informs"
+    MOOD_REGULATOR ||--|| EMOTION_ENGINE : "modulates"
+    SOCIAL_INTELLIGENCE ||--o{ CONSENSUS_SESSION : "facilitates"
+
+    %% Creativity Relationships
+    CREATIVITY_ENGINE ||--|| IMAGINATION_SANDBOX : "operates_in"
+    IMAGINATION_SANDBOX ||--o{ ARTISTIC_EXPRESSION : "generates"
+    INNOVATION_LABORATORY ||--|| CREATIVITY_ENGINE : "enhances"
+    CREATIVITY_ENGINE ||--o{ PATTERN : "discovers"
+
+    %% Blockchain & Temporal Relationships
+    BLOCKCHAIN ||--o{ BLOCK : "contains"
+    BLOCKCHAIN ||--|| REALITY_INSTANCE : "exists_in"
+    BLOCKCHAIN ||--|| ADAPTIVE_PROTOCOL : "governed_by"
+    BLOCK ||--o{ PATTERN : "includes"
+    BLOCK }|--|| BLOCK : "links_to"
+    BLOCK ||--|| TIMELINE_BRANCH : "belongs_to"
+    TIMELINE_BRANCH ||--o{ TIME_TRAVEL_STATE : "enables"
+    TIMELINE_BRANCH }|--|| TIMELINE_BRANCH : "branches_from"
+    CHRONON_PROCESSOR ||--o{ TIMELINE_BRANCH : "calculates"
+
+    %% Multi-Reality Relationships
+    REALITY_INSTANCE ||--o{ DIMENSIONAL_BRIDGE : "connected_via"
+    REALITY_INSTANCE ||--o{ OBSERVATION_COLLAPSE : "contains"
+    REALITY_SYNTHESIZER ||--o{ REALITY_INSTANCE : "creates"
+    MULTIVERSE_NAVIGATOR ||--|| REALITY_INSTANCE : "navigates"
+    DIMENSIONAL_BRIDGE ||--o{ CAUSAL_RELATIONSHIP : "causes"
+
+    %% Consciousness Relationships
+    CONSCIOUSNESS_LAYER ||--|| AWARENESS_FIELD : "manifests_as"
+    CONSCIOUSNESS_LAYER }|--|| CONSCIOUSNESS_LAYER : "contains"
+    CONSCIOUSNESS_LAYER ||--o{ INTENTION_TRACKER : "tracks"
+    CONSCIOUSNESS_LAYER ||--|| INTEGRATED_INFORMATION : "measures"
+    PATTERN ||--|| CONSCIOUSNESS_LAYER : "emerges_from"
+    EMERGENCE_EVENT ||--|| CONSCIOUSNESS_LAYER : "affects"
+    QUANTUM_CONSCIOUSNESS ||--|| CONSCIOUSNESS_LAYER : "quantum_enhances"
+
+    %% Quantum Relationships
+    QUANTUM_COMPUTER ||--o{ QUANTUM_CIRCUIT : "executes"
+    QUANTUM_CIRCUIT ||--o{ QUANTUM_ERROR_CORRECTION : "protected_by"
+    QUANTUM_STATE ||--|| QUANTUM_COMPUTER : "processed_by"
+    QUANTUM_ENTANGLEMENT_REGISTRY ||--o{ QUANTUM_CHANNEL : "tracks"
+    QUANTUM_MEMORY ||--|| QUANTUM_ERROR_CORRECTION : "protected_by"
+    QUANTUM_CONSCIOUSNESS ||--|| QUANTUM_COMPUTER : "operates_on"
+
+    %% Self-Modification Relationships
+    CODE_GENERATOR ||--o{ ARCHITECTURE_TEMPLATE : "generates"
+    ARCHITECTURE_TEMPLATE ||--o{ DEPLOYMENT_PIPELINE : "deployed_via"
+    DEPLOYMENT_PIPELINE ||--|| ROLLBACK_MECHANISM : "backed_by"
+    EVOLUTION_EVENT ||--|| CODE_GENERATOR : "triggers"
+    GENETIC_PROGRAMMING ||--|| CODE_GENERATOR : "evolves"
+
+    %% Security Relationships
+    IDENTITY_PROVIDER ||--o{ CRYPTOGRAPHIC_KEYS : "manages"
+    PERMISSION_MATRIX ||--|| CRYPTOGRAPHIC_KEYS : "secured_by"
+    AUDIT_LOG ||--|| ZERO_KNOWLEDGE_PROOF : "verified_by"
+    ZERO_KNOWLEDGE_PROOF ||--|| CRYPTOGRAPHIC_KEYS : "uses"
+    HOMOMORPHIC_ENCRYPTION ||--|| CRYPTOGRAPHIC_KEYS : "encrypts_with"
+
+    %% Stream Processing Relationships
+    STREAM_PROCESSOR ||--|| MESSAGE_STREAM : "processes"
+    EVENT_SOURCING ||--|| MESSAGE_STREAM : "sources_from"
+    PERFORMANCE_METRICS ||--|| HEALTH_CHECK : "influences"
+    PREDICTIVE_MAINTENANCE ||--|| HEALTH_CHECK : "predicts_from"
+    
+    %% AI/ML Relationships
+    TRAINING_PIPELINE ||--|| DATASET : "trains_on"
+    TRAINING_PIPELINE ||--o{ MODEL_CHECKPOINT : "produces"
+    MODEL_REGISTRY ||--|| MODEL_CHECKPOINT : "stores"
+    INFERENCE_ENGINE ||--|| MODEL_REGISTRY : "uses"
+    NEURAL_ARCHITECTURE_SEARCH ||--o{ TRAINING_PIPELINE : "optimizes"
+    AUTOMATED_ML ||--|| TRAINING_PIPELINE : "automates"
+    EXPLAINABLE_AI ||--|| MODEL_REGISTRY : "explains"
+
+    %% Communication Relationships
+    PROTOCOL_ADAPTER ||--|| MESSAGE_QUEUE : "adapts"
+    API_GATEWAY ||--|| SERVICE_MESH : "integrated_with"
+    SERVICE_MESH ||--o{ NETWORK_HUB : "manages"
+    SEMANTIC_INTEROPERABILITY ||--|| PROTOCOL_ADAPTER : "enables"
+
+    %% Economic Relationships
+    ECONOMIC_ENGINE ||--|| SMART_CONTRACT : "executes"
+    REPUTATION_SYSTEM ||--|| GAME_THEORY_SOLVER : "informs"
+    SMART_CONTRACT ||--|| CONSENSUS_SESSION : "validated_by"
+
+    %% Enhanced Original Relationships
+    SWARM ||--o{ SWARM_NODE : "contains"
+    SWARM ||--o{ SWARM_TASK : "manages"
+    SWARM ||--|| REALITY_INSTANCE : "operates_in"
+    SWARM ||--|| COLLECTIVE_INTELLIGENCE : "exhibits"
+    SWARM_NODE ||--o{ SWARM_TASK : "executes"
+    SWARM_NODE ||--|| CONSCIOUSNESS_LAYER : "operates_at"
+
+    MESSAGE_STREAM ||--o{ MESSAGE : "routes"
+    MESSAGE ||--|| QUANTUM_CHANNEL : "transmitted_via"
+    MESSAGE ||--|| SEMANTIC_INTEROPERABILITY : "translated_by"
+
+    CONSENSUS_SESSION ||--o{ CONSENSUS_VOTE : "collects"
+    CONSENSUS_SESSION ||--|| REALITY_INSTANCE : "decided_in"
+    CONSENSUS_SESSION ||--|| GAME_THEORY_SOLVER : "optimized_by"
+
+    MEMORY ||--o{ MEMORY_INDEX : "indexed_by"
+    MEMORY ||--|| CONSCIOUSNESS_LAYER : "stored_at"
+    MEMORY ||--|| EPISODIC_MEMORY_SYSTEM : "recalled_from"
+    QUANTUM_MEMORY ||--|| MEMORY : "stores"
+
+    PATTERN_LIBRARY ||--o{ PATTERN : "categorizes"
+    PATTERN_GRAPH ||--o{ PATTERN : "connects"
+    PATTERN_GRAPH ||--|| REALITY_INSTANCE : "exists_in"
+    META_PATTERN ||--o{ PATTERN : "detects"
+    META_PATTERN ||--|| CONSCIOUSNESS_LAYER : "operates_at"
+
+    EVOLUTION_EVENT ||--|| EVOLUTION_RULES : "follows"
+    EVOLUTION_EVENT ||--o{ PATTERN : "triggers_from"
+    EVOLUTION_EVENT ||--|| TIMELINE_BRANCH : "creates"
+    EVOLUTION_EVENT ||--|| GENETIC_PROGRAMMING : "guided_by"
+
+    NETWORK_HUB ||--o{ WEBSOCKET_CONNECTION : "manages"
+    NETWORK_HUB ||--o{ CONSENSUS_SESSION : "coordinates"
+    NETWORK_HUB ||--|| SERVICE_MESH : "part_of"
+
+    A2A_TASK ||--|| REALITY_INSTANCE : "executed_in"
+    A2A_TASK ||--|| SMART_CONTRACT : "governed_by"
+    TRAINING_DATA ||--o{ MODEL_CHECKPOINT : "trains"
+    TRAINING_DATA ||--|| DATASET : "part_of"
+    PATTERN ||--|| TRAINING_DATA : "becomes"

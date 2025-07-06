@@ -1,0 +1,74 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4299e1"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f7fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2d3748">CROD Data Flow</text>
+  
+  <!-- User -->
+  <rect x="350" y="60" width="100" height="40" fill="#48bb78" rx="5"/>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">User</text>
+  
+  <!-- API Gateway -->
+  <rect x="325" y="140" width="150" height="40" fill="#4299e1" rx="5"/>
+  <text x="400" y="165" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">API Gateway :4000</text>
+  
+  <!-- Polyglot Router -->
+  <rect x="325" y="220" width="150" height="40" fill="#9f7aea" rx="5"/>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Polyglot Router</text>
+  
+  <!-- Language Services -->
+  <rect x="50" y="300" width="100" height="40" fill="#4e2a8e" rx="5"/>
+  <text x="100" y="325" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Elixir</text>
+  
+  <rect x="200" y="300" width="100" height="40" fill="#ce422b" rx="5"/>
+  <text x="250" y="325" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Rust</text>
+  
+  <rect x="350" y="300" width="100" height="40" fill="#3776ab" rx="5"/>
+  <text x="400" y="325" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Python</text>
+  
+  <rect x="500" y="300" width="100" height="40" fill="#00add8" rx="5"/>
+  <text x="550" y="325" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Go</text>
+  
+  <rect x="650" y="300" width="100" height="40" fill="#339933" rx="5"/>
+  <text x="700" y="325" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Node.js</text>
+  
+  <!-- NATS Message Bus -->
+  <rect x="275" y="380" width="250" height="40" fill="#ed8936" rx="5"/>
+  <text x="400" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">NATS Message Bus :4222</text>
+  
+  <!-- Neural Districts -->
+  <rect x="50" y="460" width="120" height="30" fill="#e2e8f0" rx="3"/>
+  <text x="110" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2d3748">Pattern :7007</text>
+  
+  <rect x="200" y="460" width="120" height="30" fill="#e2e8f0" rx="3"/>
+  <text x="260" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2d3748">Memory :7031</text>
+  
+  <rect x="350" y="460" width="120" height="30" fill="#e2e8f0" rx="3"/>
+  <text x="410" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2d3748">Quantum :7101</text>
+  
+  <rect x="500" y="460" width="120" height="30" fill="#e2e8f0" rx="3"/>
+  <text x="560" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2d3748">Neural :7113</text>
+  
+  <rect x="650" y="460" width="120" height="30" fill="#e2e8f0" rx="3"/>
+  <text x="710" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#2d3748">Master :7127</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="100" x2="400" y2="140" stroke="#4299e1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="180" x2="400" y2="220" stroke="#4299e1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="260" x2="400" y2="300" stroke="#4299e1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="340" x2="400" y2="380" stroke="#4299e1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="420" x2="400" y2="460" stroke="#4299e1" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Spread arrows -->
+  <line x1="350" y1="260" x2="150" y2="300" stroke="#4299e1" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="375" y1="260" x2="250" y2="300" stroke="#4299e1" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="425" y1="260" x2="550" y2="300" stroke="#4299e1" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="260" x2="650" y2="300" stroke="#4299e1" stroke-width="1" marker-end="url(#arrowhead)"/>
+</svg>

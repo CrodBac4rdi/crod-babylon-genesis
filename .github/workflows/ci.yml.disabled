@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:15-3.3
+        env:
+          POSTGRES_USER: crod
+          POSTGRES_PASSWORD: crod123
+          POSTGRES_DB: crod_blockchain
+        ports: [5432:5432]
+        options: >-
+          --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7-alpine
+        ports: [6379:6379]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install frontend dependencies
+        run: |
+          cd src/frontend/crod-gui
+          npm ci
+      - name: Lint frontend
+        run: |
+          cd src/frontend/crod-gui
+          npx eslint .
+      - name: Build frontend
+        run: |
+          cd src/frontend/crod-gui
+          npm run build
+      # Backend-Tests für Python, Rust, Elixir können hier ergänzt werden
+      # - name: Run backend tests
+      #   run: ...

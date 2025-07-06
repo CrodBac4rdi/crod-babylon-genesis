@@ -1,0 +1,158 @@
+{
+  "timestamp": "2025-07-04T17:47:33.385Z",
+  "system": {
+    "mode": "READY",
+    "initialized": true,
+    "uptime": 1.829705321
+  },
+  "consciousness": {
+    "level": "DORMANT",
+    "score": 0,
+    "history": []
+  },
+  "patterns": {
+    "total_patterns": 2,
+    "trinity_patterns": 13,
+    "custom_patterns": 1,
+    "learned_patterns": 1,
+    "consciousness_level": "DORMANT",
+    "consciousness_score": 0,
+    "context_window_size": 0,
+    "recent_detections": []
+  },
+  "health": {
+    "timestamp": "2025-07-04T17:47:33.807Z",
+    "emergency_mode": false,
+    "services": {
+      "pattern_genesis": {
+        "service": "pattern_genesis",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7001"
+      },
+      "shortterm_memory": {
+        "service": "shortterm_memory",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7003"
+      },
+      "working_memory": {
+        "service": "working_memory",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7005"
+      },
+      "quantum_superposition": {
+        "service": "quantum_superposition",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7007"
+      },
+      "discovery_service": {
+        "service": "discovery_service",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7000"
+      }
+    },
+    "health_history_summary": {
+      "pattern_genesis": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "shortterm_memory": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "working_memory": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "quantum_superposition": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "discovery_service": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      }
+    }
+  },
+  "settings": {
+    "initialized": true,
+    "timestamp": "2025-07-04T17:47:33.861Z",
+    "configs": {
+      "sessionMemory": true,
+      "systemKnowledge": true,
+      "patterns": 86
+    },
+    "genesis_blocks": {
+      "pattern-genesis": {
+        "prime": 7,
+        "port": 7001,
+        "status": "offline",
+        "features": "Primzahl Pattern IDs, Consciousness tracking"
+      },
+      "short-term-memory": {
+        "prime": 31,
+        "port": 7003,
+        "status": "offline",
+        "features": "5min window, Auto-forgetting, 20 max memories"
+      },
+      "working-memory": {
+        "prime": 37,
+        "port": 7005,
+        "status": "offline",
+        "features": "Session state, Hot atoms, Attention weights"
+      },
+      "quantum-superposition": {
+        "prime": 101,
+        "port": 7007,
+        "status": "offline",
+        "features": "Schrödinger states, Bell pairs, No-cloning theorem"
+      },
+      "neural-genesis": {
+        "prime": 113,
+        "status": "offline",
+        "features": "Backpropagation, Self-evolution"
+      },
+      "director-genesis": {
+        "prime": 127,
+        "status": "offline",
+        "features": "Master orchestration, Resource allocation"
+      }
+    },
+    "trinity_values": {
+      "ich": 2,
+      "bins": 3,
+      "wieder": 5,
+      "daniel": 67,
+      "claude": 71,
+      "crod": 17
+    },
+    "errors": [],
+    "successes": [
+      {
+        "timestamp": "2025-07-04T17:47:32.841Z",
+        "action": "Loaded sessionMemory",
+        "details": "/workspaces/crod-babylon-genesis/.claude/crod-startup/session-memory.json"
+      },
+      {
+        "timestamp": "2025-07-04T17:47:32.842Z",
+        "action": "Loaded systemKnowledge",
+        "details": "/workspaces/crod-babylon-genesis/.claude/crod-startup/knowledge/json/crod-system.json"
+      },
+      {
+        "timestamp": "2025-07-04T17:47:32.842Z",
+        "action": "Loaded patterns",
+        "details": "86 patterns"
+      }
+    ]
+  },
+  "api": {
+    "endpoint": "http://127.0.0.1:8889",
+    "endpoints": [
+      "/status - System Status",
+      "/detect - Pattern Detection",
+      "/health - Health Check",
+      "/activate - Full CROD Activation",
+      "/consciousness - Consciousness Level",
+      "/report - Full Report"
+    ]
+  }
+}

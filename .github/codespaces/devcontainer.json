@@ -1,0 +1,26 @@
+{
+  "name": "CROD 2025 Development",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "forwardPorts": [8000, 8080, 8888, 5001],
+  "portsAttributes": {
+    "8000": { "label": "Meta-Chain", "visibility": "private" },
+    "8080": { "label": "Gateway", "visibility": "private" },
+    "8888": { "label": "Testing", "visibility": "private" },
+    "5001": { "label": "CROD Dashboard", "visibility": "private" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Continue.continue",
+        "ms-python.python",
+        "rust-lang.rust-analyzer",
+        "golang.go"
+      ]
+    }
+  }
+}

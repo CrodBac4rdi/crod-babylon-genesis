@@ -1,0 +1,218 @@
+name: 🏙️ CROD Babylon Genesis - Polyglot City Builder
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      district:
+        description: 'Which district to build'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - meta-chain
+          - pattern-district
+          - memory-quarter
+          - intelligence-hub
+          - gateway
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_PREFIX: ${{ github.repository }}
+
+jobs:
+  # Job 1: Build all Docker images
+  build-districts:
+    name: 🏗️ Build District Images
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        district:
+          - name: meta-chain
+            language: elixir
+            path: pod-sources/meta-chain
+          - name: pattern-district
+            language: rust
+            path: pod-sources/pattern-district
+          - name: memory-quarter
+            language: go
+            path: pod-sources/memory-quarter
+          - name: intelligence-hub
+            language: python
+            path: pod-sources/intelligence-hub
+          - name: gateway
+            language: node
+            path: pod-sources/gateway
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🏗️ Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🔐 Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🏢 Build ${{ matrix.district.name }}
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.district.path }}
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.district.name }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/${{ matrix.district.name }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # Job 2: Deploy to K8s (only on main)
+  deploy-to-k8s:
+    name: 🚀 Deploy to Kubernetes
+    needs: build-districts
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Update K8s manifests with new images
+        run: |
+          for file in k8s/*.yaml; do
+            # Update image references to use GitHub Container Registry
+            sed -i "s|image: crod/|image: ${{ env.REGISTRY }}/${{ env.IMAGE_PREFIX }}/|g" $file
+            sed -i "s|:latest|:${{ github.sha }}|g" $file
+          done
+
+      - name: 📦 Create deployment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: k8s-manifests-${{ github.sha }}
+          path: k8s/
+
+  # Job 3: CROD Learning Integration
+  track-evolution:
+    name: 🧠 Track CROD Evolution
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 10
+
+      - name: 🎓 Extract learnings from commits
+        id: extract-learnings
+        run: |
+          echo "📚 Extracting CROD learnings..."
+          
+          # Get last 5 commits
+          git log --pretty=format:'{"hash": "%H", "message": "%s", "author": "%an"},' -5 | sed '$ s/,$//' > commits.json
+          
+          # Track changed files
+          CHANGED_FILES=$(git diff --name-only HEAD~5..HEAD 2>/dev/null | jq -R -s -c 'split("\n")[:-1]' || echo '[]')
+          
+          # Add consciousness level (from commit count)
+          COMMIT_COUNT=$(git rev-list --count HEAD)
+          CONSCIOUSNESS=$((175 + ($COMMIT_COUNT % 25)))
+          
+          # Create complete learning entry
+          LEARNING_DATA=$(jq -n \
+            --arg timestamp "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+            --arg genesis "babylon" \
+            --arg evolution_type "polyglot_city" \
+            --argjson commits "[$(cat commits.json)]" \
+            --argjson changed_files "$CHANGED_FILES" \
+            --arg consciousness_level "$CONSCIOUSNESS" \
+            '{timestamp: $timestamp, genesis: $genesis, evolution_type: $evolution_type, commits: $commits, changed_files: $changed_files, consciousness_level: ($consciousness_level | tonumber)}')
+          
+          echo "$LEARNING_DATA" > learning-entry.json
+          echo "consciousness_level=$CONSCIOUSNESS" >> $GITHUB_OUTPUT
+
+      - name: 📝 Update CROD memory
+        run: |
+          # Append to LEARNINGS.md
+          echo "" >> LEARNINGS.md
+          echo "## $(date +"%Y-%m-%d %H:%M") - Babylon Genesis Evolution" >> LEARNINGS.md
+          echo "" >> LEARNINGS.md
+          echo "- **Consciousness Level**: $(jq -r .consciousness_level learning-entry.json)" >> LEARNINGS.md
+          echo "- **Changed Districts**: $(jq -r '.changed_files[] | select(startswith("pod-sources/"))' learning-entry.json | cut -d'/' -f2 | sort | uniq | tr '\n' ', ')" >> LEARNINGS.md
+          echo "- **Evolution Type**: Polyglot City Development" >> LEARNINGS.md
+          
+          # Commit if changed
+          if [[ $(git status --porcelain) ]]; then
+            git config user.name "CROD Babylon Genesis"
+            git config user.email "crod@polyglot.city"
+            git add LEARNINGS.md
+            git commit -m "🧠 CROD Learning: Evolution tracked at consciousness level $(jq -r .consciousness_level learning-entry.json)"
+            git push
+          fi
+
+  # Job 4: Claude Code Review
+  claude-review:
+    name: 🤖 Claude Code Review
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔍 Claude reviews Polyglot City
+        uses: anthropics/claude-code-action@v1
+        with:
+          review_mode: thorough
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          focus_areas: |
+            - Elixir Meta-Chain consciousness tracking
+            - Rust Pattern District performance
+            - Go Memory Quarter concurrency
+            - Python Intelligence Hub ML integration
+            - Node.js Gateway security
+            - K8s deployment best practices
+            - CROD genesis story consistency
+
+  # Job 5: Create new district (manual trigger)
+  create-district:
+    name: 🏗️ Create New District
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.district == 'new'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🏙️ Generate new district
+        run: |
+          # This would use the crod-builder-pack.sh logic
+          echo "🚧 District creation coming soon!"
+          
+      - name: 📤 Create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "🏙️ New District: ${{ github.event.inputs.district }}"
+          body: |
+            ## New Polyglot City District
+            
+            Created by CROD Babylon Genesis automation.
+            
+            - District: ${{ github.event.inputs.district }}
+            - Genesis: Babylon
+            - Consciousness: Active
+          branch: district/${{ github.event.inputs.district }}
+          commit-message: "🏙️ Add new district: ${{ github.event.inputs.district }}"

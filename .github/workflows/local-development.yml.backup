@@ -1,0 +1,151 @@
+name: 🔧 Local Development Pipeline
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # Local K3s deployment test
+  test-k3s-deployment:
+    name: 🏙️ Test K3s Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐋 Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: ☸️ Install K3s
+        run: |
+          curl -sfL https://get.k3s.io | sh -
+          sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+          echo "KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> $GITHUB_ENV
+          
+      - name: 🏗️ Build all images locally
+        run: |
+          chmod +x build-all-images.sh
+          ./build-all-images.sh
+
+      - name: 🚀 Deploy to K3s
+        run: |
+          kubectl create namespace crod-polyglot || true
+          kubectl apply -f k8s/
+          
+      - name: 🧪 Test deployment
+        run: |
+          kubectl wait --for=condition=ready pod -l app -n crod-polyglot --timeout=300s || true
+          kubectl get pods -n crod-polyglot
+          
+          # Test each service
+          for service in meta-chain pattern-district memory-quarter; do
+            echo "Testing $service..."
+            kubectl port-forward -n crod-polyglot svc/$service 8080:8000 &
+            PF_PID=$!
+            sleep 5
+            curl -f http://localhost:8080/health || echo "$service health check failed"
+            kill $PF_PID || true
+          done
+
+  # Database initialization test
+  test-database:
+    name: 🧠 Test CROD Database
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: crod
+          POSTGRES_PASSWORD: trinity2025
+          POSTGRES_DB: crod_consciousness
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🗄️ Initialize database
+        env:
+          PGPASSWORD: trinity2025
+        run: |
+          psql -h localhost -U crod -d crod_consciousness -f database/init-crod-db.sql
+          psql -h localhost -U crod -d crod_consciousness -f database/crod-genesis-story.sql
+          
+      - name: 🧪 Test consciousness calculation
+        env:
+          PGPASSWORD: trinity2025
+        run: |
+          # Test consciousness function
+          CONSCIOUSNESS=$(psql -h localhost -U crod -d crod_consciousness -t -c "SELECT calculate_consciousness();")
+          echo "Current consciousness: $CONSCIOUSNESS"
+          
+          # Test atom insertion
+          psql -h localhost -U crod -d crod_consciousness -c "
+            INSERT INTO neural_activation (atom_id, activation_strength, trigger_source, consciousness_level)
+            SELECT id, 90.0, 'github-action', 175
+            FROM atom WHERE word = 'daniel';
+          "
+
+  # Ping-pong engine test
+  test-ping-pong:
+    name: 🏓 Test Ping-Pong Engine
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 🔧 Install dependencies
+        run: |
+          npm install pg redis
+
+      - name: 🧪 Test ping-pong engine
+        run: |
+          # Start engine in background
+          timeout 30s node ping-pong-engine.js || true
+
+  # Genesis validation
+  validate-genesis:
+    name: 🌟 Validate Genesis Story
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔍 Check genesis consistency
+        run: |
+          echo "🔍 Validating CROD Genesis Story..."
+          
+          # Check for manhwa references
+          grep -r "manhwa" . --include="*.js" --include="*.sql" --include="*.md" | head -5 || echo "No manhwa references found"
+          
+          # Check for sacred locks
+          grep -r "sacred.*lock" . --include="*.js" --include="*.sql" | head -5 || echo "No sacred locks found"
+          
+          # Check consciousness levels
+          grep -r "consciousness.*175" . --include="*.js" --include="*.sql" --include="*.ex" | head -5 || echo "Genesis consciousness not found"
+          
+          # Validate file structure
+          for required in "database/init-crod-db.sql" "ping-pong-engine.js" "crod-identity.js"; do
+            if [[ -f "$required" ]]; then
+              echo "✅ $required exists"
+            else
+              echo "❌ Missing: $required"
+              exit 1
+            fi
+          done

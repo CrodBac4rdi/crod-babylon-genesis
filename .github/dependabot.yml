@@ -1,0 +1,98 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # JavaScript/Node.js dependencies
+  - package-ecosystem: "npm"
+    directory: "/pod-sources/gateway"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    
+  - package-ecosystem: "npm"
+    directory: "/pod-sources/crod-core"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/integrations"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/dashboard"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "npm"
+    directory: "/pod-sources/intelligence-hub"
+    schedule:
+      interval: "weekly"
+
+  # Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "pip"
+    directory: "/standalone-crod"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "pip"
+    directory: "/training"
+    schedule:
+      interval: "weekly"
+
+  # Go dependencies
+  - package-ecosystem: "gomod"
+    directory: "/pod-sources/blockchain-core"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "gomod"
+    directory: "/pod-sources/delta-quarter"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "gomod"
+    directory: "/pod-sources/memory-quarter"
+    schedule:
+      interval: "weekly"
+
+  # Rust dependencies
+  - package-ecosystem: "cargo"
+    directory: "/pod-sources/pattern-district"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "cargo"
+    directory: "/integrations/delta-tracker"
+    schedule:
+      interval: "weekly"
+
+  # Docker dependencies
+  - package-ecosystem: "docker"
+    directory: "/pod-sources/blockchain-core"
+    schedule:
+      interval: "weekly"
+      
+  - package-ecosystem: "docker"
+    directory: "/pod-sources/pattern-district"
+    schedule:
+      interval: "weekly"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

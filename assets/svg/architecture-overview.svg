@@ -1,0 +1,61 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f7fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2d3748">CROD Architecture Overview</text>
+  
+  <!-- Central Core -->
+  <circle cx="400" cy="300" r="80" fill="url(#nodeGrad)"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Blockchain</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Core</text>
+  
+  <!-- Language Nodes -->
+  <!-- Elixir -->
+  <circle cx="200" cy="150" r="60" fill="#4e2a8e"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Elixir</text>
+  <line x1="200" y1="210" x2="340" y2="260" stroke="#4e2a8e" stroke-width="2"/>
+  
+  <!-- Rust -->
+  <circle cx="600" cy="150" r="60" fill="#ce422b"/>
+  <text x="600" y="155" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Rust</text>
+  <line x1="600" y1="210" x2="460" y2="260" stroke="#ce422b" stroke-width="2"/>
+  
+  <!-- Python -->
+  <circle cx="150" cy="350" r="60" fill="#3776ab"/>
+  <text x="150" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Python</text>
+  <line x1="210" y1="350" x2="320" y2="330" stroke="#3776ab" stroke-width="2"/>
+  
+  <!-- Go -->
+  <circle cx="650" cy="350" r="60" fill="#00add8"/>
+  <text x="650" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Go</text>
+  <line x1="590" y1="350" x2="480" y2="330" stroke="#00add8" stroke-width="2"/>
+  
+  <!-- Node.js -->
+  <circle cx="400" cy="500" r="60" fill="#339933"/>
+  <text x="400" y="505" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Node.js</text>
+  <line x1="400" y1="440" x2="400" y2="380" stroke="#339933" stroke-width="2"/>
+  
+  <!-- Features -->
+  <rect x="50" y="80" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="110" y="105" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2d3748">Orchestration</text>
+  
+  <rect x="630" y="80" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="690" y="105" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2d3748">Performance</text>
+  
+  <rect x="30" y="420" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="90" y="445" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2d3748">AI/ML</text>
+  
+  <rect x="630" y="420" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="690" y="445" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2d3748">Memory Mgmt</text>
+  
+  <rect x="340" y="550" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="400" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2d3748">API Gateway</text>
+</svg>

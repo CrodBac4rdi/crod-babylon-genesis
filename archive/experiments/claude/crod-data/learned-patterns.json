@@ -1,0 +1,12 @@
+{
+  "learned_1751651251594": {
+    "input_sample": "test input",
+    "output_sample": "test output",
+    "success": true,
+    "regex": "test\\s+input",
+    "score": 10,
+    "action": "LEARNED_PATTERN",
+    "learned_at": "2025-07-04T17:47:31.594Z",
+    "usage_count": 1
+  }
+}
