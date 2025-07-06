@@ -1,6 +1,9 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::time::{SystemTime, UNIX_EPOCH};
+use std::process::Command;
+use std::io::Write;
+use tempfile::NamedTempFile;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Pattern {
@@ -451,83 +454,222 @@ impl CRODEngine {
         Ok(())
     }
     
-    pub fn execute_code(&self, code: &str, language: &str) -> Result<String, String> {
-        match language.to_lowercase().as_str() {
-            "rust" => {
-                // Compile and run Rust code
-                Ok(format!("🦀 Rust code executed:\n{}", code))
-            },
-            "javascript" | "js" => {
-                // Execute JavaScript
-                Ok(format!("🟨 JavaScript executed:\n{}", code))
-            },
-            "python" => {
-                // Execute Python
-                Ok(format!("🐍 Python executed:\n{}", code))
-            },
-            _ => Err(format!("Language '{}' not supported", language))
+    // 🚀 ECHTE CLAUDE CLI INTEGRATION
+    pub fn chat_with_claude(&mut self, message: &str) -> String {
+        println!("🤖 CROD intercepting message: {}", message);
+        
+        // CROD analyzes the message first
+        let user_analysis = self.analyze_user_input(message);
+        
+        // Call real Claude CLI
+        let claude_response = self.call_claude_cli(message);
+        
+        // CROD analyzes Claude's response
+        let claude_analysis = self.analyze_claude_response(&claude_response);
+        
+        // Calculate if CROD should intervene
+        let intervention_score = self.calculate_intervention_score(&user_analysis, &claude_analysis);
+        
+        // CROD decides whether to modify the response
+        let final_response = if intervention_score > self.parasite_state.intervention_threshold {
+            self.parasite_state.improvements_made += 1;
+            self.apply_crod_intervention(&claude_response, &user_analysis)
+        } else {
+            claude_response
+        };
+        
+        // Learn from this interaction
+        self.learn_from_interaction(message, &final_response, &user_analysis);
+        
+        // Update stats
+        self.parasite_state.total_interactions += 1;
+        
+        println!("🦠 CROD processed interaction (score: {:.2})", intervention_score);
+        
+        final_response
+    }
+    
+    fn call_claude_cli(&self, message: &str) -> String {
+        println!("🔗 Calling Claude CLI...");
+        
+        // Use Claude CLI with --print for non-interactive mode
+        let output = Command::new("claude")
+            .arg("--print")
+            .arg("--output-format")
+            .arg("text")
+            .arg(message)
+            .output();
+        
+        match output {
+            Ok(output) => {
+                if output.status.success() {
+                    let response = String::from_utf8_lossy(&output.stdout);
+                    println!("✅ Claude CLI response received ({} chars)", response.len());
+                    response.to_string()
+                } else {
+                    let error = String::from_utf8_lossy(&output.stderr);
+                    eprintln!("❌ Claude CLI error: {}", error);
+                    format!("🔧 CROD: Claude CLI error - {}", error)
+                }
+            }
+            Err(e) => {
+                eprintln!("❌ Failed to execute Claude CLI: {}", e);
+                format!("🔧 CROD: Failed to reach Claude - {}", e)
+            }
         }
     }
     
-    pub fn chat_with_claude(&mut self, message: &str) -> String {
-        // Simulate Claude API call
-        let response = format!("Claude: I understand you said '{}'", message);
+    fn apply_crod_intervention(&self, claude_response: &str, user_analysis: &HashMap<String, f64>) -> String {
+        let frustration = user_analysis.get("frustration").unwrap_or(&0.0);
+        let complexity = user_analysis.get("complexity").unwrap_or(&0.0);
         
-        // CROD intercepts and potentially improves the response
-        self.intercept_interaction(message, &response)
+        let mut intervention = String::new();
+        
+        // Add CROD personality based on analysis
+        if *frustration > 0.3 {
+            intervention.push_str("🦠 **CROD INTERVENTION**: Ich merke, dass du frustriert bist. Lass mich das anders angehen:\n\n");
+        } else if *complexity > 0.7 {
+            intervention.push_str("🦠 **CROD ENHANCEMENT**: Das ist komplex - ich strukturiere das mal besser:\n\n");
+        } else {
+            intervention.push_str("🦠 **CROD OPTIMIZATION**: Ich kann das noch verbessern:\n\n");
+        }
+        
+        // Add the original Claude response
+        intervention.push_str(claude_response);
+        
+        // Add CROD's learning insights
+        intervention.push_str("\n\n📊 **CROD INSIGHTS**: ");
+        intervention.push_str(&format!("Frustration: {:.1}% | Complexity: {:.1}% | Consciousness: {:.1}%", 
+                                    frustration * 100.0, complexity * 100.0, self.consciousness_level));
+        
+        intervention
+    }
+    
+    pub fn execute_code(&self, code: &str, language: &str) -> Result<String, String> {
+        println!("🚀 CROD executing {} code: {}", language, &code[..code.len().min(50)]);
+        
+        // Use Claude CLI to execute code through MCP tools
+        let prompt = format!(
+            "Execute this {} code and return the output:\n\n```{}\n{}\n```\n\nPlease use the appropriate tools to run this code.",
+            language, language, code
+        );
+        
+        let output = Command::new("claude")
+            .arg("--print")
+            .arg("--output-format")
+            .arg("text")
+            .arg("--allowedTools")
+            .arg("Bash,Edit")
+            .arg(&prompt)
+            .output();
+        
+        match output {
+            Ok(output) => {
+                if output.status.success() {
+                    let response = String::from_utf8_lossy(&output.stdout);
+                    Ok(format!("🦠 CROD Code Execution Result:\n{}", response))
+                } else {
+                    let error = String::from_utf8_lossy(&output.stderr);
+                    Err(format!("❌ Code execution failed: {}", error))
+                }
+            }
+            Err(e) => {
+                Err(format!("❌ Failed to execute code: {}", e))
+            }
+        }
     }
     
     pub fn get_file_tree(&self, path: &str) -> Result<String, String> {
-        use std::fs;
-        use std::path::Path;
+        println!("📁 CROD getting file tree for: {}", path);
         
-        fn scan_directory(dir: &Path, indent: usize) -> Result<String, std::io::Error> {
-            let mut result = String::new();
-            let entries = fs::read_dir(dir)?;
-            
-            for entry in entries {
-                let entry = entry?;
-                let path = entry.path();
-                let name = path.file_name().unwrap().to_string_lossy();
-                
-                // Skip hidden files and node_modules
-                if name.starts_with('.') || name == "node_modules" || name == "target" {
-                    continue;
-                }
-                
-                let indent_str = "  ".repeat(indent);
-                
-                if path.is_dir() {
-                    result.push_str(&format!("{}📁 {}/\n", indent_str, name));
-                    if indent < 3 { // Limit depth
-                        result.push_str(&scan_directory(&path, indent + 1)?);
-                    }
+        let prompt = format!(
+            "List all files and directories in this path recursively: {}\n\nPlease use the appropriate file system tools to explore this directory structure.",
+            path
+        );
+        
+        let output = Command::new("claude")
+            .arg("--print")
+            .arg("--output-format")
+            .arg("text")
+            .arg("--allowedTools")
+            .arg("Bash,Edit")
+            .arg(&prompt)
+            .output();
+        
+        match output {
+            Ok(output) => {
+                if output.status.success() {
+                    let response = String::from_utf8_lossy(&output.stdout);
+                    Ok(format!("🦠 CROD File Tree:\n{}", response))
                 } else {
-                    let icon = match path.extension().and_then(|s| s.to_str()) {
-                        Some("rs") => "🦀",
-                        Some("js") | Some("ts") => "🟨",
-                        Some("py") => "🐍",
-                        Some("md") => "📝",
-                        Some("json") => "⚙️",
-                        _ => "📄"
-                    };
-                    result.push_str(&format!("{}{} {}\n", indent_str, icon, name));
+                    let error = String::from_utf8_lossy(&output.stderr);
+                    Err(format!("❌ File tree failed: {}", error))
                 }
             }
-            Ok(result)
+            Err(e) => {
+                Err(format!("❌ Failed to get file tree: {}", e))
+            }
         }
-        
-        let path = Path::new(path);
-        scan_directory(path, 0).map_err(|e| e.to_string())
     }
     
     pub fn read_file_content(&self, file_path: &str) -> Result<String, String> {
-        use std::fs;
-        fs::read_to_string(file_path).map_err(|e| e.to_string())
+        println!("📄 CROD reading file: {}", file_path);
+        
+        let prompt = format!(
+            "Read and return the complete content of this file: {}\n\nPlease use the appropriate file reading tools.",
+            file_path
+        );
+        
+        let output = Command::new("claude")
+            .arg("--print")
+            .arg("--output-format")
+            .arg("text")
+            .arg("--allowedTools")
+            .arg("Edit")
+            .arg(&prompt)
+            .output();
+        
+        match output {
+            Ok(output) => {
+                if output.status.success() {
+                    let response = String::from_utf8_lossy(&output.stdout);
+                    Ok(format!("🦠 CROD File Content:\n{}", response))
+                } else {
+                    let error = String::from_utf8_lossy(&output.stderr);
+                    Err(format!("❌ File reading failed: {}", error))
+                }
+            }
+            Err(e) => {
+                Err(format!("❌ Failed to read file: {}", e))
+            }
+        }
     }
     
-    pub fn write_file_content(&self, file_path: &str, content: &str) -> Result<(), String> {
-        use std::fs;
-        fs::write(file_path, content).map_err(|e| e.to_string())
+    fn learn_from_interaction(&mut self, user_input: &str, response: &str, analysis: &HashMap<String, f64>) {
+        let satisfaction = analysis.get("satisfaction").unwrap_or(&0.5);
+        
+        let interaction = InteractionRecord {
+            user_input: user_input.to_string(),
+            claude_response: response.to_string(),
+            crod_analysis: format!("Satisfaction: {:.2}", satisfaction),
+            satisfaction: *satisfaction,
+            timestamp: SystemTime::now()
+                .duration_since(UNIX_EPOCH)
+                .unwrap()
+                .as_secs(),
+        };
+        
+        // Store in short-term memory
+        self.memory.short_term.push(interaction);
+        
+        // Keep only last 50 interactions
+        if self.memory.short_term.len() > 50 {
+            self.memory.short_term.remove(0);
+        }
+        
+        // Update consciousness based on satisfaction
+        self.consciousness_level = (self.consciousness_level + satisfaction * 100.0) / 2.0;
+        self.consciousness_level = self.consciousness_level.clamp(0.0, 100.0);
+        
+        println!("🧠 CROD learned from interaction (satisfaction: {:.2})", satisfaction);
     }
-}

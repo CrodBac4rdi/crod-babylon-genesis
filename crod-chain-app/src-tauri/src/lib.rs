@@ -5,14 +5,17 @@ use tauri::State;
 
 mod blockchain;
 mod crod_core;
+mod real_crod_engine;
 
 use blockchain::{Block, Blockchain};
 use crod_core::{CRODEngine, Pattern, ParasiteState};
+use real_crod_engine::{RealCRODEngine, ClaudeResponse, CodeExecutionResult};
 
 #[derive(Default)]
 struct AppState {
     blockchain: Mutex<Blockchain>,
     crod_engine: Mutex<CRODEngine>,
+    real_crod: Mutex<RealCRODEngine>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -260,6 +263,78 @@ fn start_file_monitoring(workspace_path: String, state: State<AppState>) -> Resu
     engine.start_file_monitoring(&workspace_path)
 }
 
+// Real CROD Commands with actual functionality
+
+#[tauri::command]
+async fn real_chat_with_claude(message: String, state: State<'_, AppState>) -> Result<ClaudeResponse, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.chat_with_claude(&message).await {
+        Ok(response) => Ok(response),
+        Err(e) => Err(format!("Claude chat error: {}", e)),
+    }
+}
+
+#[tauri::command]
+async fn real_execute_code(code: String, language: String, state: State<'_, AppState>) -> Result<CodeExecutionResult, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.execute_code(&code, &language).await {
+        Ok(result) => Ok(result),
+        Err(e) => Err(format!("Code execution error: {}", e)),
+    }
+}
+
+#[tauri::command]
+fn real_read_file(file_path: String, state: State<'_, AppState>) -> Result<String, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.read_file(&file_path) {
+        Ok(content) => Ok(content),
+        Err(e) => Err(format!("File read error: {}", e)),
+    }
+}
+
+#[tauri::command]
+fn real_write_file(file_path: String, content: String, state: State<'_, AppState>) -> Result<String, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.write_file(&file_path, &content) {
+        Ok(result) => Ok(result),
+        Err(e) => Err(format!("File write error: {}", e)),
+    }
+}
+
+#[tauri::command]
+fn real_list_directory(dir_path: String, state: State<'_, AppState>) -> Result<Vec<String>, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.list_directory(&dir_path) {
+        Ok(files) => Ok(files),
+        Err(e) => Err(format!("Directory listing error: {}", e)),
+    }
+}
+
+#[tauri::command]
+async fn real_install_package(package_name: String, language: String, state: State<'_, AppState>) -> Result<String, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.install_package(&package_name, &language).await {
+        Ok(result) => Ok(result),
+        Err(e) => Err(format!("Package installation error: {}", e)),
+    }
+}
+
+#[tauri::command]
+fn real_get_system_info(state: State<'_, AppState>) -> Result<String, String> {
+    let real_crod = state.real_crod.lock().map_err(|e| e.to_string())?;
+    
+    match real_crod.get_system_info() {
+        Ok(info) => Ok(info),
+        Err(e) => Err(format!("System info error: {}", e)),
+    }
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -268,7 +343,11 @@ pub fn run() {
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_sql::init())
         .plugin(tauri_plugin_dialog::init())
-        .manage(AppState::default())
+        .manage(AppState {
+            blockchain: Mutex::new(Blockchain::new()),
+            crod_engine: Mutex::new(CRODEngine::new()),
+            real_crod: Mutex::new(RealCRODEngine::new()),
+        })
         .invoke_handler(tauri::generate_handler![
             get_system_status,
             intercept_conversation,
@@ -289,7 +368,14 @@ pub fn run() {
             get_file_tree,
             read_file_content,
             write_file_content,
-            start_file_monitoring
+            start_file_monitoring,
+            real_chat_with_claude,
+            real_execute_code,
+            real_read_file,
+            real_write_file,
+            real_list_directory,
+            real_install_package,
+            real_get_system_info
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
