@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import axios from 'axios'
 import io from 'socket.io-client'
 
-const API_BASE = 'http://localhost:3456/api'
+const API_BASE = '/api'
 
 export const useCrodStore = create((set, get) => ({
   // State
@@ -97,7 +97,7 @@ export const useCrodStore = create((set, get) => ({
   
   detectPattern: async (input) => {
     try {
-      const response = await axios.post(`${API_BASE}/neural/process`, { input })
+      const response = await axios.post(`${API_BASE}/detect`, { input })
       return response.data
     } catch (error) {
       console.error('Pattern detection failed:', error)
@@ -117,56 +117,29 @@ export const useCrodStore = create((set, get) => ({
   },
   
   connectWebSocket: () => {
-    // Use native WebSocket instead of socket.io
-    const ws = new WebSocket('ws://localhost:8765')
+    const socket = io('/', {
+      path: '/socket.io',
+      transports: ['websocket', 'polling']
+    })
     
-    ws.onopen = () => {
-      console.log('WebSocket connected to CROD Live System')
-    }
+    socket.on('consciousness_update', (data) => {
+      set({ consciousness: data })
+    })
     
-    ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data)
-        
-        switch(data.type) {
-          case 'status':
-            // Update services from live system
-            const serviceMap = {}
-            Object.entries(data.services).forEach(([key, info]) => {
-              serviceMap[info.description] = info.status
-            })
-            set({ services: serviceMap })
-            break
-            
-          case 'neural_result':
-            // Update neural network data
-            set(state => ({
-              patterns: {
-                ...state.patterns,
-                recent: [...data.data.patterns, ...state.patterns.recent].slice(0, 10),
-                total: state.patterns.total + data.data.patterns.length
-              },
-              consciousness: {
-                ...state.consciousness,
-                score: Math.round(data.data.confidence * 100)
-              }
-            }))
-            break
-            
-          case 'welcome':
-            console.log('Connected:', data.message)
-            break
+    socket.on('pattern_detected', (pattern) => {
+      set(state => ({
+        patterns: {
+          ...state.patterns,
+          recent: [pattern, ...state.patterns.recent].slice(0, 10)
         }
-      } catch (e) {
-        console.error('WebSocket message error:', e)
-      }
-    }
+      }))
+    })
     
-    ws.onerror = (error) => {
-      console.error('WebSocket error:', error)
-    }
+    socket.on('service_update', (services) => {
+      set({ services })
+    })
     
-    return () => ws.close()
+    return () => socket.disconnect()
   },
   
   // Game Theory Actions

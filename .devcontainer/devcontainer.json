@@ -31,13 +31,19 @@
     }
   },
   
-  "forwardPorts": [],
+  // Auto-forward CROD ports
+  "forwardPorts": [3456, 5000, 5173, 7777, 8765],
   
   "portsAttributes": {
-    "8000": { "label": "Meta-Chain", "visibility": "private" },
-    "8080": { "label": "Gateway", "visibility": "private" },
-    "5001": { "label": "CROD Dashboard", "visibility": "private" }
+    "5173": { "label": "CROD Web Interface", "onAutoForward": "openBrowser" },
+    "5000": { "label": "CROD Visualization Studio", "onAutoForward": "notify" },
+    "3456": { "label": "CROD Live API", "onAutoForward": "notify" },
+    "7777": { "label": "CROD Parasite AI", "visibility": "private" },
+    "8765": { "label": "CROD WebSocket", "onAutoForward": "silent" }
   },
+  
+  // Auto-start CROD on container start
+  "postStartCommand": "bash .devcontainer/start-crod-auto.sh",
   
   "remoteEnv": {
     "DANIEL_OVERRIDE_KEY": "${localEnv:DANIEL_OVERRIDE_KEY}"

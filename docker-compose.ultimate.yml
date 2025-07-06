@@ -1,0 +1,130 @@
+version: '3.8'
+
+services:
+  # Python ML/AI Services
+  python-ml:
+    image: python:3.11-slim
+    container_name: crod-python-ml
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - "5000:5000"  # Visualization
+      - "7777:7777"  # Parasite AI
+      - "5001:5001"  # Chat Service
+      - "5002:5002"  # Image Gen
+    command: |
+      bash -c "
+        pip install flask numpy pandas scikit-learn tensorflow torch transformers pillow matplotlib &&
+        python bilder/crod_web_studio.py
+      "
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - crod-net
+
+  # Node.js Services
+  nodejs-api:
+    image: node:20-alpine
+    container_name: crod-nodejs
+    volumes:
+      - ./:/app
+    working_dir: /app
+    ports:
+      - "3456:3456"  # API Server
+      - "8765:8765"  # WebSocket
+    command: |
+      sh -c "
+        npm install &&
+        node src/crod-live-system.js
+      "
+    networks:
+      - crod-net
+    depends_on:
+      - python-ml
+
+  # React Frontend
+  react-frontend:
+    image: node:20-alpine
+    container_name: crod-frontend
+    volumes:
+      - ./crod-chain-app:/app
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    command: |
+      sh -c "
+        npm install &&
+        npm run dev -- --host
+      "
+    environment:
+      - REACT_APP_NO_BLOCKCHAIN=true
+    networks:
+      - crod-net
+    depends_on:
+      - nodejs-api
+
+  # Rust DB Engine
+  rust-db:
+    image: rust:1.75-slim
+    container_name: crod-rust-db
+    volumes:
+      - ./backend/rust:/app
+    working_dir: /app
+    ports:
+      - "7000:7000"
+    command: |
+      bash -c "
+        apt-get update && apt-get install -y pkg-config libssl-dev &&
+        cargo build --release &&
+        ./target/release/crod-db
+      "
+    networks:
+      - crod-net
+
+  # PostgreSQL for persistent storage
+  postgres:
+    image: postgres:16-alpine
+    container_name: crod-postgres
+    environment:
+      - POSTGRES_USER=crod
+      - POSTGRES_PASSWORD=crod123
+      - POSTGRES_DB=crod_db
+    volumes:
+      - crod-postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - crod-net
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: crod-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - crod-net
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: crod-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - crod-net
+    depends_on:
+      - react-frontend
+      - nodejs-api
+      - python-ml
+
+networks:
+  crod-net:
+    driver: bridge
+
+volumes:
+  crod-postgres-data:

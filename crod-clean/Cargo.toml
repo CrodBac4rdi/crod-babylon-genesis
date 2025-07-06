@@ -1,0 +1,54 @@
+[workspace]
+members = ["src/performance/rust"]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+authors = ["CROD Team"]
+license = "MIT"
+
+[workspace.dependencies]
+tokio = { version = "1.32", features = ["full"] }
+async-trait = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+axum = "0.6"
+tower = "0.4"
+tower-http = { version = "0.4", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1.0"
+thiserror = "1.0"
+dashmap = "5.5"
+rayon = "1.7"
+crossbeam = "0.8"
+parking_lot = "0.12"
+futures = "0.3"
+bytes = "1.4"
+uuid = { version = "1.4", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+rand = "0.8"
+
+# Performance optimization
+mimalloc = { version = "0.1", default-features = false }
+jemallocator = "0.5"
+
+# Metrics and monitoring
+prometheus = "0.13"
+metrics = "0.21"
+metrics-exporter-prometheus = "0.12"
+
+# WebGPU/Graphics (optional)
+wgpu = { version = "0.17", optional = true }
+winit = { version = "0.28", optional = true }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.bench]
+inherits = "release"
+debug = true
