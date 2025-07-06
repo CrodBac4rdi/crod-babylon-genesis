@@ -7,87 +7,41 @@ version: 2
 updates:
   # JavaScript/Node.js dependencies
   - package-ecosystem: "npm"
-    directory: "/pod-sources/gateway"
+    directory: "/"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
     
   - package-ecosystem: "npm"
-    directory: "/pod-sources/crod-core"
+    directory: "/crod-chain-app"
     schedule:
       interval: "weekly"
       
   - package-ecosystem: "npm"
-    directory: "/integrations"
+    directory: "/src/frontend/crod-gui"
     schedule:
       interval: "weekly"
       
   - package-ecosystem: "npm"
-    directory: "/dashboard"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "npm"
-    directory: "/src"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "npm"
-    directory: "/pod-sources/intelligence-hub"
+    directory: "/crod-claude-chat"
     schedule:
       interval: "weekly"
 
   # Python dependencies
   - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "pip"
-    directory: "/standalone-crod"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "pip"
-    directory: "/training"
+    directory: "/visualization/config"
     schedule:
       interval: "weekly"
 
   # Go dependencies
   - package-ecosystem: "gomod"
-    directory: "/pod-sources/blockchain-core"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "gomod"
-    directory: "/pod-sources/delta-quarter"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "gomod"
-    directory: "/pod-sources/memory-quarter"
+    directory: "/src/cmd"
     schedule:
       interval: "weekly"
 
   # Rust dependencies
   - package-ecosystem: "cargo"
-    directory: "/pod-sources/pattern-district"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "cargo"
-    directory: "/integrations/delta-tracker"
-    schedule:
-      interval: "weekly"
-
-  # Docker dependencies
-  - package-ecosystem: "docker"
-    directory: "/pod-sources/blockchain-core"
-    schedule:
-      interval: "weekly"
-      
-  - package-ecosystem: "docker"
-    directory: "/pod-sources/pattern-district"
+    directory: "/crod-chain-app/src-tauri"
     schedule:
       interval: "weekly"
 
