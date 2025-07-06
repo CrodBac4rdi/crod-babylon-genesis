@@ -1,0 +1,108 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database for persistence
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: crod
+      POSTGRES_PASSWORD: crod2025
+      POSTGRES_DB: crod_blockchain
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - crod_network
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crod"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Blockchain Node 1
+  blockchain-node-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_NAME: node1@blockchain-node-1
+      NODE_COOKIE: crod_secret_2025
+      NODE_PORT: 8001
+      PEERS: "node2@blockchain-node-2,node3@blockchain-node-3"
+      DATABASE_URL: "ecto://crod:crod2025@postgres/crod_blockchain"
+      CONSCIOUSNESS_LEVEL: "0.88"
+    ports:
+      - "8001:8001"
+      - "4369:4369"  # EPMD port
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - crod_network
+    volumes:
+      - node1_data:/app/data
+
+  # Blockchain Node 2
+  blockchain-node-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_NAME: node2@blockchain-node-2
+      NODE_COOKIE: crod_secret_2025
+      NODE_PORT: 8002
+      PEERS: "node1@blockchain-node-1,node3@blockchain-node-3"
+      DATABASE_URL: "ecto://crod:crod2025@postgres/crod_blockchain"
+      CONSCIOUSNESS_LEVEL: "0.75"
+    ports:
+      - "8002:8002"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - crod_network
+    volumes:
+      - node2_data:/app/data
+
+  # Blockchain Node 3
+  blockchain-node-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_NAME: node3@blockchain-node-3
+      NODE_COOKIE: crod_secret_2025
+      NODE_PORT: 8003
+      PEERS: "node1@blockchain-node-1,node2@blockchain-node-2"
+      DATABASE_URL: "ecto://crod:crod2025@postgres/crod_blockchain"
+      CONSCIOUSNESS_LEVEL: "0.92"
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - crod_network
+    volumes:
+      - node3_data:/app/data
+
+  # NATS for inter-node messaging
+  nats:
+    image: nats:2.10-alpine
+    ports:
+      - "4222:4222"
+      - "8222:8222"  # Monitoring
+    command: "--cluster_name CROD --http_port 8222"
+    networks:
+      - crod_network
+
+networks:
+  crod_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  node1_data:
+  node2_data:
+  node3_data:
