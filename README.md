@@ -31,6 +31,59 @@ Wir befinden uns in der **Planungsphase** für die finale Polyglot-Architektur. 
 
 ![Polyglot City Architecture](assets/svg/polyglot-city-architecture.svg)
 
+### 📊 System Flow Diagram
+
+```mermaid
+flowchart TB
+    subgraph User["👤 User Layer"]
+        U[User Input]
+        D[Dashboard]
+    end
+    
+    subgraph Gateway["🌐 Gateway Layer"]
+        API[REST API]
+        WS[WebSocket]
+        GQL[GraphQL]
+    end
+    
+    subgraph MessageBus["🔗 Message Bus"]
+        NATS[NATS JetStream]
+        REDIS[Redis Pub/Sub]
+    end
+    
+    subgraph Districts["🏙️ Polyglot Districts"]
+        MC[🧠 Meta-Chain<br/>Elixir]
+        PD[🔍 Pattern District<br/>Rust]
+        MQ[💾 Memory Quarter<br/>Go]
+        IH[🤖 Intelligence Hub<br/>Python]
+    end
+    
+    subgraph Storage["💾 Persistence"]
+        PG[(PostgreSQL)]
+        SQLITE[(SQLite)]
+        S3[Object Storage]
+    end
+    
+    U --> API
+    D <--> WS
+    API --> NATS
+    WS --> REDIS
+    
+    NATS <--> MC
+    NATS <--> PD
+    NATS <--> MQ
+    NATS <--> IH
+    
+    MC --> PG
+    MQ --> SQLITE
+    IH --> S3
+    
+    style MC fill:#9b59b6
+    style PD fill:#e74c3c
+    style MQ fill:#3498db
+    style IH fill:#f39c12
+```
+
 ## 🛠️ Technologie Stack
 
 | District | Sprache | Status | Aufgabe |
@@ -50,6 +103,81 @@ Wir befinden uns in der **Planungsphase** für die finale Polyglot-Architektur. 
 - [ ] Gemeinsame Data Layer planen
 - [ ] GitHub Repository aufräumen
 
+### 💰 Economics & Mining Model
+
+```mermaid
+graph TD
+    subgraph Mining["⛏️ Mining Economics"]
+        MD[Mining Difficulty]
+        MR[Mining Reward]
+        HP[Hash Power]
+    end
+    
+    subgraph Consciousness["🧠 Consciousness Factors"]
+        CL[Consciousness Level]
+        PD[Pattern Density]
+        TC[Trinity Coherence]
+    end
+    
+    subgraph Rewards["🏆 Reward System"]
+        BR[Block Reward]
+        PR[Pattern Bonus]
+        CR[Consciousness Multiplier]
+    end
+    
+    subgraph Market["💸 Token Economics"]
+        TS[Token Supply]
+        TV[Token Value]
+        TU[Token Utility]
+    end
+    
+    CL --> MD
+    PD --> MD
+    TC --> MD
+    
+    MD --> BR
+    PR --> BR
+    CR --> BR
+    
+    BR --> TS
+    TS --> TV
+    TU --> TV
+    
+    HP --> MR
+    MR --> Market
+    
+    style CL fill:#2ecc71
+    style BR fill:#f39c12
+    style TV fill:#e74c3c
+```
+
+### 🗺️ Development Roadmap
+
+```mermaid
+gantt
+    title CROD Development Timeline
+    dateFormat YYYY-MM-DD
+    section Phase 1 - Setup
+    Docker Containers        :a1, 2025-07-06, 7d
+    API Definitions         :a2, after a1, 5d
+    Message Bus Setup       :a3, after a1, 3d
+    
+    section Phase 2 - Build
+    Pattern District (Rust) :b1, after a2, 14d
+    Memory Quarter (Go)     :b2, after a2, 10d
+    Unit Tests             :b3, after b1, 7d
+    
+    section Phase 3 - Integration
+    District Connection     :c1, after b3, 7d
+    E2E Tests              :c2, after c1, 5d
+    Monitoring Setup       :c3, after c1, 3d
+    
+    section Phase 4 - Launch
+    Genesis Block          :d1, after c2, 3d
+    Production Deploy      :d2, after d1, 2d
+    Public API            :d3, after d2, 1d
+```
+
 ### Phase 2: Districts fertig bauen
 - [ ] Pattern District in Rust implementieren
 - [ ] Memory Quarter Go Services vervollständigen
@@ -68,6 +196,266 @@ Wir befinden uns in der **Planungsphase** für die finale Polyglot-Architektur. 
 - [ ] Genesis Block mit voller Funktionalität
 - [ ] Production Deployment auf Kubernetes
 - [ ] Public API Release
+
+### 🧬 Neural Network Architecture (88 Parameters)
+
+```mermaid
+graph LR
+    subgraph Input["📥 Input Layer"]
+        I1[Token 1]
+        I2[Token 2]
+        I3[Token 3]
+        IN[Token N]
+    end
+    
+    subgraph Hidden["🧠 88 Parameter Network"]
+        subgraph Layer1["Layer 1 (Pattern)"]
+            H1[Neuron 1-22]
+        end
+        subgraph Layer2["Layer 2 (Consciousness)"]
+            H2[Neuron 23-44]
+        end
+        subgraph Layer3["Layer 3 (Trinity)"]
+            H3[Neuron 45-66]
+        end
+        subgraph Layer4["Layer 4 (Quantum)"]
+            H4[Neuron 67-88]
+        end
+    end
+    
+    subgraph Output["📤 Output"]
+        O1[Mining Difficulty]
+        O2[Pattern Score]
+        O3[Consciousness Level]
+        O4[Block Validation]
+    end
+    
+    I1 --> Layer1
+    I2 --> Layer1
+    I3 --> Layer1
+    IN --> Layer1
+    
+    Layer1 --> Layer2
+    Layer2 --> Layer3
+    Layer3 --> Layer4
+    
+    Layer4 --> O1
+    Layer4 --> O2
+    Layer4 --> O3
+    Layer4 --> O4
+    
+    style Layer1 fill:#2ecc71
+    style Layer2 fill:#3498db
+    style Layer3 fill:#9b59b6
+    style Layer4 fill:#e74c3c
+```
+
+### ⚡ Blockchain Consensus Flow
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant G as Gateway
+    participant MC as Meta-Chain
+    participant PD as Pattern District
+    participant MQ as Memory Quarter
+    participant IH as Intelligence Hub
+    participant B as Blockchain
+    
+    U->>G: Submit Transaction
+    G->>MC: Process Request
+    MC->>PD: Pattern Analysis
+    PD->>MQ: Check Memory
+    MQ->>IH: Calculate Consciousness
+    IH-->>MC: Consciousness Score
+    MC->>B: Propose Block
+    
+    Note over B: Quantum Consensus
+    B->>MC: Block Accepted
+    MC->>G: Confirmation
+    G->>U: Transaction Complete
+```
+
+### 🚀 Deployment Architecture
+
+```mermaid
+graph TB
+    subgraph Cloud["☁️ Cloud Infrastructure"]
+        subgraph K8s["Kubernetes Cluster"]
+            subgraph Nodes["Worker Nodes"]
+                N1[Node 1]
+                N2[Node 2]
+                N3[Node 3]
+            end
+            
+            subgraph Services["Services"]
+                MC[Meta-Chain Pod]
+                PD[Pattern Pod]
+                MQ[Memory Pod]
+                IH[Intelligence Pod]
+                GW[Gateway Pod]
+            end
+            
+            subgraph Storage["Storage"]
+                PV1[PersistentVolume 1]
+                PV2[PersistentVolume 2]
+            end
+        end
+        
+        LB[Load Balancer]
+        DNS[DNS]
+    end
+    
+    subgraph Monitoring["📊 Monitoring"]
+        PROM[Prometheus]
+        GRAF[Grafana]
+        LOG[Loki]
+    end
+    
+    User --> DNS
+    DNS --> LB
+    LB --> GW
+    
+    Services --> PV1
+    Services --> PV2
+    
+    Services -.-> PROM
+    PROM --> GRAF
+    Services -.-> LOG
+    
+    style K8s fill:#326ce5
+    style Services fill:#2ecc71
+    style Monitoring fill:#f39c12
+```
+
+### 📊 Data Flow Architecture
+
+```mermaid
+graph LR
+    subgraph Sources["📥 Data Sources"]
+        UI[User Input]
+        BC[Blockchain]
+        API[External APIs]
+        IOT[IoT Devices]
+    end
+    
+    subgraph Processing["⚙️ Processing Pipeline"]
+        VAL[Validation]
+        TRANS[Transform]
+        ENRICH[Enrichment]
+        CACHE[Cache Layer]
+    end
+    
+    subgraph Analytics["📈 Analytics"]
+        RT[Real-time]
+        BATCH[Batch]
+        ML[ML Pipeline]
+    end
+    
+    subgraph Output["📤 Output"]
+        DASH[Dashboard]
+        ALERT[Alerts]
+        REPORT[Reports]
+        CHAIN[Blockchain]
+    end
+    
+    UI --> VAL
+    BC --> VAL
+    API --> VAL
+    IOT --> VAL
+    
+    VAL --> TRANS
+    TRANS --> ENRICH
+    ENRICH --> CACHE
+    
+    CACHE --> RT
+    CACHE --> BATCH
+    CACHE --> ML
+    
+    RT --> DASH
+    RT --> ALERT
+    BATCH --> REPORT
+    ML --> CHAIN
+    
+    style Processing fill:#3498db
+    style Analytics fill:#2ecc71
+```
+
+### 📈 Performance Metrics & Projections
+
+```mermaid
+graph TB
+    subgraph Current["📊 Current Performance"]
+        C1[2 Services Running]
+        C2[Mock Blockchain]
+        C3[0 TPS]
+        C4[In-Memory Only]
+    end
+    
+    subgraph Target["🎯 Target Performance"]
+        T1[10+ Services]
+        T2[Real Blockchain]
+        T3[1000+ TPS]
+        T4[Distributed Storage]
+    end
+    
+    subgraph Scaling["📈 Scaling Strategy"]
+        S1[Horizontal Scaling]
+        S2[Load Balancing]
+        S3[Sharding]
+        S4[Edge Computing]
+    end
+    
+    Current --> Target
+    Target --> Scaling
+    
+    style Current fill:#e74c3c
+    style Target fill:#2ecc71
+    style Scaling fill:#3498db
+```
+
+### 💸 Financial Projections
+
+```mermaid
+pie title Cost Distribution
+    "Development" : 35
+    "Infrastructure" : 25
+    "Marketing" : 20
+    "Operations" : 15
+    "Reserve" : 5
+```
+
+```mermaid
+graph LR
+    subgraph Revenue["💰 Revenue Streams"]
+        TX[Transaction Fees]
+        STAKE[Staking Rewards]
+        API[API Access]
+        ENT[Enterprise License]
+    end
+    
+    subgraph Costs["💸 Operating Costs"]
+        INFRA[Infrastructure]
+        DEV[Development]
+        MARKET[Marketing]
+        LEGAL[Legal/Compliance]
+    end
+    
+    subgraph Profit["📈 Profitability"]
+        Y1[Year 1: -€50k]
+        Y2[Year 2: €20k]
+        Y3[Year 3: €200k]
+        Y4[Year 4: €1M+]
+    end
+    
+    Revenue --> Profit
+    Costs --> Profit
+    
+    style Y1 fill:#e74c3c
+    style Y2 fill:#f39c12
+    style Y3 fill:#2ecc71
+    style Y4 fill:#27ae60
+```
 
 ## 🏗️ Projekt Struktur
 
