@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#00ff00" font-size="28" font-family="monospace">CROD Roadmap 2025</text>
+  
+  <!-- Timeline -->
+  <line x1="100" y1="100" x2="100" y2="600" stroke="#00ff00" stroke-width="3"/>
+  
+  <!-- Completed Milestones -->
+  <g id="milestone1">
+    <circle cx="100" cy="150" r="15" fill="#00ff00"/>
+    <text x="20" y="155" fill="#fff" font-size="20" font-family="monospace">✓</text>
+    <rect x="130" y="130" width="250" height="40" fill="#1a1a1a" stroke="#00ff00" stroke-width="2"/>
+    <text x="140" y="150" fill="#00ff00" font-size="14" font-family="monospace">Basic Blockchain Implementation</text>
+    <text x="140" y="165" fill="#888" font-size="10" font-family="monospace">Genesis, Mining, API - DONE</text>
+  </g>
+  
+  <g id="milestone2">
+    <circle cx="100" cy="220" r="15" fill="#00ff00"/>
+    <text x="92" y="225" fill="#fff" font-size="20" font-family="monospace">✓</text>
+    <rect x="130" y="200" width="250" height="40" fill="#1a1a1a" stroke="#00ff00" stroke-width="2"/>
+    <text x="140" y="220" fill="#00ff00" font-size="14" font-family="monospace">React GUI Framework</text>
+    <text x="140" y="235" fill="#888" font-size="10" font-family="monospace">Multi-panel interface - DONE</text>
+  </g>
+  
+  <g id="milestone3">
+    <circle cx="100" cy="290" r="15" fill="#00ff00"/>
+    <text x="92" y="295" fill="#fff" font-size="20" font-family="monospace">✓</text>
+    <rect x="130" y="270" width="250" height="40" fill="#1a1a1a" stroke="#00ff00" stroke-width="2"/>
+    <text x="140" y="290" fill="#00ff00" font-size="14" font-family="monospace">LLaMA 7B Training System</text>
+    <text x="140" y="305" fill="#888" font-size="10" font-family="monospace">FastAPI + Training Loop - DONE</text>
+  </g>
+  
+  <!-- In Progress -->
+  <g id="current">
+    <circle cx="100" cy="360" r="15" fill="#ff8800" stroke="#fff" stroke-width="2">
+      <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="130" y="340" width="250" height="40" fill="#1a1a1a" stroke="#ff8800" stroke-width="2"/>
+    <text x="140" y="360" fill="#ff8800" font-size="14" font-family="monospace">Polyglot Integration</text>
+    <text x="140" y="375" fill="#888" font-size="10" font-family="monospace">Python + Rust + Node.js - NOW</text>
+  </g>
+  
+  <!-- Upcoming Milestones -->
+  <g id="upcoming1">
+    <circle cx="100" cy="430" r="15" fill="#333" stroke="#888" stroke-width="2"/>
+    <rect x="130" y="410" width="250" height="40" fill="#1a1a1a" stroke="#888" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="140" y="430" fill="#888" font-size="14" font-family="monospace">NATS JetStream Integration</text>
+    <text x="140" y="445" fill="#666" font-size="10" font-family="monospace">Week 1 - Replace Redis</text>
+  </g>
+  
+  <g id="upcoming2">
+    <circle cx="100" cy="500" r="15" fill="#333" stroke="#888" stroke-width="2"/>
+    <rect x="130" y="480" width="250" height="40" fill="#1a1a1a" stroke="#888" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="140" y="500" fill="#888" font-size="14" font-family="monospace">Post-Quantum Cryptography</text>
+    <text x="140" y="515" fill="#666" font-size="10" font-family="monospace">Week 1-2 - NIST Algorithms</text>
+  </g>
+  
+  <g id="upcoming3">
+    <circle cx="100" cy="570" r="15" fill="#333" stroke="#888" stroke-width="2"/>
+    <rect x="130" y="550" width="250" height="40" fill="#1a1a1a" stroke="#888" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="140" y="570" fill="#888" font-size="14" font-family="monospace">District Implementation</text>
+    <text x="140" y="585" fill="#666" font-size="10" font-family="monospace">Week 3-4 - Pattern, Memory, Intelligence</text>
+  </g>
+  
+  <!-- Side Panel - Tech Stack -->
+  <g id="techstack">
+    <rect x="450" y="130" width="400" height="300" fill="#1a1a1a" stroke="#00ff00" stroke-width="2"/>
+    <text x="650" y="160" text-anchor="middle" fill="#00ff00" font-size="18" font-family="monospace">Current Tech Stack</text>
+    
+    <text x="470" y="190" fill="#0f0" font-size="14" font-family="monospace">✓ Node.js - Blockchain Core</text>
+    <text x="470" y="210" fill="#0f0" font-size="14" font-family="monospace">✓ React - Frontend GUI</text>
+    <text x="470" y="230" fill="#0f0" font-size="14" font-family="monospace">✓ Python - LLaMA Training</text>
+    <text x="470" y="250" fill="#ff8800" font-size="14" font-family="monospace">⚡ Rust - Pattern Engine</text>
+    <text x="470" y="270" fill="#ff8800" font-size="14" font-family="monospace">⚡ Go - Memory Quarter</text>
+    <text x="470" y="290" fill="#888" font-size="14" font-family="monospace">⏳ Elixir - Meta Chain</text>
+    <text x="470" y="310" fill="#888" font-size="14" font-family="monospace">⏳ NATS - Message Bus</text>
+    <text x="470" y="330" fill="#888" font-size="14" font-family="monospace">⏳ PostGIS - Spatial DB</text>
+  </g>
+  
+  <!-- Performance Goals -->
+  <g id="performance">
+    <rect x="450" y="450" width="400" height="150" fill="#1a1a1a" stroke="#ff8800" stroke-width="2"/>
+    <text x="650" y="480" text-anchor="middle" fill="#ff8800" font-size="18" font-family="monospace">Performance Targets</text>
+    
+    <text x="470" y="510" fill="#fff" font-size="12" font-family="monospace">Current: ~100 TPS (basic blockchain)</text>
+    <text x="470" y="530" fill="#ff8800" font-size="12" font-family="monospace">Target: 10,000 TPS (with NATS)</text>
+    <text x="470" y="550" fill="#888" font-size="12" font-family="monospace">Future: 100,000 TPS (quantum enhanced)</text>
+  </g>
+</svg>
