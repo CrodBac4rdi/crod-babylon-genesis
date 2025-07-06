@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CROD Babylon Genesis
+Comment=Launch CROD System Control Center
+Icon=crod-chain-app/src-tauri/icons/icon.png
+Exec=bash -c "cd $(dirname %k)/../.. && ./src/cmd/launch-crod-system.sh"
+Terminal=false
+Categories=Development;System;
+StartupNotify=true

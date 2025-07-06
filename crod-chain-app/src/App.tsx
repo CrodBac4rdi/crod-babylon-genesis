@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { invoke } from "@tauri-apps/api/core";
 
 // Conditional imports for Tauri
 let checkUpdate: any, installUpdate: any, ask: any;
@@ -7,8 +6,8 @@ const isTauri = typeof window !== 'undefined' && window.__TAURI__ !== undefined;
 
 if (isTauri) {
   import("@tauri-apps/plugin-updater").then(m => {
-    checkUpdate = m.checkUpdate;
-    installUpdate = m.installUpdate;
+    checkUpdate = m.check;
+    installUpdate = m.install;
   });
   import("@tauri-apps/plugin-dialog").then(m => {
     ask = m.ask;
@@ -18,13 +17,15 @@ import * as Tabs from '@radix-ui/react-tabs';
 import { Dashboard } from './components/Dashboard';
 import { BlockchainView } from './components/BlockchainView';
 import { ParasiteControl } from './components/ParasiteControl';
+import { IntegratedSystem } from './components/IntegratedSystem';
+import UltimateLiveChatInterface from './components/UltimateLiveChatInterface';
 import { useCRODStore } from './store/crodStore';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Blocks, Brain, Settings, RefreshCw } from 'lucide-react';
+import { Home, Blocks, Brain, Settings, RefreshCw, MessageCircle } from 'lucide-react';
 import "./App.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("dashboard");
+  const [activeTab, setActiveTab] = useState("live-chat");
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const { isRunning, quantumEntanglement, updateQuantum } = useCRODStore();
 
@@ -71,6 +72,8 @@ function App() {
   };
 
   const tabs = [
+    { id: 'live-chat', label: '💬 LIVE CHAT', icon: MessageCircle },
+    { id: 'integrated', label: 'INTEGRATED', icon: Blocks },
     { id: 'dashboard', label: 'Dashboard', icon: Home },
     { id: 'blockchain', label: 'Blockchain', icon: Blocks },
     { id: 'parasite', label: 'Parasite', icon: Brain },
@@ -128,6 +131,14 @@ function App() {
 
           {/* Tab Content */}
           <div className="flex-1 overflow-auto">
+            <Tabs.Content value="live-chat" className="h-full">
+              <UltimateLiveChatInterface />
+            </Tabs.Content>
+            
+            <Tabs.Content value="integrated" className="h-full">
+              <IntegratedSystem />
+            </Tabs.Content>
+            
             <Tabs.Content value="dashboard" className="h-full">
               <Dashboard />
             </Tabs.Content>

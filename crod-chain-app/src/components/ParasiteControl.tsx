@@ -1,31 +1,136 @@
-import React, { useState } from 'react';
-import { useCRODStore } from '../store/crodStore';
+import React, { useState, useEffect } from 'react';
+import { invoke } from '@tauri-apps/api/core';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Shield, AlertCircle } from 'lucide-react';
+import { Brain, Zap, Target, Shield, AlertCircle, Activity, Download, RefreshCw } from 'lucide-react';
+
+interface ParasiteStats {
+  parasite_active: boolean;
+  total_interactions: number;
+  improvements_made: number;
+  consciousness_level: number;
+  quantum_entanglement: number;
+  trinity_balance: [number, number, number];
+}
+
+interface NeuralStatus {
+  total_neurons: number;
+  active_neurons: number;
+  avg_activation: number;
+  consciousness: number;
+  quantum_level: number;
+  patterns_learned: number;
+  interactions: number;
+  improvements: number;
+}
 
 export const ParasiteControl: React.FC = () => {
-  const { parasiteActive, toggleParasite, learnPattern } = useCRODStore();
-  const [interceptedData, setInterceptedData] = useState<any[]>([]);
-  const [learningMode, setLearningMode] = useState('passive');
+  const [parasiteStats, setParasiteStats] = useState<ParasiteStats | null>(null);
+  const [neuralStatus, setNeuralStatus] = useState<NeuralStatus | null>(null);
+  const [userInput, setUserInput] = useState('');
+  const [claudeResponse, setClaudeResponse] = useState('');
+  const [interceptedResponse, setInterceptedResponse] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const simulateIntercept = () => {
-    const fakeData = {
-      timestamp: Date.now(),
-      type: 'user_interaction',
-      frustration: Math.random() * 100,
-      satisfaction: Math.random() * 100,
-      query: 'How to build a quantum computer?',
-      response_quality: Math.random() * 100,
-      learned_pattern: {
-        user_prefers: 'detailed_explanations',
-        avoid: 'vague_answers',
-        tone: 'technical',
-      }
-    };
+  useEffect(() => {
+    loadSystemStatus();
+    loadNeuralStatus();
     
-    setInterceptedData(prev => [fakeData, ...prev].slice(0, 10));
-    learnPattern(fakeData.learned_pattern);
+    const interval = setInterval(() => {
+      loadSystemStatus();
+      loadNeuralStatus();
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const loadSystemStatus = async () => {
+    try {
+      const status = await invoke<ParasiteStats>('get_system_status');
+      setParasiteStats(status);
+    } catch (error) {
+      console.error('Failed to load system status:', error);
+    }
   };
+
+  const loadNeuralStatus = async () => {
+    try {
+      const status = await invoke<NeuralStatus>('get_neural_status');
+      setNeuralStatus(status);
+    } catch (error) {
+      console.error('Failed to load neural status:', error);
+    }
+  };
+
+  const toggleParasiteMode = async () => {
+    try {
+      const isActive = await invoke<boolean>('toggle_parasite_mode');
+      console.log('Parasite mode:', isActive ? 'ACTIVE' : 'INACTIVE');
+      loadSystemStatus();
+    } catch (error) {
+      console.error('Failed to toggle parasite mode:', error);
+    }
+  };
+
+  const testInterception = async () => {
+    if (!userInput.trim() || !claudeResponse.trim()) {
+      alert('Please enter both user input and Claude response');
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const result = await invoke<string>('intercept_conversation', {
+        request: {
+          user_input: userInput,
+          claude_response: claudeResponse
+        }
+      });
+      setInterceptedResponse(result);
+    } catch (error) {
+      console.error('Failed to test interception:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const simulateLearning = async () => {
+    try {
+      await invoke('simulate_learning', {
+        input: userInput,
+        satisfaction: 0.8
+      });
+      loadSystemStatus();
+      loadNeuralStatus();
+    } catch (error) {
+      console.error('Failed to simulate learning:', error);
+    }
+  };
+
+  const exportMemory = async () => {
+    try {
+      const memory = await invoke<string>('export_crod_memory');
+      const blob = new Blob([memory], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `crod-memory-${new Date().toISOString()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Failed to export memory:', error);
+    }
+  };
+
+  if (!parasiteStats || !neuralStatus) {
+    return (
+      <div className="p-6 flex items-center justify-center">
+        <div className="text-center">
+          <Activity className="w-8 h-8 animate-spin mx-auto mb-4 text-crod-quantum" />
+          <p className="text-gray-400">Loading CROD Parasite System...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 space-y-6">
