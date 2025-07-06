@@ -22,10 +22,7 @@ defmodule CROD.MixProject do
     [
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.6"},
-      {:gnat, "~> 1.7"},
-      {:uuid, "~> 1.1"},
-      {:quantum, "~> 3.5"},
-      {:httpoison, "~> 2.1"}
+      {:uuid, "~> 1.1"}
     ]
   end
 end

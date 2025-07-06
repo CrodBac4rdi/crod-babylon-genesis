@@ -24,6 +24,24 @@
     ],
     "security": {
       "csp": null
+    },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    }
+  },
+  "plugins": {
+    "shell": {
+      "open": true,
+      "sidecar": {
+        "binaries": [
+          {
+            "name": "elixir-blockchain",
+            "command": "elixir",
+            "args": ["--name", "crod@localhost", "--cookie", "crod_chain", "-S", "mix", "run", "--no-halt"]
+          }
+        ]
+      }
     }
   },
   "bundle": {

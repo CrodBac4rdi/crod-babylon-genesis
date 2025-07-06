@@ -7,7 +7,14 @@ defmodule CROD.MixProject do
       version: "0.4.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: [main_module: CROD.CLI],
+      releases: [
+        crod: [
+          include_executables_for: [:unix],
+          applications: [runtime_tools: :permanent]
+        ]
+      ]
     ]
   end
 

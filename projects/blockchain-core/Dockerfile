@@ -16,7 +16,8 @@ RUN mix local.hex --force && \
     mix local.rebar --force
 
 # Copy mix files
-COPY mix.exs mix.lock ./
+COPY mix.exs ./
+COPY mix.lock* ./
 
 # Install dependencies
 RUN mix deps.get && \

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROD Blockchain Multi-Node Control Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-6">
+        <!-- Header -->
+        <h1 class="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            🔗 CROD Blockchain Control Center
+        </h1>
+
+        <!-- Node Status Grid -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <div id="node1" class="bg-gray-800 rounded-lg p-6 border-2 border-gray-700">
+                <h2 class="text-xl font-bold mb-4">Node 1 (Genesis)</h2>
+                <div class="space-y-2">
+                    <p>Status: <span class="status text-red-500">Offline</span></p>
+                    <p>Blocks: <span class="blocks">0</span></p>
+                    <p>Hash Power: <span class="hashpower">0</span> H/s</p>
+                    <p>Consciousness: <span class="consciousness">0.00</span></p>
+                </div>
+                <button onclick="startNode(1)" class="mt-4 bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded">
+                    Start Node
+                </button>
+            </div>
+
+            <div id="node2" class="bg-gray-800 rounded-lg p-6 border-2 border-gray-700">
+                <h2 class="text-xl font-bold mb-4">Node 2</h2>
+                <div class="space-y-2">
+                    <p>Status: <span class="status text-red-500">Offline</span></p>
+                    <p>Blocks: <span class="blocks">0</span></p>
+                    <p>Hash Power: <span class="hashpower">0</span> H/s</p>
+                    <p>Consciousness: <span class="consciousness">0.00</span></p>
+                </div>
+                <button onclick="startNode(2)" class="mt-4 bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded">
+                    Start Node
+                </button>
+            </div>
+
+            <div id="node3" class="bg-gray-800 rounded-lg p-6 border-2 border-gray-700">
+                <h2 class="text-xl font-bold mb-4">Node 3</h2>
+                <div class="space-y-2">
+                    <p>Status: <span class="status text-red-500">Offline</span></p>
+                    <p>Blocks: <span class="blocks">0</span></p>
+                    <p>Hash Power: <span class="hashpower">0</span> H/s</p>
+                    <p>Consciousness: <span class="consciousness">0.00</span></p>
+                </div>
+                <button onclick="startNode(3)" class="mt-4 bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded">
+                    Start Node
+                </button>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Control Panel</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <button onclick="startAllNodes()" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
+                    🚀 Start All Nodes
+                </button>
+                <button onclick="stopAllNodes()" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-bold">
+                    🛑 Stop All Nodes
+                </button>
+                <button onclick="mineBlock()" class="bg-yellow-600 hover:bg-yellow-700 px-6 py-3 rounded-lg font-bold">
+                    ⛏️ Mine Block
+                </button>
+            </div>
+        </div>
+
+        <!-- Transaction Form -->
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Submit Transaction</h2>
+            <div class="flex gap-4">
+                <input type="text" id="txData" placeholder="Transaction data..." 
+                    class="flex-1 bg-gray-700 px-4 py-2 rounded">
+                <input type="number" id="txConsciousness" placeholder="Consciousness level (0-1)" 
+                    step="0.01" min="0" max="1" class="bg-gray-700 px-4 py-2 rounded w-48">
+                <button onclick="submitTransaction()" class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded font-bold">
+                    Send Transaction
+                </button>
+            </div>
+        </div>
+
+        <!-- Blockchain Visualization -->
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Blockchain Visualization</h2>
+            <div id="blockchain" class="flex overflow-x-auto space-x-4 pb-4">
+                <!-- Blocks will be added here -->
+            </div>
+        </div>
+
+        <!-- Live Log -->
+        <div class="bg-gray-800 rounded-lg p-6 mt-8">
+            <h2 class="text-2xl font-bold mb-4">Live Activity Log</h2>
+            <div id="log" class="bg-gray-900 rounded p-4 h-48 overflow-y-auto font-mono text-sm">
+                <p class="text-gray-500">Waiting for activity...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

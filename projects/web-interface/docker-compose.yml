@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Phoenix Web Interface
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      - MIX_ENV=dev
+      - BLOCKCHAIN_URL=http://blockchain:8001
+    volumes:
+      - .:/app
+      - /app/_build
+      - /app/deps
+    command: mix phx.server
+    networks:
+      - crod_network
+
+  # Simple Blockchain Node
+  blockchain:
+    image: elixir:1.15-alpine
+    volumes:
+      - ../blockchain-core:/blockchain
+    working_dir: /blockchain
+    ports:
+      - "8001:8001"
+    command: elixir api_server.ex
+    networks:
+      - crod_network
+
+networks:
+  crod_network:
+    driver: bridge
