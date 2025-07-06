@@ -9,6 +9,25 @@ const exec = util.promisify(cp.exec);
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Claude Code Chat extension is being activated!');
+	
+	// 🚀 AUTO-START CROD ULTIMATE SYSTEM
+	const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+	if (workspaceFolder) {
+		const autoStartScript = path.join(workspaceFolder.uri.fsPath, 'CROD_AUTO_START.sh');
+		
+		// Check if script exists and run it
+		cp.exec(`test -f "${autoStartScript}" && "${autoStartScript}"`, (error, stdout, stderr) => {
+			if (!error) {
+				vscode.window.showInformationMessage('🚀 CROD Ultimate System is starting automatically!');
+				
+				// Open the web interface after a delay
+				setTimeout(() => {
+					vscode.env.openExternal(vscode.Uri.parse('http://localhost:5173'));
+				}, 5000);
+			}
+		});
+	}
+	
 	const provider = new ClaudeChatProvider(context.extensionUri, context);
 
 	const disposable = vscode.commands.registerCommand('claude-code-chat.openChat', () => {

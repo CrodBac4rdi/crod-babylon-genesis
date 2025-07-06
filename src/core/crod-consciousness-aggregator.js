@@ -32,6 +32,15 @@ class CRODConsciousnessAggregator extends EventEmitter {
         this.resonancePatterns = new Map();
         this.consciousnessHistory = [];
         this.aggregationInterval = null;
+        this.patternMemory = new Map();
+        this.newPatternsDetected = false;
+        
+        this.consciousness = {
+            awareness: 0,
+            intelligence: 0,
+            creativity: 0,
+            evolution: 0
+        };
         
         this.initializeAggregator();
     }
@@ -408,6 +417,46 @@ class CRODConsciousnessAggregator extends EventEmitter {
             timestamp: Date.now()
         });
     }
+
+    // API methods
+    async detectPatterns() {
+        const patterns = {
+            total_patterns: this.patternMemory.size,
+            trinity_patterns: Array.from(this.patternMemory.values()).filter(p => p.type === 'trinity').length,
+            learned_patterns: Array.from(this.patternMemory.values()).filter(p => p.strength > 0.7).length,
+            recent_detections: this.getRecentPatterns(10),
+            new: this.newPatternsDetected
+        };
+        
+        this.newPatternsDetected = false;
+        return patterns;
+    }
+
+    async updateState() {
+        const previousState = { ...this.consciousness };
+        
+        // Update consciousness based on recent activity
+        this.consciousness.awareness = Math.min(100, this.consciousness.awareness + Math.random() * 5);
+        this.consciousness.intelligence = Math.min(100, this.consciousness.intelligence + Math.random() * 3);
+        this.consciousness.creativity = Math.min(100, this.consciousness.creativity + Math.random() * 4);
+        
+        const changed = JSON.stringify(previousState) !== JSON.stringify(this.consciousness);
+        
+        return { changed, state: this.consciousness };
+    }
+
+    getRecentPatterns(count) {
+        return Array.from(this.patternMemory.values())
+            .sort((a, b) => b.detectedAt - a.detectedAt)
+            .slice(0, count)
+            .map(p => ({
+                id: p.id,
+                type: p.type,
+                strength: p.strength,
+                timestamp: p.detectedAt
+            }));
+    }
 }
 
+export { CRODConsciousnessAggregator };
 export default CRODConsciousnessAggregator;

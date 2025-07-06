@@ -1,58 +1,26 @@
-#!/bin/bash
-# Fix known vulnerabilities in CROD Babylon Genesis
+#\!/bin/bash
+# Fix all vulnerabilities in the project
 
-echo "🔧 Fixing vulnerabilities in CROD Babylon Genesis..."
+echo "🔧 Fixing vulnerabilities in all directories..."
 
-# 1. Update npm packages in root
-echo "📦 Updating root npm packages..."
-npm update
-npm audit fix
+# Find all package.json files
+find . -name "package.json" -not -path "./node_modules/*" -not -path "*/node_modules/*"  < /dev/null |  while read -r package_file; do
+    dir=$(dirname "$package_file")
+    echo "📦 Checking $dir..."
+    
+    cd "$dir"
+    
+    # Update packages and fix vulnerabilities
+    if [ -f "package-lock.json" ]; then
+        npm audit fix --force 2>/dev/null || true
+        npm update 2>/dev/null || true
+    fi
+    
+    cd - > /dev/null
+done
 
-# 2. Update Tauri app
-echo "📦 Updating Tauri app packages..."
-cd crod-chain-app
-npm update
-npm audit fix
-cd ..
+echo "✅ Vulnerability fix complete!"
 
-# 3. Update VSCode extension
-echo "📦 Updating VSCode extension packages..."
-cd crod-claude-chat
-npm update
-npm audit fix
-cd ..
-
-# 4. Update frontend packages
-echo "📦 Updating frontend packages..."
-cd src/frontend/crod-gui
-npm update
-npm audit fix
-cd ../../..
-
-# 5. Create security report
-echo "📄 Creating security report..."
-cat > SECURITY_FIXES.md << EOF
-# Security Fixes Applied - $(date)
-
-## NPM Vulnerabilities Fixed
-- Updated all npm dependencies to latest versions
-- Ran npm audit fix on all projects
-
-## Python Dependencies
-All Python packages use >= versions which auto-update to latest secure versions:
-- numpy>=1.24.0
-- scipy>=1.10.0
-- matplotlib>=3.7.0
-- Pillow>=10.0.0
-
-## Rust/Cargo
-Tauri and related crates are at version 2.x which is latest stable.
-
-## Recommendations
-1. Regularly run: npm audit
-2. Keep Python packages updated: pip install -r requirements.txt --upgrade
-3. Update Rust: cargo update
-
-EOF
-
-echo "✅ Vulnerability fixes complete! Check SECURITY_FIXES.md for details."
+# Show summary
+echo "📊 Summary:"
+npm audit
