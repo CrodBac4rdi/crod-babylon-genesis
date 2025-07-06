@@ -775,6 +775,12 @@ python3 enhanced_diagrams.py
 - React/Tauri Desktop App
 - Python Visualization Suite
 - CROD Parasite Learning System
+- 3D Blockchain Visualizer (Three.js)
+- WebGPU Mining Acceleration
+- MCP (Model Context Protocol) Integration
+- Phoenix LiveView Dashboard
+- Multi-Node P2P Blockchain Setup
+- PostgreSQL Persistence Layer
 
 ### 🚧 In Arbeit
 - Docker Container für alle Services

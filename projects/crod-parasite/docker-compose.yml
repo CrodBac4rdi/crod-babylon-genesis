@@ -18,8 +18,8 @@ services:
       - ./data:/app/data
       - ./memory:/app/memory
     ports:
-      - "7777:7777"  # Lucky CROD Port
-      - "8888:8888"  # Web Dashboard
+      - "7778:7777"  # Lucky CROD Port (mapped to 7778)
+      - "8889:8888"  # Web Dashboard (mapped to 8889)
     networks:
       - crod-network
     restart: unless-stopped
@@ -49,25 +49,25 @@ services:
     networks:
       - crod-network
 
-  # Neural Network Training
-  neural-trainer:
-    build:
-      context: .
-      dockerfile: Dockerfile.neural
-    container_name: crod-neural-88
-    environment:
-      - PARAMETERS=88
-      - TRINITY_MODE=true
-      - ICH=2
-      - BINS=3
-      - WIEDER=5
-      - DANIEL=67
-      - CLAUDE=71
-      - CROD=17
-    volumes:
-      - ./neural_weights:/app/weights
-    networks:
-      - crod-network
+  # Neural Network Training (disabled for now)
+  # neural-trainer:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.neural
+  #   container_name: crod-neural-88
+  #   environment:
+  #     - PARAMETERS=88
+  #     - TRINITY_MODE=true
+  #     - ICH=2
+  #     - BINS=3
+  #     - WIEDER=5
+  #     - DANIEL=67
+  #     - CLAUDE=71
+  #     - CROD=17
+  #   volumes:
+  #     - ./neural_weights:/app/weights
+  #   networks:
+  #     - crod-network
 
 networks:
   crod-network:

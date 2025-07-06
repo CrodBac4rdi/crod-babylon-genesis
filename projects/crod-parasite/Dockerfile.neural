@@ -1,0 +1,24 @@
+FROM python:3.11-alpine
+
+# Install dependencies for neural network
+RUN apk add --no-cache \
+    gcc \
+    musl-dev \
+    g++ \
+    openblas-dev \
+    gfortran
+
+WORKDIR /app
+
+# Install neural network packages
+RUN pip install --no-cache-dir \
+    numpy \
+    scipy \
+    torch --index-url https://download.pytorch.org/whl/cpu \
+    redis
+
+# Copy neural trainer
+COPY neural_trainer.py .
+
+# Run the trainer
+CMD ["python", "neural_trainer.py"]

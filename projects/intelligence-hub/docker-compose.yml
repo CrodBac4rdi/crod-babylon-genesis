@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # Ollama Server for LLaMA
+  ollama:
+    image: ollama/ollama:latest
+    container_name: crod-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+    networks:
+      - crod-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Intelligence Hub API
+  intelligence-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crod-intelligence-hub
+    ports:
+      - "7113:7113"  # Intelligence Hub port from README
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - BLOCKCHAIN_API=http://blockchain-api:8001
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./:/app
+    networks:
+      - crod-network
+    depends_on:
+      ollama:
+        condition: service_healthy
+    command: python hub_server.py
+
+  # LLaMA Model Loader (runs once to download models)
+  model-loader:
+    image: ollama/ollama:latest
+    container_name: crod-model-loader
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - crod-network
+    depends_on:
+      ollama:
+        condition: service_healthy
+    entrypoint: |
+      sh -c "
+        echo '🦙 Loading LLaMA models for CROD...'
+        ollama pull llama2:7b
+        ollama pull codellama:7b
+        ollama pull mistral:7b
+        echo '✅ Models loaded successfully!'
+        ollama list
+      "
+
+networks:
+  crod-network:
+    external: true
+    name: infrastructure_crod-network
+
+volumes:
+  ollama_data:

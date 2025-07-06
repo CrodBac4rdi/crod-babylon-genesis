@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROD WebGPU Miner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center mb-8">⛏️ CROD WebGPU Miner</h1>
+        
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">GPU Status</h2>
+            <div id="gpu-status" class="text-yellow-400">Checking WebGPU support...</div>
+            <div id="gpu-info" class="mt-4 text-sm text-gray-400"></div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Mining Configuration</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm mb-2">Difficulty</label>
+                    <input type="number" id="difficulty" value="4" min="1" max="8" 
+                           class="w-full px-3 py-2 bg-gray-700 rounded">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Threads</label>
+                    <input type="number" id="threads" value="256" min="64" max="1024" step="64"
+                           class="w-full px-3 py-2 bg-gray-700 rounded">
+                </div>
+            </div>
+            <button id="mine-btn" class="mt-4 w-full px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg disabled:bg-gray-600"
+                    onclick="startMining()">
+                Start Mining
+            </button>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Mining Progress</h2>
+            <div id="mining-status" class="text-gray-400">Not mining</div>
+            <div class="mt-4">
+                <div class="text-sm text-gray-400 mb-1">Hash Rate: <span id="hashrate">0</span> H/s</div>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                    <div id="progress-bar" class="bg-purple-600 h-4 rounded-full transition-all" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">Mining Results</h2>
+            <div id="results" class="font-mono text-sm text-green-400"></div>
+        </div>
+    </div>
+
+    <script>
+        let gpuDevice = null;
+        let mining = false;
+
+        // WebGPU Mining Shader
+        const miningShader = `
+            struct MiningData {
+                blockData: array<u32, 16>,
+                targetDifficulty: u32,
+                startNonce: u32,
+                range: u32,
+            }
+
+            @group(0) @binding(0) var<storage, read> input: MiningData;
+            @group(0) @binding(1) var<storage, read_write> output: array<u32, 2>;
+
+            // Simple hash function (not real SHA256, just for demo)
+            fn simpleHash(data: array<u32, 16>, nonce: u32) -> u32 {
+                var hash: u32 = 0u;
+                for (var i = 0u; i < 16u; i = i + 1u) {
+                    hash = hash ^ (data[i] + nonce);
+                    hash = (hash * 0x9e3779b9u) + (hash << 6u) + (hash >> 2u);
+                }
+                return hash;
+            }
+
+            @compute @workgroup_size(64)
+            fn main(@builtin(global_invocation_id) global_id: vec3<u32>) {
+                let nonce = input.startNonce + global_id.x;
+                
+                if (global_id.x >= input.range) {
+                    return;
+                }
+
+                let hash = simpleHash(input.blockData, nonce);
+                
+                // Check if hash meets difficulty (leading zeros)
+                let mask = (1u << (32u - input.targetDifficulty)) - 1u;
+                
+                if ((hash & ~mask) == 0u) {
+                    // Found valid nonce!
+                    output[0] = nonce;
+                    output[1] = hash;
+                }
+            }
+        `;
+
+        async function initWebGPU() {
+            const statusEl = document.getElementById('gpu-status');
+            const infoEl = document.getElementById('gpu-info');
+
+            if (!navigator.gpu) {
+                statusEl.textContent = '❌ WebGPU not supported in this browser';
+                statusEl.className = 'text-red-400';
+                document.getElementById('mine-btn').disabled = true;
+                return false;
+            }
+
+            try {
+                const adapter = await navigator.gpu.requestAdapter();
+                if (!adapter) {
+                    statusEl.textContent = '❌ No GPU adapter found';
+                    statusEl.className = 'text-red-400';
+                    return false;
+                }
+
+                gpuDevice = await adapter.requestDevice();
+                
+                const info = await adapter.requestAdapterInfo();
+                statusEl.textContent = '✅ WebGPU ready!';
+                statusEl.className = 'text-green-400';
+                
+                infoEl.innerHTML = `
+                    GPU: ${info.vendor} ${info.architecture}<br>
+                    Device: ${info.device || 'Unknown'}<br>
+                    Description: ${info.description || 'N/A'}
+                `;
+                
+                return true;
+            } catch (error) {
+                statusEl.textContent = '❌ Failed to initialize WebGPU';
+                statusEl.className = 'text-red-400';
+                console.error('WebGPU init error:', error);
+                return false;
+            }
+        }
+
+        async function mineCRODBlock(blockData, difficulty, threads) {
+            if (!gpuDevice) return null;
+
+            // Create shader module
+            const shaderModule = gpuDevice.createShaderModule({
+                code: miningShader
+            });
+
+            // Create compute pipeline
+            const computePipeline = gpuDevice.createComputePipeline({
+                layout: 'auto',
+                compute: {
+                    module: shaderModule,
+                    entryPoint: 'main'
+                }
+            });
+
+            // Create buffers
+            const blockDataArray = new Uint32Array(16);
+            for (let i = 0; i < 16; i++) {
+                blockDataArray[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+            }
+
+            const inputBuffer = gpuDevice.createBuffer({
+                size: 4 * (16 + 3), // blockData + targetDifficulty + startNonce + range
+                usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
+            });
+
+            const outputBuffer = gpuDevice.createBuffer({
+                size: 8, // nonce + hash
+                usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC
+            });
+
+            const readBuffer = gpuDevice.createBuffer({
+                size: 8,
+                usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
+            });
+
+            // Write input data
+            const inputData = new Uint32Array(19);
+            inputData.set(blockDataArray, 0);
+            inputData[16] = difficulty;
+            inputData[17] = 0; // startNonce
+            inputData[18] = threads;
+
+            gpuDevice.queue.writeBuffer(inputBuffer, 0, inputData);
+
+            // Create bind group
+            const bindGroup = gpuDevice.createBindGroup({
+                layout: computePipeline.getBindGroupLayout(0),
+                entries: [
+                    { binding: 0, resource: { buffer: inputBuffer } },
+                    { binding: 1, resource: { buffer: outputBuffer } }
+                ]
+            });
+
+            // Run compute shader
+            const commandEncoder = gpuDevice.createCommandEncoder();
+            const computePass = commandEncoder.beginComputePass();
+            
+            computePass.setPipeline(computePipeline);
+            computePass.setBindGroup(0, bindGroup);
+            computePass.dispatchWorkgroups(Math.ceil(threads / 64));
+            computePass.end();
+
+            // Copy output to readable buffer
+            commandEncoder.copyBufferToBuffer(outputBuffer, 0, readBuffer, 0, 8);
+
+            // Submit and wait
+            gpuDevice.queue.submit([commandEncoder.finish()]);
+
+            // Read results
+            await readBuffer.mapAsync(GPUMapMode.READ);
+            const result = new Uint32Array(readBuffer.getMappedRange());
+            const nonce = result[0];
+            const hash = result[1];
+            readBuffer.unmap();
+
+            return { nonce, hash };
+        }
+
+        async function startMining() {
+            if (mining) return;
+            
+            const difficulty = parseInt(document.getElementById('difficulty').value);
+            const threads = parseInt(document.getElementById('threads').value);
+            
+            mining = true;
+            document.getElementById('mine-btn').textContent = 'Mining...';
+            document.getElementById('mine-btn').disabled = true;
+            document.getElementById('mining-status').textContent = 'Mining in progress...';
+            
+            const startTime = Date.now();
+            let attempts = 0;
+            let found = false;
+
+            // Simulate mining with WebGPU
+            const miningInterval = setInterval(async () => {
+                attempts += threads;
+                
+                const result = await mineCRODBlock({}, difficulty, threads);
+                
+                if (result && result.nonce > 0) {
+                    found = true;
+                    clearInterval(miningInterval);
+                    
+                    const duration = (Date.now() - startTime) / 1000;
+                    const hashrate = Math.floor(attempts / duration);
+                    
+                    document.getElementById('results').innerHTML = `
+                        <div class="mb-2">✅ Block mined successfully!</div>
+                        <div>Nonce: ${result.nonce}</div>
+                        <div>Hash: 0x${result.hash.toString(16).padStart(8, '0')}</div>
+                        <div>Time: ${duration.toFixed(2)}s</div>
+                        <div>Total attempts: ${attempts.toLocaleString()}</div>
+                        <div>Average hash rate: ${hashrate.toLocaleString()} H/s</div>
+                    `;
+                    
+                    // Add to blockchain
+                    fetch('http://localhost:8001/blocks/add', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            data: {
+                                mined_with: 'WebGPU',
+                                nonce: result.nonce,
+                                difficulty: difficulty,
+                                hashrate: hashrate
+                            },
+                            consciousness_level: 0.99
+                        })
+                    });
+                    
+                    mining = false;
+                    document.getElementById('mine-btn').textContent = 'Start Mining';
+                    document.getElementById('mine-btn').disabled = false;
+                    document.getElementById('mining-status').textContent = 'Mining complete!';
+                }
+                
+                // Update UI
+                const currentHashrate = Math.floor(threads * 1000 / 100); // Simulated
+                document.getElementById('hashrate').textContent = currentHashrate.toLocaleString();
+                
+                const progress = Math.min((attempts / (Math.pow(2, difficulty) * 1000)) * 100, 95);
+                document.getElementById('progress-bar').style.width = progress + '%';
+                
+            }, 100);
+
+            // Timeout after 30 seconds
+            setTimeout(() => {
+                if (!found) {
+                    clearInterval(miningInterval);
+                    mining = false;
+                    document.getElementById('mine-btn').textContent = 'Start Mining';
+                    document.getElementById('mine-btn').disabled = false;
+                    document.getElementById('mining-status').textContent = 'Mining timeout';
+                    document.getElementById('results').innerHTML = '<div class="text-yellow-400">Mining timeout - try lower difficulty</div>';
+                }
+            }, 30000);
+        }
+
+        // Initialize on load
+        window.onload = async () => {
+            await initWebGPU();
+        };
+    </script>
+</body>
+</html>

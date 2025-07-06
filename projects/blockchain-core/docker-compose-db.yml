@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: crod-postgres
+    environment:
+      POSTGRES_USER: crod
+      POSTGRES_PASSWORD: crod2025
+      POSTGRES_DB: crod_blockchain
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - crod-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crod"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  blockchain-db:
+    image: elixir:1.15
+    container_name: crod-blockchain-db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      PORT: "8001"
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: elixir blockchain_with_db.ex
+    networks:
+      - crod-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: crod-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@crod.com
+      PGADMIN_DEFAULT_PASSWORD: crod2025
+    ports:
+      - "5050:80"
+    networks:
+      - crod-network
+    depends_on:
+      - postgres
+
+networks:
+  crod-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

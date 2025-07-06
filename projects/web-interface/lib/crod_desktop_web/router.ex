@@ -19,6 +19,7 @@ defmodule CrodDesktopWeb.Router do
 
     live "/", DashboardLive, :index
     live "/blockchain", BlockchainLive, :index
+    live "/simple-blockchain", SimpleBlockchainLive, :index
     live "/patterns", PatternsLive, :index
     live "/consciousness", ConsciousnessLive, :index
     live "/quantum", QuantumLive, :index

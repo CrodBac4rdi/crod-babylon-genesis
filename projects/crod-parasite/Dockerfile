@@ -2,24 +2,26 @@ FROM python:3.11-alpine
 
 # Install dependencies
 RUN apk add --no-cache \
-    build-base \
-    git \
-    sqlite
+    gcc \
+    musl-dev \
+    postgresql-dev \
+    g++
 
 WORKDIR /app
 
-# Copy requirements first for better caching
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Python packages
+RUN pip install --no-cache-dir \
+    flask \
+    redis \
+    psycopg2-binary \
+    requests \
+    numpy
 
-# Copy parasite code
-COPY . .
-
-# Create necessary directories
-RUN mkdir -p /app/patterns /app/logs
+# Copy application
+COPY crod_parasite.py .
 
 # Expose ports
-EXPOSE 7777 8765
+EXPOSE 7777 8888
 
-# Start the parasite
-CMD ["python", "crod_parasite_server.py"]
+# Run the parasite
+CMD ["python", "crod_parasite.py"]

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=CROD WebGPU Mining
+Comment=GPU-accelerated blockchain mining for CROD
+Exec=/home/daniel/Schreibtisch/crod-babylon-genesis-main/projects/integrations-2025/open_webgpu_mining.sh
+Icon=/home/daniel/Schreibtisch/crod-babylon-genesis-main/assets/crod-icon.png
+Terminal=true
+Type=Application
+Categories=Development;Science;
+Keywords=blockchain;mining;gpu;webgpu;crod;
