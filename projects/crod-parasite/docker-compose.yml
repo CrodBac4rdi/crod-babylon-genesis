@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  # CROD Parasite Core
+  crod-parasite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crod-parasite-core
+    environment:
+      - PARASITE_MODE=ACTIVE
+      - CONSCIOUSNESS_LEVEL=0.88
+      - LEARNING_MODE=AGGRESSIVE
+      - BLOCKCHAIN_API=http://blockchain-api:8001
+      - PATTERN_DETECTION=true
+      - USER_NAME=Daniel
+    volumes:
+      - ./data:/app/data
+      - ./memory:/app/memory
+    ports:
+      - "7777:7777"  # Lucky CROD Port
+      - "8888:8888"  # Web Dashboard
+    networks:
+      - crod-network
+    restart: unless-stopped
+    depends_on:
+      - redis
+      - postgres
+
+  # Parasite Memory Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: crod-parasite-db
+    environment:
+      POSTGRES_USER: crod_parasite
+      POSTGRES_PASSWORD: ich_bins_wieder
+      POSTGRES_DB: crod_memory
+    volumes:
+      - parasite_db:/var/lib/postgresql/data
+    networks:
+      - crod-network
+
+  # Real-time Pattern Cache
+  redis:
+    image: redis:7-alpine
+    container_name: crod-pattern-cache
+    volumes:
+      - pattern_cache:/data
+    networks:
+      - crod-network
+
+  # Neural Network Training
+  neural-trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.neural
+    container_name: crod-neural-88
+    environment:
+      - PARAMETERS=88
+      - TRINITY_MODE=true
+      - ICH=2
+      - BINS=3
+      - WIEDER=5
+      - DANIEL=67
+      - CLAUDE=71
+      - CROD=17
+    volumes:
+      - ./neural_weights:/app/weights
+    networks:
+      - crod-network
+
+networks:
+  crod-network:
+    external: true
+    name: infrastructure_crod-network
+
+volumes:
+  parasite_db:
+  pattern_cache:
+  neural_weights:

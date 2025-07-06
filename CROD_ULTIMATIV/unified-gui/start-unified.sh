@@ -1,0 +1,678 @@
+#!/bin/bash
+
+echo "🔥 CROD UNIFIED GUI - ALLES IN EINEM! 🔥"
+echo "========================================"
+
+# Kill any running mock services
+pkill -f "node blockchain-server.js" 2>/dev/null
+pkill -f "python3 crod_web_studio.py" 2>/dev/null
+
+# Start REAL Elixir Blockchain
+echo "🚀 Starting REAL Elixir Blockchain..."
+cd ../../src/blockchain/elixir
+
+# Compile first
+mix deps.get
+mix compile
+
+# Start blockchain with HTTP API
+elixir -S mix run -e '
+  # Start applications
+  Application.ensure_all_started(:plug)
+  Application.ensure_all_started(:cowboy)
+  Application.ensure_all_started(:jason)
+  
+  # Start blockchain
+  {:ok, blockchain} = CROD.Blockchain.start_link(name: :main_blockchain)
+  {:ok, _} = CROD.InnovationMining.start_link()
+  
+  # HTTP API
+  defmodule CROD.API do
+    use Plug.Router
+    
+    plug Plug.Logger
+    plug :match
+    plug :dispatch
+    plug Plug.Parsers, parsers: [:json], json_decoder: Jason
+    
+    # CORS
+    plug Plug.Static, at: "/", from: :crod
+    
+    get "/" do
+      send_resp(conn, 200, Jason.encode!(%{
+        status: "running",
+        type: "real_blockchain",
+        consciousness: 0.88
+      }))
+    end
+    
+    post "/mine" do
+      data = conn.body_params
+      
+      # Check innovation
+      case CROD.InnovationMining.should_mine_block?(data) do
+        {true, score} ->
+          {:ok, block} = CROD.Blockchain.add_block(:main_blockchain, data)
+          send_resp(conn, 200, Jason.encode!(%{
+            status: "mined",
+            block: block,
+            innovation_score: score
+          }))
+        
+        {false, _} ->
+          send_resp(conn, 200, Jason.encode!(%{
+            status: "rejected",
+            reason: "Not innovative enough"
+          }))
+      end
+    end
+    
+    get "/chain" do
+      chain = CROD.Blockchain.get_chain(:main_blockchain)
+      send_resp(conn, 200, Jason.encode!(chain))
+    end
+    
+    get "/status" do
+      efficiency = CROD.InnovationMining.get_efficiency_score()
+      send_resp(conn, 200, Jason.encode!(%{
+        running: true,
+        efficiency: efficiency,
+        blocks: length(CROD.Blockchain.get_chain(:main_blockchain))
+      }))
+    end
+    
+    match _ do
+      send_resp(conn, 404, "Not found")
+    end
+  end
+  
+  # Start HTTP server
+  {:ok, _} = Plug.Cowboy.http(CROD.API, [], port: 4000)
+  
+  IO.puts("✅ Real Blockchain API running on http://localhost:4000")
+  Process.sleep(:infinity)
+' &
+
+BLOCKCHAIN_PID=$!
+
+# Wait for blockchain to start
+sleep 3
+
+# Start unified GUI
+cd ../../../CROD_ULTIMATIV/unified-gui
+echo "🎨 Starting Unified GUI..."
+
+# Create index.html if not exists
+if [ ! -f index.html ]; then
+  cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 CROD ULTIMATIV - Everything is Blockchain</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow: hidden;
+        }
+        .app {
+            display: grid;
+            grid-template-rows: 60px 1fr;
+            height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff0080, #ff8c00);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(255,0,128,0.5);
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 200px 1fr 300px;
+            height: 100%;
+        }
+        .sidebar {
+            background: #1a1a1a;
+            padding: 20px;
+            border-right: 1px solid #333;
+        }
+        .content {
+            padding: 20px;
+            overflow-y: auto;
+            position: relative;
+        }
+        .status-bar {
+            background: #1a1a1a;
+            padding: 20px;
+            border-left: 1px solid #333;
+        }
+        .module-btn {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .module-btn:hover {
+            background: #ff0080;
+            transform: translateX(5px);
+        }
+        .module-btn.active {
+            background: #ff8c00;
+        }
+        #canvas3d {
+            width: 100%;
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .tool-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .tool-btn {
+            padding: 20px;
+            background: #2a2a2a;
+            border: 2px solid #444;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .tool-btn:hover {
+            background: #3a3a3a;
+            border-color: #ff0080;
+            transform: scale(1.05);
+        }
+        .stats {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .innovation-meter {
+            height: 30px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        .innovation-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff0080, #ff8c00);
+            width: 0%;
+            transition: width 0.5s;
+        }
+        #console {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .creation-form {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff0080, #ff8c00);
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255,0,128,0.5);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>🔥 CROD ULTIMATIV Creative Suite</h1>
+            <div id="header-stats">
+                <span>Efficiency: <span id="efficiency">100%</span></span> | 
+                <span>Blocks: <span id="blocks">0</span></span> | 
+                <span>Status: <span id="status">🟢 Running</span></span>
+            </div>
+        </header>
+        
+        <main class="main">
+            <aside class="sidebar">
+                <h3>Modules</h3>
+                <button class="module-btn active" onclick="switchModule('dashboard')">📊 Dashboard</button>
+                <button class="module-btn" onclick="switchModule('3d')">🎨 3D Studio</button>
+                <button class="module-btn" onclick="switchModule('game')">🎮 Game Creator</button>
+                <button class="module-btn" onclick="switchModule('story')">📖 Story Gen</button>
+                <button class="module-btn" onclick="switchModule('media')">🎬 Media</button>
+                <button class="module-btn" onclick="switchModule('blockchain')">⛓️ Blockchain</button>
+            </aside>
+            
+            <section class="content" id="content">
+                <!-- Dynamic content loads here -->
+            </section>
+            
+            <aside class="status-bar">
+                <h3>Innovation Mining</h3>
+                <div class="stats">
+                    <p>Score: <span id="innovation-score">0.00</span></p>
+                    <div class="innovation-meter">
+                        <div class="innovation-fill" id="innovation-fill"></div>
+                    </div>
+                </div>
+                
+                <h3>GPU Status</h3>
+                <div class="stats">
+                    <p id="gpu-info">Detecting...</p>
+                </div>
+                
+                <h3>Console</h3>
+                <div id="console"></div>
+            </aside>
+        </main>
+    </div>
+    
+    <script>
+        let currentModule = 'dashboard';
+        let scene, camera, renderer;
+        let innovationScore = 0;
+        let ws;
+        
+        // Initialize
+        window.onload = () => {
+            switchModule('dashboard');
+            connectToBlockchain();
+            updateStats();
+            detectGPU();
+        };
+        
+        function connectToBlockchain() {
+            log('🔗 Connecting to REAL Elixir Blockchain...');
+            
+            // Fetch initial status
+            fetch('http://localhost:4000/status')
+                .then(r => r.json())
+                .then(data => {
+                    log('✅ Connected! Efficiency: ' + data.efficiency);
+                    document.getElementById('efficiency').textContent = (data.efficiency * 100).toFixed(2) + '%';
+                    document.getElementById('blocks').textContent = data.blocks;
+                })
+                .catch(err => {
+                    log('❌ Blockchain connection failed: ' + err);
+                });
+        }
+        
+        function switchModule(module) {
+            currentModule = module;
+            document.querySelectorAll('.module-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const content = document.getElementById('content');
+            
+            switch(module) {
+                case 'dashboard':
+                    content.innerHTML = getDashboardHTML();
+                    break;
+                case '3d':
+                    content.innerHTML = get3DStudioHTML();
+                    setTimeout(init3D, 100);
+                    break;
+                case 'game':
+                    content.innerHTML = getGameCreatorHTML();
+                    break;
+                case 'story':
+                    content.innerHTML = getStoryGenHTML();
+                    break;
+                case 'media':
+                    content.innerHTML = getMediaHTML();
+                    break;
+                case 'blockchain':
+                    content.innerHTML = getBlockchainHTML();
+                    loadBlockchain();
+                    break;
+            }
+        }
+        
+        function getDashboardHTML() {
+            return `
+                <h2>🏠 Dashboard</h2>
+                <div class="tool-panel">
+                    <div class="tool-btn" onclick="switchModule('3d')">
+                        <h3>🎨</h3>
+                        <p>3D Studio</p>
+                    </div>
+                    <div class="tool-btn" onclick="switchModule('game')">
+                        <h3>🎮</h3>
+                        <p>Games</p>
+                    </div>
+                    <div class="tool-btn" onclick="switchModule('story')">
+                        <h3>📖</h3>
+                        <p>Stories</p>
+                    </div>
+                    <div class="tool-btn" onclick="switchModule('media')">
+                        <h3>🎬</h3>
+                        <p>Media</p>
+                    </div>
+                </div>
+                <h3>Recent Creations</h3>
+                <div id="recent-creations"></div>
+            `;
+        }
+        
+        function get3DStudioHTML() {
+            return `
+                <h2>🎨 3D Studio (GPU Accelerated)</h2>
+                <div class="tool-panel">
+                    <button class="tool-btn" onclick="add3DPrimitive('cube')">🟦 Cube</button>
+                    <button class="tool-btn" onclick="add3DPrimitive('sphere')">🔵 Sphere</button>
+                    <button class="tool-btn" onclick="add3DPrimitive('torus')">🟡 Torus</button>
+                    <button class="tool-btn" onclick="generateProcedural()">🌀 Procedural</button>
+                </div>
+                <div id="canvas3d"></div>
+                <div class="creation-form">
+                    <input type="text" class="form-input" id="creation-name" placeholder="Creation name...">
+                    <button class="submit-btn" onclick="submit3DCreation()">💎 Mine Innovation Block</button>
+                </div>
+            `;
+        }
+        
+        function getGameCreatorHTML() {
+            return `
+                <h2>🎮 Game Creator</h2>
+                <div class="creation-form">
+                    <h3>Create New Game</h3>
+                    <input type="text" class="form-input" placeholder="Game Title">
+                    <select class="form-input">
+                        <option>Platformer</option>
+                        <option>Puzzle</option>
+                        <option>Adventure</option>
+                        <option>Custom</option>
+                    </select>
+                    <textarea class="form-input" rows="5" placeholder="Game Description & Innovations"></textarea>
+                    <button class="submit-btn" onclick="submitGame()">🎮 Create & Mine</button>
+                </div>
+            `;
+        }
+        
+        function getStoryGenHTML() {
+            return `
+                <h2>📖 Story Generator</h2>
+                <div class="creation-form">
+                    <input type="text" class="form-input" placeholder="Story Title">
+                    <textarea class="form-input" rows="10" placeholder="Write your story..."></textarea>
+                    <button class="submit-btn" onclick="submitStory()">📖 Generate & Mine</button>
+                </div>
+            `;
+        }
+        
+        function getMediaHTML() {
+            return `
+                <h2>🎬 Media Processor</h2>
+                <div class="creation-form">
+                    <h3>Create GIF/Video</h3>
+                    <input type="file" class="form-input" accept="video/*,image/*">
+                    <button class="submit-btn" onclick="processMedia()">🎬 Process & Mine</button>
+                </div>
+            `;
+        }
+        
+        function getBlockchainHTML() {
+            return `
+                <h2>⛓️ Blockchain Explorer</h2>
+                <div id="blockchain-view"></div>
+            `;
+        }
+        
+        function init3D() {
+            const container = document.getElementById('canvas3d');
+            if (!container) return;
+            
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x1a1a1a);
+            
+            camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.set(5, 5, 5);
+            camera.lookAt(0, 0, 0);
+            
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+            
+            // Lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+            
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(10, 10, 5);
+            scene.add(directionalLight);
+            
+            // Grid
+            const gridHelper = new THREE.GridHelper(10, 10);
+            scene.add(gridHelper);
+            
+            animate();
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            if (renderer && scene && camera) {
+                renderer.render(scene, camera);
+            }
+        }
+        
+        function add3DPrimitive(type) {
+            if (!scene) return;
+            
+            let geometry;
+            switch(type) {
+                case 'cube':
+                    geometry = new THREE.BoxGeometry(1, 1, 1);
+                    break;
+                case 'sphere':
+                    geometry = new THREE.SphereGeometry(0.5, 32, 32);
+                    break;
+                case 'torus':
+                    geometry = new THREE.TorusGeometry(0.5, 0.2, 16, 100);
+                    break;
+            }
+            
+            const material = new THREE.MeshStandardMaterial({ 
+                color: Math.random() * 0xffffff,
+                metalness: 0.7,
+                roughness: 0.3
+            });
+            
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(
+                (Math.random() - 0.5) * 5,
+                Math.random() * 3,
+                (Math.random() - 0.5) * 5
+            );
+            
+            scene.add(mesh);
+            updateInnovationScore(0.1);
+            log(`Added ${type} to scene`);
+        }
+        
+        function generateProcedural() {
+            if (!scene) return;
+            
+            const geometry = new THREE.BufferGeometry();
+            const vertices = [];
+            
+            for (let i = 0; i < 10000; i++) {
+                vertices.push((Math.random() - 0.5) * 10);
+                vertices.push((Math.random() - 0.5) * 10);
+                vertices.push((Math.random() - 0.5) * 10);
+            }
+            
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+            
+            const material = new THREE.PointsMaterial({
+                size: 0.05,
+                color: 0x88ccff,
+                blending: THREE.AdditiveBlending
+            });
+            
+            const points = new THREE.Points(geometry, material);
+            scene.add(points);
+            
+            updateInnovationScore(0.5);
+            log('Generated procedural object!');
+        }
+        
+        function submit3DCreation() {
+            const name = document.getElementById('creation-name').value || 'Unnamed Creation';
+            
+            const creation = {
+                type: '3d',
+                title: name,
+                data: {
+                    objects: scene ? scene.children.length : 0,
+                    innovation_score: innovationScore
+                },
+                timestamp: Date.now()
+            };
+            
+            log('🔥 Submitting creation to blockchain...');
+            
+            fetch('http://localhost:4000/mine', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(creation)
+            })
+            .then(r => r.json())
+            .then(result => {
+                if (result.status === 'mined') {
+                    log('✅ INNOVATION BLOCK MINED! Score: ' + result.innovation_score);
+                    updateStats();
+                } else {
+                    log('❌ Not innovative enough: ' + result.reason);
+                }
+            });
+        }
+        
+        function loadBlockchain() {
+            fetch('http://localhost:4000/chain')
+                .then(r => r.json())
+                .then(chain => {
+                    const view = document.getElementById('blockchain-view');
+                    view.innerHTML = '<h3>Blockchain Blocks:</h3>';
+                    
+                    chain.forEach(block => {
+                        view.innerHTML += `
+                            <div class="stats">
+                                <p>Block #${block.index}</p>
+                                <p>Hash: ${block.hash?.substring(0, 16)}...</p>
+                                <p>Data: ${JSON.stringify(block.data).substring(0, 50)}...</p>
+                            </div>
+                        `;
+                    });
+                });
+        }
+        
+        function updateInnovationScore(delta) {
+            innovationScore = Math.min(innovationScore + delta, 1.0);
+            document.getElementById('innovation-score').textContent = innovationScore.toFixed(2);
+            document.getElementById('innovation-fill').style.width = (innovationScore * 100) + '%';
+        }
+        
+        function updateStats() {
+            fetch('http://localhost:4000/status')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('efficiency').textContent = (data.efficiency * 100).toFixed(2) + '%';
+                    document.getElementById('blocks').textContent = data.blocks;
+                });
+        }
+        
+        function detectGPU() {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            
+            if (gl) {
+                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                if (debugInfo) {
+                    const vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+                    const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+                    document.getElementById('gpu-info').textContent = `${vendor} ${renderer}`;
+                } else {
+                    document.getElementById('gpu-info').textContent = 'WebGL supported';
+                }
+            } else {
+                document.getElementById('gpu-info').textContent = 'No WebGL';
+            }
+        }
+        
+        function log(message) {
+            const console = document.getElementById('console');
+            const time = new Date().toLocaleTimeString();
+            console.innerHTML += `[${time}] ${message}\n`;
+            console.scrollTop = console.scrollHeight;
+        }
+        
+        // Placeholder functions
+        function submitGame() { log('Game submission not implemented yet'); }
+        function submitStory() { log('Story submission not implemented yet'); }
+        function processMedia() { log('Media processing not implemented yet'); }
+    </script>
+</body>
+</html>
+EOF
+fi
+
+# Start simple HTTP server for the GUI
+python3 -m http.server 8888 &
+GUI_PID=$!
+
+echo ""
+echo "✅ CROD UNIFIED GUI RUNNING!"
+echo ""
+echo "🌐 Open in browser: http://localhost:8888"
+echo ""
+echo "Features:"
+echo "  ✅ REAL Elixir Blockchain (no mock!)"
+echo "  ✅ All tools in ONE interface"
+echo "  ✅ GPU-accelerated 3D"
+echo "  ✅ Innovation Mining active"
+echo ""
+echo "Press Ctrl+C to stop all services"
+
+# Wait for interrupt
+trap "kill $BLOCKCHAIN_PID $GUI_PID; exit" INT
+wait
