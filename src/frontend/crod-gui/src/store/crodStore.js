@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import axios from 'axios'
 import io from 'socket.io-client'
 
-const API_BASE = 'http://localhost:3456/api'
+const API_BASE = 'http://localhost:3001/api'
 
 export const useCrodStore = create((set, get) => ({
   // State
@@ -118,7 +118,7 @@ export const useCrodStore = create((set, get) => ({
   
   connectWebSocket: () => {
     // Use native WebSocket instead of socket.io
-    const ws = new WebSocket('ws://localhost:8765')
+    const ws = new WebSocket('ws://localhost:3001')
     
     ws.onopen = () => {
       console.log('WebSocket connected to CROD Live System')
