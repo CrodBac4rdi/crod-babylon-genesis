@@ -1,0 +1,4879 @@
+{
+  "python_packages": [
+    {
+      "name": "appdirs",
+      "version": "1.4.4"
+    },
+    {
+      "name": "argon2-cffi",
+      "version": "21.1.0"
+    },
+    {
+      "name": "asgiref",
+      "version": "3.7.2"
+    },
+    {
+      "name": "asttokens",
+      "version": "2.4.1"
+    },
+    {
+      "name": "attrs",
+      "version": "23.2.0"
+    },
+    {
+      "name": "Babel",
+      "version": "2.10.3"
+    },
+    {
+      "name": "bcc",
+      "version": "0.29.1"
+    },
+    {
+      "name": "bcrypt",
+      "version": "3.2.2"
+    },
+    {
+      "name": "beautifulsoup4",
+      "version": "4.12.3"
+    },
+    {
+      "name": "bleach",
+      "version": "6.1.0"
+    },
+    {
+      "name": "blinker",
+      "version": "1.7.0"
+    },
+    {
+      "name": "Bottleneck",
+      "version": "1.3.5"
+    },
+    {
+      "name": "Brlapi",
+      "version": "0.8.5"
+    },
+    {
+      "name": "Brotli",
+      "version": "1.1.0"
+    },
+    {
+      "name": "bytecode",
+      "version": "0.15.1"
+    },
+    {
+      "name": "certifi",
+      "version": "2023.11.17"
+    },
+    {
+      "name": "chardet",
+      "version": "5.2.0"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.3.2"
+    },
+    {
+      "name": "click",
+      "version": "8.1.6"
+    },
+    {
+      "name": "cloud-init",
+      "version": "25.1.2"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6"
+    },
+    {
+      "name": "comm",
+      "version": "0.2.1"
+    },
+    {
+      "name": "command-not-found",
+      "version": "0.3"
+    },
+    {
+      "name": "configobj",
+      "version": "5.0.8"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.0.7"
+    },
+    {
+      "name": "coverage",
+      "version": "7.4.4"
+    },
+    {
+      "name": "cryptography",
+      "version": "41.0.7"
+    },
+    {
+      "name": "cssselect",
+      "version": "1.2.0"
+    },
+    {
+      "name": "cupshelpers",
+      "version": "1.0"
+    },
+    {
+      "name": "cycler",
+      "version": "0.11.0"
+    },
+    {
+      "name": "dbus-python",
+      "version": "1.3.2"
+    },
+    {
+      "name": "debugpy",
+      "version": "1.8.0"
+    },
+    {
+      "name": "decorator",
+      "version": "5.1.1"
+    },
+    {
+      "name": "defer",
+      "version": "1.0.6"
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0"
+    },
+    {
+      "name": "distro-info",
+      "version": "1.7+build1"
+    },
+    {
+      "name": "docker",
+      "version": "5.0.3"
+    },
+    {
+      "name": "docker-compose",
+      "version": "1.29.2"
+    },
+    {
+      "name": "dockerpty",
+      "version": "0.4.1"
+    },
+    {
+      "name": "docopt",
+      "version": "0.6.2"
+    },
+    {
+      "name": "duplicity",
+      "version": "2.1.4"
+    },
+    {
+      "name": "entrypoints",
+      "version": "0.4"
+    },
+    {
+      "name": "et-xmlfile",
+      "version": "1.0.1"
+    },
+    {
+      "name": "executing",
+      "version": "2.0.1"
+    },
+    {
+      "name": "fail2ban",
+      "version": "1.0.2"
+    },
+    {
+      "name": "fasteners",
+      "version": "0.18"
+    },
+    {
+      "name": "fastjsonschema",
+      "version": "2.19.0"
+    },
+    {
+      "name": "Flask",
+      "version": "3.0.2"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.46.0"
+    },
+    {
+      "name": "fs",
+      "version": "2.4.16"
+    },
+    {
+      "name": "gyp",
+      "version": "0.1"
+    },
+    {
+      "name": "html5lib",
+      "version": "1.1"
+    },
+    {
+      "name": "httpie",
+      "version": "3.2.2"
+    },
+    {
+      "name": "httplib2",
+      "version": "0.20.4"
+    },
+    {
+      "name": "idna",
+      "version": "3.6"
+    },
+    {
+      "name": "iniconfig",
+      "version": "1.1.1"
+    },
+    {
+      "name": "ipykernel",
+      "version": "6.29.3"
+    },
+    {
+      "name": "ipython",
+      "version": "8.20.0"
+    },
+    {
+      "name": "ipython-genutils",
+      "version": "0.2.0"
+    },
+    {
+      "name": "ipywidgets",
+      "version": "8.1.1"
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.1.2"
+    },
+    {
+      "name": "jedi",
+      "version": "0.19.1"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.2"
+    },
+    {
+      "name": "joblib",
+      "version": "1.3.2"
+    },
+    {
+      "name": "jsonpatch",
+      "version": "1.32"
+    },
+    {
+      "name": "jsonpointer",
+      "version": "2.0"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.10.3"
+    },
+    {
+      "name": "jupyter_client",
+      "version": "7.4.9"
+    },
+    {
+      "name": "jupyter_core",
+      "version": "5.3.2"
+    },
+    {
+      "name": "jupyterlab-pygments",
+      "version": "0.2.2"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "0.0.0"
+    },
+    {
+      "name": "language-selector",
+      "version": "0.1"
+    },
+    {
+      "name": "launchpadlib",
+      "version": "1.11.0"
+    },
+    {
+      "name": "lazr.restfulclient",
+      "version": "0.14.6"
+    },
+    {
+      "name": "lazr.uri",
+      "version": "1.0.6"
+    },
+    {
+      "name": "louis",
+      "version": "3.29.0"
+    },
+    {
+      "name": "lxml",
+      "version": "5.2.1"
+    },
+    {
+      "name": "lxml-html-clean",
+      "version": "0.1.1"
+    },
+    {
+      "name": "lz4",
+      "version": "4.0.2+dfsg"
+    },
+    {
+      "name": "Mako",
+      "version": "1.3.2.dev0"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "3.0.0"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "2.1.5"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.6.3"
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.1.6"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "name": "monotonic",
+      "version": "1.6"
+    },
+    {
+      "name": "mpmath",
+      "version": "0.0.0"
+    },
+    {
+      "name": "multidict",
+      "version": "6.0.4"
+    },
+    {
+      "name": "nbclient",
+      "version": "0.8.0"
+    },
+    {
+      "name": "nbconvert",
+      "version": "6.5.3"
+    },
+    {
+      "name": "nbformat",
+      "version": "5.9.1"
+    },
+    {
+      "name": "nest-asyncio",
+      "version": "1.5.4"
+    },
+    {
+      "name": "netaddr",
+      "version": "0.8.0"
+    },
+    {
+      "name": "netifaces",
+      "version": "0.11.0"
+    },
+    {
+      "name": "notebook",
+      "version": "6.4.12"
+    },
+    {
+      "name": "numexpr",
+      "version": "2.9.0"
+    },
+    {
+      "name": "numpy",
+      "version": "1.26.4"
+    },
+    {
+      "name": "oauthlib",
+      "version": "3.2.2"
+    },
+    {
+      "name": "odfpy",
+      "version": "1.4.2"
+    },
+    {
+      "name": "olefile",
+      "version": "0.46"
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.2"
+    },
+    {
+      "name": "packaging",
+      "version": "24.0"
+    },
+    {
+      "name": "pandas",
+      "version": "2.1.4+dfsg"
+    },
+    {
+      "name": "pandocfilters",
+      "version": "1.5.0"
+    },
+    {
+      "name": "paramiko",
+      "version": "2.12.0"
+    },
+    {
+      "name": "parso",
+      "version": "0.8.3"
+    },
+    {
+      "name": "patsy",
+      "version": "0.5.6"
+    },
+    {
+      "name": "pexpect",
+      "version": "4.9.0"
+    },
+    {
+      "name": "pillow",
+      "version": "10.2.0"
+    },
+    {
+      "name": "pip",
+      "version": "24.0"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.2.0"
+    },
+    {
+      "name": "plotly",
+      "version": "5.15.0"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.4.0"
+    },
+    {
+      "name": "prometheus-client",
+      "version": "0.19.0"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.43"
+    },
+    {
+      "name": "psutil",
+      "version": "5.9.8"
+    },
+    {
+      "name": "ptyprocess",
+      "version": "0.7.0"
+    },
+    {
+      "name": "pure-eval",
+      "version": "0.0.0"
+    },
+    {
+      "name": "py",
+      "version": "1.11.0"
+    },
+    {
+      "name": "py-cpuinfo",
+      "version": "9.0.0"
+    },
+    {
+      "name": "pyasyncore",
+      "version": "1.0.2"
+    },
+    {
+      "name": "pycairo",
+      "version": "1.25.1"
+    },
+    {
+      "name": "pycups",
+      "version": "2.0.1"
+    },
+    {
+      "name": "pydevd",
+      "version": "2.10.0"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.17.2"
+    },
+    {
+      "name": "PyGObject",
+      "version": "3.48.2"
+    },
+    {
+      "name": "pyinotify",
+      "version": "0.9.6"
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.7.0"
+    },
+    {
+      "name": "PyNaCl",
+      "version": "1.5.0"
+    },
+    {
+      "name": "PyOpenGL",
+      "version": "3.1.7"
+    },
+    {
+      "name": "pyOpenSSL",
+      "version": "23.2.0"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.1.1"
+    },
+    {
+      "name": "PyQt5",
+      "version": "5.15.10"
+    },
+    {
+      "name": "PyQt5-sip",
+      "version": "12.13.0"
+    },
+    {
+      "name": "PyQt6",
+      "version": "6.6.1"
+    },
+    {
+      "name": "PyQt6-sip",
+      "version": "13.6.0"
+    },
+    {
+      "name": "PyQt6-WebEngine",
+      "version": "6.6.0"
+    },
+    {
+      "name": "pyqtgraph",
+      "version": "0.13.4"
+    },
+    {
+      "name": "pyrsistent",
+      "version": "0.20.0"
+    },
+    {
+      "name": "pyserial",
+      "version": "3.5"
+    },
+    {
+      "name": "PySocks",
+      "version": "1.7.1"
+    },
+    {
+      "name": "pytest",
+      "version": "7.4.4"
+    },
+    {
+      "name": "python-apt",
+      "version": "2.7.7+ubuntu4"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.8.2"
+    },
+    {
+      "name": "python-debian",
+      "version": "0.1.49+ubuntu2"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.0.1"
+    },
+    {
+      "name": "pytz",
+      "version": "2024.1"
+    },
+    {
+      "name": "pyxdg",
+      "version": "0.28"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.1"
+    },
+    {
+      "name": "pyzmq",
+      "version": "24.0.1"
+    },
+    {
+      "name": "requests",
+      "version": "2.31.0"
+    },
+    {
+      "name": "requests-toolbelt",
+      "version": "1.0.0"
+    },
+    {
+      "name": "rich",
+      "version": "13.7.1"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.4.1.post1"
+    },
+    {
+      "name": "SciPy",
+      "version": "1.11.4"
+    },
+    {
+      "name": "screen-resolution-extra",
+      "version": "0.0.0"
+    },
+    {
+      "name": "seaborn",
+      "version": "0.13.2"
+    },
+    {
+      "name": "Send2Trash",
+      "version": "1.8.2"
+    },
+    {
+      "name": "setuptools",
+      "version": "68.1.2"
+    },
+    {
+      "name": "simplejson",
+      "version": "3.19.2"
+    },
+    {
+      "name": "six",
+      "version": "1.16.0"
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.5"
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3"
+    },
+    {
+      "name": "sympy",
+      "version": "1.12"
+    },
+    {
+      "name": "systemd-python",
+      "version": "235"
+    },
+    {
+      "name": "tables",
+      "version": "3.9.2"
+    },
+    {
+      "name": "tenacity",
+      "version": "8.2.3"
+    },
+    {
+      "name": "terminado",
+      "version": "0.17.1"
+    },
+    {
+      "name": "texttable",
+      "version": "1.6.7"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.1.0"
+    },
+    {
+      "name": "tinycss2",
+      "version": "1.2.1"
+    },
+    {
+      "name": "tornado",
+      "version": "6.4"
+    },
+    {
+      "name": "traitlets",
+      "version": "5.5.0"
+    },
+    {
+      "name": "types-aiofiles",
+      "version": "23.2"
+    },
+    {
+      "name": "types-aws-xray-sdk",
+      "version": "2.12"
+    },
+    {
+      "name": "types-beautifulsoup4",
+      "version": "4.12"
+    },
+    {
+      "name": "types-bleach",
+      "version": "6.1"
+    },
+    {
+      "name": "types-boltons",
+      "version": "23.0"
+    },
+    {
+      "name": "types-boto",
+      "version": "2.49"
+    },
+    {
+      "name": "types-braintree",
+      "version": "4.24"
+    },
+    {
+      "name": "types-cachetools",
+      "version": "5.3"
+    },
+    {
+      "name": "types-caldav",
+      "version": "1.3"
+    },
+    {
+      "name": "types-cffi",
+      "version": "1.16"
+    },
+    {
+      "name": "types-chevron",
+      "version": "0.14"
+    },
+    {
+      "name": "types-click-default-group",
+      "version": "1.2"
+    },
+    {
+      "name": "types-click-spinner",
+      "version": "0.1"
+    },
+    {
+      "name": "types-colorama",
+      "version": "0.4"
+    },
+    {
+      "name": "types-commonmark",
+      "version": "0.9"
+    },
+    {
+      "name": "types-console-menu",
+      "version": "0.8"
+    },
+    {
+      "name": "types-croniter",
+      "version": "2.0"
+    },
+    {
+      "name": "types-dateparser",
+      "version": "1.1"
+    },
+    {
+      "name": "types-decorator",
+      "version": "5.1"
+    },
+    {
+      "name": "types-Deprecated",
+      "version": "1.2"
+    },
+    {
+      "name": "types-dockerfile-parse",
+      "version": "2.0"
+    },
+    {
+      "name": "types-docopt",
+      "version": "0.6"
+    },
+    {
+      "name": "types-docutils",
+      "version": "0.20"
+    },
+    {
+      "name": "types-editdistance",
+      "version": "0.6"
+    },
+    {
+      "name": "types-entrypoints",
+      "version": "0.4"
+    },
+    {
+      "name": "types-ExifRead",
+      "version": "3.0"
+    },
+    {
+      "name": "types-first",
+      "version": "2.0"
+    },
+    {
+      "name": "types-flake8-2020",
+      "version": "1.8"
+    },
+    {
+      "name": "types-flake8-bugbear",
+      "version": "23.9.16"
+    },
+    {
+      "name": "types-flake8-builtins",
+      "version": "2.2"
+    },
+    {
+      "name": "types-flake8-docstrings",
+      "version": "1.7"
+    },
+    {
+      "name": "types-flake8-plugin-utils",
+      "version": "1.3"
+    },
+    {
+      "name": "types-flake8-rst-docstrings",
+      "version": "0.3"
+    },
+    {
+      "name": "types-flake8-simplify",
+      "version": "0.21"
+    },
+    {
+      "name": "types-flake8-typing-imports",
+      "version": "1.15"
+    },
+    {
+      "name": "types-Flask-Cors",
+      "version": "4.0"
+    },
+    {
+      "name": "types-Flask-Migrate",
+      "version": "4.0"
+    },
+    {
+      "name": "types-Flask-SocketIO",
+      "version": "5.3"
+    },
+    {
+      "name": "types-fpdf2",
+      "version": "2.7.4"
+    },
+    {
+      "name": "types-gdb",
+      "version": "12.1"
+    },
+    {
+      "name": "types-google-cloud-ndb",
+      "version": "2.2"
+    },
+    {
+      "name": "types-greenlet",
+      "version": "3.0"
+    },
+    {
+      "name": "types-hdbcli",
+      "version": "2.18"
+    },
+    {
+      "name": "types-html5lib",
+      "version": "1.1"
+    },
+    {
+      "name": "types-httplib2",
+      "version": "0.22"
+    },
+    {
+      "name": "types-humanfriendly",
+      "version": "10.0"
+    },
+    {
+      "name": "types-ibm-db",
+      "version": "3.2"
+    },
+    {
+      "name": "types-influxdb-client",
+      "version": "1.38"
+    },
+    {
+      "name": "types-inifile",
+      "version": "0.4"
+    },
+    {
+      "name": "types-JACK-Client",
+      "version": "0.5"
+    },
+    {
+      "name": "types-jmespath",
+      "version": "1.0"
+    },
+    {
+      "name": "types-jsonschema",
+      "version": "4.19"
+    },
+    {
+      "name": "types-keyboard",
+      "version": "0.13"
+    },
+    {
+      "name": "types-ldap3",
+      "version": "2.9"
+    },
+    {
+      "name": "types-libsass",
+      "version": "0.22"
+    },
+    {
+      "name": "types-Markdown",
+      "version": "3.5"
+    },
+    {
+      "name": "types-mock",
+      "version": "5.1"
+    },
+    {
+      "name": "types-mypy-extensions",
+      "version": "1.0"
+    },
+    {
+      "name": "types-mysqlclient",
+      "version": "2.2"
+    },
+    {
+      "name": "types-netaddr",
+      "version": "0.9"
+    },
+    {
+      "name": "types-oauthlib",
+      "version": "3.2"
+    },
+    {
+      "name": "types-openpyxl",
+      "version": "3.1"
+    },
+    {
+      "name": "types-opentracing",
+      "version": "2.4"
+    },
+    {
+      "name": "types-paho-mqtt",
+      "version": "1.6"
+    },
+    {
+      "name": "types-paramiko",
+      "version": "3.3"
+    },
+    {
+      "name": "types-parsimonious",
+      "version": "0.10"
+    },
+    {
+      "name": "types-passlib",
+      "version": "1.7"
+    },
+    {
+      "name": "types-passpy",
+      "version": "1.0"
+    },
+    {
+      "name": "types-peewee",
+      "version": "3.17"
+    },
+    {
+      "name": "types-pep8-naming",
+      "version": "0.13"
+    },
+    {
+      "name": "types-pexpect",
+      "version": "4.8"
+    },
+    {
+      "name": "types-pika-ts",
+      "version": "1.3"
+    },
+    {
+      "name": "types-Pillow",
+      "version": "10.1"
+    },
+    {
+      "name": "types-playsound",
+      "version": "1.3"
+    },
+    {
+      "name": "types-pluggy",
+      "version": "1.2.0"
+    },
+    {
+      "name": "types-polib",
+      "version": "1.2"
+    },
+    {
+      "name": "types-portpicker",
+      "version": "1.6"
+    },
+    {
+      "name": "types-protobuf",
+      "version": "4.24"
+    },
+    {
+      "name": "types-psutil",
+      "version": "5.9"
+    },
+    {
+      "name": "types-psycopg2",
+      "version": "2.9"
+    },
+    {
+      "name": "types-pyasn1",
+      "version": "0.5"
+    },
+    {
+      "name": "types-pyaudio",
+      "version": "0.2"
+    },
+    {
+      "name": "types-PyAutoGUI",
+      "version": "0.9"
+    },
+    {
+      "name": "types-pycocotools",
+      "version": "2.0"
+    },
+    {
+      "name": "types-pycurl",
+      "version": "7.45.2"
+    },
+    {
+      "name": "types-pyfarmhash",
+      "version": "0.3"
+    },
+    {
+      "name": "types-pyflakes",
+      "version": "3.1"
+    },
+    {
+      "name": "types-Pygments",
+      "version": "2.16"
+    },
+    {
+      "name": "types-pyinstaller",
+      "version": "6.1"
+    },
+    {
+      "name": "types-pyjks",
+      "version": "20.0"
+    },
+    {
+      "name": "types-PyMySQL",
+      "version": "1.1"
+    },
+    {
+      "name": "types-pynput",
+      "version": "1.7"
+    },
+    {
+      "name": "types-pyOpenSSL",
+      "version": "23.3"
+    },
+    {
+      "name": "types-pyRFC3339",
+      "version": "1.1"
+    },
+    {
+      "name": "types-PyScreeze",
+      "version": "0.1.29"
+    },
+    {
+      "name": "types-pyserial",
+      "version": "3.5"
+    },
+    {
+      "name": "types-pysftp",
+      "version": "0.2"
+    },
+    {
+      "name": "types-pytest-lazy-fixture",
+      "version": "0.6"
+    },
+    {
+      "name": "types-python-crontab",
+      "version": "3.0"
+    },
+    {
+      "name": "types-python-datemath",
+      "version": "1.5"
+    },
+    {
+      "name": "types-python-dateutil",
+      "version": "2.8"
+    },
+    {
+      "name": "types-python-gflags",
+      "version": "3.1"
+    },
+    {
+      "name": "types-python-jose",
+      "version": "3.3"
+    },
+    {
+      "name": "types-python-nmap",
+      "version": "0.7"
+    },
+    {
+      "name": "types-python-slugify",
+      "version": "8.0"
+    },
+    {
+      "name": "types-python-xlib",
+      "version": "0.33"
+    },
+    {
+      "name": "types-pytz",
+      "version": "2023.3.post1"
+    },
+    {
+      "name": "types-pywin32",
+      "version": "306"
+    },
+    {
+      "name": "types-pyxdg",
+      "version": "0.28"
+    },
+    {
+      "name": "types-PyYAML",
+      "version": "6.0"
+    },
+    {
+      "name": "types-qrcode",
+      "version": "7.4"
+    },
+    {
+      "name": "types-redis",
+      "version": "4.6.0"
+    },
+    {
+      "name": "types-regex",
+      "version": "2023.10.3"
+    },
+    {
+      "name": "types-requests",
+      "version": "2.31"
+    },
+    {
+      "name": "types-requests-oauthlib",
+      "version": "1.3"
+    },
+    {
+      "name": "types-retry",
+      "version": "0.9"
+    },
+    {
+      "name": "types-s2clientprotocol",
+      "version": "5"
+    },
+    {
+      "name": "types-seaborn",
+      "version": "0.13"
+    },
+    {
+      "name": "types-Send2Trash",
+      "version": "1.8"
+    },
+    {
+      "name": "types-setuptools",
+      "version": "68.2"
+    },
+    {
+      "name": "types-simplejson",
+      "version": "3.19"
+    },
+    {
+      "name": "types-singledispatch",
+      "version": "4.1"
+    },
+    {
+      "name": "types-six",
+      "version": "1.16"
+    },
+    {
+      "name": "types-slumber",
+      "version": "0.7"
+    },
+    {
+      "name": "types-stdlib-list",
+      "version": "0.8"
+    },
+    {
+      "name": "types-stripe",
+      "version": "3.5"
+    },
+    {
+      "name": "types-tabulate",
+      "version": "0.9"
+    },
+    {
+      "name": "types-tensorflow",
+      "version": "2.12"
+    },
+    {
+      "name": "types-toml",
+      "version": "0.10"
+    },
+    {
+      "name": "types-toposort",
+      "version": "1.10"
+    },
+    {
+      "name": "types-tqdm",
+      "version": "4.66"
+    },
+    {
+      "name": "types-translationstring",
+      "version": "1.4"
+    },
+    {
+      "name": "types-tree-sitter",
+      "version": "0.20.1"
+    },
+    {
+      "name": "types-tree-sitter-languages",
+      "version": "1.8"
+    },
+    {
+      "name": "types-ttkthemes",
+      "version": "3.2"
+    },
+    {
+      "name": "types-tzlocal",
+      "version": "5.1"
+    },
+    {
+      "name": "types-ujson",
+      "version": "5.8"
+    },
+    {
+      "name": "types-untangle",
+      "version": "1.2"
+    },
+    {
+      "name": "types-usersettings",
+      "version": "1.1"
+    },
+    {
+      "name": "types-uWSGI",
+      "version": "2.0"
+    },
+    {
+      "name": "types-vobject",
+      "version": "0.9"
+    },
+    {
+      "name": "types-waitress",
+      "version": "2.1"
+    },
+    {
+      "name": "types-WebOb",
+      "version": "1.8"
+    },
+    {
+      "name": "types-whatthepatch",
+      "version": "1.0"
+    },
+    {
+      "name": "types-workalendar",
+      "version": "17.0"
+    },
+    {
+      "name": "types-WTForms",
+      "version": "3.1"
+    },
+    {
+      "name": "types-xmltodict",
+      "version": "0.13"
+    },
+    {
+      "name": "types-zstd",
+      "version": "1.5"
+    },
+    {
+      "name": "types-zxcvbn",
+      "version": "4.4"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.10.0"
+    },
+    {
+      "name": "ubuntu-drivers-common",
+      "version": "0.0.0"
+    },
+    {
+      "name": "ubuntu-pro-client",
+      "version": "8001"
+    },
+    {
+      "name": "ufoLib2",
+      "version": "0.16.0"
+    },
+    {
+      "name": "ufw",
+      "version": "0.36.2"
+    },
+    {
+      "name": "unattended-upgrades",
+      "version": "0.1"
+    },
+    {
+      "name": "unicodedata2",
+      "version": "15.1.0"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.0.7"
+    },
+    {
+      "name": "usb-creator",
+      "version": "0.3.16"
+    },
+    {
+      "name": "wadllib",
+      "version": "1.3.6"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.2.5"
+    },
+    {
+      "name": "webencodings",
+      "version": "0.5.1"
+    },
+    {
+      "name": "websocket-client",
+      "version": "1.7.0"
+    },
+    {
+      "name": "websockets",
+      "version": "10.4"
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.0.1"
+    },
+    {
+      "name": "wheel",
+      "version": "0.42.0"
+    },
+    {
+      "name": "widgetsnbextension",
+      "version": "4.0.9"
+    },
+    {
+      "name": "xdg",
+      "version": "5"
+    },
+    {
+      "name": "xkit",
+      "version": "0.0.0"
+    }
+  ],
+  "npm_packages": [
+    "corepack",
+    "n8n",
+    "npm"
+  ],
+  "system_packages": [
+    {
+      "name": "build-essential",
+      "version": "12.10ubuntu1"
+    },
+    {
+      "name": "docker-compose",
+      "version": "1.29.2-6ubuntu1"
+    },
+    {
+      "name": "docker.io",
+      "version": "27.5.1-0ubuntu3~24.04.2"
+    },
+    {
+      "name": "git",
+      "version": "1:2.43.0-1ubuntu7.2"
+    },
+    {
+      "name": "git-man",
+      "version": "1:2.43.0-1ubuntu7.2"
+    },
+    {
+      "name": "libgit2-1.7:amd64",
+      "version": "1.7.2+ds-1ubuntu3"
+    },
+    {
+      "name": "libnvidia-cfg1-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-common-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-compute-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-compute-570:i386",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-decode-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-decode-570:i386",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-egl-wayland1:amd64",
+      "version": "1:1.1.13-1build1"
+    },
+    {
+      "name": "libnvidia-egl-wayland1:i386",
+      "version": "1:1.1.13-1build1"
+    },
+    {
+      "name": "libnvidia-encode-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-encode-570:i386",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-extra-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-fbc1-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-fbc1-570:i386",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-gl-570:amd64",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libnvidia-gl-570:i386",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "libpython3-dev:amd64",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "libpython3-stdlib:amd64",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "libpython3.12-dev:amd64",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "libpython3.12-minimal:amd64",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "libpython3.12-stdlib:amd64",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "libpython3.12t64:amd64",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "linux-modules-nvidia-570-6.11.0-28-generic",
+      "version": "6.11.0-28.28~24.04.1"
+    },
+    {
+      "name": "linux-modules-nvidia-570-6.11.0-29-generic",
+      "version": "6.11.0-29.29~24.04.1"
+    },
+    {
+      "name": "linux-modules-nvidia-570-generic-hwe-24.04",
+      "version": "6.11.0-29.29~24.04.1"
+    },
+    {
+      "name": "linux-objects-nvidia-570-6.11.0-28-generic",
+      "version": "6.11.0-28.28~24.04.1"
+    },
+    {
+      "name": "linux-objects-nvidia-570-6.11.0-29-generic",
+      "version": "6.11.0-29.29~24.04.1"
+    },
+    {
+      "name": "linux-signatures-nvidia-6.11.0-28-generic",
+      "version": "6.11.0-28.28~24.04.1"
+    },
+    {
+      "name": "linux-signatures-nvidia-6.11.0-29-generic",
+      "version": "6.11.0-29.29~24.04.1"
+    },
+    {
+      "name": "node-abbrev",
+      "version": "1.1.1+~1.1.2-1"
+    },
+    {
+      "name": "node-ampproject-remapping",
+      "version": "2.2.0+~cs5.15.37-1"
+    },
+    {
+      "name": "node-ansi-regex",
+      "version": "5.0.1-1"
+    },
+    {
+      "name": "node-ansi-styles",
+      "version": "6.2.1-2"
+    },
+    {
+      "name": "node-aproba",
+      "version": "2.0.0-3"
+    },
+    {
+      "name": "node-are-we-there-yet",
+      "version": "3.0.1+~1.1.0-1"
+    },
+    {
+      "name": "node-arrify",
+      "version": "2.0.1-3"
+    },
+    {
+      "name": "node-async",
+      "version": "0.8.0-6"
+    },
+    {
+      "name": "node-async-each",
+      "version": "1.0.3-3"
+    },
+    {
+      "name": "node-auto-bind",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-babel-plugin-add-module-exports",
+      "version": "1.0.4+dfsg1~cs5.8.0-4"
+    },
+    {
+      "name": "node-babel7-runtime",
+      "version": "7.20.15+ds1+~cs214.269.168-6build1"
+    },
+    {
+      "name": "node-balanced-match",
+      "version": "2.0.0-1"
+    },
+    {
+      "name": "node-base64-js",
+      "version": "1.5.1+dfsg+~1.3.0-2"
+    },
+    {
+      "name": "node-binary-extensions",
+      "version": "2.2.0-2"
+    },
+    {
+      "name": "node-brace-expansion",
+      "version": "2.0.1+~1.1.0-1"
+    },
+    {
+      "name": "node-busboy",
+      "version": "1.6.0+~cs2.6.0-2"
+    },
+    {
+      "name": "node-camelcase",
+      "version": "7.0.0-3"
+    },
+    {
+      "name": "node-caniuse-lite",
+      "version": "1.0.30001571+dfsg+~1.0.5-1"
+    },
+    {
+      "name": "node-chownr",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-chrome-trace-event",
+      "version": "1.0.3-2"
+    },
+    {
+      "name": "node-ci-info",
+      "version": "4.0.0+~cs1.1.0-1build2"
+    },
+    {
+      "name": "node-cjs-module-lexer",
+      "version": "1.2.3+dfsg-1"
+    },
+    {
+      "name": "node-cli-boxes",
+      "version": "3.0.0-1build2"
+    },
+    {
+      "name": "node-cli-cursor",
+      "version": "4.0.0-3"
+    },
+    {
+      "name": "node-clone",
+      "version": "2.1.2+~2.1.2-1"
+    },
+    {
+      "name": "node-collection-visit",
+      "version": "1.0.0-4"
+    },
+    {
+      "name": "node-color-convert",
+      "version": "2.0.1+~cs2.0.0-2"
+    },
+    {
+      "name": "node-color-name",
+      "version": "1.1.4+~1.1.1-2"
+    },
+    {
+      "name": "node-colors",
+      "version": "1.4.0-4"
+    },
+    {
+      "name": "node-commander",
+      "version": "9.4.1-1"
+    },
+    {
+      "name": "node-commondir",
+      "version": "1.0.1+~1.0.0-1"
+    },
+    {
+      "name": "node-concat-stream",
+      "version": "2.0.0+~2.0.0-2"
+    },
+    {
+      "name": "node-console-control-strings",
+      "version": "1.1.0-3"
+    },
+    {
+      "name": "node-convert-source-map",
+      "version": "1.9.0+~1.5.2-1"
+    },
+    {
+      "name": "node-core-js",
+      "version": "3.33.2-1build2"
+    },
+    {
+      "name": "node-core-js-pure",
+      "version": "3.33.2-1build2"
+    },
+    {
+      "name": "node-core-util-is",
+      "version": "1.0.3-1"
+    },
+    {
+      "name": "node-data-uri-to-buffer",
+      "version": "5.0.1~0~2023071921-5"
+    },
+    {
+      "name": "node-decompress-response",
+      "version": "6.0.0-2"
+    },
+    {
+      "name": "node-deep-is",
+      "version": "0.1.4-1"
+    },
+    {
+      "name": "node-defaults",
+      "version": "1.0.4+~1.0.3-1"
+    },
+    {
+      "name": "node-define-property",
+      "version": "2.0.2+really+2.0.2-3"
+    },
+    {
+      "name": "node-delegates",
+      "version": "1.0.0-3"
+    },
+    {
+      "name": "node-depd",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-diff",
+      "version": "5.0.0~dfsg+~5.0.1-4"
+    },
+    {
+      "name": "node-electron-to-chromium",
+      "version": "1.4.616-1"
+    },
+    {
+      "name": "node-encoding",
+      "version": "0.1.13-2"
+    },
+    {
+      "name": "node-end-of-stream",
+      "version": "1.4.4+~1.4.1-1"
+    },
+    {
+      "name": "node-err-code",
+      "version": "2.0.3+dfsg-3"
+    },
+    {
+      "name": "node-error-ex",
+      "version": "1.3.2-4"
+    },
+    {
+      "name": "node-es-module-lexer",
+      "version": "1.1.0+dfsg-3"
+    },
+    {
+      "name": "node-escape-string-regexp",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-eslint-utils",
+      "version": "3.0.0-3"
+    },
+    {
+      "name": "node-eslint-visitor-keys",
+      "version": "3.3.0+~1.0.0-1"
+    },
+    {
+      "name": "node-esquery",
+      "version": "1.4.2~ds-1"
+    },
+    {
+      "name": "node-estraverse",
+      "version": "5.3.0+ds+~5.1.1-1"
+    },
+    {
+      "name": "node-esutils",
+      "version": "2.0.3+~2.0.0-1"
+    },
+    {
+      "name": "node-events",
+      "version": "3.3.0+~3.0.0-3"
+    },
+    {
+      "name": "node-fancy-log",
+      "version": "1.3.3+~cs1.3.1-2"
+    },
+    {
+      "name": "node-fast-deep-equal",
+      "version": "3.1.3-3"
+    },
+    {
+      "name": "node-fast-levenshtein",
+      "version": "2.0.6+ds-3"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2+~cs11.4.11-1"
+    },
+    {
+      "name": "node-find-up",
+      "version": "6.3.0-7"
+    },
+    {
+      "name": "node-flatted",
+      "version": "3.2.7~ds-1"
+    },
+    {
+      "name": "node-foreground-child",
+      "version": "3.1.1-2"
+    },
+    {
+      "name": "node-fs-readdir-recursive",
+      "version": "1.1.0+~1.1.0-1"
+    },
+    {
+      "name": "node-fs-write-stream-atomic",
+      "version": "1.0.10-6"
+    },
+    {
+      "name": "node-fs.realpath",
+      "version": "1.0.0-3"
+    },
+    {
+      "name": "node-function-bind",
+      "version": "1.1.2+~cs2.1.14-1"
+    },
+    {
+      "name": "node-get-caller-file",
+      "version": "2.0.5+~cs1.1.1-4"
+    },
+    {
+      "name": "node-get-stream",
+      "version": "6.0.1-1"
+    },
+    {
+      "name": "node-get-value",
+      "version": "1:3.0.1-4"
+    },
+    {
+      "name": "node-glob",
+      "version": "8.1.0+~cs8.5.15-1"
+    },
+    {
+      "name": "node-globals",
+      "version": "13.23.0-1"
+    },
+    {
+      "name": "node-got",
+      "version": "11.8.5+~cs58.13.36-3"
+    },
+    {
+      "name": "node-graceful-fs",
+      "version": "4.2.10-1"
+    },
+    {
+      "name": "node-growl",
+      "version": "1.10.5-4"
+    },
+    {
+      "name": "node-has-flag",
+      "version": "4.0.0-3"
+    },
+    {
+      "name": "node-has-unicode",
+      "version": "2.0.1-5"
+    },
+    {
+      "name": "node-has-value",
+      "version": "2.0.2-4"
+    },
+    {
+      "name": "node-has-values",
+      "version": "2.0.1-4"
+    },
+    {
+      "name": "node-hosted-git-info",
+      "version": "6.1.1-2"
+    },
+    {
+      "name": "node-iconv-lite",
+      "version": "0.6.3-3"
+    },
+    {
+      "name": "node-ieee754",
+      "version": "1.2.1-3"
+    },
+    {
+      "name": "node-iferr",
+      "version": "1.0.2+~1.0.2-1"
+    },
+    {
+      "name": "node-imurmurhash",
+      "version": "0.1.4+dfsg+~0.1.1-2"
+    },
+    {
+      "name": "node-indent-string",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-inflight",
+      "version": "1.0.6-2"
+    },
+    {
+      "name": "node-inherits",
+      "version": "2.0.4-6"
+    },
+    {
+      "name": "node-ini",
+      "version": "3.0.1-2"
+    },
+    {
+      "name": "node-interpret",
+      "version": "2.2.0-3"
+    },
+    {
+      "name": "node-ip",
+      "version": "2.0.0+~1.1.0-1ubuntu1"
+    },
+    {
+      "name": "node-ip-regex",
+      "version": "4.3.0+~4.1.1-1"
+    },
+    {
+      "name": "node-is-arrayish",
+      "version": "0.3.2-3"
+    },
+    {
+      "name": "node-is-binary-path",
+      "version": "2.1.0-5"
+    },
+    {
+      "name": "node-is-buffer",
+      "version": "2.0.5-2"
+    },
+    {
+      "name": "node-is-descriptor",
+      "version": "3.0.0-2"
+    },
+    {
+      "name": "node-is-extglob",
+      "version": "2.1.1-5"
+    },
+    {
+      "name": "node-is-path-cwd",
+      "version": "2.2.0-2"
+    },
+    {
+      "name": "node-is-plain-obj",
+      "version": "3.0.0-2"
+    },
+    {
+      "name": "node-is-plain-object",
+      "version": "5.0.0-7"
+    },
+    {
+      "name": "node-is-stream",
+      "version": "3.0.0-4"
+    },
+    {
+      "name": "node-is-typedarray",
+      "version": "1.0.0-4"
+    },
+    {
+      "name": "node-is-windows",
+      "version": "1.0.2+~cs1.0.0-1"
+    },
+    {
+      "name": "node-isarray",
+      "version": "2.0.5-4"
+    },
+    {
+      "name": "node-isexe",
+      "version": "2.0.0+~2.0.1-5"
+    },
+    {
+      "name": "node-isobject",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-jed",
+      "version": "1.1.1-4"
+    },
+    {
+      "name": "node-js-tokens",
+      "version": "8.0.0-2"
+    },
+    {
+      "name": "node-json-buffer",
+      "version": "3.0.1+~3.0.0-1"
+    },
+    {
+      "name": "node-json-parse-better-errors",
+      "version": "1.0.2+~cs3.3.1-2"
+    },
+    {
+      "name": "node-json-schema",
+      "version": "0.4.0+~7.0.11-1"
+    },
+    {
+      "name": "node-json-schema-traverse",
+      "version": "1.0.0-3"
+    },
+    {
+      "name": "node-json-stable-stringify",
+      "version": "1.0.2+repack1+~cs1.0.34-2"
+    },
+    {
+      "name": "node-jsonify",
+      "version": "0.0.1-1"
+    },
+    {
+      "name": "node-jsonparse",
+      "version": "1.3.1-10"
+    },
+    {
+      "name": "node-kind-of",
+      "version": "6.0.3+dfsg-2"
+    },
+    {
+      "name": "node-levn",
+      "version": "0.4.1+dfsg-2"
+    },
+    {
+      "name": "node-loader-runner",
+      "version": "4.3.0-1"
+    },
+    {
+      "name": "node-locate-path",
+      "version": "7.1.1-2"
+    },
+    {
+      "name": "node-lodash-packages",
+      "version": "4.17.21+dfsg+~cs8.31.198.20210220-9"
+    },
+    {
+      "name": "node-lowercase-keys",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-lru-cache",
+      "version": "7.14.1-1"
+    },
+    {
+      "name": "node-map-visit",
+      "version": "1.0.0-4"
+    },
+    {
+      "name": "node-memfs",
+      "version": "3.4.12+~cs1.0.3-1"
+    },
+    {
+      "name": "node-merge-stream",
+      "version": "2.0.0+~1.1.2-2"
+    },
+    {
+      "name": "node-mimic-response",
+      "version": "3.1.0-8"
+    },
+    {
+      "name": "node-minimatch",
+      "version": "9.0.3-4build5"
+    },
+    {
+      "name": "node-minimist",
+      "version": "1.2.8+~cs5.3.5-1"
+    },
+    {
+      "name": "node-minipass",
+      "version": "3.3.6+~cs9.4.19-1"
+    },
+    {
+      "name": "node-mute-stream",
+      "version": "0.0.8+~0.0.1-3"
+    },
+    {
+      "name": "node-n3",
+      "version": "1.16.3+~1.2.3+~1.10.4-1"
+    },
+    {
+      "name": "node-negotiator",
+      "version": "0.6.3+~0.6.1-1"
+    },
+    {
+      "name": "node-npm-run-path",
+      "version": "5.1.0+~4.0.0-8"
+    },
+    {
+      "name": "node-object-inspect",
+      "version": "1.12.2+~cs1.8.1-1"
+    },
+    {
+      "name": "node-object-visit",
+      "version": "1.0.1-5"
+    },
+    {
+      "name": "node-once",
+      "version": "1.4.1-1"
+    },
+    {
+      "name": "node-optimist",
+      "version": "0.6.1+~0.0.30-2"
+    },
+    {
+      "name": "node-optionator",
+      "version": "0.9.1+dfsg+~cs1.2.3-1"
+    },
+    {
+      "name": "node-osenv",
+      "version": "0.1.5+~0.1.1-1"
+    },
+    {
+      "name": "node-p-cancelable",
+      "version": "2.1.1-1"
+    },
+    {
+      "name": "node-p-limit",
+      "version": "4.0.0+~cs4.0.0-5"
+    },
+    {
+      "name": "node-p-locate",
+      "version": "6.0.0-12"
+    },
+    {
+      "name": "node-p-map",
+      "version": "4.0.0+~3.1.0+~3.0.1-1"
+    },
+    {
+      "name": "node-pascalcase",
+      "version": "1.0.0-1"
+    },
+    {
+      "name": "node-path-dirname",
+      "version": "1.0.2-2"
+    },
+    {
+      "name": "node-path-exists",
+      "version": "5.0.0-8"
+    },
+    {
+      "name": "node-path-is-absolute",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-path-is-inside",
+      "version": "1.0.2+~1.0.0-1"
+    },
+    {
+      "name": "node-path-type",
+      "version": "4.0.0-3"
+    },
+    {
+      "name": "node-pify",
+      "version": "5.0.0+~cs5.0.1-1"
+    },
+    {
+      "name": "node-pkg-dir",
+      "version": "5.0.0-2"
+    },
+    {
+      "name": "node-postcss-value-parser",
+      "version": "4.2.0-1"
+    },
+    {
+      "name": "node-prelude-ls",
+      "version": "1.2.1+dfsg-3"
+    },
+    {
+      "name": "node-process-nextick-args",
+      "version": "2.0.1-3"
+    },
+    {
+      "name": "node-promise-inflight",
+      "version": "1.0.1+~1.0.0-1"
+    },
+    {
+      "name": "node-promise-retry",
+      "version": "2.0.1-4"
+    },
+    {
+      "name": "node-promzard",
+      "version": "0.3.0-2"
+    },
+    {
+      "name": "node-prr",
+      "version": "1.0.1-3"
+    },
+    {
+      "name": "node-pump",
+      "version": "3.0.0-5"
+    },
+    {
+      "name": "node-punycode",
+      "version": "2.2.3-2"
+    },
+    {
+      "name": "node-quick-lru",
+      "version": "6.1.1-4"
+    },
+    {
+      "name": "node-randombytes",
+      "version": "2.1.0+~2.0.0-2"
+    },
+    {
+      "name": "node-read",
+      "version": "1.0.7-5"
+    },
+    {
+      "name": "node-readable-stream",
+      "version": "3.6.0+~cs3.0.0-4build1"
+    },
+    {
+      "name": "node-rechoir",
+      "version": "0.8.0+~0.6.1-2"
+    },
+    {
+      "name": "node-regenerator-runtime",
+      "version": "0.15.2+~0.10.8-1"
+    },
+    {
+      "name": "node-regenerator-transform",
+      "version": "0.15.2+~0.10.8-1"
+    },
+    {
+      "name": "node-regexpp",
+      "version": "3.2.0-5"
+    },
+    {
+      "name": "node-regjsgen",
+      "version": "0.7.1+ds-1"
+    },
+    {
+      "name": "node-repeat-string",
+      "version": "1.6.1+repack-1"
+    },
+    {
+      "name": "node-require-directory",
+      "version": "2.1.1+~2.1.2-1"
+    },
+    {
+      "name": "node-require-from-string",
+      "version": "2.0.2+~1.2.1-1"
+    },
+    {
+      "name": "node-resolve",
+      "version": "1.22.8+~cs5.34.15-2"
+    },
+    {
+      "name": "node-resolve-cwd",
+      "version": "3.0.0-2"
+    },
+    {
+      "name": "node-resolve-from",
+      "version": "5.0.0+~3.1.0+~3.3.0+~2.0.0-1"
+    },
+    {
+      "name": "node-restore-cursor",
+      "version": "4.0.0-4"
+    },
+    {
+      "name": "node-resumer",
+      "version": "0.0.0-6"
+    },
+    {
+      "name": "node-retry",
+      "version": "0.13.1+~0.12.1-1"
+    },
+    {
+      "name": "node-run-queue",
+      "version": "2.0.0-3"
+    },
+    {
+      "name": "node-safe-buffer",
+      "version": "5.2.1+~cs2.1.2-3"
+    },
+    {
+      "name": "node-serialize-javascript",
+      "version": "6.0.1-1"
+    },
+    {
+      "name": "node-set-blocking",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-set-immediate-shim",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-shebang-command",
+      "version": "2.0.0-1"
+    },
+    {
+      "name": "node-shebang-regex",
+      "version": "3.0.0-2"
+    },
+    {
+      "name": "node-shell-quote",
+      "version": "1.7.4+~1.7.1-1"
+    },
+    {
+      "name": "node-signal-exit",
+      "version": "4.1.0-6"
+    },
+    {
+      "name": "node-slash",
+      "version": "4.0.0-3"
+    },
+    {
+      "name": "node-slice-ansi",
+      "version": "5.0.0+~cs9.0.0-5"
+    },
+    {
+      "name": "node-source-list-map",
+      "version": "2.0.1+dfsg+~0.1.2-1"
+    },
+    {
+      "name": "node-source-map",
+      "version": "0.7.0++dfsg2+really.0.6.1-15"
+    },
+    {
+      "name": "node-spdx-correct",
+      "version": "3.1.1-2"
+    },
+    {
+      "name": "node-spdx-exceptions",
+      "version": "2.3.0-2"
+    },
+    {
+      "name": "node-spdx-expression-parse",
+      "version": "3.0.1+~3.0.1-1"
+    },
+    {
+      "name": "node-spdx-license-ids",
+      "version": "3.0.12-1"
+    },
+    {
+      "name": "node-sprintf-js",
+      "version": "1.1.2+ds1+~1.1.2-1"
+    },
+    {
+      "name": "node-ssri",
+      "version": "9.0.1-2"
+    },
+    {
+      "name": "node-stack-utils",
+      "version": "2.0.6+~2.0.1-1"
+    },
+    {
+      "name": "node-string-decoder",
+      "version": "1.3.0-6"
+    },
+    {
+      "name": "node-strip-bom",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-supports-color",
+      "version": "8.1.1+~8.1.1-1"
+    },
+    {
+      "name": "node-tapable",
+      "version": "2.2.1-3"
+    },
+    {
+      "name": "node-terser",
+      "version": "5.19.2-1"
+    },
+    {
+      "name": "node-text-table",
+      "version": "0.2.0-4"
+    },
+    {
+      "name": "node-through",
+      "version": "2.3.8+~cs0.0.30-1"
+    },
+    {
+      "name": "node-time-stamp",
+      "version": "2.2.0-2"
+    },
+    {
+      "name": "node-to-fast-properties",
+      "version": "3.0.1-3"
+    },
+    {
+      "name": "node-tslib",
+      "version": "2.4.1-1"
+    },
+    {
+      "name": "node-type-check",
+      "version": "0.4.0+dfsg-3"
+    },
+    {
+      "name": "node-typedarray",
+      "version": "0.0.7-1"
+    },
+    {
+      "name": "node-typedarray-to-buffer",
+      "version": "4.0.0-2"
+    },
+    {
+      "name": "node-undici",
+      "version": "5.26.3+dfsg1+~cs23.10.12-2"
+    },
+    {
+      "name": "node-unicode-canonical-property-names-ecmascript",
+      "version": "2.0.0-2"
+    },
+    {
+      "name": "node-unicode-match-property-value-ecmascript",
+      "version": "2.1.0+ds-1"
+    },
+    {
+      "name": "node-unicode-property-aliases-ecmascript",
+      "version": "2.1.0+ds-1"
+    },
+    {
+      "name": "node-unset-value",
+      "version": "2.0.1-1"
+    },
+    {
+      "name": "node-uri-js",
+      "version": "4.4.0+dfsg-8"
+    },
+    {
+      "name": "node-util-deprecate",
+      "version": "1.0.2-3"
+    },
+    {
+      "name": "node-uuid",
+      "version": "8.3.2+~8.3.3-4"
+    },
+    {
+      "name": "node-v8flags",
+      "version": "3.2.0+~3.1.1-1"
+    },
+    {
+      "name": "node-validate-npm-package-license",
+      "version": "3.0.4-2"
+    },
+    {
+      "name": "node-wcwidth.js",
+      "version": "1.0.2-2"
+    },
+    {
+      "name": "node-webpack-sources",
+      "version": "3.2.3+~3.2.0-2"
+    },
+    {
+      "name": "node-wordwrap",
+      "version": "1.0.0-4"
+    },
+    {
+      "name": "node-wrappy",
+      "version": "1.0.2-3"
+    },
+    {
+      "name": "node-write-file-atomic",
+      "version": "4.0.2+~4.0.0-2"
+    },
+    {
+      "name": "node-xtend",
+      "version": "4.0.2-3"
+    },
+    {
+      "name": "node-y18n",
+      "version": "5.0.8+~5.0.0-3"
+    },
+    {
+      "name": "node-yallist",
+      "version": "4.0.0+~4.0.1-1"
+    },
+    {
+      "name": "node-yaml",
+      "version": "2.3.4-1build1"
+    },
+    {
+      "name": "nodejs",
+      "version": "20.19.3-1nodesource1"
+    },
+    {
+      "name": "nvidia-compute-utils-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "nvidia-driver-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "nvidia-firmware-570-570.133.07",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "nvidia-kernel-common-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "nvidia-kernel-source-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "nvidia-prime",
+      "version": "0.8.17.2"
+    },
+    {
+      "name": "nvidia-settings",
+      "version": "510.47.03-0ubuntu4"
+    },
+    {
+      "name": "nvidia-utils-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    },
+    {
+      "name": "python-apt-common",
+      "version": "2.7.7ubuntu4"
+    },
+    {
+      "name": "python-babel-localedata",
+      "version": "2.10.3-3build1"
+    },
+    {
+      "name": "python-matplotlib-data",
+      "version": "3.6.3-1ubuntu5"
+    },
+    {
+      "name": "python-odf-doc",
+      "version": "1.4.2-2"
+    },
+    {
+      "name": "python-odf-tools",
+      "version": "1.4.2-2"
+    },
+    {
+      "name": "python-tables-data",
+      "version": "3.9.2-1build3"
+    },
+    {
+      "name": "python-tinycss2-common",
+      "version": "1.2.1-2"
+    },
+    {
+      "name": "python3",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "python3-appdirs",
+      "version": "1.4.4-4"
+    },
+    {
+      "name": "python3-apport",
+      "version": "2.28.1-0ubuntu3.7"
+    },
+    {
+      "name": "python3-apt",
+      "version": "2.7.7ubuntu4"
+    },
+    {
+      "name": "python3-aptdaemon",
+      "version": "1.1.1+bzr982-0ubuntu44"
+    },
+    {
+      "name": "python3-aptdaemon.gtk3widgets",
+      "version": "1.1.1+bzr982-0ubuntu44"
+    },
+    {
+      "name": "python3-argon2",
+      "version": "21.1.0-2build1"
+    },
+    {
+      "name": "python3-asgiref",
+      "version": "3.7.2-1"
+    },
+    {
+      "name": "python3-asttokens",
+      "version": "2.4.1-1"
+    },
+    {
+      "name": "python3-attr",
+      "version": "23.2.0-2"
+    },
+    {
+      "name": "python3-babel",
+      "version": "2.10.3-3build1"
+    },
+    {
+      "name": "python3-bcrypt",
+      "version": "3.2.2-1build1"
+    },
+    {
+      "name": "python3-bleach",
+      "version": "6.1.0-2"
+    },
+    {
+      "name": "python3-blinker",
+      "version": "1.7.0-1"
+    },
+    {
+      "name": "python3-bottleneck",
+      "version": "1.3.5+ds1-3build1"
+    },
+    {
+      "name": "python3-bpfcc",
+      "version": "0.29.1+ds-1ubuntu7"
+    },
+    {
+      "name": "python3-brlapi:amd64",
+      "version": "6.6-4ubuntu5"
+    },
+    {
+      "name": "python3-brotli",
+      "version": "1.1.0-2build2"
+    },
+    {
+      "name": "python3-bs4",
+      "version": "4.12.3-1"
+    },
+    {
+      "name": "python3-bytecode",
+      "version": "0.15.1-3"
+    },
+    {
+      "name": "python3-cairo",
+      "version": "1.25.1-2build2"
+    },
+    {
+      "name": "python3-certifi",
+      "version": "2023.11.17-1"
+    },
+    {
+      "name": "python3-cffi-backend:amd64",
+      "version": "1.16.0-2build1"
+    },
+    {
+      "name": "python3-chardet",
+      "version": "5.2.0+dfsg-1"
+    },
+    {
+      "name": "python3-charset-normalizer",
+      "version": "3.3.2-1"
+    },
+    {
+      "name": "python3-click",
+      "version": "8.1.6-2"
+    },
+    {
+      "name": "python3-colorama",
+      "version": "0.4.6-4"
+    },
+    {
+      "name": "python3-comm",
+      "version": "0.2.1-1"
+    },
+    {
+      "name": "python3-commandnotfound",
+      "version": "23.04.0"
+    },
+    {
+      "name": "python3-compose",
+      "version": "1.29.2-6ubuntu1"
+    },
+    {
+      "name": "python3-configobj",
+      "version": "5.0.8-3"
+    },
+    {
+      "name": "python3-contourpy",
+      "version": "1.0.7-2build1"
+    },
+    {
+      "name": "python3-coverage",
+      "version": "7.4.4+dfsg1-0ubuntu2"
+    },
+    {
+      "name": "python3-cpuinfo",
+      "version": "9.0.0-1"
+    },
+    {
+      "name": "python3-cryptography",
+      "version": "41.0.7-4ubuntu0.1"
+    },
+    {
+      "name": "python3-cssselect",
+      "version": "1.2.0-2"
+    },
+    {
+      "name": "python3-cups:amd64",
+      "version": "2.0.1-5build6"
+    },
+    {
+      "name": "python3-cupshelpers",
+      "version": "1.5.18-1ubuntu9"
+    },
+    {
+      "name": "python3-cycler",
+      "version": "0.11.0-2"
+    },
+    {
+      "name": "python3-dateutil",
+      "version": "2.8.2-3ubuntu1"
+    },
+    {
+      "name": "python3-dbus",
+      "version": "1.3.2-5build3"
+    },
+    {
+      "name": "python3-debconf",
+      "version": "1.5.86ubuntu1"
+    },
+    {
+      "name": "python3-debian",
+      "version": "0.1.49ubuntu2"
+    },
+    {
+      "name": "python3-debugpy",
+      "version": "1.8.0+ds-4ubuntu4"
+    },
+    {
+      "name": "python3-decorator",
+      "version": "5.1.1-5"
+    },
+    {
+      "name": "python3-defer",
+      "version": "1.0.6-2.1ubuntu1"
+    },
+    {
+      "name": "python3-defusedxml",
+      "version": "0.7.1-2"
+    },
+    {
+      "name": "python3-dev",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "python3-distro",
+      "version": "1.9.0-1"
+    },
+    {
+      "name": "python3-distro-info",
+      "version": "1.7build1"
+    },
+    {
+      "name": "python3-distupgrade",
+      "version": "1:24.04.26"
+    },
+    {
+      "name": "python3-docker",
+      "version": "5.0.3-1ubuntu1.1"
+    },
+    {
+      "name": "python3-dockerpty",
+      "version": "0.4.1-5"
+    },
+    {
+      "name": "python3-docopt",
+      "version": "0.6.2-6"
+    },
+    {
+      "name": "python3-dotenv",
+      "version": "1.0.1-1"
+    },
+    {
+      "name": "python3-entrypoints",
+      "version": "0.4-2"
+    },
+    {
+      "name": "python3-et-xmlfile",
+      "version": "1.0.1-2.1"
+    },
+    {
+      "name": "python3-executing",
+      "version": "2.0.1-0.1"
+    },
+    {
+      "name": "python3-fasteners",
+      "version": "0.18-2"
+    },
+    {
+      "name": "python3-fastjsonschema",
+      "version": "2.19.0-1"
+    },
+    {
+      "name": "python3-flask",
+      "version": "3.0.2-1ubuntu1"
+    },
+    {
+      "name": "python3-fonttools",
+      "version": "4.46.0-1build2"
+    },
+    {
+      "name": "python3-fs",
+      "version": "2.4.16-3"
+    },
+    {
+      "name": "python3-gdbm:amd64",
+      "version": "3.12.3-0ubuntu1"
+    },
+    {
+      "name": "python3-gi",
+      "version": "3.48.2-1"
+    },
+    {
+      "name": "python3-html5lib",
+      "version": "1.1-6"
+    },
+    {
+      "name": "python3-httplib2",
+      "version": "0.20.4-3"
+    },
+    {
+      "name": "python3-ibus-1.0",
+      "version": "1.5.29-2"
+    },
+    {
+      "name": "python3-idna",
+      "version": "3.6-2ubuntu0.1"
+    },
+    {
+      "name": "python3-iniconfig",
+      "version": "1.1.1-2"
+    },
+    {
+      "name": "python3-ipykernel",
+      "version": "6.29.3-1"
+    },
+    {
+      "name": "python3-ipython",
+      "version": "8.20.0-1"
+    },
+    {
+      "name": "python3-ipython-genutils",
+      "version": "0.2.0-6"
+    },
+    {
+      "name": "python3-ipywidgets",
+      "version": "8.1.1-2"
+    },
+    {
+      "name": "python3-itsdangerous",
+      "version": "2.1.2-4"
+    },
+    {
+      "name": "python3-jedi",
+      "version": "0.19.1+ds1-1"
+    },
+    {
+      "name": "python3-jinja2",
+      "version": "3.1.2-1ubuntu1.3"
+    },
+    {
+      "name": "python3-joblib",
+      "version": "1.3.2-1"
+    },
+    {
+      "name": "python3-json-pointer",
+      "version": "2.0-0ubuntu1"
+    },
+    {
+      "name": "python3-jsonpatch",
+      "version": "1.32-3"
+    },
+    {
+      "name": "python3-jsonschema",
+      "version": "4.10.3-2ubuntu1"
+    },
+    {
+      "name": "python3-jupyter-client",
+      "version": "7.4.9-2ubuntu1"
+    },
+    {
+      "name": "python3-jupyter-core",
+      "version": "5.3.2-1ubuntu1"
+    },
+    {
+      "name": "python3-jupyterlab-pygments",
+      "version": "0.2.2-3"
+    },
+    {
+      "name": "python3-jwt",
+      "version": "2.7.0-1"
+    },
+    {
+      "name": "python3-kiwisolver",
+      "version": "1.4.4-2build1"
+    },
+    {
+      "name": "python3-launchpadlib",
+      "version": "1.11.0-6"
+    },
+    {
+      "name": "python3-lazr.restfulclient",
+      "version": "0.14.6-1"
+    },
+    {
+      "name": "python3-lazr.uri",
+      "version": "1.0.6-3"
+    },
+    {
+      "name": "python3-louis",
+      "version": "3.29.0-1build1"
+    },
+    {
+      "name": "python3-lxml:amd64",
+      "version": "5.2.1-1"
+    },
+    {
+      "name": "python3-lxml-html-clean",
+      "version": "0.1.1-1"
+    },
+    {
+      "name": "python3-lz4",
+      "version": "4.0.2+dfsg-1build4"
+    },
+    {
+      "name": "python3-mako",
+      "version": "1.3.2-1"
+    },
+    {
+      "name": "python3-markdown-it",
+      "version": "3.0.0-2"
+    },
+    {
+      "name": "python3-markupsafe",
+      "version": "2.1.5-1build2"
+    },
+    {
+      "name": "python3-matplotlib",
+      "version": "3.6.3-1ubuntu5"
+    },
+    {
+      "name": "python3-matplotlib-inline",
+      "version": "0.1.6-2"
+    },
+    {
+      "name": "python3-mdurl",
+      "version": "0.1.2-1"
+    },
+    {
+      "name": "python3-minimal",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "python3-monotonic",
+      "version": "1.6-2"
+    },
+    {
+      "name": "python3-mpmath",
+      "version": "1.2.1-3"
+    },
+    {
+      "name": "python3-multidict",
+      "version": "6.0.4-1.1build1"
+    },
+    {
+      "name": "python3-nacl",
+      "version": "1.5.0-4build1"
+    },
+    {
+      "name": "python3-nbclient",
+      "version": "0.8.0-1"
+    },
+    {
+      "name": "python3-nbconvert",
+      "version": "6.5.3-5"
+    },
+    {
+      "name": "python3-nbformat",
+      "version": "5.9.1-1"
+    },
+    {
+      "name": "python3-nest-asyncio",
+      "version": "1.5.4-1"
+    },
+    {
+      "name": "python3-netaddr",
+      "version": "0.8.0-2ubuntu1"
+    },
+    {
+      "name": "python3-netifaces:amd64",
+      "version": "0.11.0-2build3"
+    },
+    {
+      "name": "python3-netplan",
+      "version": "1.1.2-2~ubuntu24.04.1"
+    },
+    {
+      "name": "python3-notebook",
+      "version": "6.4.12-2.2ubuntu1"
+    },
+    {
+      "name": "python3-numexpr",
+      "version": "2.9.0-1build1"
+    },
+    {
+      "name": "python3-numpy",
+      "version": "1:1.26.4+ds-6ubuntu1"
+    },
+    {
+      "name": "python3-oauthlib",
+      "version": "3.2.2-1"
+    },
+    {
+      "name": "python3-odf",
+      "version": "1.4.2-2"
+    },
+    {
+      "name": "python3-olefile",
+      "version": "0.46-3"
+    },
+    {
+      "name": "python3-opengl",
+      "version": "3.1.7+dfsg-1"
+    },
+    {
+      "name": "python3-openpyxl",
+      "version": "3.1.2+dfsg-6"
+    },
+    {
+      "name": "python3-openssl",
+      "version": "23.2.0-1"
+    },
+    {
+      "name": "python3-packaging",
+      "version": "24.0-1"
+    },
+    {
+      "name": "python3-pandas",
+      "version": "2.1.4+dfsg-7"
+    },
+    {
+      "name": "python3-pandas-lib:amd64",
+      "version": "2.1.4+dfsg-7"
+    },
+    {
+      "name": "python3-pandocfilters",
+      "version": "1.5.0-1"
+    },
+    {
+      "name": "python3-paramiko",
+      "version": "2.12.0-2ubuntu4.1"
+    },
+    {
+      "name": "python3-parso",
+      "version": "0.8.3-1"
+    },
+    {
+      "name": "python3-patsy",
+      "version": "0.5.6-1"
+    },
+    {
+      "name": "python3-pexpect",
+      "version": "4.9-2"
+    },
+    {
+      "name": "python3-pil:amd64",
+      "version": "10.2.0-1ubuntu1"
+    },
+    {
+      "name": "python3-pil.imagetk:amd64",
+      "version": "10.2.0-1ubuntu1"
+    },
+    {
+      "name": "python3-pip",
+      "version": "24.0+dfsg-1ubuntu1.2"
+    },
+    {
+      "name": "python3-pip-whl",
+      "version": "24.0+dfsg-1ubuntu1.2"
+    },
+    {
+      "name": "python3-pkg-resources",
+      "version": "68.1.2-2ubuntu1.2"
+    },
+    {
+      "name": "python3-platformdirs",
+      "version": "4.2.0-1"
+    },
+    {
+      "name": "python3-plotly",
+      "version": "5.15.0+dfsg1-1"
+    },
+    {
+      "name": "python3-pluggy",
+      "version": "1.4.0-1"
+    },
+    {
+      "name": "python3-problem-report",
+      "version": "2.28.1-0ubuntu3.7"
+    },
+    {
+      "name": "python3-prometheus-client",
+      "version": "0.19.0+ds1-1"
+    },
+    {
+      "name": "python3-prompt-toolkit",
+      "version": "3.0.43-1"
+    },
+    {
+      "name": "python3-psutil",
+      "version": "5.9.8-2build2"
+    },
+    {
+      "name": "python3-ptyprocess",
+      "version": "0.7.0-5"
+    },
+    {
+      "name": "python3-pure-eval",
+      "version": "0.2.2-1"
+    },
+    {
+      "name": "python3-py",
+      "version": "1.11.0-2"
+    },
+    {
+      "name": "python3-pyasyncore",
+      "version": "1.0.2-2"
+    },
+    {
+      "name": "python3-pydevd",
+      "version": "2.10.0+ds-10ubuntu1"
+    },
+    {
+      "name": "python3-pygments",
+      "version": "2.17.2+dfsg-1"
+    },
+    {
+      "name": "python3-pyinotify",
+      "version": "0.9.6-2ubuntu1"
+    },
+    {
+      "name": "python3-pyparsing",
+      "version": "3.1.1-1"
+    },
+    {
+      "name": "python3-pyqt5",
+      "version": "5.15.10+dfsg-1build6"
+    },
+    {
+      "name": "python3-pyqt5.qtopengl",
+      "version": "5.15.10+dfsg-1build6"
+    },
+    {
+      "name": "python3-pyqt5.sip",
+      "version": "12.13.0-1build3"
+    },
+    {
+      "name": "python3-pyqt6",
+      "version": "6.6.1-2build4"
+    },
+    {
+      "name": "python3-pyqt6.qtqml",
+      "version": "6.6.1-2build4"
+    },
+    {
+      "name": "python3-pyqt6.qtwebchannel",
+      "version": "6.6.1-2build4"
+    },
+    {
+      "name": "python3-pyqt6.qtwebengine",
+      "version": "6.6.0-1build2"
+    },
+    {
+      "name": "python3-pyqt6.sip",
+      "version": "13.6.0-1build2"
+    },
+    {
+      "name": "python3-pyqtgraph",
+      "version": "0.13.4-2"
+    },
+    {
+      "name": "python3-pyrsistent:amd64",
+      "version": "0.20.0-1build2"
+    },
+    {
+      "name": "python3-pytest",
+      "version": "7.4.4-1"
+    },
+    {
+      "name": "python3-requests",
+      "version": "2.31.0+dfsg-1ubuntu1.1"
+    },
+    {
+      "name": "python3-requests-toolbelt",
+      "version": "1.0.0-2"
+    },
+    {
+      "name": "python3-rich",
+      "version": "13.7.1-1"
+    },
+    {
+      "name": "python3-scipy",
+      "version": "1.11.4-6build1"
+    },
+    {
+      "name": "python3-seaborn",
+      "version": "0.13.2-3"
+    },
+    {
+      "name": "python3-send2trash",
+      "version": "1.8.2-1"
+    },
+    {
+      "name": "python3-serial",
+      "version": "3.5-2"
+    },
+    {
+      "name": "python3-setuptools",
+      "version": "68.1.2-2ubuntu1.2"
+    },
+    {
+      "name": "python3-setuptools-whl",
+      "version": "68.1.2-2ubuntu1.2"
+    },
+    {
+      "name": "python3-simplejson",
+      "version": "3.19.2-1build2"
+    },
+    {
+      "name": "python3-six",
+      "version": "1.16.0-4"
+    },
+    {
+      "name": "python3-sklearn",
+      "version": "1.4.1.post1+dfsg-1build1"
+    },
+    {
+      "name": "python3-sklearn-lib:amd64",
+      "version": "1.4.1.post1+dfsg-1build1"
+    },
+    {
+      "name": "python3-socks",
+      "version": "1.7.1+dfsg-1"
+    },
+    {
+      "name": "python3-software-properties",
+      "version": "0.99.49.2"
+    },
+    {
+      "name": "python3-soupsieve",
+      "version": "2.5-1"
+    },
+    {
+      "name": "python3-speechd",
+      "version": "0.12.0~rc2-2build3"
+    },
+    {
+      "name": "python3-sss",
+      "version": "2.9.4-1.1ubuntu6.2"
+    },
+    {
+      "name": "python3-stack-data",
+      "version": "0.6.3-1"
+    },
+    {
+      "name": "python3-sympy",
+      "version": "1.12-7"
+    },
+    {
+      "name": "python3-systemd",
+      "version": "235-1build4"
+    },
+    {
+      "name": "python3-tables",
+      "version": "3.9.2-1build3"
+    },
+    {
+      "name": "python3-tables-lib",
+      "version": "3.9.2-1build3"
+    },
+    {
+      "name": "python3-tenacity",
+      "version": "8.2.3-2"
+    },
+    {
+      "name": "python3-terminado",
+      "version": "0.17.1-1"
+    },
+    {
+      "name": "python3-texttable",
+      "version": "1.6.7-1"
+    },
+    {
+      "name": "python3-threadpoolctl",
+      "version": "3.1.0-1"
+    },
+    {
+      "name": "python3-tinycss2",
+      "version": "1.2.1-2"
+    },
+    {
+      "name": "python3-tk:amd64",
+      "version": "3.12.3-0ubuntu1"
+    },
+    {
+      "name": "python3-tornado",
+      "version": "6.4.0-1ubuntu0.2"
+    },
+    {
+      "name": "python3-traitlets",
+      "version": "5.5.0-2"
+    },
+    {
+      "name": "python3-typeshed",
+      "version": "0.0~git20231111.6764465-3"
+    },
+    {
+      "name": "python3-typing-extensions",
+      "version": "4.10.0-1"
+    },
+    {
+      "name": "python3-tz",
+      "version": "2024.1-2"
+    },
+    {
+      "name": "python3-ufolib2",
+      "version": "0.16.0+dfsg1-1"
+    },
+    {
+      "name": "python3-unicodedata2",
+      "version": "15.1.0+ds-1build1"
+    },
+    {
+      "name": "python3-uno",
+      "version": "4:24.2.7-0ubuntu0.24.04.4"
+    },
+    {
+      "name": "python3-update-manager",
+      "version": "1:24.04.12"
+    },
+    {
+      "name": "python3-urllib3",
+      "version": "2.0.7-1ubuntu0.2"
+    },
+    {
+      "name": "python3-venv",
+      "version": "3.12.3-0ubuntu2"
+    },
+    {
+      "name": "python3-wadllib",
+      "version": "1.3.6-5"
+    },
+    {
+      "name": "python3-wcwidth",
+      "version": "0.2.5+dfsg1-1.1ubuntu1"
+    },
+    {
+      "name": "python3-webencodings",
+      "version": "0.5.1-5"
+    },
+    {
+      "name": "python3-websocket",
+      "version": "1.7.0-1"
+    },
+    {
+      "name": "python3-websockets",
+      "version": "10.4-1"
+    },
+    {
+      "name": "python3-werkzeug",
+      "version": "3.0.1-3ubuntu0.2"
+    },
+    {
+      "name": "python3-wheel",
+      "version": "0.42.0-2"
+    },
+    {
+      "name": "python3-widgetsnbextension",
+      "version": "8.1.1-2"
+    },
+    {
+      "name": "python3-xdg",
+      "version": "0.28-2"
+    },
+    {
+      "name": "python3-xkit",
+      "version": "0.5.0ubuntu6"
+    },
+    {
+      "name": "python3-yaml",
+      "version": "6.0.1-2build2"
+    },
+    {
+      "name": "python3-zmq",
+      "version": "24.0.1-5build1"
+    },
+    {
+      "name": "python3.12",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "python3.12-dev",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "python3.12-minimal",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "python3.12-venv",
+      "version": "3.12.3-1ubuntu0.7"
+    },
+    {
+      "name": "xserver-xorg-video-nvidia-570",
+      "version": "570.133.07-0ubuntu0.24.04.1"
+    }
+  ],
+  "docker_images": [
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-04 00:26:31 +0200 CEST",
+      "CreatedSince": "12 hours ago",
+      "Digest": "<none>",
+      "ID": "e8a25f1f7715",
+      "Repository": "crod/gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "final",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-04 00:25:59 +0200 CEST",
+      "CreatedSince": "12 hours ago",
+      "Digest": "<none>",
+      "ID": "7978706c1401",
+      "Repository": "crod/gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "dns-fix",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-04 00:25:16 +0200 CEST",
+      "CreatedSince": "12 hours ago",
+      "Digest": "<none>",
+      "ID": "11d7417c621a",
+      "Repository": "crod/gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "fixed",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-04 00:25:16 +0200 CEST",
+      "CreatedSince": "12 hours ago",
+      "Digest": "<none>",
+      "ID": "11d7417c621a",
+      "Repository": "crod/gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 20:02:42 +0200 CEST",
+      "CreatedSince": "16 hours ago",
+      "Digest": "<none>",
+      "ID": "4a9e1d94b7d7",
+      "Repository": "<none>",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "<none>",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 12:37:23 +0200 CEST",
+      "CreatedSince": "23 hours ago",
+      "Digest": "<none>",
+      "ID": "3311aad4fbd8",
+      "Repository": "crod/delta-quarter",
+      "SharedSize": "N/A",
+      "Size": "16.9MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "16.87MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 03:30:59 +0200 CEST",
+      "CreatedSince": "33 hours ago",
+      "Digest": "<none>",
+      "ID": "5eef14fba62a",
+      "Repository": "crod/crod-core",
+      "SharedSize": "N/A",
+      "Size": "145MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "144.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 02:15:00 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "21abec88f71d",
+      "Repository": "crod/llama-learning",
+      "SharedSize": "N/A",
+      "Size": "143MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "142.9MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 02:15:00 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "21abec88f71d",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/llama-learning",
+      "SharedSize": "N/A",
+      "Size": "143MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "142.9MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 02:15:00 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "21abec88f71d",
+      "Repository": "ghcr.io/crodbac4rdi/llama-learning",
+      "SharedSize": "N/A",
+      "Size": "143MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "142.9MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 02:07:24 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "f05ee78c96f2",
+      "Repository": "crod/pattern-district",
+      "SharedSize": "N/A",
+      "Size": "90.7MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "90.66MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 01:58:06 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "fac5c2447a41",
+      "Repository": "crod/github-webhook",
+      "SharedSize": "N/A",
+      "Size": "141MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "140.6MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-03 01:52:32 +0200 CEST",
+      "CreatedSince": "34 hours ago",
+      "Digest": "<none>",
+      "ID": "b3c598d1b4f2",
+      "Repository": "crod/blockchain-core",
+      "SharedSize": "N/A",
+      "Size": "16.8MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "16.81MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:54:05 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "8c979aee3a97",
+      "Repository": "crod/intelligence-hub",
+      "SharedSize": "N/A",
+      "Size": "223MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "222.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:54:05 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "8c979aee3a97",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/intelligence-hub-intelligence_hub",
+      "SharedSize": "N/A",
+      "Size": "223MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "222.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:54:05 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "8c979aee3a97",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/intelligence-hub-python",
+      "SharedSize": "N/A",
+      "Size": "223MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "222.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:54:05 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "8c979aee3a97",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/intelligence-hub",
+      "SharedSize": "N/A",
+      "Size": "223MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "222.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:53:59 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "32f8f2ab6858",
+      "Repository": "crod/memory-quarter",
+      "SharedSize": "N/A",
+      "Size": "16.6MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "16.61MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:53:59 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "32f8f2ab6858",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/memory-quarter-memory_quarter",
+      "SharedSize": "N/A",
+      "Size": "16.6MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "16.61MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:53:59 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "32f8f2ab6858",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/memory-quarter",
+      "SharedSize": "N/A",
+      "Size": "16.6MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "16.61MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:53:40 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "1feeca9c3049",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/pattern-district-pattern_district",
+      "SharedSize": "N/A",
+      "Size": "14.6MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "14.57MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:53:40 +0200 CEST",
+      "CreatedSince": "38 hours ago",
+      "Digest": "<none>",
+      "ID": "1feeca9c3049",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/pattern-district",
+      "SharedSize": "N/A",
+      "Size": "14.6MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "14.57MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "crod/meta-chain-elixir",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "crod/meta-chain-elixir",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "v2",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "crod/meta-chain",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/meta-chain-elixir",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/meta-chain-meta_chain",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 21:02:51 +0200 CEST",
+      "CreatedSince": "39 hours ago",
+      "Digest": "<none>",
+      "ID": "2c4a91222748",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/meta-chain",
+      "SharedSize": "N/A",
+      "Size": "332MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "332MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 20:08:59 +0200 CEST",
+      "CreatedSince": "40 hours ago",
+      "Digest": "<none>",
+      "ID": "7edcc5c2c52e",
+      "Repository": "crod/gateway-node",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 20:08:59 +0200 CEST",
+      "CreatedSince": "40 hours ago",
+      "Digest": "<none>",
+      "ID": "7edcc5c2c52e",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/gateway-gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 20:08:59 +0200 CEST",
+      "CreatedSince": "40 hours ago",
+      "Digest": "<none>",
+      "ID": "7edcc5c2c52e",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/gateway-node",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 20:08:59 +0200 CEST",
+      "CreatedSince": "40 hours ago",
+      "Digest": "<none>",
+      "ID": "7edcc5c2c52e",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/gateway",
+      "SharedSize": "N/A",
+      "Size": "135MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "135.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 17:45:30 +0200 CEST",
+      "CreatedSince": "42 hours ago",
+      "Digest": "<none>",
+      "ID": "d15d896f291c",
+      "Repository": "crod/pattern-district-rust",
+      "SharedSize": "N/A",
+      "Size": "84.8MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "84.85MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-07-02 17:45:30 +0200 CEST",
+      "CreatedSince": "42 hours ago",
+      "Digest": "<none>",
+      "ID": "d15d896f291c",
+      "Repository": "ghcr.io/crodbac4rdi/crod-babylon-genesis/pattern-district-rust",
+      "SharedSize": "N/A",
+      "Size": "84.8MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "84.85MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-06-28 07:20:13 +0200 CEST",
+      "CreatedSince": "6 days ago",
+      "Digest": "<none>",
+      "ID": "37917e5f3734",
+      "Repository": "dpage/pgadmin4",
+      "SharedSize": "N/A",
+      "Size": "543MB",
+      "Tag": "latest",
+      "UniqueSize": "N/A",
+      "VirtualSize": "543.1MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-06-06 20:27:47 +0200 CEST",
+      "CreatedSince": "3 weeks ago",
+      "Digest": "<none>",
+      "ID": "8c5b83868f93",
+      "Repository": "postgres",
+      "SharedSize": "N/A",
+      "Size": "274MB",
+      "Tag": "15-alpine",
+      "UniqueSize": "N/A",
+      "VirtualSize": "273.7MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-06-04 01:02:53 +0200 CEST",
+      "CreatedSince": "4 weeks ago",
+      "Digest": "<none>",
+      "ID": "be3324b8ee1a",
+      "Repository": "python",
+      "SharedSize": "N/A",
+      "Size": "130MB",
+      "Tag": "3.11-slim",
+      "UniqueSize": "N/A",
+      "VirtualSize": "129.9MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-05-29 16:46:25 +0200 CEST",
+      "CreatedSince": "5 weeks ago",
+      "Digest": "<none>",
+      "ID": "7ff232a1fe04",
+      "Repository": "redis",
+      "SharedSize": "N/A",
+      "Size": "41.4MB",
+      "Tag": "7-alpine",
+      "UniqueSize": "N/A",
+      "VirtualSize": "41.41MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-05-21 14:21:12 +0200 CEST",
+      "CreatedSince": "6 weeks ago",
+      "Digest": "<none>",
+      "ID": "72a94020693f",
+      "Repository": "moby/buildkit",
+      "SharedSize": "N/A",
+      "Size": "216MB",
+      "Tag": "buildx-stable-1",
+      "UniqueSize": "N/A",
+      "VirtualSize": "216.3MB"
+    },
+    {
+      "Containers": "N/A",
+      "CreatedAt": "2025-03-27 15:23:08 +0100 CET",
+      "CreatedSince": "3 months ago",
+      "Digest": "<none>",
+      "ID": "ee77c6cd7c18",
+      "Repository": "node",
+      "SharedSize": "N/A",
+      "Size": "127MB",
+      "Tag": "18-alpine",
+      "UniqueSize": "N/A",
+      "VirtualSize": "127MB"
+    }
+  ],
+  "docker_containers": [
+    {
+      "Command": "\"buildkitd --allow-i\u2026\"",
+      "CreatedAt": "2025-06-29 23:09:10 +0200 CEST",
+      "ID": "34900bbb9476",
+      "Image": "moby/buildkit:buildx-stable-1",
+      "Labels": "",
+      "LocalVolumes": "1",
+      "Mounts": "buildx_buildki\u2026",
+      "Names": "buildx_buildkit_crod-builder0",
+      "Networks": "bridge",
+      "Ports": "",
+      "RunningFor": "4 days ago",
+      "Size": "0B",
+      "State": "running",
+      "Status": "Up 17 hours"
+    }
+  ],
+  "k8s_resources": {
+    "total_items": 68,
+    "namespaces": [],
+    "pods": [
+      "crod-core-f9886957d-dwjvq",
+      "gateway-649cfcb5d8-6pfk8",
+      "gateway-7f5b8c4f66-dv86k",
+      "intelligence-hub-8547fd7c54-mk5rt",
+      "memory-quarter-d5dc45484-wbc64",
+      "meta-chain-765ccdf646-qnddx",
+      "pattern-district-7b99545f64-xsh5x",
+      "postgres-spatial-7bbb4898bb-xdqtt",
+      "redis-76fc6cd69f-tdfpx",
+      "coredns-697968c856-b767d",
+      "helm-install-traefik-crd-jqk9g",
+      "helm-install-traefik-x28c4",
+      "local-path-provisioner-774c6665dc-vxc2k",
+      "metrics-server-6f4c6675d5-jtv5l",
+      "svclb-traefik-f19eaade-qpsqn",
+      "traefik-c98fdf6fb-26wcj"
+    ],
+    "services": [
+      "blockchain-core",
+      "crod-core",
+      "delta-quarter",
+      "gateway",
+      "gateway-public",
+      "intelligence-hub",
+      "llama-learning",
+      "memory-quarter",
+      "meta-chain",
+      "pattern-district",
+      "postgres-spatial",
+      "redis",
+      "kubernetes",
+      "kube-dns",
+      "metrics-server",
+      "traefik"
+    ]
+  },
+  "databases": [
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/meta.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23Video.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23Audio.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23Pictures.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23Software.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23FileSystem.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.cache/tracker3/files/http%3A%2F%2Ftracker.api.gnome.org%2Fontology%2Fv3%2Ftracker%23Documents.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/nltk_data/corpora/toolbox/iu_mien_samp.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/nltk_data/corpora/toolbox/MDF/MDF_AltH.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/nltk_data/corpora/toolbox/MDF/MDFSampl.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/nltk_data/corpora/city_database/city.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.n8n/database.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/storage.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/global-messages-db.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/blist.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/permissions.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/openpgp.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/favicons.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/cert9.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/places.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/cookies.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/key4.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/calendar-data/local.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/storage/ls-archive.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/thunderbird/common/.thunderbird/w5andebd.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/content-prefs.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/webappsstore.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/formhistory.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/synced-tabs.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/permissions.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/bounce-tracking-protection.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/favicons.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/domain_to_categories.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/cert9.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/protections.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/places.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage-sync-v2.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/cookies.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/key4.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/weave/bookmarks.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/ls-archive.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/indexeddb+++fx-devtools/idb/478967115deegvatroootlss--cans.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/1451318868ntouromlalnodry--epcr.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/3561288849sdhlie.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/1657114595AmcateirvtiSty.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/permanent/chrome/idb/2918063365piupsah.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cscribehow.com%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++docs.n8n.io/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++coolify.io/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cclaude.ai%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/http+++localhost+5678/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/http+++localhost+5678/idb/2040028451teyhpceascc-rtip.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Canthropic.com%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Creddit.com%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++accounts.firefox.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++laikwer.com^partitionKey=%28https%2Cgutefrage.net%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++laikwer.com^partitionKey=%28https%2Cgutefrage.net%29/idb/12183338011.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++console.hetzner.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.flaschenpost.de/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++docs.anthropic.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28http%2Clocalhost%2C5678%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28http%2Clocalhost%2C5678%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28http%2Clocalhost%2C5678%29/idb/2171031483YattIedMb.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28http%2Clocalhost%2C5678%29/idb/2826865490LCo7g%sCD7a%t1a7baaes.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/http+++fritz.box/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cubuntu.com%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++docs.github.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.crunchyroll.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/idb/2171031483YattIedMb.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/idb/2232182701SeesravbiacteaWDosrgk.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.youtube.com^partitionKey=%28https%2Cgoogle.com%29/idb/310537443LCo7g%sCD7a%taa9bca6s.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++mail.google.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++mail.google.com/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++mail.google.com/idb/953658429glmaaviyle-ks-w.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.reddit.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.reddit.com/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.reddit.com/idb/2728594770keeryovtasl-.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7.github.dev/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7.github.dev/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7.github.dev/idb/4277777170vlsacboodleg--wbedb--.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7.github.dev/idb/1068420821vdsecfo6dce3-0w7e-bb-.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7.github.dev/idb/2366965780vbsdc-obdeew-.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cgoflink.com%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++ubuntu.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cflaschenpost.de%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++accounts.google.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cpygpt.net%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++console.anthropic.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++tauri.app/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++tauri.app/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++tauri.app/idb/4197078560wnooriktbaorxi-pex.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++login.ubuntu.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++scribehow.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++scribehow.com/idb/2455568668mbiDxrpeasnweolrB.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++scribehow.com/idb/4078710882671e5df8421e51117235b.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++claude.ai/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www-crunchyroll-com.translate.goog/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++github.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cgutefrage.net%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++app.usercentrics.eu^partitionKey=%28https%2Cflaschenpost.de%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++challenges.cloudflare.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/3166453069wcaw.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/1119037936ptbc_edte.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/2181795718meogdaerlo-ts.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/2436550297weograkreort-s.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/1805274345setgaatruost-s.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/568386319wcanwec__bd.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++web.whatsapp.com/idb/3271781254seigganraolt-s.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.anthropic.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++docs.docker.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++docs.docker.com/fs/metadata.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.pornhub.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++crodbac4rdi.github.io/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.netflix.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.netflix.com/idb/2753419432nreetyfallipx..sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++0de1u6ptelv9dms6cre2r6eiomao9esedbpo79bail1eltd7gn0o.assets.github.dev/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++one.dash.cloudflare.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++fantastic-tribble-x579rgwwv563vwq7-8888.app.github.dev/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.cloudflare.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com^partitionKey=%28https%2Cchip.de%29/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++serverside.flaschenpost.de/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++discourse.ubuntu.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++discourse.ubuntu.com/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.gutefrage.net/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.gutefrage.net/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.gutefrage.net/idb/12183338011.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.googletagmanager.com^partitionKey=%28https%2Cubuntu.com%29/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.goflink.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.goflink.com/idb/4094211298BtrsaezTe++tIrnodpepx.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.goflink.com/idb/3547115956fbiDreegbaarsoetLSolc.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.goflink.com/idb/4277393678AepgpabrooytSSecrnvyi.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++github.blog/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++dash.cloudflare.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++www.google.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++ad.doubleclick.net^partitionKey=%28https%2Cgutefrage.net%29/idb/12183338011.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++coolify.imaginaryops.com/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++praxistipps.chip.de/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++praxistipps.chip.de/cache/caches.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++praxistipps.chip.de/idb/2715347067c180cb3241859ee2-5f83.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++praxistipps.chip.de/idb/646535086w1o0rbk2e1r5_ec285c83.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/https+++praxistipps.chip.de/idb/301792106ttes.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/snap/firefox/common/.mozilla/firefox/n72cird3.default/storage/default/http+++91.99.152.34+8000/ls/data.sqlite"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod local/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crodlocal/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/crod-fresh/Crod1/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/crod-fresh/alt2/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate/Mental Health Care needed/chatgpt_agent/image_metadata.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate/Mental Health Care needed/chatgpt_agent/archive_integrity.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate/Mental Health Care needed/chatgpt_agent/data/image_metadata.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate/Mental Health Care needed/chatgpt_agent/data/archive_integrity.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Agent/crod_demo.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/crood/training_data/interactions.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/crod_3d_database.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/crod_memory.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/unified_crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/crod_3d_database.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/crod_data/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/crod_parasite_data/crod_parasite.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/crod_python_city/crod_city.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/advanced/Crod1/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/advanced/alt2/crod.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.local/share/nautilus/tags/meta.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.local/share/evolution/addressbook/system/contacts.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.pki/nssdb/cert9.db"
+    },
+    {
+      "type": "sqlite",
+      "path": "/home/daniel/.pki/nssdb/key4.db"
+    }
+  ],
+  "services": [
+    "docker.service                loaded active running Docker Application Container Engine",
+    "k3s.service                   loaded active running Lightweight Kubernetes",
+    "ollama.service                loaded active running Ollama Service"
+  ],
+  "user_directories": [
+    "/home/daniel/Schreibtisch/CROD",
+    "/home/daniel/Schreibtisch/CROD/idk",
+    "/home/daniel/Schreibtisch/CROD/crod local",
+    "/home/daniel/Schreibtisch/CROD/ClaudeStuff",
+    "/home/daniel/Schreibtisch/CROD/plugins",
+    "/home/daniel/Schreibtisch/CROD/SEED_NETWORK",
+    "/home/daniel/Schreibtisch/CROD/crodlocal",
+    "/home/daniel/Schreibtisch/CROD/.ssh",
+    "/home/daniel/Schreibtisch/CROD/crod kram",
+    "/home/daniel/Schreibtisch/CROD/trolling",
+    "/home/daniel/Schreibtisch/CROD/Crod_Mental_Systems_FINAL_BUNDLE_with_Certificate",
+    "/home/daniel/Schreibtisch/CROD/idk/__pycache__",
+    "/home/daniel/Schreibtisch/CROD/crod local/__pycache__",
+    "/home/daniel/Schreibtisch/CROD/SEED_NETWORK/__pycache__",
+    "/home/daniel/Schreibtisch/CROD/crodlocal/__pycache__",
+    "/home/daniel/Schreibtisch/CROD/crod kram/serverneu",
+    "/home/daniel/Schreibtisch/CROD/crod kram/rules",
+    "/home/daniel/Schreibtisch/CROD/crod kram/runtime",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Games",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Beweise",
+    "/home/daniel/Schreibtisch/CROD/crod kram/crod-fresh",
+    "/home/daniel/Schreibtisch/CROD/crod kram/core",
+    "/home/daniel/Schreibtisch/CROD/crod kram/server_top",
+    "/home/daniel/Schreibtisch/CROD/crod kram/audit",
+    "/home/daniel/Schreibtisch/CROD/crod kram/logic",
+    "/home/daniel/Schreibtisch/CROD/crod kram/CROD_OS_Project",
+    "/home/daniel/Schreibtisch/CROD/crod kram/test it",
+    "/home/daniel/Schreibtisch/CROD/crod kram/core_rules",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Projekt Peak",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Folder",
+    "/home/daniel/Schreibtisch/CROD/crod kram/missing",
+    "/home/daniel/Schreibtisch/CROD/crod kram/memories",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Neuer Ordner (3)",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Neuer Ordner",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate",
+    "/home/daniel/Schreibtisch/CROD/crod kram/ml",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Agent",
+    "/home/daniel/Schreibtisch/CROD/crod kram/flutter_application_first",
+    "/home/daniel/Schreibtisch/CROD/crod kram/__pycache__",
+    "/home/daniel/Schreibtisch/CROD/crod kram/metadata",
+    "/home/daniel/Schreibtisch/CROD/crod kram/logs",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Neuer Ordner (2)",
+    "/home/daniel/Schreibtisch/CROD/crod kram/directory",
+    "/home/daniel/Schreibtisch/CROD/crod kram/servaa",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Neuer Ordner (4)",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Local version",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Agent_server",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Terminal - root@sealedgpt-runtime_files",
+    "/home/daniel/Schreibtisch/CROD/crod kram/crood",
+    "/home/daniel/Schreibtisch/CROD/crod kram/meta"
+  ],
+  "development_tools": [
+    {
+      "tool": "git",
+      "version": "git version 2.43.0"
+    },
+    {
+      "tool": "node",
+      "version": "v20.19.3"
+    },
+    {
+      "tool": "npm",
+      "version": "11.4.2"
+    },
+    {
+      "tool": "python3",
+      "version": "Python 3.12.3"
+    },
+    {
+      "tool": "pip3",
+      "version": "pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)"
+    },
+    {
+      "tool": "docker",
+      "version": "Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2"
+    },
+    {
+      "tool": "kubectl",
+      "version": "Client Version: v1.32.5+k3s1"
+    },
+    {
+      "tool": "k3s",
+      "version": "k3s version v1.32.5+k3s1 (8e8f2a47)"
+    },
+    {
+      "tool": "cargo",
+      "version": "cargo 1.88.0 (873a06493 2025-05-10)"
+    },
+    {
+      "tool": "rustc",
+      "version": "rustc 1.88.0 (6b00bc388 2025-06-23)"
+    },
+    {
+      "tool": "go",
+      "version": "go version go1.22.2 linux/amd64"
+    },
+    {
+      "tool": "ollama",
+      "version": "ollama version is 0.9.3"
+    },
+    {
+      "tool": "code",
+      "version": "1.101.2"
+    }
+  ],
+  "ai_models": [],
+  "custom_scripts": [
+    "/home/daniel/.claude/crod-launch.sh",
+    "/home/daniel/.n8n/start-crod-n8n.sh",
+    "/home/daniel/Schreibtisch/CROD-MEGA-START.sh",
+    "/home/daniel/Downloads/crod_complete_system.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/organize_crod_clean.sh",
+    "/home/daniel/Schreibtisch/CROD/crod kram/Consolidate/Mental Health Care needed/chatgpt_agent/install_ngrok.sh",
+    "/home/daniel/Schreibtisch/CROD/crod kram/flutter_application_first/ios/Flutter/flutter_export_environment.sh",
+    "/home/daniel/Schreibtisch/CROD/crod kram/flutter_application_first/macos/Flutter/ephemeral/flutter_export_environment.sh",
+    "/home/daniel/Schreibtisch/CROD/crod kram/directory/venv/Lib/site-packages/tqdm/completion.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/night-training.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/final_cleanup.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/start-crod-universe.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/start-claudia.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/stop-crod-universe.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-2025-RESEARCH/query_examples.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-2025-RESEARCH/query_universal_chain.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/alt/cleanup-scan.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/alt/cleanup_crod_universe.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/setup-crod-everywhere.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_overnight_training.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_crod_ultimate.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/install_node20_and_n8n.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_unified_crod.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/install_n8n.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_crod_complete.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_crod_mirror.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/standalone-crod/start_crod.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/crod-cleanup.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/crod-builder-pack.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/deploy-to-k3s.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/claude-sudo.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/generate-ghcr-secret.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/crod-power.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/dashboard/start-pyqt-dashboard.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/dashboard/start-dashboard.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/delta-tracker/install-service.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/delta-tracker/start.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/delta-tracker/deploy.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/hooks/crod-learning-hook.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/claude-imitation/start-learning-crod.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/integrations/claude-imitation/start-crod.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/pod-sources/intelligence-hub/start.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/start-crod-complete.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/create-new-repo.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/INSTALL-EVERYTHING.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/fix-k3s-permissions.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/START-CROD-CITY.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/fix-kubectl.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/setup/setup-github-repo.sh",
+    "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7/scripts/test/test-crod-city.sh"
+  ],
+  "config_files": [
+    "/home/daniel/.bashrc",
+    "/home/daniel/.config/Code/User/settings.json",
+    "/home/daniel/.claude/CLAUDE.md",
+    "/etc/systemd/system/"
+  ],
+  "cron_jobs": [],
+  "systemd_services": [],
+  "network_ports": [
+    "tcp   LISTEN 0      4096       127.0.0.1:8000       0.0.0.0:*    users:((\"kubectl\",pid=40621,fd=8))",
+    "tcp   LISTEN 0      128          0.0.0.0:8080       0.0.0.0:*    users:((\"python3\",pid=284983,fd=4),(\"python3\",pid=284983,fd=3),(\"python3\",pid=131971,fd=3))",
+    "tcp   LISTEN 0      4096       127.0.0.1:6379       0.0.0.0:*    users:((\"kubectl\",pid=40620,fd=8))",
+    "tcp   LISTEN 0      4096           [::1]:6379          [::]:*    users:((\"kubectl\",pid=40620,fd=9))",
+    "tcp   LISTEN 0      4096           [::1]:8000          [::]:*    users:((\"kubectl\",pid=40621,fd=9))"
+  ],
+  "environment_vars": {
+    "PATH": "/home/daniel/.local/bin:/home/daniel/.cargo/bin:/home/daniel/.local/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/daniel/.vscode/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/daniel/.config/Code/User/globalStorage/github.copilot-chat/debugCommand",
+    "KUBECONFIG": "/home/daniel/.kube/config"
+  },
+  "redis_info": {},
+  "ollama_models": [
+    {
+      "name": "crod-tool:latest",
+      "size": "3fd2f7f65cfb"
+    },
+    {
+      "name": "crod-simple:latest",
+      "size": "330ec1848a4a"
+    },
+    {
+      "name": "crod-simple-coder:latest",
+      "size": "241fbbc5257e"
+    },
+    {
+      "name": "crod-coder:latest",
+      "size": "86918bf2eb2a"
+    },
+    {
+      "name": "crod-chat:latest",
+      "size": "539f162e36e3"
+    },
+    {
+      "name": "mistral:7b",
+      "size": "3944fe81ec14"
+    },
+    {
+      "name": "crod:latest",
+      "size": "0f1d4a72dee8"
+    },
+    {
+      "name": "deepseek-coder:1.3b",
+      "size": "3ddd2d3fc8d2"
+    }
+  ],
+  "vscode_extensions": [],
+  "shell_history": [],
+  "git_repos": [
+    {
+      "path": "/home/daniel/Schreibtisch/Crod Programming",
+      "name": "Crod Programming"
+    },
+    {
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Folder",
+      "name": "Folder"
+    },
+    {
+      "path": "/home/daniel/Schreibtisch/CROD/crod kram/Agent",
+      "name": "Agent"
+    },
+    {
+      "path": "/home/daniel/Schreibtisch/Crod Programming/CROD-Helper-Member-7",
+      "name": "CROD-Helper-Member-7"
+    }
+  ]
+}

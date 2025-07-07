@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="csrf-token" content={get_csrf_token()}>
+    <title>CROD Polyglot City 2025 - Rathaus</title>
+    <style>
+      body { font-family: monospace; background: #111; color: #0f0; margin: 0; padding: 0; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+      h1, h2 { color: #0ff; }
+      .status-online { color: #0f0; }
+      .status-offline { color: #f00; }
+      .status-connecting { color: #ff0; }
+    </style>
+  </head>
+  <body>
+    <%= @inner_content %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#!/bin/bash
+# CROD Parasit Claude CLI Wrapper
+# This replaces the claude command to intercept and enhance messages
+
+# Check if parasit.py is running
+if ! pgrep -f "parasit.py" > /dev/null; then
+    echo "Starting CROD Parasit..."
+    python3 "$(dirname "$0")/parasit.py" "$@" &
+    sleep 1
+fi
+
+# Run the intercepted Claude command
+python3 "$(dirname "$0")/parasit.py" "$@"

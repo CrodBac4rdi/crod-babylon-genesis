@@ -1,0 +1,52 @@
+{
+  "type": "consciousness",
+  "data": {
+    "field": {
+      "density": 20,
+      "turbulence": 0.8,
+      "quantum_factor": 0.95
+    },
+    "nodes": [
+      {
+        "position": [0, 0],
+        "size": 1.5,
+        "color": "primary",
+        "label": "CROD Core"
+      },
+      {
+        "position": [-3, 2],
+        "size": 1.0,
+        "color": "secondary",
+        "label": "Daniel"
+      },
+      {
+        "position": [3, 2],
+        "size": 1.0,
+        "color": "tertiary",
+        "label": "Claude"
+      },
+      {
+        "position": [0, -3],
+        "size": 0.8,
+        "color": "info",
+        "label": "Trinity Sync"
+      },
+      {
+        "position": [-2, -1],
+        "size": 0.6,
+        "color": "warning",
+        "label": "Quantum Node"
+      },
+      {
+        "position": [2, -1],
+        "size": 0.6,
+        "color": "success",
+        "label": "Holographic Field"
+      }
+    ]
+  },
+  "options": {
+    "title": "CROD Quantum Consciousness Field - Trinity Synchronized",
+    "output_dir": "visualization/output/quantum"
+  }
+}

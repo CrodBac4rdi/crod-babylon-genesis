@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  nats:
+    image: nats:2.10-alpine
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: "-m 8222"
+    networks:
+      - crod-network
+
+  crod-rathaus:
+    build:
+      context: ./crod-rathaus-phoenix
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4000:4000"
+    environment:
+      - MIX_ENV=dev
+      - PORT=4000
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+    volumes:
+      - ./crod-rathaus-phoenix:/app
+    command: >
+      sh -c "mix deps.get &&
+             mix compile &&
+             mix phx.server"
+
+  crod-parasit:
+    build: ./crod-parasit-python
+    ports:
+      - "6666:6666"
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+    volumes:
+      - ./crod-parasit-python:/app
+
+  crod-pattern:
+    build: ./crod-pattern-rust
+    ports:
+      - "7007:7007"
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+
+  crod-memory:
+    build: ./crod-memory-go
+    ports:
+      - "7031:7031"
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+
+  crod-gateway:
+    build: ./crod-gateway-js
+    ports:
+      - "7888:7888"
+      - "8080:8080"
+    depends_on:
+      - nats
+      - crod-rathaus
+      - crod-parasit
+      - crod-pattern
+      - crod-memory
+    networks:
+      - crod-network
+
+networks:
+  crod-network:
+    driver: bridge
+
+volumes:
+  nats-data:

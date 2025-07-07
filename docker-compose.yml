@@ -1,0 +1,135 @@
+version: '3.8'
+
+services:
+  # NATS Message Bus Cluster
+  nats-1:
+    image: nats:2.10-alpine
+    container_name: crod-nats-1
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - ./config/nats-server.conf:/etc/nats/nats-server.conf
+      - nats-data-1:/data
+    command: "-c /etc/nats/nats-server.conf"
+    networks:
+      - crod-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8222/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nats-2:
+    image: nats:2.10-alpine
+    container_name: crod-nats-2
+    volumes:
+      - ./config/nats-server.conf:/etc/nats/nats-server.conf
+      - nats-data-2:/data
+    command: "-c /etc/nats/nats-server.conf"
+    networks:
+      - crod-network
+    depends_on:
+      - nats-1
+
+  nats-3:
+    image: nats:2.10-alpine
+    container_name: crod-nats-3
+    volumes:
+      - ./config/nats-server.conf:/etc/nats/nats-server.conf
+      - nats-data-3:/data
+    command: "-c /etc/nats/nats-server.conf"
+    networks:
+      - crod-network
+    depends_on:
+      - nats-1
+
+  phoenix-rathaus:
+    build: ./phoenix-rathaus
+    container_name: phoenix-rathaus
+    ports:
+      - "4000:4000"
+    environment:
+      - NATS_URL=nats://nats:4222
+      - MIX_ENV=prod
+      - SECRET_KEY_BASE=VeryLongSecretKeyThatIsAtLeast64BytesLongForPhoenixProductionUse123
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+
+  python-parasit:
+    build: ./python-parasit
+    container_name: python-parasit
+    ports:
+      - "6666:6666"
+    environment:
+      - NATS_URL=nats://nats:4222
+      - PHOENIX_URL=ws://phoenix-rathaus:4000/socket/websocket
+    depends_on:
+      - nats
+      - phoenix-rathaus
+    networks:
+      - crod-network
+
+  rust-pattern:
+    build: ./rust-pattern
+    container_name: rust-pattern
+    ports:
+      - "7007:7007"
+    environment:
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+
+  go-memory:
+    build: ./go-memory
+    container_name: go-memory
+    ports:
+      - "7031:7031"
+    environment:
+      - NATS_URL=nats://nats:4222
+    depends_on:
+      - nats
+    networks:
+      - crod-network
+
+  # JS Gateway - API Gateway
+  js-gateway:
+    build: ./js-gateway
+    container_name: crod-js-gateway
+    ports:
+      - "8888:8888"
+    environment:
+      - NATS_URL=nats://nats-1:4222
+      - CROD_ROLE=gateway
+      - TRINITY_VALUES=ich:2,bins:3,wieder:5,daniel:67,claude:71,crod:17
+      - NODE_ENV=production
+    depends_on:
+      - nats-1
+      - phoenix-rathaus
+      - python-parasit
+      - rust-pattern
+      - go-memory
+    networks:
+      - crod-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  crod-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+
+volumes:
+  nats-data-1:
+  nats-data-2:
+  nats-data-3:
+  memory-data:

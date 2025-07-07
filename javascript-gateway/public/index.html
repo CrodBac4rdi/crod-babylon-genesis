@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROD Polyglot City Gateway</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ff00ff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .districts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .district {
+            background: #1a1a1a;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .district.online {
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        .district.offline {
+            border-color: #ff0000;
+            opacity: 0.5;
+        }
+
+        .district h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff0000;
+        }
+
+        .status.online {
+            background: #00ff00;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        }
+
+        .console {
+            background: #000;
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .console-line {
+            margin-bottom: 5px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            background: #1a1a1a;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        button {
+            background: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #ff00ff;
+            box-shadow: 0 0 10px #ff00ff;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .metric {
+            background: #1a1a1a;
+            border: 1px solid #00ffff;
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            color: #ffff00;
+            font-weight: bold;
+        }
+
+        .metric-label {
+            color: #00ffff;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏙️ CROD POLYGLOT CITY GATEWAY 🏙️</h1>
+        
+        <div class="districts" id="districts">
+            <!-- Districts will be populated here -->
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="patternInput" placeholder="Enter text for pattern analysis...">
+            <button onclick="analyzePattern()">Analyze Pattern</button>
+        </div>
+
+        <div class="console" id="console">
+            <div class="console-line">🌐 Connecting to CROD Polyglot City...</div>
+        </div>
+
+        <div class="metrics" id="metrics">
+            <div class="metric">
+                <div class="metric-value" id="wsConnections">0</div>
+                <div class="metric-label">WebSocket Connections</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value" id="patternsAnalyzed">0</div>
+                <div class="metric-label">Patterns Analyzed</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value" id="memoryOps">0</div>
+                <div class="metric-label">Memory Operations</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value" id="uptime">0s</div>
+                <div class="metric-label">Uptime</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ws;
+        let startTime = Date.now();
+        let stats = {
+            wsConnections: 0,
+            patternsAnalyzed: 0,
+            memoryOps: 0
+        };
+
+        const districts = {
+            phoenix_rathaus: { name: 'Phoenix Rathaus', port: 4000, status: 'offline' },
+            python_parasit: { name: 'Python Parasit', port: 6666, status: 'offline' },
+            rust_pattern: { name: 'Rust Pattern District', port: 7007, status: 'offline' },
+            go_memory: { name: 'Go Memory Quarter', port: 7031, status: 'offline' },
+            js_gateway: { name: 'JavaScript Gateway', port: 7888, status: 'online' }
+        };
+
+        function connectWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
+
+            ws.onopen = () => {
+                addConsoleMessage('✅ Connected to Gateway WebSocket');
+                stats.wsConnections = 1;
+                updateMetrics();
+            };
+
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                handleWebSocketMessage(data);
+            };
+
+            ws.onclose = () => {
+                addConsoleMessage('❌ WebSocket connection closed');
+                stats.wsConnections = 0;
+                updateMetrics();
+                setTimeout(connectWebSocket, 3000);
+            };
+
+            ws.onerror = (error) => {
+                addConsoleMessage(`⚠️ WebSocket error: ${error.message}`);
+            };
+        }
+
+        function handleWebSocketMessage(data) {
+            switch (data.type) {
+                case 'connected':
+                    addConsoleMessage(`🔗 Connected with ID: ${data.clientId}`);
+                    if (data.districts) {
+                        data.districts.forEach(d => {
+                            if (districts[d.name]) {
+                                districts[d.name].status = d.status;
+                            }
+                        });
+                        updateDistricts();
+                    }
+                    break;
+
+                case 'district_update':
+                    const { district, status } = data.data;
+                    if (districts[district]) {
+                        districts[district].status = status;
+                        updateDistricts();
+                        addConsoleMessage(`📡 District ${district} is now ${status}`);
+                    }
+                    break;
+
+                case 'pattern_result':
+                    stats.patternsAnalyzed++;
+                    updateMetrics();
+                    addConsoleMessage(`🧠 Pattern analysis complete: ${JSON.stringify(data.data)}`);
+                    break;
+            }
+        }
+
+        function updateDistricts() {
+            const container = document.getElementById('districts');
+            container.innerHTML = '';
+
+            Object.entries(districts).forEach(([key, district]) => {
+                const div = document.createElement('div');
+                div.className = `district ${district.status}`;
+                div.innerHTML = `
+                    <div class="status ${district.status}"></div>
+                    <h3>${district.name}</h3>
+                    <p>Port: ${district.port}</p>
+                    <p>Status: ${district.status}</p>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function analyzePattern() {
+            const input = document.getElementById('patternInput');
+            const text = input.value.trim();
+            
+            if (!text) return;
+
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({
+                    type: 'pattern_analyze',
+                    payload: { text }
+                }));
+                addConsoleMessage(`📤 Sent pattern for analysis: "${text}"`);
+                input.value = '';
+            } else {
+                addConsoleMessage('⚠️ WebSocket not connected');
+            }
+        }
+
+        function addConsoleMessage(message) {
+            const console = document.getElementById('console');
+            const line = document.createElement('div');
+            line.className = 'console-line';
+            line.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            console.appendChild(line);
+            console.scrollTop = console.scrollHeight;
+        }
+
+        function updateMetrics() {
+            document.getElementById('wsConnections').textContent = stats.wsConnections;
+            document.getElementById('patternsAnalyzed').textContent = stats.patternsAnalyzed;
+            document.getElementById('memoryOps').textContent = stats.memoryOps;
+            
+            const uptime = Math.floor((Date.now() - startTime) / 1000);
+            document.getElementById('uptime').textContent = `${uptime}s`;
+        }
+
+        // Initialize
+        updateDistricts();
+        connectWebSocket();
+        setInterval(updateMetrics, 1000);
+
+        // Handle Enter key
+        document.getElementById('patternInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                analyzePattern();
+            }
+        });
+    </script>
+</body>
+</html>
