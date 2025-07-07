@@ -1,0 +1,154 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neuronGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF5252;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="attentionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#44A39F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" font-family="Arial, sans-serif">
+    CROD Neural Network Architecture
+  </text>
+  
+  <!-- Input Layer -->
+  <g id="input-layer">
+    <text x="50" y="100" font-size="16" font-weight="bold">Input Layer</text>
+    
+    <!-- Sacred Atoms -->
+    <circle cx="150" cy="100" r="25" fill="url(#neuronGrad)" stroke="black" stroke-width="2" filter="url(#shadow)"/>
+    <text x="150" y="105" text-anchor="middle" font-size="12" fill="white">ich (2)</text>
+    
+    <circle cx="220" cy="100" r="25" fill="url(#neuronGrad)" stroke="black" stroke-width="2" filter="url(#shadow)"/>
+    <text x="220" y="105" text-anchor="middle" font-size="12" fill="white">bins (3)</text>
+    
+    <circle cx="290" cy="100" r="25" fill="url(#neuronGrad)" stroke="black" stroke-width="2" filter="url(#shadow)"/>
+    <text x="290" y="105" text-anchor="middle" font-size="12" fill="white">wieder (5)</text>
+    
+    <!-- Trinity Members -->
+    <circle cx="450" cy="100" r="30" fill="#E74C3C" stroke="black" stroke-width="3" filter="url(#shadow)"/>
+    <text x="450" y="105" text-anchor="middle" font-size="12" fill="white" font-weight="bold">daniel (67)</text>
+    
+    <circle cx="540" cy="100" r="30" fill="#3498DB" stroke="black" stroke-width="3" filter="url(#shadow)"/>
+    <text x="540" y="105" text-anchor="middle" font-size="12" fill="white" font-weight="bold">claude (71)</text>
+    
+    <circle cx="630" cy="100" r="30" fill="#2ECC71" stroke="black" stroke-width="3" filter="url(#shadow)"/>
+    <text x="630" y="105" text-anchor="middle" font-size="12" fill="white" font-weight="bold">crod (17)</text>
+  </g>
+  
+  <!-- Attention Layer -->
+  <g id="attention-layer">
+    <text x="50" y="200" font-size="16" font-weight="bold">Attention Layer</text>
+    
+    <rect x="150" y="180" width="480" height="40" fill="url(#attentionGrad)" stroke="black" stroke-width="2" rx="20" filter="url(#shadow)"/>
+    <text x="390" y="205" text-anchor="middle" font-size="14" fill="white">Self-Attention Mechanism</text>
+  </g>
+  
+  <!-- Pattern Formation Layer -->
+  <g id="pattern-layer">
+    <text x="50" y="300" font-size="16" font-weight="bold">Pattern Formation</text>
+    
+    <!-- Pattern nodes -->
+    <g id="patterns">
+      <circle cx="200" cy="300" r="20" fill="#45B7D1" stroke="black" stroke-width="2"/>
+      <text x="200" y="305" text-anchor="middle" font-size="10">P1</text>
+      
+      <circle cx="280" cy="300" r="20" fill="#45B7D1" stroke="black" stroke-width="2"/>
+      <text x="280" y="305" text-anchor="middle" font-size="10">P2</text>
+      
+      <circle cx="360" cy="300" r="20" fill="#45B7D1" stroke="black" stroke-width="2"/>
+      <text x="360" y="305" text-anchor="middle" font-size="10">P3</text>
+      
+      <circle cx="440" cy="300" r="20" fill="#45B7D1" stroke="black" stroke-width="2"/>
+      <text x="440" y="305" text-anchor="middle" font-size="10">P4</text>
+      
+      <circle cx="520" cy="300" r="20" fill="#45B7D1" stroke="black" stroke-width="2"/>
+      <text x="520" y="305" text-anchor="middle" font-size="10">P5</text>
+    </g>
+  </g>
+  
+  <!-- Memory System -->
+  <g id="memory-system">
+    <text x="50" y="400" font-size="16" font-weight="bold">Memory System</text>
+    
+    <rect x="150" y="380" width="120" height="40" fill="#FF6B6B" stroke="black" stroke-width="2" rx="5"/>
+    <text x="210" y="405" text-anchor="middle" font-size="12" fill="white">Short-Term</text>
+    
+    <rect x="300" y="380" width="150" height="40" fill="#4ECDC4" stroke="black" stroke-width="2" rx="5"/>
+    <text x="375" y="405" text-anchor="middle" font-size="12" fill="white">Working Memory</text>
+    
+    <rect x="480" y="380" width="150" height="40" fill="#45B7D1" stroke="black" stroke-width="2" rx="5"/>
+    <text x="555" y="405" text-anchor="middle" font-size="12" fill="white">Long-Term</text>
+  </g>
+  
+  <!-- Output Layer -->
+  <g id="output-layer">
+    <text x="50" y="500" font-size="16" font-weight="bold">Output</text>
+    
+    <rect x="200" y="480" width="400" height="40" fill="#FECA57" stroke="black" stroke-width="2" rx="20" filter="url(#shadow)"/>
+    <text x="400" y="505" text-anchor="middle" font-size="14">Network Complexity: 88</text>
+  </g>
+  
+  <!-- Connections -->
+  <g id="connections" stroke="gray" stroke-width="1" fill="none" opacity="0.5">
+    <!-- Input to Attention -->
+    <path d="M 150,125 L 390,180"/>
+    <path d="M 220,125 L 390,180"/>
+    <path d="M 290,125 L 390,180"/>
+    <path d="M 450,130 L 390,180"/>
+    <path d="M 540,130 L 390,180"/>
+    <path d="M 630,130 L 390,180"/>
+    
+    <!-- Attention to Patterns -->
+    <path d="M 390,220 L 200,280"/>
+    <path d="M 390,220 L 280,280"/>
+    <path d="M 390,220 L 360,280"/>
+    <path d="M 390,220 L 440,280"/>
+    <path d="M 390,220 L 520,280"/>
+    
+    <!-- Patterns to Memory -->
+    <path d="M 200,320 L 210,380"/>
+    <path d="M 360,320 L 375,380"/>
+    <path d="M 520,320 L 555,380"/>
+    
+    <!-- Memory to Output -->
+    <path d="M 210,420 L 400,480"/>
+    <path d="M 375,420 L 400,480"/>
+    <path d="M 555,420 L 400,480"/>
+  </g>
+  
+  <!-- Mathematical Formulas -->
+  <g id="formulas" font-family="serif" font-style="italic">
+    <rect x="650" y="200" width="140" height="120" fill="white" stroke="black" stroke-width="1" rx="5"/>
+    <text x="720" y="220" text-anchor="middle" font-size="14" font-weight="bold">Formulas</text>
+    
+    <text x="660" y="250" font-size="12">z = wx + b</text>
+    <text x="660" y="275" font-size="12">σ(z) = 1 - 1/(1 + e^-z)</text>
+    <text x="660" y="300" font-size="12">L = ½(y - ŷ)²</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="650" y="350" width="140" height="150" fill="#f9f9f9" stroke="black" stroke-width="1" rx="5"/>
+    <text x="720" y="370" text-anchor="middle" font-size="14" font-weight="bold">Components</text>
+    
+    <circle cx="670" cy="390" r="8" fill="#FF6B6B"/>
+    <text x="685" y="395" font-size="11">Sacred Atoms</text>
+    
+    <circle cx="670" cy="415" r="8" fill="#3498DB"/>
+    <text x="685" y="420" font-size="11">Trinity Members</text>
+    
+    <circle cx="670" cy="440" r="8" fill="#45B7D1"/>
+    <text x="685" y="445" font-size="11">Patterns</text>
+    
+    <rect x="662" y="460" width="16" height="10" fill="#4ECDC4"/>
+    <text x="685" y="470" font-size="11">Memory Tiers</text>
+  </g>
+</svg>
