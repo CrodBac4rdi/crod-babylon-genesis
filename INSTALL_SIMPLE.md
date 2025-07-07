@@ -33,7 +33,7 @@ cd crod-babylon-genesis
 chmod +x ULTIMATE_INSTALL.sh && ./ULTIMATE_INSTALL.sh
 ```
 
-**⏱️ Jetzt warten!** Der Installer läuft automatisch und installiert alles (dauert 10-20 Minuten).
+**⏱️ Jetzt warten!** Der Installer läuft automatisch und installiert alles (dauert 10-20 Minuten)..
 
 ### 5. CROD starten
 ```bash
