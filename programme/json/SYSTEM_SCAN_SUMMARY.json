@@ -1,0 +1,22 @@
+{
+  "scan_date": "2025-07-04T12:06:20.831911",
+  "totals": {
+    "python_packages": 342,
+    "npm_packages": 3,
+    "system_packages": 498,
+    "docker_images": 40,
+    "docker_containers": 1,
+    "k8s_pods": 16,
+    "databases": 172,
+    "services": 3,
+    "dev_tools": 13,
+    "ollama_models": 8,
+    "git_repos": 4
+  },
+  "highlights": {
+    "has_docker": true,
+    "has_k8s": true,
+    "has_ollama": true,
+    "crod_services_running": 0
+  }
+}

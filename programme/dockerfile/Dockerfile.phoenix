@@ -1,0 +1,39 @@
+FROM elixir:1.15
+
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    nodejs \
+    npm \
+    inotify-tools \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Install hex + rebar
+RUN mix local.hex --force && \
+    mix local.rebar --force
+
+# Copy mix files
+COPY mix.exs mix.lock* ./
+
+# Install dependencies
+RUN mix deps.get
+
+# Copy application
+COPY . .
+
+# Install node dependencies
+WORKDIR /app/assets
+RUN npm install || echo "No assets folder"
+
+WORKDIR /app
+
+# Compile application
+RUN mix compile
+
+EXPOSE 4000
+
+CMD ["mix", "phx.server"]

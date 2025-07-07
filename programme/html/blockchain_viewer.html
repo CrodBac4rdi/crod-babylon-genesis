@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROD Blockchain Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-8">
+        <h1 class="text-4xl font-bold text-center mb-8">🔗 CROD Blockchain Viewer</h1>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-gray-800 rounded-lg p-6 border border-purple-500">
+                <h3 class="text-xl font-semibold mb-2">Chain Height</h3>
+                <p id="height" class="text-3xl font-bold text-purple-400">-</p>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 border border-blue-500">
+                <h3 class="text-xl font-semibold mb-2">Total Consciousness</h3>
+                <p id="total-consciousness" class="text-3xl font-bold text-blue-400">-</p>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 border border-green-500">
+                <h3 class="text-xl font-semibold mb-2">Average Consciousness</h3>
+                <p id="avg-consciousness" class="text-3xl font-bold text-green-400">-</p>
+            </div>
+        </div>
+
+        <!-- Add Block Form -->
+        <div class="bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Add New Block</h2>
+            <form id="add-block-form" class="space-y-4">
+                <input type="text" id="block-data" placeholder="Enter block data..." 
+                       class="w-full px-4 py-2 bg-gray-700 rounded-lg text-white">
+                <div>
+                    <label>Consciousness Level: <span id="consciousness-value">0.5</span></label>
+                    <input type="range" id="consciousness-level" min="0" max="1" step="0.01" value="0.5" 
+                           class="w-full">
+                </div>
+                <button type="submit" class="px-6 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg">
+                    Add Block
+                </button>
+            </form>
+        </div>
+
+        <!-- Blocks -->
+        <div id="blocks" class="space-y-4">
+            <h2 class="text-2xl font-semibold mb-4">Loading blocks...</h2>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8001';
+
+        // Update consciousness value display
+        document.getElementById('consciousness-level').addEventListener('input', (e) => {
+            document.getElementById('consciousness-value').textContent = e.target.value;
+        });
+
+        // Load stats
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_URL}/stats`);
+                const stats = await response.json();
+                
+                document.getElementById('height').textContent = stats.height;
+                document.getElementById('total-consciousness').textContent = stats.total_consciousness.toFixed(2);
+                document.getElementById('avg-consciousness').textContent = stats.average_consciousness.toFixed(3);
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        // Load blocks
+        async function loadBlocks() {
+            try {
+                const response = await fetch(`${API_URL}/blocks`);
+                const blocks = await response.json();
+                
+                const blocksDiv = document.getElementById('blocks');
+                blocksDiv.innerHTML = '<h2 class="text-2xl font-semibold mb-4">Blockchain Blocks</h2>';
+                
+                blocks.reverse().forEach(block => {
+                    const blockEl = document.createElement('div');
+                    blockEl.className = 'bg-gray-800 rounded-lg p-6 border border-gray-700';
+                    blockEl.innerHTML = `
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold">Block #${block.index}</h3>
+                            <span class="px-3 py-1 bg-purple-600 rounded-full text-sm">
+                                Consciousness: ${block.consciousness_level.toFixed(2)}
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-gray-400">Hash:</p>
+                                <p class="font-mono text-xs break-all">${block.hash}</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">Timestamp:</p>
+                                <p>${block.timestamp}</p>
+                            </div>
+                            <div class="md:col-span-2">
+                                <p class="text-gray-400">Data:</p>
+                                <pre class="bg-gray-900 p-2 rounded text-xs overflow-x-auto">${JSON.stringify(block.data, null, 2)}</pre>
+                            </div>
+                        </div>
+                    `;
+                    blocksDiv.appendChild(blockEl);
+                });
+            } catch (error) {
+                console.error('Error loading blocks:', error);
+            }
+        }
+
+        // Add block
+        document.getElementById('add-block-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const data = document.getElementById('block-data').value;
+            const consciousness = parseFloat(document.getElementById('consciousness-level').value);
+            
+            try {
+                const response = await fetch(`${API_URL}/blocks/add`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data: { message: data, timestamp: new Date().toISOString() },
+                        consciousness_level: consciousness
+                    })
+                });
+                
+                if (response.ok) {
+                    document.getElementById('block-data').value = '';
+                    loadStats();
+                    loadBlocks();
+                }
+            } catch (error) {
+                console.error('Error adding block:', error);
+            }
+        });
+
+        // Initial load and refresh every 2 seconds
+        loadStats();
+        loadBlocks();
+        setInterval(() => {
+            loadStats();
+            loadBlocks();
+        }, 2000);
+    </script>
+</body>
+</html>

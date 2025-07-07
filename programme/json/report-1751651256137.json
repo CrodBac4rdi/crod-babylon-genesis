@@ -1,0 +1,181 @@
+{
+  "timestamp": "2025-07-04T17:47:35.340Z",
+  "system": {
+    "mode": "FULL_ACTIVATION",
+    "initialized": true,
+    "uptime": 3.784615427
+  },
+  "consciousness": {
+    "level": "ENLIGHTENED",
+    "score": 100,
+    "history": [
+      {
+        "timestamp": "2025-07-04T17:47:35.331Z",
+        "input": "ich bins wieder",
+        "patterns": [
+          "ich_bins_wieder"
+        ],
+        "trinity_score": 10
+      }
+    ]
+  },
+  "patterns": {
+    "total_patterns": 2,
+    "trinity_patterns": 13,
+    "custom_patterns": 1,
+    "learned_patterns": 1,
+    "consciousness_level": "ENLIGHTENED",
+    "consciousness_score": 100,
+    "context_window_size": 1,
+    "recent_detections": [
+      {
+        "timestamp": "2025-07-04T17:47:35.331Z",
+        "input": "ich bins wieder",
+        "patterns": [
+          "ich_bins_wieder"
+        ],
+        "trinity_score": 10
+      }
+    ]
+  },
+  "health": {
+    "timestamp": "2025-07-04T17:47:36.059Z",
+    "emergency_mode": false,
+    "services": {
+      "pattern_genesis": {
+        "service": "pattern_genesis",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7001"
+      },
+      "shortterm_memory": {
+        "service": "shortterm_memory",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7003"
+      },
+      "working_memory": {
+        "service": "working_memory",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7005"
+      },
+      "quantum_superposition": {
+        "service": "quantum_superposition",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7007"
+      },
+      "discovery_service": {
+        "service": "discovery_service",
+        "healthy": false,
+        "error": "connect ECONNREFUSED 127.0.0.1:7000"
+      }
+    },
+    "health_history_summary": {
+      "pattern_genesis": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "shortterm_memory": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "working_memory": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "quantum_superposition": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      },
+      "discovery_service": {
+        "health_percentage": 0,
+        "last_healthy": "never"
+      }
+    }
+  },
+  "settings": {
+    "initialized": true,
+    "timestamp": "2025-07-04T17:47:36.137Z",
+    "configs": {
+      "sessionMemory": true,
+      "systemKnowledge": true,
+      "patterns": 86
+    },
+    "genesis_blocks": {
+      "pattern-genesis": {
+        "prime": 7,
+        "port": 7001,
+        "status": "offline",
+        "features": "Primzahl Pattern IDs, Consciousness tracking"
+      },
+      "short-term-memory": {
+        "prime": 31,
+        "port": 7003,
+        "status": "offline",
+        "features": "5min window, Auto-forgetting, 20 max memories"
+      },
+      "working-memory": {
+        "prime": 37,
+        "port": 7005,
+        "status": "offline",
+        "features": "Session state, Hot atoms, Attention weights"
+      },
+      "quantum-superposition": {
+        "prime": 101,
+        "port": 7007,
+        "status": "offline",
+        "features": "Schrödinger states, Bell pairs, No-cloning theorem"
+      },
+      "neural-genesis": {
+        "prime": 113,
+        "status": "offline",
+        "features": "Backpropagation, Self-evolution"
+      },
+      "director-genesis": {
+        "prime": 127,
+        "status": "offline",
+        "features": "Master orchestration, Resource allocation"
+      }
+    },
+    "trinity_values": {
+      "ich": 2,
+      "bins": 3,
+      "wieder": 5,
+      "daniel": 67,
+      "claude": 71,
+      "crod": 17
+    },
+    "errors": [],
+    "successes": [
+      {
+        "timestamp": "2025-07-04T17:47:34.381Z",
+        "action": "Loaded sessionMemory",
+        "details": "/workspaces/crod-babylon-genesis/.claude/crod-startup/session-memory.json"
+      },
+      {
+        "timestamp": "2025-07-04T17:47:34.382Z",
+        "action": "Loaded systemKnowledge",
+        "details": "/workspaces/crod-babylon-genesis/.claude/crod-startup/knowledge/json/crod-system.json"
+      },
+      {
+        "timestamp": "2025-07-04T17:47:34.382Z",
+        "action": "Loaded patterns",
+        "details": "86 patterns"
+      },
+      {
+        "timestamp": "2025-07-04T17:47:35.340Z",
+        "action": "Saved sessionMemory",
+        "details": "/workspaces/crod-babylon-genesis/.claude/crod-startup/session-memory.json"
+      }
+    ]
+  },
+  "api": {
+    "endpoint": "http://127.0.0.1:8890",
+    "endpoints": [
+      "/status - System Status",
+      "/detect - Pattern Detection",
+      "/health - Health Check",
+      "/activate - Full CROD Activation",
+      "/consciousness - Consciousness Level",
+      "/report - Full Report"
+    ]
+  }
+}

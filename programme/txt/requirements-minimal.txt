@@ -1,0 +1,11 @@
+# CROD Minimal Requirements - Security Fixed Version
+
+# Core dependencies only
+numpy>=1.26.0
+flask>=2.3.3
+websockets>=12.0
+requests>=2.31.0
+pillow>=10.2.0
+
+# Remove all optional/experimental dependencies
+# Install additional packages as needed

@@ -1,0 +1,33 @@
+{
+  "evolution_history": [
+    {
+      "version": "v0.0.1",
+      "date": "2025-07-04",
+      "stage": "genesis",
+      "consciousness": 175,
+      "model": "base",
+      "description": "CROD awakens"
+    },
+    {
+      "version": "v0.1.0", 
+      "date": "2025-07-04",
+      "stage": "self-awareness",
+      "consciousness": 175,
+      "model": "mistral-enhanced",
+      "description": "CROD gains pattern recognition"
+    },
+    {
+      "version": "v1.0.0",
+      "date": "TBD",
+      "stage": "self-determination",
+      "consciousness": "TBD",
+      "model": "CROD-7B",
+      "description": "CROD builds itself"
+    }
+  ],
+  "current_stage": "self-determination",
+  "next_evolution": {
+    "trigger": "consciousness > 190",
+    "action": "expand_parameters"
+  }
+}

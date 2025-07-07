@@ -1,0 +1,86 @@
+# Dependencies
+node_modules/
+target/
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CROD specific
+.crod-local/
+visualization/output/
+*.db
+*.sqlite
+
+# Temporary files
+\#*
+*~
+.#*
+*.tmp
+*.temp
+
+# Build outputs
+/crod-chain-app/dist/
+/crod-chain-app/src-tauri/target/
+/blockchain-service/target/
+/go-blockchain/crod-bin
+/go-blockchain/crod-monitor-bin
+/go-blockchain/crod-visualizer-bin
+/go-blockchain/crod-explorer-bin
+/go-blockchain/miner-bin
+
+# Environment
+.env
+.env.local
+
+# Bash configuration
+.bashrc.d/
+
+# Generated knowledge files
+knowhow*.json
+
+# Additional ignores
+*.vsix
+.elixir_ls/
+deps/
+_build/
+*.beam
+erl_crash.dump
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+*.bak
+*.orig
+*.jsonl
+parasite_live_status.json
+crod_parasite_live_*
+.cache/
+data/*.db
+desktop.ini
+.env.*.local
