@@ -1,0 +1,141 @@
+version: '3.8'
+
+services:
+  # PostgreSQL for main data and event sourcing
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crod_phoenix_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # EventStore for event sourcing
+  eventstore:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crod_eventstore_dev
+    ports:
+      - "5433:5432"
+    volumes:
+      - eventstore_data:/var/lib/postgresql/data
+
+  # NATS for inter-service messaging
+  nats:
+    image: nats:2.10-alpine
+    ports:
+      - "4222:4222"
+      - "8222:8222"  # Monitoring port
+    command: ["-js", "-m", "8222"]  # Enable JetStream
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "4222"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # n8n for workflow automation
+  n8n:
+    image: n8nio/n8n:latest
+    environment:
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      - N8N_DIAGNOSTICS_ENABLED=false
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  # CROD Phoenix orchestrator
+  crod-phoenix:
+    build:
+      context: ./crod-phoenix
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+      nats:
+        condition: service_healthy
+    environment:
+      - MIX_ENV=dev
+      - POSTGRES_HOST=postgres
+      - NATS_HOST=nats
+      - PHX_HOST=localhost
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./crod-phoenix:/app
+      - crod_build:/app/_build
+      - crod_deps:/app/deps
+    command: >
+      sh -c "mix deps.get && 
+             mix ecto.create && 
+             mix ecto.migrate && 
+             mix phx.server"
+
+  # Python AI District (CROD Parasite services)
+  crod-python:
+    build:
+      context: ./polyglot/python
+      dockerfile: Dockerfile
+    depends_on:
+      - nats
+    environment:
+      - NATS_HOST=nats
+      - DISTRICT=python
+      - SUB_DISTRICT=neural_network_park
+    volumes:
+      - ./polyglot/python:/app
+    command: python crod_parasite_service.py
+
+  # Rust Performance District
+  crod-rust:
+    build:
+      context: ./polyglot/rust
+      dockerfile: Dockerfile
+    depends_on:
+      - nats
+    environment:
+      - NATS_HOST=nats
+      - DISTRICT=rust
+      - SUB_DISTRICT=memory_safe_zone
+    volumes:
+      - ./polyglot/rust:/app
+      - rust_target:/app/target
+    command: cargo run --release
+
+  # Go Networking District
+  crod-go:
+    build:
+      context: ./polyglot/go
+      dockerfile: Dockerfile
+    depends_on:
+      - nats
+    environment:
+      - NATS_HOST=nats
+      - DISTRICT=go
+      - SUB_DISTRICT=goroutine_grid
+    volumes:
+      - ./polyglot/go:/app
+      - go_cache:/go/pkg
+    command: go run .
+
+volumes:
+  postgres_data:
+  eventstore_data:
+  n8n_data:
+  crod_build:
+  crod_deps:
+  rust_target:
+  go_cache:
