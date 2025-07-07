@@ -63,3 +63,24 @@ visualization/output/
 
 # Generated knowledge files
 knowhow*.json
+
+# Additional ignores
+*.vsix
+.elixir_ls/
+deps/
+_build/
+*.beam
+erl_crash.dump
+.coverage
+htmlcov/
+.pytest_cache/
+coverage/
+*.bak
+*.orig
+*.jsonl
+parasite_live_status.json
+crod_parasite_live_*
+.cache/
+data/*.db
+desktop.ini
+.env.*.local
