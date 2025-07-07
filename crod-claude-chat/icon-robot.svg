@@ -1,0 +1,55 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Robot Head -->
+  <rect x="32" y="24" width="64" height="48" rx="8" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  
+  <!-- Antenna -->
+  <line x1="64" y1="24" x2="64" y2="12" stroke="#2D3748" stroke-width="2"/>
+  <circle cx="64" cy="10" r="4" fill="#F56565"/>
+  
+  <!-- Eyes -->
+  <circle cx="48" cy="44" r="8" fill="#63B3ED">
+    <animate attributeName="r" values="8;6;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="44" r="8" fill="#63B3ED">
+    <animate attributeName="r" values="8;6;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Mouth/Display -->
+  <rect x="44" y="56" width="40" height="8" rx="2" fill="#48BB78">
+    <animate attributeName="width" values="40;35;40" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Body -->
+  <rect x="28" y="72" width="72" height="40" rx="4" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  
+  <!-- Control Panel -->
+  <rect x="40" y="82" width="48" height="20" rx="2" fill="#2D3748"/>
+  
+  <!-- Blinking Lights -->
+  <circle cx="48" cy="88" r="3" fill="#F56565">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="64" cy="88" r="3" fill="#48BB78">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="88" r="3" fill="#63B3ED">
+    <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Progress Bar -->
+  <rect x="48" y="96" width="32" height="4" rx="2" fill="#2D3748"/>
+  <rect x="48" y="96" width="24" height="4" rx="2" fill="#48BB78">
+    <animate attributeName="width" values="0;32;0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Arms -->
+  <rect x="20" y="80" width="8" height="24" rx="4" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  <rect x="100" y="80" width="8" height="24" rx="4" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  
+  <!-- Hands -->
+  <circle cx="24" cy="108" r="6" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  <circle cx="104" cy="108" r="6" fill="#4A5568" stroke="#2D3748" stroke-width="2"/>
+  
+  <!-- CROD Badge -->
+  <text x="64" y="120" text-anchor="middle" font-family="monospace" font-size="8" fill="#F56565">CROD</text>
+</svg>

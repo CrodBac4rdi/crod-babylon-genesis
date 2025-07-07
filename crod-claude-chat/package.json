@@ -45,7 +45,7 @@
     "development",
     "productivity"
   ],
-  "icon": "icon.png",
+  "icon": "icon-robot.svg",
   "main": "./out/extension.js",
   "activationEvents": [
     "onStartupFinished"
@@ -56,7 +56,7 @@
         "command": "claude-code-chat.openChat",
         "title": "Open Claude Code Chat",
         "category": "Claude Code Chat",
-        "icon": "icon.png"
+        "icon": "icon-robot.svg"
       },
       {
         "command": "claude-code-chat.showCRODStats",
@@ -142,7 +142,7 @@
           "id": "claude-code-chat.chat",
           "name": "Claude Code Chat",
           "when": "true",
-          "icon": "icon.png",
+          "icon": "icon-robot.svg",
           "contextualTitle": "Claude Code Chat"
         }
       ]
@@ -152,7 +152,7 @@
         {
           "id": "claude-code-chat",
           "title": "Claude Code Chat",
-          "icon": "icon.png"
+          "icon": "icon-robot.svg"
         }
       ]
     },
